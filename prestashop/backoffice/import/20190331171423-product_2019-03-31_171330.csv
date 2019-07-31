@@ -1,0 +1,524 @@
+"Product ID";Imagen;Nombre;Referencia;Categoría;"Precio (imp. excl.)";"Precio (imp. incl.)";Cantidad;Estado;Posición
+1728;http://localhost/cuenca/zona-rosa/img/p/1/7/2/8/1728.jpg;"CIG. MARLBORO GOLD CAJ.X10 UNID.";10062544;Snacks;2.770000;3.1;31;0
+1743;http://localhost/cuenca/zona-rosa/img/p/1/7/4/3/1743.jpg;"POLO AMATEUR CABERNET SAUVIGNON 750 ML";10063824;Vino;9.820000;11;21;0
+1775;http://localhost/cuenca/zona-rosa/img/p/1/7/7/5/1775.jpg;"HALLS SANDIA 28,8GR";10062003;Snacks;0.450000;0.5;136;0
+1781;http://localhost/cuenca/zona-rosa/img/p/1/7/8/1/1781.jpg;"VENTISQUERO CABERNET SAUVIGNON 750ML";10069103;Vino;8.920000;9.99;21;0
+1813;http://localhost/cuenca/zona-rosa/img/p/1/8/1/3/1813.jpg;"MONTES SAUVIGNON BLANCO-LEYDA 750ML";10062225;Vino;20.400000;22.85;18;0
+1817;http://localhost/cuenca/zona-rosa/img/p/1/8/1/7/1817.jpg;"VENTISQUERO QUEULAT CAB SAUVIGNON 750ML";10068158;Vino;23.680000;26.52;19;0
+1838;http://localhost/cuenca/zona-rosa/img/p/1/8/3/8/1838.jpg;"THREE PACK 120 SANTA RITA";10075683;Vino;26.770000;29.98;3;0
+1842;http://localhost/cuenca/zona-rosa/img/p/1/8/4/2/1842.jpg;"IMPERIAL LIMONADA LATA 350ML";10074344;"Bebidas & Mixers";0.660000;0.74;22;0
+1845;http://localhost/cuenca/zona-rosa/img/p/1/8/4/5/1845.jpg;"MONTES CASA CABERNET SAUV 750ML";10062443;Vino;24.010000;26.89;12;0
+1851;http://localhost/cuenca/zona-rosa/img/p/1/8/5/1/1851.jpg;"RUFFLES PIC 92GR";10061779;Snacks;0.980000;1.1;5;0
+1874;http://localhost/cuenca/zona-rosa/img/p/1/8/7/4/1874.jpg;"VINO DON DAVID MALBEC 750 ML";10077222;Vino;20.540000;23;1;0
+1881;http://localhost/cuenca/zona-rosa/img/p/1/8/8/1/1881.jpg;"WHISKY BLACK CASTLE 750ML";10062820;Whisky;10.250000;11.48;17;0
+1888;http://localhost/cuenca/zona-rosa/img/p/1/8/8/8/1888.jpg;"PACK VANDUSH DULCE + SPLASH NARANJA";50000167;"Champaña & Espumantes";4.890000;5.48;3;0
+1889;http://localhost/cuenca/zona-rosa/img/p/1/8/8/9/1889.jpg;"MONTES CHARDONAY RESERVA 750ML";10061660;Vino;17.180000;19.24;18;0
+1897;http://localhost/cuenca/zona-rosa/img/p/1/8/9/7/1897.jpg;"CIGARRILLOS LARK CAJ. X 10 UNID.";10062534;Snacks;2.860000;3.2;21;0
+1902;http://localhost/cuenca/zona-rosa/img/p/1/9/0/2/1902.jpg;"TRIDENT MENTA 10,2GR";10061983;Snacks;0.450000;0.5;21;0
+1914;http://localhost/cuenca/zona-rosa/img/p/1/9/1/4/1914.jpg;"MC BRUT IMPERIAL 750 ML";10063460;"Champaña & Espumantes";68.300000;76.5;7;0
+1977;http://localhost/cuenca/zona-rosa/img/p/1/9/7/7/1977.jpg;"MONTES ALFHA PINOT NOIR 750ML";10062277;Vino;47.540000;53.24;13;0
+2006;http://localhost/cuenca/zona-rosa/img/p/2/0/0/6/2006.jpg;"HALLS MENTHO LYPTUS 28,8GR";10062000;Snacks;0.450000;0.5;81;0
+2013;http://localhost/cuenca/zona-rosa/img/p/2/0/1/3/2013.jpg;"VENTISQUERO ROOT1 CABERNET SAUVI 750ML";10069097;Vino;16.670000;18.67;40;0
+2016;http://localhost/cuenca/zona-rosa/img/p/2/0/1/6/2016.jpg;"CIGARRILLOS LIDER CAJ. X 20 UNID.";10062548;Snacks;5.540000;6.2;28;0
+2035;http://localhost/cuenca/zona-rosa/img/p/2/0/3/5/2035.jpg;"LUIGI BOSCA GALA 4 CABER FRANC MALBEC 75";10063613;Vino;46.430000;52;7;0
+2046;http://localhost/cuenca/zona-rosa/img/p/2/0/4/6/2046.jpg;"TRIDENT HERBAL 10,2GR";10062686;Snacks;0.450000;0.5;19;0
+2090;http://localhost/cuenca/zona-rosa/img/p/2/0/9/0/2090.jpg;"VENTISQUERO MERLOT RESERVA 750ML";10069104;Vino;17.100000;19.15;11;0
+2091;http://localhost/cuenca/zona-rosa/img/p/2/0/9/1/2091.jpg;"DUC DE PARIS BRUT 750ML";10062880;"Champaña & Espumantes";13.790000;15.44;9;0
+2117;http://localhost/cuenca/zona-rosa/img/p/2/1/1/7/2117.jpg;"CRISTAL CHERRY PASSION 750ML";10062299;Aguardiente;4.880000;5.47;15;0
+2126;http://localhost/cuenca/zona-rosa/img/p/2/1/2/6/2126.jpg;"VENTISQUERO GREY CABERNET SAUVIGNON 750M";10068160;Vino;31.580000;35.37;16;0
+2131;http://localhost/cuenca/zona-rosa/img/p/2/1/3/1/2131.jpg;"EL ESTECO MALBEC 750 ML";10077219;Vino;33.750000;37.8;6;0
+2132;http://localhost/cuenca/zona-rosa/img/p/2/1/3/2/2132.jpg;"DUC DE PARIS DEMISEC 750ML";10062768;"Champaña & Espumantes";12.280000;13.75;10;0
+2136;http://localhost/cuenca/zona-rosa/img/p/2/1/3/6/2136.jpg;"MONTES MERLOT RESERVA 750ML";10061658;Vino;13.350000;14.95;24;0
+2140;http://localhost/cuenca/zona-rosa/img/p/2/1/4/0/2140.jpg;"VINO MORA NEGRA MALBEC BONARDA 750 ML";10075865;Vino;39.040000;43.72;8;0
+2145;http://localhost/cuenca/zona-rosa/img/p/2/1/4/5/2145.jpg;"VINO TINTO (TEMPRANILLO) 750 ML RISCAL S";10063774;Vino;10.696429;11.98;16;0
+2157;http://localhost/cuenca/zona-rosa/img/p/2/1/5/7/2157.jpg;"SUPER COLA 525ML";10074945;"Bebidas & Mixers";0.460000;0.52;23;0
+2192;http://localhost/cuenca/zona-rosa/img/p/2/1/9/2/2192.jpg;"VINO DON DAVID TORRONTES 750 ML";10077223;Vino;20.540000;23;8;0
+2195;http://localhost/cuenca/zona-rosa/img/p/2/1/9/5/2195.jpg;"MATEUS ROSE ORIGINAL 75OML";10072081;Vino;10.710000;12;20;0
+2198;http://localhost/cuenca/zona-rosa/img/p/2/1/9/8/2198.jpg;"TWO PACK 120 SANTA RITA MERLOT - CABERNE";10068423;Vino;15.780000;17.67;1;0
+2227;http://localhost/cuenca/zona-rosa/img/p/2/2/2/7/2227.jpg;"MARLBORO ICE MINT X 10";10062271;Snacks;2.680000;3;6;0
+2230;http://localhost/cuenca/zona-rosa/img/p/2/2/3/0/2230.jpg;"EL KARNAL MARGARITA MIX 750ML";10068147;"Bebidas & Mixers";4.940000;5.53;11;0
+2249;http://localhost/cuenca/zona-rosa/img/p/2/2/4/9/2249.jpg;"ESPUMANTE CONDE CRUZ ROSE 750ML";10068138;"Champaña & Espumantes";6.510000;7.29;13;0
+2254;http://localhost/cuenca/zona-rosa/img/p/2/2/5/4/2254.jpg;"Funda de Regalo Mediana";00001000001;Inicio;1.330357;1.49;0;1
+2258;http://localhost/cuenca/zona-rosa/img/p/2/2/5/8/2258.jpg;"RESERVA SYRAH 750ML";10062708;Vino;19.470000;21.81;38;0
+2339;http://localhost/cuenca/zona-rosa/img/p/2/3/3/9/2339.jpg;"VENTISQUERO MERLOT CALSICO 750ML";10069101;Vino;8.920000;9.99;12;0
+2344;http://localhost/cuenca/zona-rosa/img/p/2/3/4/4/2344.jpg;"CIGARRILLOS LIDER CAJ. X 10 UNID.";10062549;Snacks;2.770000;3.1;68;0
+2399;http://localhost/cuenca/zona-rosa/img/p/2/3/9/9/2399.jpg;"SUPER COLA 3000 ML";10064321;"Bebidas & Mixers";2.370000;2.65;24;0
+2406;http://localhost/cuenca/zona-rosa/img/p/2/4/0/6/2406.jpg;"VENTISQUERO MERLOT GRAN RESERVA 750ML";10069105;Vino;25.870000;28.97;22;0
+2409;http://localhost/cuenca/zona-rosa/img/p/2/4/0/9/2409.jpg;"RUFFELS CEB 92GR";10061763;Snacks;0.980000;1.1;5;0
+2449;http://localhost/cuenca/zona-rosa/img/p/2/4/4/9/2449.jpg;"EL ESTECO CABERNET SAUVIGNON  750 ML";10077220;Vino;33.750000;37.8;5;0
+2452;http://localhost/cuenca/zona-rosa/img/p/2/4/5/2/2452.jpg;"HALLS SURTIDO FRUTOS ROJOS 28,8GR";10062958;Snacks;0.450000;0.5;2;0
+2453;http://localhost/cuenca/zona-rosa/img/p/2/4/5/3/2453.jpg;"MONTES SAUVIGNON BLANCO 750ML";10061659;Vino;17.180000;19.24;31;0
+2487;http://localhost/cuenca/zona-rosa/img/p/2/4/8/7/2487.jpg;"TUBOS BOTANICOS GIN&TONIC KLIK";10077224;Regalos;8.640000;9.68;0;1
+2504;http://localhost/cuenca/zona-rosa/img/p/2/5/0/4/2504.jpg;"MARLBORO ICE MINT CAJETILLA 20S";10062088;Snacks;5.360000;6;4;0
+2539;http://localhost/cuenca/zona-rosa/img/p/2/5/3/9/2539.jpg;"CIG. MARLBORO ROJO CAJ. X 10 UNID.";10062538;Snacks;2.770000;3.1;1;0
+2541;http://localhost/cuenca/zona-rosa/img/p/2/5/4/1/2541.jpg;"TRIDENT SANDIA 10,2GR";10061985;Snacks;0.450000;0.5;109;0
+2568;http://localhost/cuenca/zona-rosa/img/p/2/5/6/8/2568.jpg;"PACK VANDUSH S SECO + R MERLOT 750ML";50000129;"Champaña & Espumantes";12.080000;13.53;2;0
+2576;http://localhost/cuenca/zona-rosa/img/p/2/5/7/6/2576.jpg;"Funda de Regalo Pequeña";000010000002;Inicio;0.000000;0;0;1
+2579;http://localhost/cuenca/zona-rosa/img/p/2/5/7/9/2579.jpg;"HALLS STRONG 28,8GR";10061997;Snacks;0.450000;0.5;17;0
+2580;http://localhost/cuenca/zona-rosa/img/p/2/5/8/0/2580.jpg;"TERRAZAS RESERVA MALBEC 750 ML + ESTUCHE";10063606;Vino;25.320000;28.36;13;0
+2581;http://localhost/cuenca/zona-rosa/img/p/2/5/8/1/2581.jpg;"COGNAC REMY MARTIN V.S.O.P. 750 ML";10063725;"Coñac & Brandy";89.280000;99.99;2;0
+2582;http://localhost/cuenca/zona-rosa/img/p/2/5/8/2/2582.jpg;"NOVISIMO MERLOT 750 ML";10063849;Vino;7.140000;8;35;0
+2583;http://localhost/cuenca/zona-rosa/img/p/2/5/8/3/2583.jpg;"Finca Las Moras Cabernet Sauvignon";10075862;Inicio;9.360000;10.48;0;1
+2584;http://localhost/cuenca/zona-rosa/img/p/2/5/8/4/2584.jpg;"RITTER FRESA YOGURT 100GR";10062662;Snacks;2.670000;2.99;8;0
+2586;http://localhost/cuenca/zona-rosa/img/p/2/5/8/6/2586.jpg;"READY XTRM LADY 500ML";10068781;"Cerveza & RTD";5.400000;6.05;2;0
+2588;http://localhost/cuenca/zona-rosa/img/p/2/5/8/8/2588.jpg;"RON APPLETON ORO 750ML + VASO";10063415;Ron;11.800000;13.22;16;0
+2591;http://localhost/cuenca/zona-rosa/img/p/2/5/9/1/2591.jpg;"NORTON BARREL SELECT CAB.SAUVIGNON 750 M";10063595;Vino;10.710000;12;13;0
+2594;http://localhost/cuenca/zona-rosa/img/p/.jpg;"UNDER LONDON DRY GIN 1L";10071072;Gin;13.840000;15.5;17;0
+2597;http://localhost/cuenca/zona-rosa/img/p/2/5/9/7/2597.jpg;"WHISKY MC GYBER 750ML+ESTUCHE DE CARTON";10065292;Whisky;10.480000;11.74;9;0
+2598;http://localhost/cuenca/zona-rosa/img/p/2/5/9/8/2598.jpg;"FINCA LA LINDA MALBEC 750 ML";10063566;Vino;10.260000;11.49;18;0
+2599;http://localhost/cuenca/zona-rosa/img/p/2/5/9/9/2599.jpg;"NAVARRO CORREAS RESERVA CABERNET SAUVIGN";10063936;Vino;22.320000;25;5;0
+2600;http://localhost/cuenca/zona-rosa/img/p/2/6/0/0/2600.jpg;"PKNT SAUVIGNON BLANC 750 ML";10064031;Vino;6.460000;7.24;18;0
+2601;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Bomba de vació manual";10080081;Inicio;9.026786;10.11;0;1
+2603;http://localhost/cuenca/zona-rosa/img/p/2/6/0/3/2603.jpg;"RESERVA CHARDONNAY 750 ML";10063782;Vino;22.410000;25.1;24;0
+2608;http://localhost/cuenca/zona-rosa/img/p/2/6/0/8/2608.jpg;"FINCA LA LINDA TORRONTES 750 ML";10063611;Vino;10.260000;11.49;8;0
+2609;http://localhost/cuenca/zona-rosa/img/p/2/6/0/9/2609.jpg;"NC COLECCION PRIVADA SYRAH";10063906;Vino;17.850000;19.99;12;0
+2611;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Cucharada Roscada Moonlight";10080055;Inicio;8.580357;9.61;0;1
+2612;http://localhost/cuenca/zona-rosa/img/p/2/6/1/2/2612.jpg;"CORDON NEGRO BRUT 750 ML";10063750;"Champaña & Espumantes";17.410000;19.5;68;0
+2613;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Promo 6 Bacardi Superior + Hielo + Mixer";10064077;Inicio;12.044643;13.49;-1;1
+2615;http://localhost/cuenca/zona-rosa/img/p/2/6/1/5/2615.jpg;"TOCORNAL SYRAH 750 ML";10063870;Vino;4.970000;5.57;6;0
+2616;http://localhost/cuenca/zona-rosa/img/p/2/6/1/6/2616.jpg;"ESPUMANTE VILLA D ALVA 750ML";10064186;"Champaña & Espumantes";6.700000;7.5;9;0
+2617;http://localhost/cuenca/zona-rosa/img/p/.jpg;"SPRITE 500ML";10070570;"Bebidas & Mixers";0.500000;0.56;30;0
+2620;http://localhost/cuenca/zona-rosa/img/p/2/6/2/0/2620.jpg;"SKYY INFUSIONS PINEAPPLE 750 ML";10063660;Vodka;15.620000;17.49;6;0
+2621;http://localhost/cuenca/zona-rosa/img/p/2/6/2/1/2621.jpg;"RON FLOR DE CAÑA GOLD 4 AÑOS 750ML";10062220;Ron;38.070000;42.64;6;0
+2623;http://localhost/cuenca/zona-rosa/img/p/.jpg;"COCA COLA 3000ML DEST";10061708;"Bebidas & Mixers";2.860000;3.2;15;0
+2624;http://localhost/cuenca/zona-rosa/img/p/2/6/2/4/2624.jpg;"CHANDON EXTRA BRUT 750 ML C.E";10063500;"Champaña & Espumantes";28.120000;31.49;29;0
+2625;http://localhost/cuenca/zona-rosa/img/p/2/6/2/5/2625.jpg;"GUAYASAMIN  RESERVA SAUVIGNON BLAN 750ML";10066825;Vino;6.470000;7.25;6;0
+2627;http://localhost/cuenca/zona-rosa/img/p/2/6/2/7/2627.jpg;"RESERVA ESPECIAL SYRAH 750 ML";10063950;Vino;51.540000;57.72;18;0
+2628;http://localhost/cuenca/zona-rosa/img/p/2/6/2/8/2628.jpg;"ANTHONY BY RIUNITE PEACH 750ML";10064051;Vino;5.190000;5.81;15;0
+2629;http://localhost/cuenca/zona-rosa/img/p/2/6/2/9/2629.jpg;"Sacacorchos eléctrico compact";10080095;Inicio;38.321429;42.92;0;1
+2631;http://localhost/cuenca/zona-rosa/img/p/.jpg;"POLO PROFESSIONAL CABER SAUVIG. MALB+EST";10065242;Vino;32.330000;36.21;12;0
+2632;http://localhost/cuenca/zona-rosa/img/p/2/6/3/2/2632.jpg;"NORTON CLASICO BLANCO 750 ML";10063551;Vino;5.450000;6.1;24;0
+2633;http://localhost/cuenca/zona-rosa/img/p/2/6/3/3/2633.jpg;"NAVARRO CORREAS LOS ARBOLES CHARDONNAY";10063923;Vino;8.480000;9.5;8;0
+2635;http://localhost/cuenca/zona-rosa/img/p/2/6/3/5/2635.jpg;"Sacacorchos profesional 2 tiempos";10080070;Inicio;5.151786;5.77;0;1
+2636;http://localhost/cuenca/zona-rosa/img/p/2/6/3/6/2636.jpg;"TOCORNAL SAUVIGNON BLANC 750 ML";10063770;Vino;5.810000;6.51;18;0
+2640;http://localhost/cuenca/zona-rosa/img/p/2/6/4/0/2640.jpg;"SALENTEIN RESERVE MALBEC 750 ML";10063598;Vino;22.320000;25;6;0
+2643;http://localhost/cuenca/zona-rosa/img/p/2/6/4/3/2643.jpg;"CATENA ALAMOS MALBEC 750ML";10061652;Vino;15.400000;17.25;2;0
+2645;http://localhost/cuenca/zona-rosa/img/p/2/6/4/5/2645.jpg;"Finca Las Moras Pedernal";10075866;Inicio;76.310000;85.47;0;1
+2647;http://localhost/cuenca/zona-rosa/img/p/2/6/4/7/2647.jpg;"CERVEZA CORONA EXTRA 355 ML";10063450;"Cerveza & RTD";2.280000;2.55;186;0
+2651;http://localhost/cuenca/zona-rosa/img/p/.jpg;"FUNDA DE HIELO GRANDE";10062553;"Bebidas & Mixers";1.120000;1.25;120;0
+2653;http://localhost/cuenca/zona-rosa/img/p/2/6/5/3/2653.jpg;"CRYMS DURAZNO 750ML";10064109;"Cremas & Cocteleras";8.690000;9.73;2;0
+2654;http://localhost/cuenca/zona-rosa/img/p/2/6/5/4/2654.jpg;"BARBA NEGRA ORO 200 ML";10064282;Ron;2.760000;3.09;17;0
+2657;http://localhost/cuenca/zona-rosa/img/p/2/6/5/7/2657.jpg;"HENNESSY XO 700 ML";10063483;"Coñac & Brandy";297.350000;333.03;2;0
+2658;http://localhost/cuenca/zona-rosa/img/p/2/6/5/8/2658.jpg;"VINO MUTHERMILCH LEC.MUJER AMAD750+ESTUC";10065356;Vino;4.900000;5.49;9;0
+2659;http://localhost/cuenca/zona-rosa/img/p/2/6/5/9/2659.jpg;"TERRAZAS ALTOS DEL PLATA CAB.SAUV. 750 M";10063569;Vino;19.640000;22;6;0
+2660;http://localhost/cuenca/zona-rosa/img/p/2/6/6/0/2660.jpg;"POLO PROFESIONAL CABERNET SAUVIGNON 750";10063939;Vino;17.850000;19.99;54;0
+2661;http://localhost/cuenca/zona-rosa/img/p/2/6/6/1/2661.jpg;"MONT ARQUATO CHARDONNAY 750 ML";10064035;Vino;8.800000;9.86;20;0
+2662;http://localhost/cuenca/zona-rosa/img/p/2/6/6/2/2662.jpg;"Tapón escanciador 2 en 1";10080084;Inicio;3.535714;3.96;0;1
+2666;http://localhost/cuenca/zona-rosa/img/p/2/6/6/6/2666.jpg;"RON APPLETON BLANCO 750ML + VASO";10063791;Ron;11.800000;13.22;11;0
+2667;http://localhost/cuenca/zona-rosa/img/p/2/6/6/7/2667.jpg;"WHISKEY  BLACK OWL 750ML";10066742;Whisky;10.370000;11.61;29;0
+2668;http://localhost/cuenca/zona-rosa/img/p/2/6/6/8/2668.jpg;"PACK GIN W + VASO";10065170;Gin;11.800000;13.22;27;0
+2669;http://localhost/cuenca/zona-rosa/img/p/2/6/6/9/2669.jpg;"CERVEZA CLUB 330ML";10061820;"Cerveza & RTD";1.210000;1.36;128;0
+2670;http://localhost/cuenca/zona-rosa/img/p/2/6/7/0/2670.jpg;"SANDEMAN PORTO TAWNY 10 YEARS 750 ML";10063540;Vino;66.120000;74.05;2;0
+2674;http://localhost/cuenca/zona-rosa/img/p/2/6/7/4/2674.jpg;"Taza Cobre 500 ml Vintage";10080058;Inicio;15.928571;17.84;0;1
+2676;http://localhost/cuenca/zona-rosa/img/p/2/6/7/6/2676.jpg;"VODKA SMIRNOFF 375 ML";10063753;Vodka;6.140000;6.88;2;0
+2677;http://localhost/cuenca/zona-rosa/img/p/2/6/7/7/2677.jpg;"Promo 10 Ron Cien Fuegos + 2 Colas";10064134;Inicio;10.700000;11.98;-3;1
+2678;http://localhost/cuenca/zona-rosa/img/p/2/6/7/8/2678.jpg;"CRISTAL CHERRY PASSION 375ML";10062296;Aguardiente;2.700000;3.02;15;0
+2680;http://localhost/cuenca/zona-rosa/img/p/2/6/8/0/2680.jpg;"MARTIN ALSINA MALBEC 750 ML";10063874;Vino;88.390000;99;12;0
+2681;http://localhost/cuenca/zona-rosa/img/p/2/6/8/1/2681.jpg;"RON SELECTO 70 CL";10064208;Ron;32.950000;36.9;6;0
+2683;http://localhost/cuenca/zona-rosa/img/p/2/6/8/3/2683.jpg;"Set Vino Essential";10080099;Inicio;18.178571;20.36;0;1
+2684;http://localhost/cuenca/zona-rosa/img/p/2/6/8/4/2684.jpg;"GLENMORANGIE ORIGINAL 750 ML";10063667;Whisky;52.210000;58.48;7;0
+2685;http://localhost/cuenca/zona-rosa/img/p/.jpg;"CERVEZA 593 BOTELLA 330ML (5+1)";50000331;Packs;6.612500;7.41;0;1
+2686;http://localhost/cuenca/zona-rosa/img/p/2/6/8/6/2686.jpg;"SMIRNOFF ORANGE TWIST 750 ML";10063830;Vodka;18.100000;20.27;25;0
+2688;http://localhost/cuenca/zona-rosa/img/p/2/6/8/8/2688.jpg;"VODKA STOLICHNAYA NEUTRO 750ML";10064313;Vodka;41.890000;46.92;5;0
+2689;http://localhost/cuenca/zona-rosa/img/p/2/6/8/9/2689.jpg;"VINO TINTO(AMARONE)BELA VALPOLICELLA 750";10063000;Vino;64.410000;72.14;11;0
+2690;http://localhost/cuenca/zona-rosa/img/p/.jpg;"SPRITE 3000ML";10061721;"Bebidas & Mixers";2.350000;2.63;20;0
+2692;http://localhost/cuenca/zona-rosa/img/p/2/6/9/2/2692.jpg;"LUIGI BOSCA MALBEC 750 ML";10063584;Vino;25.440000;28.49;14;0
+2695;http://localhost/cuenca/zona-rosa/img/p/2/6/9/5/2695.jpg;"RON BARBA NEGRA PLATA 1750 ML";10064247;Ron;12.120000;13.57;13;0
+2699;http://localhost/cuenca/zona-rosa/img/p/2/6/9/9/2699.jpg;"AGUARDIENTE ANTIOQUENO 750ML";10061855;Aguardiente;15.980000;17.9;1;0
+2700;http://localhost/cuenca/zona-rosa/img/p/2/7/0/0/2700.jpg;"FINCA NOBLES CABERNET BOUCHET TINTO 750";10063557;Vino;77.280000;86.55;8;0
+2703;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Descorchador Mayordomo";10080073;Inicio;5.258929;5.89;0;1
+2704;http://localhost/cuenca/zona-rosa/img/p/2/7/0/4/2704.jpg;"VINO BLANCO(RUEDA) 750 ML";10063773;Vino;19.410000;21.74;22;0
+2711;http://localhost/cuenca/zona-rosa/img/p/2/7/1/1/2711.jpg;"ESPUMANTE G. VANDUSH DULCE 750ML";10064058;"Champaña & Espumantes";5.040000;5.64;10;0
+2713;http://localhost/cuenca/zona-rosa/img/p/2/7/1/3/2713.jpg;"CERVEZA HEINEKEN UCL LATA 33CL";10069224;"Cerveza & RTD";1.490000;1.67;45;0
+2716;http://localhost/cuenca/zona-rosa/img/p/2/7/1/6/2716.jpg;"VEUVE CLICQUOT DEMISEC 750 ML";10063455;"Champaña & Espumantes";96.950000;108.58;0;1
+2717;http://localhost/cuenca/zona-rosa/img/p/2/7/1/7/2717.jpg;"PISCO OCUCAJE ITALIA 750 ML";10063523;Pisco;25.790000;28.88;6;0
+2721;http://localhost/cuenca/zona-rosa/img/p/2/7/2/1/2721.jpg;"SANTA RITA MED REAL SAUVIGNON BLANC 750M";10062410;Vino;30.980000;34.7;12;0
+2722;http://localhost/cuenca/zona-rosa/img/p/.jpg;"JOHNNIE WALKER BLACK 750ML + 375ML";50000310;Whisky;70.170000;78.59;0;1
+2723;http://localhost/cuenca/zona-rosa/img/p/2/7/2/3/2723.jpg;"CRYMS SAMBUCA 750ML";10064112;"Cremas & Cocteleras";8.690000;9.73;11;0
+2724;http://localhost/cuenca/zona-rosa/img/p/2/7/2/4/2724.jpg;"ENERGIZANTE 440 PET 400ML";10064286;"Bebidas & Mixers";0.890000;1;39;0
+2725;http://localhost/cuenca/zona-rosa/img/p/2/7/2/5/2725.jpg;"RON APPLETON ORO 1.75L";10062984;Ron;24.470000;27.41;12;0
+2728;http://localhost/cuenca/zona-rosa/img/p/2/7/2/8/2728.jpg;"ALTO PALERMO SAUVIGNON BLANC 750ML";10066749;Vino;5.800000;6.5;7;0
+2730;http://localhost/cuenca/zona-rosa/img/p/2/7/3/0/2730.jpg;"NORTON BARREL SELECT CHARDONNAY 750 ML";10063572;Vino;10.710000;12;10;0
+2732;http://localhost/cuenca/zona-rosa/img/p/2/7/3/2/2732.jpg;"LANCELLOTA RIUNITE 750 ML";10064039;"Champaña & Espumantes";10.750000;12.04;32;0
+2733;http://localhost/cuenca/zona-rosa/img/p/2/7/3/3/2733.jpg;"Funda enfriadora Magnum";;Inicio;8.910000;9.98;0;1
+2738;http://localhost/cuenca/zona-rosa/img/p/2/7/3/8/2738.jpg;"IMPERIAL LIMONADA 550ML";10068000;"Bebidas & Mixers";0.730000;0.82;21;0
+2740;http://localhost/cuenca/zona-rosa/img/p/2/7/4/0/2740.jpg;"STRUCTURA NAVARRO CORREAS";10063914;Vino;64.280000;71.99;2;0
+2743;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Set Marca copas (Emoticonos)";10080061;Inicio;6.758929;7.57;0;1
+2745;http://localhost/cuenca/zona-rosa/img/p/2/7/4/5/2745.jpg;"CORDON NEGRO BRUT 200 ML";10063756;"Champaña & Espumantes";6.580000;7.37;6;0
+2746;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Promo 13 Smirnoff 700 ml + Hielo + Mixer";10075156;Inicio;10.520000;11.78;0;1
+2750;http://localhost/cuenca/zona-rosa/img/p/2/7/5/0/2750.jpg;"PUNCH TONICA 2000 ML";10064083;"Bebidas & Mixers";1.560000;1.75;35;0
+2751;http://localhost/cuenca/zona-rosa/img/p/2/7/5/1/2751.jpg;"RON BARBA NEGRA ORO 70 CL";10064220;Ron;6.160000;6.9;36;0
+2752;http://localhost/cuenca/zona-rosa/img/p/2/7/5/2/2752.jpg;"Set 2 Tapones para bomba Vacio";10080103;Inicio;3.732143;4.18;0;1
+2753;http://localhost/cuenca/zona-rosa/img/p/2/7/5/3/2753.jpg;"SOUR APPLE CREMA 750ML";10063719;"Cremas & Cocteleras";19.520000;21.86;14;0
+2754;http://localhost/cuenca/zona-rosa/img/p/2/7/5/4/2754.jpg;"LOS CARDOS CABERNET SAUVIGNON 750ML";10062228;Vino;13.380000;14.99;6;0
+2757;http://localhost/cuenca/zona-rosa/img/p/2/7/5/7/2757.jpg;"LICOR TOUCH SANDIA 750ML";10064141;Aguardiente;4.210000;4.72;56;0
+2758;http://localhost/cuenca/zona-rosa/img/p/2/7/5/8/2758.jpg;"CRISTAL SECO 34GL 750ML";10064316;Aguardiente;5.440000;6.09;48;0
+2759;http://localhost/cuenca/zona-rosa/img/p/2/7/5/9/2759.jpg;"THE LITTLE PENGUIN MERLOT";10063006;Vino;10.390000;11.64;6;0
+2761;http://localhost/cuenca/zona-rosa/img/p/2/7/6/1/2761.jpg;"ANTHONY STRAWBERRY 1500 ML";10067255;Vino;10.260000;11.49;6;0
+2762;http://localhost/cuenca/zona-rosa/img/p/2/7/6/2/2762.jpg;"JAGERMEISTER BOTELLA 700ML";10061921;"Aperitivos & Cordiales";26.700000;29.9;26;0
+2763;http://localhost/cuenca/zona-rosa/img/p/2/7/6/3/2763.jpg;"FINCA LA LINDA CABERNET SAUVIGNON 750 ML";10063585;Vino;10.260000;11.49;15;0
+2764;http://localhost/cuenca/zona-rosa/img/p/2/7/6/4/2764.jpg;"SINGLE VINEYARD PINOT NOIR 750 ML";10063956;Vino;18.740000;20.99;6;0
+2766;http://localhost/cuenca/zona-rosa/img/p/2/7/6/6/2766.jpg;"VODKA ICELAND 750ML";10064254;Vodka;6.160000;6.9;20;0
+2767;http://localhost/cuenca/zona-rosa/img/p/2/7/6/7/2767.jpg;"3 PACK FINCA LIN MALB.SYRAH.CABERN.750ML";10065257;Vino;36.330000;40.69;26;0
+2768;http://localhost/cuenca/zona-rosa/img/p/2/7/6/8/2768.jpg;"NORTON D.O.C MALBEC 750 ML";10063561;Vino;12.500000;14;19;0
+2770;http://localhost/cuenca/zona-rosa/img/p/2/7/7/0/2770.jpg;"5 laminas Antigoteo";10080076;Inicio;4.232143;4.74;0;1
+2771;http://localhost/cuenca/zona-rosa/img/p/2/7/7/1/2771.jpg;"JOHNNIE WALKER SWING 750ML";10063797;Whisky;67.410000;75.5;7;0
+2775;http://localhost/cuenca/zona-rosa/img/p/2/7/7/5/2775.jpg;"TEQUILA 1800 AÑEJO 750 ML";10063528;Tequila;71.140000;79.68;12;0
+2776;http://localhost/cuenca/zona-rosa/img/p/2/7/7/6/2776.jpg;"NORTON VARIETAL MALBEC 750 ML";10063604;Vino;8.480000;9.5;24;0
+2778;http://localhost/cuenca/zona-rosa/img/p/2/7/7/8/2778.jpg;"GRAPPOLO GRAPPA ALEXANDER 200 ML";10063980;Aguardiente;66.900000;74.93;6;0
+2781;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Promo 2 Johnnie Walker Black Label 750 ml Hielo + Mixer";10063793;Inicio;49.098214;54.99;0;1
+2784;http://localhost/cuenca/zona-rosa/img/p/2/7/8/4/2784.jpg;"VINO BLANCO TETRA BRINK 1L";10064061;Vino;3.730000;4.18;18;0
+2785;http://localhost/cuenca/zona-rosa/img/p/2/7/8/5/2785.jpg;"SKYY VODKA 980ML";10064169;Vodka;15.620000;17.49;18;0
+2786;http://localhost/cuenca/zona-rosa/img/p/2/7/8/6/2786.jpg;"LICOR DE CREMA TIPO IRISH CREAM 750ML";10070004;"Cremas & Cocteleras";6.820000;7.64;9;0
+2788;http://localhost/cuenca/zona-rosa/img/p/2/7/8/8/2788.jpg;"B&G RESERVE SAUVIGNON BLANC 750 ML";10063641;Vino;9.370000;10.49;7;0
+2789;http://localhost/cuenca/zona-rosa/img/p/2/7/8/9/2789.jpg;"OCIO 750 ML";10063803;Vino;87.500000;98;3;0
+2791;http://localhost/cuenca/zona-rosa/img/p/2/7/9/1/2791.jpg;"ESPUMANTE G. VANDUSH ROSE 750ML";10064116;"Champaña & Espumantes";5.250000;5.88;10;0
+2792;http://localhost/cuenca/zona-rosa/img/p/2/7/9/2/2792.jpg;"LAN RESERVA 750 ML";10062988;Vino;32.910000;36.86;6;0
+2793;http://localhost/cuenca/zona-rosa/img/p/2/7/9/3/2793.jpg;"CHANDON DEMISEC 750 ML";10063496;"Champaña & Espumantes";19.640000;22;39;0
+2794;http://localhost/cuenca/zona-rosa/img/p/2/7/9/4/2794.jpg;"GUAYASAMIN MERLOT 750ML";10066752;Vino;5.660000;6.34;66;0
+2795;http://localhost/cuenca/zona-rosa/img/p/2/7/9/5/2795.jpg;"NORTON RESERVA CAB. SAUVIGNON 750 ML";10063575;Vino;17.850000;19.99;21;0
+2797;http://localhost/cuenca/zona-rosa/img/p/2/7/9/7/2797.jpg;Cuchara;10080090;Inicio;3.875000;4.34;0;1
+2799;http://localhost/cuenca/zona-rosa/img/p/2/7/9/9/2799.jpg;"MAGNIFICUM CABERNET SAUVIGNON 750ML 2006";10062936;Vino;75.000000;84;12;0
+2804;http://localhost/cuenca/zona-rosa/img/p/2/8/0/4/2804.jpg;"ESPUMANTE CONDE CRUZ DULCE 750ML";10068137;"Champaña & Espumantes";6.510000;7.29;14;0
+2809;http://localhost/cuenca/zona-rosa/img/p/2/8/0/9/2809.jpg;"Transparent cubitera 6 Botellas";10080064;Inicio;20.482143;22.94;0;1
+2810;http://localhost/cuenca/zona-rosa/img/p/2/8/1/0/2810.jpg;"RITTER LECHE C.AVELLANAS ENTERAS 100GR";10062092;Snacks;3.350000;3.75;5;0
+2811;http://localhost/cuenca/zona-rosa/img/p/2/8/1/1/2811.jpg;"FINISIMO CABERNET SAUVIGNON 750 ML";10063761;Vino;20.530000;22.99;6;0
+2812;http://localhost/cuenca/zona-rosa/img/p/2/8/1/2/2812.jpg;"Promo 7 Bacardi Superior Oro + Hielo + Mixer";10061836;Inicio;12.044643;13.49;0;1
+2814;http://localhost/cuenca/zona-rosa/img/p/2/8/1/4/2814.jpg;"CERVEZA 593 BOTELLA 330ML";10077226;"Cerveza & RTD";1.340000;1.5;569;0
+2815;http://localhost/cuenca/zona-rosa/img/p/2/8/1/5/2815.jpg;"NC COLECCION PRIVADA CABERNET SAUVIGNON";10063886;Vino;17.850000;19.99;17;0
+2816;http://localhost/cuenca/zona-rosa/img/p/2/8/1/6/2816.jpg;"CRYM'S MENTA 750ML";10064086;"Cremas & Cocteleras";8.690000;9.73;20;0
+2817;http://localhost/cuenca/zona-rosa/img/p/2/8/1/7/2817.jpg;"AGUA IMPERIAL 1500 ML";10064224;"Bebidas & Mixers";0.890000;1;55;0
+2820;http://localhost/cuenca/zona-rosa/img/p/2/8/2/0/2820.jpg;"BRANDY TORRES 5 IMPERIAL 750ML";10062427;"Coñac & Brandy";71.910000;80.54;17;0
+2824;http://localhost/cuenca/zona-rosa/img/p/2/8/2/4/2824.jpg;"VODKA SKYY INFUSION CITRUS 750ML";10068732;Vodka;15.620000;17.49;29;0
+2825;http://localhost/cuenca/zona-rosa/img/p/2/8/2/5/2825.jpg;"CIGARRILOS LARK CAJ. X 20UNID.";10064343;Snacks;5.710000;6.4;20;0
+2829;http://localhost/cuenca/zona-rosa/img/p/2/8/2/9/2829.jpg;"ANTHONY ROSATO 1500 ML";10067258;Vino;10.260000;11.49;11;0
+2830;http://localhost/cuenca/zona-rosa/img/p/2/8/3/0/2830.jpg;"TERRAZAS RESERVA CAB. SUAVIGNON 750 ML";10063591;Vino;29.010000;32.49;4;0
+2832;http://localhost/cuenca/zona-rosa/img/p/2/8/3/2/2832.jpg;"JUGO SPLASH NARANJA 500ML";10064257;"Bebidas & Mixers";0.400000;0.45;46;0
+2834;http://localhost/cuenca/zona-rosa/img/p/2/8/3/4/2834.jpg;"LUIGI BOSCA SAUVIGNON BLANCO 750 ML";10063564;Vino;25.440000;28.49;16;0
+2836;http://localhost/cuenca/zona-rosa/img/p/2/8/3/6/2836.jpg;"PKNT SHIRAZ CARMENERE 750 ML";10064029;Vino;6.460000;7.24;25;0
+2837;http://localhost/cuenca/zona-rosa/img/p/2/8/3/7/2837.jpg;"Abre Chapas Acero";10080079;Inicio;4.000000;4.48;0;1
+2838;http://localhost/cuenca/zona-rosa/img/p/2/8/3/8/2838.jpg;"B&G CHATEAU MAGNOL 750 ML";10063629;Vino;58.040000;65;11;0
+2839;http://localhost/cuenca/zona-rosa/img/p/2/8/3/9/2839.jpg;"BICICLETA MERLOT 750 ML";10063780;Vino;9.370000;10.49;34;0
+2840;http://localhost/cuenca/zona-rosa/img/p/2/8/4/0/2840.jpg;"CIG. MARLBORO GOLD CAJ.X20 UNID.";10062539;Snacks;5.540000;6.2;12;0
+2842;http://localhost/cuenca/zona-rosa/img/p/2/8/4/2/2842.jpg;"TEQUILA CUERVO ESPECIAL SILVER 750 ML";10063532;Tequila;44.200000;49.5;23;0
+2843;http://localhost/cuenca/zona-rosa/img/p/2/8/4/3/2843.jpg;"TRIDENT MORA AZUL 10,2GR";10061986;Snacks;0.450000;0.5;68;0
+2845;http://localhost/cuenca/zona-rosa/img/p/2/8/4/5/2845.jpg;"NAVARRO CORREAS EXTRA BRUT ESPUMANTE";10063904;"Champaña & Espumantes";11.490000;12.87;0;1
+2846;http://localhost/cuenca/zona-rosa/img/p/2/8/4/6/2846.jpg;"ZIRCONIUM GRAPPA ALEXANDER 200 ML";10063984;Aguardiente;66.900000;74.93;7;0
+2848;http://localhost/cuenca/zona-rosa/img/p/2/8/4/8/2848.jpg;"Promo 4 Skyy Vodka 980 ml Hielo + Mixer";10064169;Inicio;15.780000;17.67;0;1
+2850;http://localhost/cuenca/zona-rosa/img/p/2/8/5/0/2850.jpg;"20 BARRELS PINOT NOIR 750 ML";10063867;Vino;54.020000;60.5;16;0
+2851;http://localhost/cuenca/zona-rosa/img/p/2/8/5/1/2851.jpg;"VODKA MYST 750ML";10062683;Vodka;10.250000;11.48;14;0
+2852;http://localhost/cuenca/zona-rosa/img/p/2/8/5/2/2852.jpg;"COCA COLA 1530ML PET(6)";10070519;"Bebidas & Mixers";1.430000;1.6;70;0
+2854;http://localhost/cuenca/zona-rosa/img/p/2/8/5/4/2854.jpg;"VODKA BELVEDERE CYTRUS 750 ML";10063650;Vodka;61.030000;68.35;4;0
+2855;http://localhost/cuenca/zona-rosa/img/p/2/8/5/5/2855.jpg;"CERVEZA ERDINGER RUBIA 500ML";10062199;"Cerveza & RTD";5.270000;5.9;14;0
+2856;http://localhost/cuenca/zona-rosa/img/p/2/8/5/6/2856.jpg;"POLO AMATEUR CHARDONAY 750 ML";10063821;Vino;9.820000;11;22;0
+2857;http://localhost/cuenca/zona-rosa/img/p/2/8/5/7/2857.jpg;"TORRES CORONAS 750ML";10062424;Vino;36.320000;40.68;11;0
+2859;http://localhost/cuenca/zona-rosa/img/p/2/8/5/9/2859.jpg;"CONDE DE LA CRUZ TINTO 1500 ML";10064274;Vino;8.280000;9.27;12;0
+2860;http://localhost/cuenca/zona-rosa/img/p/2/8/6/0/2860.jpg;"MICHELADA MIX 210GR";10062803;"Bebidas & Mixers";2.680000;3;15;0
+2861;http://localhost/cuenca/zona-rosa/img/p/2/8/6/1/2861.jpg;"VODKA ICELAND  MELON 750ML";10064303;Vodka;5.710000;6.4;22;0
+2863;http://localhost/cuenca/zona-rosa/img/p/2/8/6/3/2863.jpg;"COCA COLA LIGHT 500ML";10061699;"Bebidas & Mixers";0.760000;0.85;23;0
+2864;http://localhost/cuenca/zona-rosa/img/p/2/8/6/4/2864.jpg;"CHANDON EXTRA BRUT 750 ML";10063498;"Champaña & Espumantes";19.640000;22;34;0
+2865;http://localhost/cuenca/zona-rosa/img/p/2/8/6/5/2865.jpg;"GUAYASAMIN RESERVA CABERNET SAUVIG 750ML";10066820;Vino;6.470000;7.25;3;0
+2867;http://localhost/cuenca/zona-rosa/img/p/2/8/6/7/2867.jpg;"TERRAZAS ALTOS DEL PLATA SYRAH 750 ML";10063578;Vino;17.760000;19.89;8;0
+2869;http://localhost/cuenca/zona-rosa/img/p/2/8/6/9/2869.jpg;"RON APPLETON BLANCO 750ML";10064049;Ron;10.140000;11.36;15;0
+2870;http://localhost/cuenca/zona-rosa/img/p/2/8/7/0/2870.jpg;"Molde de Hielos GIN Gigantes";10080093;Inicio;0.000000;0;0;1
+2873;http://localhost/cuenca/zona-rosa/img/p/2/8/7/3/2873.jpg;"TWO PACK JHONNIE WALKER BLACK 375ML";10065237;Whisky;49.100000;54.99;10;0
+2875;http://localhost/cuenca/zona-rosa/img/p/2/8/7/5/2875.jpg;"NORTON VARIETAL SAUVIGNON BLANC 750 ML";10063549;Vino;8.480000;9.5;10;0
+2877;http://localhost/cuenca/zona-rosa/img/p/2/8/7/7/2877.jpg;"NAVARRO CORREAS LOS ARBOLES MALBEC 750 M";10063921;Vino;8.480000;9.5;2;0
+2879;http://localhost/cuenca/zona-rosa/img/p/2/8/7/9/2879.jpg;"Coctelera 500 ml";10080067;Inicio;17.150000;19.21;0;1
+2880;http://localhost/cuenca/zona-rosa/img/p/2/8/8/0/2880.jpg;"RITTER CHOCOLATE GALLETA 100GR";10062096;Snacks;2.670000;2.99;3;0
+2882;http://localhost/cuenca/zona-rosa/img/p/2/8/8/2/2882.jpg;"RESERVA PRIVADA CABERNET SAUVIGNON 750 M";10063764;Vino;12.060000;13.51;21;0
+2883;http://localhost/cuenca/zona-rosa/img/p/2/8/8/3/2883.jpg;"MOËT & CHANDON ROSE IMPERIAL 75 CL CE";10063475;;88.840000;99.5;13;0
+2884;http://localhost/cuenca/zona-rosa/img/p/2/8/8/4/2884.jpg;"SANTARITA120 CABERNET SAUV 375ML";10062487;Vino;4.870000;5.45;2;0
+2885;http://localhost/cuenca/zona-rosa/img/p/2/8/8/5/2885.jpg;"MAX RESERVA CABERNET SAUVIGNON 750ML";10062710;Vino;26.780000;29.99;7;0
+2886;http://localhost/cuenca/zona-rosa/img/p/2/8/8/6/2886.jpg;"CRYM'S BLUE CURACAO 750ML";10064089;"Cremas & Cocteleras";8.690000;9.73;3;0
+2889;http://localhost/cuenca/zona-rosa/img/p/2/8/8/9/2889.jpg;"NOVISIMO CARMENERE 750 ML";10063850;Vino;7.140000;8;24;0
+2890;http://localhost/cuenca/zona-rosa/img/p/2/8/9/0/2890.jpg;"Finca Las Moras Chardonnay";10075863;Inicio;9.360000;10.48;0;1
+2897;http://localhost/cuenca/zona-rosa/img/p/2/8/9/7/2897.jpg;"PATRON REPOSADO 750ML";10061935;Tequila;119.820000;134.2;1;0
+2898;http://localhost/cuenca/zona-rosa/img/p/2/8/9/8/2898.jpg;"SALENTEIN PRIMUS MALBEC 750 ML";10063596;Vino;87.500000;98;8;0
+2899;http://localhost/cuenca/zona-rosa/img/p/2/8/9/9/2899.jpg;"CRYMS MANZANA VERDE 750ML";10064107;"Cremas & Cocteleras";8.690000;9.73;10;0
+2900;http://localhost/cuenca/zona-rosa/img/p/2/9/0/0/2900.jpg;"TEQUILA EL KARNAL ORO 750ML";10064260;Tequila;13.300000;14.9;26;0
+2904;http://localhost/cuenca/zona-rosa/img/p/2/9/0/4/2904.jpg;"HENNESSY V.S.O.P 750 ML PC016243";10063481;"Coñac & Brandy";88.850000;99.51;10;0
+2905;http://localhost/cuenca/zona-rosa/img/p/2/9/0/5/2905.jpg;"COLONIA LAS LIEBRES BONARDA 750 ML";10063567;Vino;11.570000;12.96;7;0
+2906;http://localhost/cuenca/zona-rosa/img/p/2/9/0/6/2906.jpg;"Tapón de vació 2 en 1";10080082;Inicio;4.803571;5.38;0;1
+2907;http://localhost/cuenca/zona-rosa/img/p/2/9/0/7/2907.jpg;"B&G CHATEAU MAGNOL 375 ML";10063632;Vino;16.950000;18.98;36;0
+2908;http://localhost/cuenca/zona-rosa/img/p/2/9/0/8/2908.jpg;"RESERVA CABERNET SAUVIGNON 750 ML";10063783;Vino;22.320000;25;13;0
+2911;http://localhost/cuenca/zona-rosa/img/p/2/9/1/1/2911.jpg;"SANDEMAN PORTO RUBY 750 ML";10063538;Vino;24.550000;27.5;10;0
+2912;http://localhost/cuenca/zona-rosa/img/p/2/9/1/2/2912.jpg;"HALLS CHERRY LYPTUS 28,8GR";10061994;Snacks;0.450000;0.5;70;0
+2913;http://localhost/cuenca/zona-rosa/img/p/2/9/1/3/2913.jpg;"NC COLECCION PRIVADA CHARDONNAY";10063907;Vino;17.850000;19.99;6;0
+2914;http://localhost/cuenca/zona-rosa/img/p/2/9/1/4/2914.jpg;"Medidor Moonlight 50-25";10080056;Inicio;13.151786;14.73;0;1
+2915;http://localhost/cuenca/zona-rosa/img/p/2/9/1/5/2915.jpg;"VODKA SMIRNOFF 50 ML";10063751;Vodka;4.610000;5.16;23;0
+2916;http://localhost/cuenca/zona-rosa/img/p/2/9/1/6/2916.jpg;"Promo 8 Black & White Hielo + Mixer";10064095;Inicio;17.840000;19.98;0;1
+2917;http://localhost/cuenca/zona-rosa/img/p/2/9/1/7/2917.jpg;"TOCORNAL MERLOT 750 ML";10063871;Vino;5.810000;6.51;10;0
+2919;http://localhost/cuenca/zona-rosa/img/p/2/9/1/9/2919.jpg;"CONDE DE LA CRUZ TINTO 2250ML";10064205;Vino;12.190000;13.65;11;0
+2921;http://localhost/cuenca/zona-rosa/img/p/2/9/2/1/2921.jpg;"LATITUD CERO CONCORDIA 330 ML";10065550;"Cerveza & RTD";1.750000;1.96;20;0
+2922;http://localhost/cuenca/zona-rosa/img/p/2/9/2/2/2922.jpg;"Champanera cubitera 2 botellas";10080096;Inicio;13.696429;15.34;0;1
+2923;http://localhost/cuenca/zona-rosa/img/p/2/9/2/3/2923.jpg;"SKYY INFUSIONS PASSION FRUIT 750 ML";10063661;Vodka;15.620000;17.49;10;0
+2924;http://localhost/cuenca/zona-rosa/img/p/2/9/2/4/2924.jpg;"POLO PROFESIONAL MALBEC 750 ML";10063825;Vino;17.850000;19.99;60;0
+2925;http://localhost/cuenca/zona-rosa/img/p/2/9/2/5/2925.jpg;"VINO MUTHERMILCH LECHE MUJER AMADA 750ML";10064133;Vino;6.380000;7.15;8;0
+2928;http://localhost/cuenca/zona-rosa/img/p/2/9/2/8/2928.jpg;"CHANDON BRUT ROSE 750 ML";10063503;"Champaña & Espumantes";23.660000;26.5;16;0
+2929;http://localhost/cuenca/zona-rosa/img/p/2/9/2/9/2929.jpg;"LUIGI BOSCA PINOT NOIR 750 ML";10063582;Vino;35.000000;39.2;6;0
+2930;http://localhost/cuenca/zona-rosa/img/p/2/9/3/0/2930.jpg;"RESERVA ESPECIAL CHARDONNAY 750 ML";10063951;Vino;33.480000;37.5;13;0
+2931;http://localhost/cuenca/zona-rosa/img/p/2/9/3/1/2931.jpg;"RIUNITE SUNNY APPLE 750ML";10064052;Vino;5.220000;5.85;0;1
+2936;http://localhost/cuenca/zona-rosa/img/p/2/9/3/6/2936.jpg;"NC COLECCION PRIVADA MALBEC 375 ML";10063924;Vino;8.930000;10;6;0
+2938;http://localhost/cuenca/zona-rosa/img/p/2/9/3/8/2938.jpg;"Sacacorchos 2 tiempos VINTAGE";10080071;Inicio;7.892857;8.84;0;1
+2939;http://localhost/cuenca/zona-rosa/img/p/2/9/3/9/2939.jpg;"Marques de Riscal Vino Tinto Reserva 750 ml";10063771;Vino;31.241071;34.99;10;0
+2941;http://localhost/cuenca/zona-rosa/img/p/2/9/4/1/2941.jpg;"FINCA EL PORTILLO MALBEC 750 ML";10063599;Vino;9.820000;11;11;0
+2942;http://localhost/cuenca/zona-rosa/img/p/2/9/4/2/2942.jpg;"DRAMBUIE 750 ML";10063972;Whisky;73.320000;82.12;30;0
+2944;http://localhost/cuenca/zona-rosa/img/p/2/9/4/4/2944.jpg;"LATITUD CERO PUNTA PALMAR 330ML";10075730;"Cerveza & RTD";1.750000;1.96;1;0
+2945;http://localhost/cuenca/zona-rosa/img/p/2/9/4/5/2945.jpg;"BICICLETA CARMENERE 750 ML";10063855;Vino;9.370000;10.49;26;0
+2946;http://localhost/cuenca/zona-rosa/img/p/2/9/4/6/2946.jpg;"CONDE DE LA CRUZ TINTO 750ML";10064056;Vino;5.000000;5.6;36;0
+2948;http://localhost/cuenca/zona-rosa/img/p/2/9/4/8/2948.jpg;"VEUVE CLICQUOT LE GRAN DAME 750 ML";10063453;"Champaña & Espumantes";319.860000;358.24;1;0
+2951;http://localhost/cuenca/zona-rosa/img/p/2/9/5/1/2951.jpg;"JOHNNIE WALKER RED LABEL 750 ML";10063792;Whisky;17.640000;19.76;203;0
+2953;http://localhost/cuenca/zona-rosa/img/p/2/9/5/3/2953.jpg;"CRYMS MELON 750ML";10064110;"Cremas & Cocteleras";8.690000;9.73;10;0
+2954;http://localhost/cuenca/zona-rosa/img/p/2/9/5/4/2954.jpg;"EL GRECO AMARETTO 750 ML";10064284;"Cremas & Cocteleras";12.670000;14.19;17;0
+2955;http://localhost/cuenca/zona-rosa/img/p/2/9/5/5/2955.jpg;"WHISKY WILLIAM LAWSON 750ML";10062982;Whisky;12.050000;13.5;159;0
+2956;http://localhost/cuenca/zona-rosa/img/p/2/9/5/6/2956.jpg;"CAMPARI BITTER 750 ML";10063486;"Aperitivos & Cordiales";23.660000;26.5;16;0
+2957;http://localhost/cuenca/zona-rosa/img/p/2/9/5/7/2957.jpg;"ALTO PALERMO CABERNET SAUVIGNON 750ML";10066746;Vino;5.800000;6.5;12;0
+2958;http://localhost/cuenca/zona-rosa/img/p/2/9/5/8/2958.jpg;"PILSENER LIGHT 330ML";10061880;"Cerveza & RTD";1.100000;1.23;35;0
+2959;http://localhost/cuenca/zona-rosa/img/p/2/9/5/9/2959.jpg;"TERRAZAS RESERVA MALBEC 750 ML";10063570;Vino;29.010000;32.49;14;0
+2960;http://localhost/cuenca/zona-rosa/img/p/2/9/6/0/2960.jpg;"CARTA NEVADA SEMISECO THREE PACK 20CL";10063940;"Champaña & Espumantes";22.150000;24.81;6;0
+2961;http://localhost/cuenca/zona-rosa/img/p/2/9/6/1/2961.jpg;"MONT ARQUATO CABERNET SAUVIGNON 750 ML";10064036;Vino;8.640000;9.68;9;0
+2962;http://localhost/cuenca/zona-rosa/img/p/2/9/6/2/2962.jpg;"Tapón Hermético Universal";;Inicio;3.535714;3.96;0;1
+2964;http://localhost/cuenca/zona-rosa/img/p/2/9/6/4/2964.jpg;"RON FLOR DE CAÑA EXTRA LITE 4 AÑOS 750ML";10062158;Ron;34.510000;38.65;28;0
+2966;http://localhost/cuenca/zona-rosa/img/p/2/9/6/6/2966.jpg;"WHISKEY BLACK OWL FIRE 750ML";10067324;Whisky;10.600000;11.87;17;0
+2968;http://localhost/cuenca/zona-rosa/img/p/2/9/6/8/2968.jpg;"PILSENER TWISS OFF 330ML";10061821;"Cerveza & RTD";0.970000;1.09;141;0
+2970;http://localhost/cuenca/zona-rosa/img/p/2/9/7/0/2970.jpg;"READY WILD BOMB 500ML";10067654;"Cerveza & RTD";5.400000;6.05;23;0
+2972;http://localhost/cuenca/zona-rosa/img/p/2/9/7/2/2972.jpg;"MAYCAS RESERVA CHARDONNAY 750 ML";10063912;Vino;22.320000;25;4;0
+2974;http://localhost/cuenca/zona-rosa/img/p/2/9/7/4/2974.jpg;"Aireador de Botella";10080059;Inicio;18.070000;20.24;0;1
+2976;http://localhost/cuenca/zona-rosa/img/p/2/9/7/6/2976.jpg;"Promo 11 Finlandia Vodka + Hielo + Mixer";10077677;Inicio;21.170000;23.71;0;1
+2981;http://localhost/cuenca/zona-rosa/img/p/2/9/8/1/2981.jpg;"CONDE DE LA CRUZ BLANCO 750ML";10064055;Vino;5.000000;5.6;42;0
+2982;http://localhost/cuenca/zona-rosa/img/p/2/9/8/2/2982.jpg;"Set Aireador con Peana";10080100;Inicio;57.187500;64.05;0;1
+2985;http://localhost/cuenca/zona-rosa/img/p/2/9/8/5/2985.jpg;"JHONNIE WALKER BLACK LABEL 375 ML";10063834;Whisky;25.000000;28;9;0
+2987;http://localhost/cuenca/zona-rosa/img/p/2/9/8/7/2987.jpg;"LICOR DE CREMA PIÑA COLADA 750ML";10064135;"Cremas & Cocteleras";6.810000;7.63;9;0
+2989;http://localhost/cuenca/zona-rosa/img/p/2/9/8/9/2989.jpg;"THE LITTLE PENGUIN CHARDONNAY";10063004;Vino;10.360000;11.6;25;0
+2992;http://localhost/cuenca/zona-rosa/img/p/2/9/9/2/2992.jpg;"ANTHONY BY RIUNITE PEACH 1500 ML";10067218;Vino;10.260000;11.49;7;0
+2994;http://localhost/cuenca/zona-rosa/img/p/2/9/9/4/2994.jpg;"MAYCAS QUEBRADA SECA CHARDONNAY 750 ML";10063954;Vino;57.140000;64;2;0
+2996;http://localhost/cuenca/zona-rosa/img/p/2/9/9/6/2996.jpg;"CERVEZA HEINEKEN BOTELLA 25 CL";10064250;"Cerveza & RTD";1.400000;1.57;517;0
+2999;http://localhost/cuenca/zona-rosa/img/p/2/9/9/9/2999.jpg;"ISLANEGRA CARMENERE.CABERNET SAUVIG 750";10064016;Vino;3.010000;3.37;84;0
+3000;http://localhost/cuenca/zona-rosa/img/p/3/0/0/0/3000.jpg;"Sacacorchos de Alas";10080074;Inicio;5.151786;5.77;0;1
+3002;http://localhost/cuenca/zona-rosa/img/p/3/0/0/2/3002.jpg;"NC COLECCION PRIVADA SAUVIGNON BLANC";10063888;Vino;17.850000;19.99;12;0
+3003;http://localhost/cuenca/zona-rosa/img/p/3/0/0/3/3003.jpg;"PAMA LICOR DE GRANADA 750 ML";10063977;"Cremas & Cocteleras";36.270000;40.62;19;0
+3007;http://localhost/cuenca/zona-rosa/img/p/3/0/0/7/3007.jpg;"CERVEZA HEINEKEN LATA 33CL";10064059;"Cerveza & RTD";1.560000;1.75;156;0
+3011;http://localhost/cuenca/zona-rosa/img/p/3/0/1/1/3011.jpg;"VEUVE CLICQUOT BRUT 750 ML TRAVELER BAG";10063457;"Champaña & Espumantes";179.670000;201.23;2;0
+3014;http://localhost/cuenca/zona-rosa/img/p/3/0/1/4/3014.jpg;"JOHNNIE WALKER RED 750ML + 375ML";50000306;Whisky;30.690000;34.37;0;1
+3020;http://localhost/cuenca/zona-rosa/img/p/3/0/2/0/3020.jpg;"ALTO PALERMO MALBEC 750ML";10066750;Vino;5.800000;6.5;8;0
+3021;http://localhost/cuenca/zona-rosa/img/p/3/0/2/1/3021.jpg;"LUIGI BOSCA GALA 1 MALBEC VERDOT 750 ML";10063573;Vino;46.430000;52;5;0
+3024;http://localhost/cuenca/zona-rosa/img/p/3/0/2/4/3024.jpg;"Funda Enfriadora Rojo";10080088;Inicio;5.151786;5.77;0;1
+3025;http://localhost/cuenca/zona-rosa/img/p/3/0/2/5/3025.jpg;"B&G PASSEPORT COTES DU RHONE TINTO 750 M";10063639;Vino;18.750000;21;14;0
+3028;http://localhost/cuenca/zona-rosa/img/p/3/0/2/8/3028.jpg;"ALTOS LAS HORMIGAS MALBEC 750 ML";10063544;Vino;20.090000;22.5;21;0
+3033;http://localhost/cuenca/zona-rosa/img/p/3/0/3/3/3033.jpg;Alcoholímetro;10080062;Inicio;7.428571;8.32;0;1
+3036;http://localhost/cuenca/zona-rosa/img/p/3/0/3/6/3036.jpg;"Promo 15 Gin Under 1L + Hielo + Mixer";10071072;Inicio;13.840000;15.5;0;1
+3037;http://localhost/cuenca/zona-rosa/img/p/3/0/3/7/3037.jpg;"JAMES ALEXANDER BLACK LABEL 750ML";10062476;Whisky;21.490000;24.07;7;0
+3038;http://localhost/cuenca/zona-rosa/img/p/3/0/3/8/3038.jpg;"LOS CARDOS CHARDONNAY 750ML";10062307;Vino;13.380000;14.99;5;0
+3040;http://localhost/cuenca/zona-rosa/img/p/3/0/4/0/3040.jpg;"NC COLECCION PRIVADA MALBEC 750 ML";10063884;Vino;17.850000;19.99;12;0
+3042;http://localhost/cuenca/zona-rosa/img/p/3/0/4/2/3042.jpg;"RON BARBA NEGRA PLATA  70 CL";10064221;Ron;6.160000;6.9;16;0
+3043;http://localhost/cuenca/zona-rosa/img/p/3/0/4/3/3043.jpg;"Termómetro Analógico";10080104;Inicio;5.151786;5.77;0;1
+3044;http://localhost/cuenca/zona-rosa/img/p/3/0/4/4/3044.jpg;"CREMA MENTA GREEN 700 ML";10063721;"Cremas & Cocteleras";17.850000;19.99;6;0
+3045;http://localhost/cuenca/zona-rosa/img/p/3/0/4/5/3045.jpg;"TORRES TINTO SANGRE DE TORO 750ML";10062425;Vino;34.960000;39.16;7;0
+3046;http://localhost/cuenca/zona-rosa/img/p/3/0/4/6/3046.jpg;"MONTES FOLLY SYRAH 750ML";10062229;Vino;143.360000;160.56;1;0
+3047;http://localhost/cuenca/zona-rosa/img/p/3/0/4/7/3047.jpg;"RESERVA PRIVADA CARMENERE 750 ML";10063845;Vino;12.060000;13.51;15;0
+3050;http://localhost/cuenca/zona-rosa/img/p/3/0/5/0/3050.jpg;"THE LITTLE PENGUIN CABERNET SAUVIGNON";10063007;Vino;10.100000;11.31;10;0
+3051;http://localhost/cuenca/zona-rosa/img/p/3/0/5/1/3051.jpg;"ANTHONY RASPBERRY 1500 ML";10067256;Vino;10.310000;11.55;6;0
+3055;http://localhost/cuenca/zona-rosa/img/p/3/0/5/5/3055.jpg;"JUGO SPLASH NARANJILLA 500 ML";10064255;"Bebidas & Mixers";0.400000;0.45;7;0
+3056;http://localhost/cuenca/zona-rosa/img/p/3/0/5/6/3056.jpg;"MONTES PINOT NOIR 750ML";10061663;Vino;20.970000;23.49;25;0
+3058;http://localhost/cuenca/zona-rosa/img/p/3/0/5/8/3058.jpg;"LUIGI BOSCA CABERNET SAUVIGNON 750 ML";10063562;Vino;25.440000;28.49;10;0
+3061;http://localhost/cuenca/zona-rosa/img/p/3/0/6/1/3061.jpg;"Mini Decantador Cristal";10080077;Inicio;10.866071;12.17;0;1
+3062;http://localhost/cuenca/zona-rosa/img/p/3/0/6/2/3062.jpg;"SPRITE 1750ML";10062128;"Bebidas & Mixers";1.430000;1.6;22;0
+3063;http://localhost/cuenca/zona-rosa/img/p/3/0/6/3/3063.jpg;"SMIRNOFF RED 750ML+JACKET RIO";10063778;Vodka;10.520000;11.78;4;0
+3064;http://localhost/cuenca/zona-rosa/img/p/3/0/6/4/3064.jpg;"CIG. MARLBORO ROJO CAJ. X 20 UNID.";10062537;Snacks;5.540000;6.2;40;0
+3066;http://localhost/cuenca/zona-rosa/img/p/3/0/6/6/3066.jpg;"TEQUILA TRADICIONAL 695 ML JOSE CUERVO";10063529;Tequila;68.950000;77.22;10;0
+3067;http://localhost/cuenca/zona-rosa/img/p/3/0/6/7/3067.jpg;"AGUARDIENTE ANTIOQUEÑO AZUL 750ML";10067323;Aguardiente;16.960000;19;18;0
+3071;http://localhost/cuenca/zona-rosa/img/p/3/0/7/1/3071.jpg;"CONDE DE CARALT SEMI SECO 750 ML";10063740;"Champaña & Espumantes";13.630000;15.27;18;0
+3072;http://localhost/cuenca/zona-rosa/img/p/3/0/7/2/3072.jpg;"Promo 3 Bombay Sapphire Hielo + Mixer";10062055;Inicio;26.776786;29.99;0;1
+3075;http://localhost/cuenca/zona-rosa/img/p/3/0/7/5/3075.jpg;"VINO TINTO TETRA BRINK 1L";10064062;Vino;3.950000;4.42;18;0
+3076;http://localhost/cuenca/zona-rosa/img/p/3/0/7/6/3076.jpg;"ANTHONY BY RIUNITE GREEN APPLE 750ML";10064174;Vino;5.180000;5.8;39;0
+3080;http://localhost/cuenca/zona-rosa/img/p/3/0/8/0/3080.jpg;"B&G PARTAGER BLANC 750 ML";10063642;Vino;15.360000;17.2;16;0
+3082;http://localhost/cuenca/zona-rosa/img/p/3/0/8/2/3082.jpg;"20 BARRELS MERLOT 750 ML";10063804;Vino;44.200000;49.5;3;0
+3083;http://localhost/cuenca/zona-rosa/img/p/3/0/8/3/3083.jpg;"SANTA RITA 120 MERLOT 750ML";10062422;Vino;8.920000;9.99;14;0
+3085;http://localhost/cuenca/zona-rosa/img/p/3/0/8/5/3085.jpg;"AGUARDIENTE 34° CRISTAL 375ML";10061697;Aguardiente;3.140000;3.52;21;0
+3086;http://localhost/cuenca/zona-rosa/img/p/3/0/8/6/3086.jpg;"CHANDON EXTRA BRUT 187 ML";10063497;"Champaña & Espumantes";5.500000;6.16;16;0
+3088;http://localhost/cuenca/zona-rosa/img/p/3/0/8/8/3088.jpg;"LAYS ARTESANAS 100GR";10061896;Snacks;1.270000;1.42;12;0
+3089;http://localhost/cuenca/zona-rosa/img/p/3/0/8/9/3089.jpg;"LO TENGO TORRONTES 750 ML";10063576;Vino;5.760000;6.45;22;0
+3090;http://localhost/cuenca/zona-rosa/img/p/3/0/9/0/3090.jpg;"BICICLETA PINOT NOIR 750 ML";10063946;Vino;9.370000;10.49;16;0
+3091;http://localhost/cuenca/zona-rosa/img/p/3/0/9/1/3091.jpg;"ANTHONY BY RIUNITE BIANCO 750ML";10064047;Vino;5.180000;5.8;13;0
+3092;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Set de cóctel 3 piezas";10080091;Inicio;34.196429;38.3;0;1
+3094;http://localhost/cuenca/zona-rosa/img/p/3/0/9/4/3094.jpg;"CREMA AMARULA 750ML";10062937;"Cremas & Cocteleras";44.730000;50.1;6;0
+3096;http://localhost/cuenca/zona-rosa/img/p/3/0/9/6/3096.jpg;"RESERVA ESPECIAL CHARDONNAY 750ML+ESTUCH";10065234;Vino;23.190000;25.97;6;0
+3098;http://localhost/cuenca/zona-rosa/img/p/3/0/9/8/3098.jpg;"NORTON VARIETAL CABERNET SAUVIGNON 750 M";10063547;Vino;8.480000;9.5;18;0
+3099;http://localhost/cuenca/zona-rosa/img/p/3/0/9/9/3099.jpg;"MARQUES D'MURRIETA RESERVA 750 ML";10063623;Vino;38.840000;43.5;12;0
+3102;http://localhost/cuenca/zona-rosa/img/p/3/1/0/2/3102.jpg;"Cubitera 1 botella";10080065;Inicio;11.410714;12.78;0;1
+3105;http://localhost/cuenca/zona-rosa/img/p/3/1/0/5/3105.jpg;"CRYM'S AMARETTO 750ML";10064087;"Cremas & Cocteleras";8.690000;9.73;12;0
+3106;http://localhost/cuenca/zona-rosa/img/p/3/1/0/6/3106.jpg;"AGUA IMPERIAL 3000 ML";10064225;"Bebidas & Mixers";1.250000;1.4;22;0
+3108;http://localhost/cuenca/zona-rosa/img/p/3/1/0/8/3108.jpg;"WHISKY BUCHANANS 750 ML";10063809;Whisky;49.110000;55;13;0
+3109;http://localhost/cuenca/zona-rosa/img/p/3/1/0/9/3109.jpg;"LATITUD CERO PUNTA PALMAR 4P 330ML";10075731;"Cerveza & RTD";1.750000;1.96;23;0
+3110;http://localhost/cuenca/zona-rosa/img/p/3/1/1/0/3110.jpg;"NOVISIMO CABERNET SAUVIGNON 750 ML";10063848;Vino;7.140000;8;27;0
+3111;http://localhost/cuenca/zona-rosa/img/p/3/1/1/1/3111.jpg;"Finca Las Moras Malbec";10075860;Inicio;9.360000;10.48;0;1
+3113;http://localhost/cuenca/zona-rosa/img/p/3/1/1/3/3113.jpg;"VODKA SKYY INFUSION MARACUYA 750ML";10068733;Vodka;15.620000;17.49;20;0
+3118;http://localhost/cuenca/zona-rosa/img/p/3/1/1/8/3118.jpg;"TERRAZAS RESERVA CHARDONNAY 750 ML";10063592;Vino;30.700000;34.38;8;0
+3121;http://localhost/cuenca/zona-rosa/img/p/3/1/2/1/3121.jpg;"KIT GIN&TONIC KLIK";10070552;Regalos;48.250000;54.04;0;1
+3123;http://localhost/cuenca/zona-rosa/img/p/3/1/2/3/3123.jpg;"FINCA LA LINDA SYRAH 750 ML";10063565;Vino;14.090000;15.78;14;0
+3126;http://localhost/cuenca/zona-rosa/img/p/3/1/2/6/3126.jpg;"Marcadores de copas 8 piezas";10080080;Inicio;5.383929;6.03;0;1
+3127;http://localhost/cuenca/zona-rosa/img/p/3/1/2/7/3127.jpg;"B&G THOMAS BARTON RESERVE MEDOC 750 ML";10063630;Vino;28.130000;31.51;21;0
+3128;http://localhost/cuenca/zona-rosa/img/p/3/1/2/8/3128.jpg;"BICICLETA CABERNET SAUVIGNON 750 ML";10063781;Vino;9.370000;10.49;88;0
+3132;http://localhost/cuenca/zona-rosa/img/p/3/1/3/2/3132.jpg;"WHISKY BLACK CASTLE FIRE 750ML";10067483;Whisky;10.250000;11.48;28;0
+3135;http://localhost/cuenca/zona-rosa/img/p/3/1/3/5/3135.jpg;"Sacacorchos 2 Tiempos Moonlight";10080054;Inicio;12.098214;13.55;0;1
+3136;http://localhost/cuenca/zona-rosa/img/p/3/1/3/6/3136.jpg;"CARTA NEVADA SEMISECO 750 ML";10063749;"Champaña & Espumantes";14.270000;15.98;119;0
+3137;http://localhost/cuenca/zona-rosa/img/p/3/1/3/7/3137.jpg;"Promo 5 Appleton Jam Hielo + Mixer";10064048;Inicio;10.140000;11.36;0;1
+3139;http://localhost/cuenca/zona-rosa/img/p/3/1/3/9/3139.jpg;"TOCORNAL CARMENERE 750 ML";10063869;Vino;7.100000;7.95;11;0
+3140;http://localhost/cuenca/zona-rosa/img/p/3/1/4/0/3140.jpg;"RON 2300 BLANCO 750ML";10062684;Ron;9.810000;10.99;18;0
+3141;http://localhost/cuenca/zona-rosa/img/p/3/1/4/1/3141.jpg;"SKYY VODKA 750ML";10064073;Vodka;12.960000;14.52;17;0
+3143;http://localhost/cuenca/zona-rosa/img/p/3/1/4/3/3143.jpg;"RON CARTAGENA 750ML";10062905;Ron;8.030000;8.99;1;0
+3145;http://localhost/cuenca/zona-rosa/img/p/3/1/4/5/3145.jpg;"VODKA BELVERDEE PURE 750 ML";10063653;Vodka;49.110000;55;13;0
+3146;http://localhost/cuenca/zona-rosa/img/p/3/1/4/6/3146.jpg;"CERVEZA ERDINGER NEGRA 500ML";10062203;"Cerveza & RTD";5.270000;5.9;20;0
+3147;http://localhost/cuenca/zona-rosa/img/p/3/1/4/7/3147.jpg;"POLO AMATEUR MALBEC 750 ML";10063822;Vino;9.820000;11;9;0
+3149;http://localhost/cuenca/zona-rosa/img/p/3/1/4/9/3149.jpg;"CONDE DE LA CRUZ BLANCO 1500 ML";10064275;Vino;8.280000;9.27;12;0
+3151;http://localhost/cuenca/zona-rosa/img/p/3/1/5/1/3151.jpg;"VODKA ICELAND MANZANA 750ML";10064304;Vodka;5.710000;6.4;12;0
+3154;http://localhost/cuenca/zona-rosa/img/p/3/1/5/4/3154.jpg;"CHANDON FOUR PACK EXTRA BRUT 187 ML";10063499;"Champaña & Espumantes";26.160000;29.3;11;0
+3155;http://localhost/cuenca/zona-rosa/img/p/3/1/5/5/3155.jpg;"GUAYASAMIN RESERVA MERLOT 750ML";10066823;Vino;5.660000;6.34;1020;0
+3157;http://localhost/cuenca/zona-rosa/img/p/3/1/5/7/3157.jpg;"TERRAZAS RESERVA SYRAH 750 ML";10063580;Vino;30.700000;34.38;4;0
+3158;http://localhost/cuenca/zona-rosa/img/p/3/1/5/8/3158.jpg;"COSECHA NOBLE LATE RIESING 375 ML";10063949;Vino;9.690000;10.85;21;0
+3159;http://localhost/cuenca/zona-rosa/img/p/3/1/5/9/3159.jpg;"RON APPLETON ESTATE V.X 750ML";10064050;Ron;15.620000;17.49;56;0
+3160;http://localhost/cuenca/zona-rosa/img/p/3/1/6/0/3160.jpg;"Sacacorchos eléctrico a pilas";10080094;Inicio;22.303571;24.98;0;1
+3161;http://localhost/cuenca/zona-rosa/img/p/3/1/6/1/3161.jpg;"REGION SAUVIGNON BLANC 375 ML";10064243;Vino;3.730000;4.18;11;0
+3163;http://localhost/cuenca/zona-rosa/img/p/3/1/6/3/3163.jpg;"TWO PACK ORGANICO CABER CARME.PINOT NOIR";10065241;Vino;37.840000;42.38;11;0
+3166;http://localhost/cuenca/zona-rosa/img/p/3/1/6/6/3166.jpg;"NAVARRO CORREAS LOS ARBOLES CABER SAUVIG";10063922;Vino;8.480000;9.5;5;0
+3168;http://localhost/cuenca/zona-rosa/img/p/3/1/6/8/3168.jpg;"Bandeja para Borde Cócteles";10080068;Inicio;10.303571;11.54;0;1
+3169;http://localhost/cuenca/zona-rosa/img/p/3/1/6/9/3169.jpg;"RESERVA PRIVADA CHARDONNAY";10063767;Vino;12.060000;13.51;5;0
+3171;http://localhost/cuenca/zona-rosa/img/p/3/1/7/1/3171.jpg;"CRYM'S KAFFE 750ML";10064090;"Cremas & Cocteleras";8.690000;9.73;10;0
+3173;http://localhost/cuenca/zona-rosa/img/p/3/1/7/3/3173.jpg;"NOVISIMO SAUVIGNON BLANC 750 ML";10063851;Vino;7.140000;8;34;0
+3174;http://localhost/cuenca/zona-rosa/img/p/3/1/7/4/3174.jpg;"Finca Las Moras Barrel Select";10075864;Inicio;16.320000;18.28;0;1
+3177;http://localhost/cuenca/zona-rosa/img/p/3/1/7/7/3177.jpg;"RUFFLES CEB 200GR";10061751;Snacks;2.420000;2.71;11;0
+3180;http://localhost/cuenca/zona-rosa/img/p/3/1/8/0/3180.jpg;"SALENTEIN PRIMUS PINOT NOIR 750 ML";10063597;Vino;70.860000;79.36;12;0
+3183;http://localhost/cuenca/zona-rosa/img/p/3/1/8/3/3183.jpg;"TEQUILA EL KARNAL PLATA 750ML";10064261;Tequila;13.300000;14.9;14;0
+3184;http://localhost/cuenca/zona-rosa/img/p/3/1/8/4/3184.jpg;"VODKA ICELAND 20 CL";10064280;Vodka;2.370000;2.65;56;0
+3185;http://localhost/cuenca/zona-rosa/img/p/3/1/8/5/3185.jpg;"STOLICHNAYA NEUTRO CON ESTUCHE 750ML";10062978;Vodka;44.300000;49.62;4;0
+3188;http://localhost/cuenca/zona-rosa/img/p/3/1/8/8/3188.jpg;"TERRAZAS ALTOS DEL PLATA MALBEC 750 ML";10063568;Vino;19.640000;22;5;0
+3189;http://localhost/cuenca/zona-rosa/img/p/3/1/8/9/3189.jpg;"Tapón & Bomba Cava-Champagne";10080083;Inicio;5.839286;6.54;0;1
+3190;http://localhost/cuenca/zona-rosa/img/p/3/1/9/0/3190.jpg;"B&G PASSEPORT BEAUJOLAIS TINTO 750 ML";10063633;Vino;18.750000;21;19;0
+3191;http://localhost/cuenca/zona-rosa/img/p/3/1/9/1/3191.jpg;"20 BARRELS CABERNET SAUVIGNON 750 ML";10063787;Vino;44.200000;49.5;11;0
+3195;http://localhost/cuenca/zona-rosa/img/p/3/1/9/5/3195.jpg;"SANDEMAN PORTO TAWNY 750 ML";10063539;Vino;24.550000;27.5;9;0
+3196;http://localhost/cuenca/zona-rosa/img/p/3/1/9/6/3196.jpg;"LUIGI BOSCA CHARDONNAY 750 ML";10063615;Vino;25.440000;28.49;8;0
+3197;http://localhost/cuenca/zona-rosa/img/p/3/1/9/7/3197.jpg;"NC COLECCION PRIVADA PINOT NOIR";10063908;Vino;29.600000;33.15;11;0
+3199;http://localhost/cuenca/zona-rosa/img/p/3/1/9/9/3199.jpg;"Taza Cobre Vintage";10080057;Inicio;12.732143;14.26;0;1
+3203;http://localhost/cuenca/zona-rosa/img/p/3/2/0/3/3203.jpg;"Promo 9 Black Owl Hielo + Mixer";10066742;Inicio;10.440000;11.69;0;1
+3205;http://localhost/cuenca/zona-rosa/img/p/3/2/0/5/3205.jpg;"SMIRNOFF BLACK 700 ML";10063873;Vodka;40.490000;45.35;12;0
+3207;http://localhost/cuenca/zona-rosa/img/p/3/2/0/7/3207.jpg;"CONDE DE LA CRUZ BLANCO 2250ML";10064206;Vino;12.190000;13.65;24;0
+3210;http://localhost/cuenca/zona-rosa/img/p/3/2/1/0/3210.jpg;"Soporte de mesa para Cubitera";10080097;Inicio;15.982143;17.9;0;1
+3212;http://localhost/cuenca/zona-rosa/img/p/3/2/1/2/3212.jpg;"MONTES MERLOT CLASSIC SERI 750ML";10062224;Vino;19.780000;22.15;21;0
+3213;http://localhost/cuenca/zona-rosa/img/p/3/2/1/3/3213.jpg;"CORDON ROSADO BRUT 750 ML";10063827;"Champaña & Espumantes";17.410000;19.5;22;0
+3215;http://localhost/cuenca/zona-rosa/img/p/3/2/1/5/3215.jpg;"RON CIEN FUEGOS ORO 750 CL";10064134;Ron;10.700000;11.98;47;0
+3217;http://localhost/cuenca/zona-rosa/img/p/3/2/1/7/3217.jpg;"VINO BLANCO SOAVE 750 ML";10062999;Vino;5.470000;6.13;8;0
+3218;http://localhost/cuenca/zona-rosa/img/p/3/2/1/8/3218.jpg;"CHANDON BRUT ROSE 750 ML ESTUCHE";10063504;"Champaña & Espumantes";29.660000;33.22;24;0
+3219;http://localhost/cuenca/zona-rosa/img/p/3/2/1/9/3219.jpg;"TOCORNAL CABERNET SAUVIGNON 750 ML";10061914;Vino;5.810000;6.51;74;0
+3220;http://localhost/cuenca/zona-rosa/img/p/3/2/2/0/3220.jpg;"LUIGI BOSCA SYRAH 750 ML";10063583;Vino;25.440000;28.49;13;0
+3222;http://localhost/cuenca/zona-rosa/img/p/3/2/2/2/3222.jpg;"ANTHONY BY RIUNITE RASPBERRY 750ML";10064053;Vino;5.190000;5.81;13;0
+3223;http://localhost/cuenca/zona-rosa/img/p/3/2/2/3/3223.jpg;"RON BARBA NEGRA ORO 1750 ML";10064246;Ron;12.120000;13.57;16;0
+3225;http://localhost/cuenca/zona-rosa/img/p/3/2/2/5/3225.jpg;"RESERVA PRIVADA SYRAH 750ML + ESTUCHE";10065245;Vino;14.340000;16.06;9;0
+3226;http://localhost/cuenca/zona-rosa/img/p/3/2/2/6/3226.jpg;"FINCA NOBLES MALBEC VERDOT TINTO 750 ML";10063555;Vino;64.750000;72.52;7;0
+3228;http://localhost/cuenca/zona-rosa/img/p/3/2/2/8/3228.jpg;"CERVEZA SOL 355ML 1+1";50000410;;1.483385;1.66;0;1
+3230;http://localhost/cuenca/zona-rosa/img/p/3/2/3/0/3230.jpg;"Sacacorchos de aire comprimido";10080072;Inicio;11.892857;13.32;0;1
+3231;http://localhost/cuenca/zona-rosa/img/p/3/2/3/1/3231.jpg;"JOHNNIE WALKER GOLD 750 ML";10062747;Whisky;70.530000;78.99;53;0
+3232;http://localhost/cuenca/zona-rosa/img/p/3/2/3/2/3232.jpg;"VINO TINTO RESERVA 750 ML BARON DE CHIRE";10063772;Vino;107.710000;120.64;8;0
+3235;http://localhost/cuenca/zona-rosa/img/p/3/2/3/5/3235.jpg;"PUNCH GINGER ALE 2000 ML";10064093;"Bebidas & Mixers";1.560000;1.75;7;0
+3236;http://localhost/cuenca/zona-rosa/img/p/3/2/3/6/3236.jpg;"FINCA EL PORTILLO SAUV. BLANC 750 ML";10063600;Vino;9.820000;11;19;0
+3241;http://localhost/cuenca/zona-rosa/img/p/3/2/4/1/3241.jpg;"ESPUMANTE G. VANDUSH SEMI SECO 750ML";10064057;"Champaña & Espumantes";5.040000;5.64;11;0
+3246;http://localhost/cuenca/zona-rosa/img/p/3/2/4/6/3246.jpg;"JOHNNIE WALKER BLACK LABEL 750 ML";10063793;Whisky;44.550000;49.9;41;0
+3247;http://localhost/cuenca/zona-rosa/img/p/3/2/4/7/3247.jpg;"SANTA RITA MED REAL CHARDONAY 750ML";10062409;Vino;30.690000;34.37;21;0
+3250;http://localhost/cuenca/zona-rosa/img/p/3/2/5/0/3250.jpg;"RON APPLETON BLANCO 1.75L";10062983;Ron;24.610000;27.56;7;0
+3252;http://localhost/cuenca/zona-rosa/img/p/3/2/5/2/3252.jpg;"ALTO PALERMO MERLOT 750ML";10066747;Vino;5.800000;6.5;5;0
+3253;http://localhost/cuenca/zona-rosa/img/p/3/2/5/3/3253.jpg;"CRISTAL DURAZNO 750ML";10061881;Aguardiente;5.380000;6.03;14;0
+3254;http://localhost/cuenca/zona-rosa/img/p/3/2/5/4/3254.jpg;"TERRAZAS SINGLE VINEYARD MALBEC 750 ML";10063571;Vino;74.330000;83.25;9;0
+3255;http://localhost/cuenca/zona-rosa/img/p/3/2/5/5/3255.jpg;"LAMBRUSCO RIUNITE 750 ML";10064038;"Champaña & Espumantes";12.320000;13.8;64;0
+3256;http://localhost/cuenca/zona-rosa/img/p/3/2/5/6/3256.jpg;"Funda Enfriadora  con Gel";10080086;Inicio;14.866071;16.65;0;1
+3259;http://localhost/cuenca/zona-rosa/img/p/3/2/5/9/3259.jpg;"VINO CHOCOLATE KKO 750ML";10067494;Vino;9.810000;10.99;14;0
+3261;http://localhost/cuenca/zona-rosa/img/p/3/2/6/1/3261.jpg;"BLUE NUN LIEBRAUMILCH 750 ML";10063541;Vino;9.370000;10.49;18;0
+3262;http://localhost/cuenca/zona-rosa/img/p/3/2/6/2/3262.jpg;"GIN & TONIC  LATA 350ML";10067676;"Cerveza & RTD";1.340000;1.5;47;0
+3264;http://localhost/cuenca/zona-rosa/img/p/3/2/6/4/3264.jpg;"MAYCAS RESERVA SYRAH 750 ML";10063913;Vino;16.740000;18.75;9;0
+3266;http://localhost/cuenca/zona-rosa/img/p/3/2/6/6/3266.jpg;"Aireador de Vino";10080060;Inicio;35.440000;39.69;0;1
+3267;http://localhost/cuenca/zona-rosa/img/p/3/2/6/7/3267.jpg;"BAILEYS 750 ML";10063755;"Cremas & Cocteleras";23.200000;25.98;39;0
+3268;http://localhost/cuenca/zona-rosa/img/p/3/2/6/8/3268.jpg;"Promo 12 Gin W + Hielo + Mixer";10064082;Inicio;11.540000;12.92;0;1
+3271;http://localhost/cuenca/zona-rosa/img/p/3/2/7/1/3271.jpg;"GIN W 750 CL";10064082;Gin;11.540000;12.92;32;0
+3272;http://localhost/cuenca/zona-rosa/img/p/3/2/7/2/3272.jpg;"ENERGIZANTE 440 LATA 269ML";10064219;"Bebidas & Mixers";1.070000;1.2;30;0
+3274;http://localhost/cuenca/zona-rosa/img/p/.jpg;"Petaca 8 Oz Vintage";10080101;Inicio;13.383929;14.99;0;1
+3275;http://localhost/cuenca/zona-rosa/img/p/3/2/7/5/3275.jpg;"LOS CARDOS MALBEC 750ML";10062227;Vino;13.380000;14.99;15;0
+3277;http://localhost/cuenca/zona-rosa/img/p/3/2/7/7/3277.jpg;"JOHNNIE WALKER BLACK LABEL 50 ML";10063835;Whisky;9.250000;10.36;12;0
+3279;http://localhost/cuenca/zona-rosa/img/p/3/2/7/9/3279.jpg;"LICOR TOUCH SECO 750ML";10064140;Aguardiente;4.250000;4.76;25;0
+3280;http://localhost/cuenca/zona-rosa/img/p/3/2/8/0/3280.jpg;"VODKA PLATINO 750ML";10062819;Vodka;7.860000;8.8;7;0
+3281;http://localhost/cuenca/zona-rosa/img/p/3/2/8/1/3281.jpg;"CRISTAL SECO 34GL 375ML";10064315;Aguardiente;3.660000;4.1;29;0
+3283;http://localhost/cuenca/zona-rosa/img/p/3/2/8/3/3283.jpg;"CHANDON EXTRA BRUT 2BOTELLAS+2COPAS";10063507;"Champaña & Espumantes";52.870000;59.21;6;0
+3284;http://localhost/cuenca/zona-rosa/img/p/3/2/8/4/3284.jpg;"ANTHONY GREEN APPLE 1500 ML";10067254;Vino;10.260000;11.49;11;0
+3285;http://localhost/cuenca/zona-rosa/img/p/3/2/8/5/3285.jpg;"LUIGI BOSCA GALA 3 CHARDONAY 750 ML";10063587;Vino;42.700000;47.82;10;0
+3286;http://localhost/cuenca/zona-rosa/img/p/3/2/8/6/3286.jpg;"GENOVINO CARIGNAN 750 ML";10063955;Vino;30.150000;33.77;16;0
+3287;http://localhost/cuenca/zona-rosa/img/p/3/2/8/7/3287.jpg;"REGION CABERNET SAUVIGNON 750ML";10064096;Vino;6.440000;7.21;7;0
+3293;http://localhost/cuenca/zona-rosa/img/p/3/2/9/3/3293.jpg;"Vertedor Metálico con filtro";10080075;Inicio;5.026786;5.63;0;1
+3294;http://localhost/cuenca/zona-rosa/img/p/3/2/9/4/3294.jpg;"JOHNNIE WALKER BLUE LABEL 750 ML";10062113;Whisky;326.780000;365.99;2;0
+3295;http://localhost/cuenca/zona-rosa/img/p/3/2/9/5/3295.jpg;"BICICLETA SAUVIGNON BLANC 750 ML";10063775;Vino;9.370000;10.49;28;0
+3296;http://localhost/cuenca/zona-rosa/img/p/3/2/9/6/3296.jpg;"SKYY VODKA 1750 ML";10062531;Vodka;29.570000;33.12;4;0
+3297;http://localhost/cuenca/zona-rosa/img/p/3/2/9/7/3297.jpg;"TEQUILA CUERVO ESPECIAL GOLD 750 ML";10063527;Tequila;44.200000;49.5;17;0
+3301;http://localhost/cuenca/zona-rosa/img/p/3/3/0/1/3301.jpg;"MANI CRIS FAMILIAR 100GR";10062026;Snacks;1.120000;1.25;8;0
+3302;http://localhost/cuenca/zona-rosa/img/p/3/3/0/2/3302.jpg;"BELLA TAVOLA BLANCO 1L";10063733;Vino;4.220000;4.73;15;0
+3303;http://localhost/cuenca/zona-rosa/img/p/3/3/0/3/3303.jpg;"Promo 1 Johnnie Walker Red Label 750 Hielo + Mixer";10063792;Inicio;22.310000;24.99;200;0
+3304;http://localhost/cuenca/zona-rosa/img/p/3/3/0/4/3304.jpg;"RESERVA PINOT NOIR 750 ML";10063862;Vino;22.320000;25;4;0
+3305;http://localhost/cuenca/zona-rosa/img/p/3/3/0/5/3305.jpg;"CERVEZA HEINEKEN BOTELLA 33CL";10064060;"Cerveza & RTD";1.650000;1.85;352;0
+3306;http://localhost/cuenca/zona-rosa/img/p/3/3/0/6/3306.jpg;"RON CIEN FUEGOS ORO 1750ML";10064168;Ron;21.420000;23.99;25;0
+3307;http://localhost/cuenca/zona-rosa/img/p/3/3/0/7/3307.jpg;"AGUA IMPERIAL 350 ML LATA";10069353;"Bebidas & Mixers";0.540000;0.6;2;0
+3308;http://localhost/cuenca/zona-rosa/img/p/3/3/0/8/3308.jpg;"DOM PERIGNON 750 ML";10063458;"Champaña & Espumantes";253.570000;284;1;0
+3309;http://localhost/cuenca/zona-rosa/img/p/3/3/0/9/3309.jpg;"SANTA RITA RESERVA SAUVIGNON 750ML";10062417;Vino;17.540000;19.64;13;0
+3310;http://localhost/cuenca/zona-rosa/img/p/3/3/1/0/3310.jpg;"CRYMS GRANADINA 750ML";10064115;"Cremas & Cocteleras";4.910000;5.5;13;0
+3311;http://localhost/cuenca/zona-rosa/img/p/3/3/1/1/3311.jpg;"LAN CRIANZA 750 ML";10062987;Vino;24.510000;27.45;11;0
+3312;http://localhost/cuenca/zona-rosa/img/p/3/3/1/2/3312.jpg;"COCA LIGHT 2000ML";10061692;"Bebidas & Mixers";1.670000;1.87;6;0
+3313;http://localhost/cuenca/zona-rosa/img/p/3/3/1/3/3313.jpg;"GUAYASAMIN CABERNET SAUVIGNON 750ML";10066751;Vino;5.800000;6.5;8;0
+3315;http://localhost/cuenca/zona-rosa/img/p/3/3/1/5/3315.jpg;"NORTON RESERVA MALBEC 750 ML";10063574;Vino;17.850000;19.99;18;0
+3316;http://localhost/cuenca/zona-rosa/img/p/3/3/1/6/3316.jpg;"Eco Jigger 40/20 ml";10080089;Inicio;4.232143;4.74;0;1
+3318;http://localhost/cuenca/zona-rosa/img/p/3/3/1/8/3318.jpg;"VODKA FINLANDIA  750 ML";10077677;Vodka;21.050000;23.58;34;0
+3320;http://localhost/cuenca/zona-rosa/img/p/3/3/2/0/3320.jpg;"READY WI FIVE COCO 500 ML";10074000;"Cerveza & RTD";5.810000;6.51;10;0
+3322;http://localhost/cuenca/zona-rosa/img/p/3/3/2/2/3322.jpg;"ALTOS LAS HORMIGAS MALBEC RES.750 ML";10063545;Vino;37.950000;42.5;5;0
+3323;http://localhost/cuenca/zona-rosa/img/p/3/3/2/3/3323.jpg;"ESPUMANTE CONDE CRUZ SEMI SECO 750ML";10068134;"Champaña & Espumantes";5.190000;5.81;22;0
+3325;http://localhost/cuenca/zona-rosa/img/p/3/3/2/5/3325.jpg;"ELYSSIA GRAN CUVEE BRUT 750 ML";10063918;"Champaña & Espumantes";37.500000;42;4;0
+3328;http://localhost/cuenca/zona-rosa/img/p/3/3/2/8/3328.jpg;"Stone Rocks (hielos enfriadores)";10080063;Inicio;14.303571;16.02;0;1
+3329;http://localhost/cuenca/zona-rosa/img/p/3/3/2/9/3329.jpg;"FINISIMO SAUVIGNON BLANC 750 ML";10063760;Vino;20.530000;22.99;6;0
+3330;http://localhost/cuenca/zona-rosa/img/p/3/3/3/0/3330.jpg;"Promo 16 William Lawson 750ml + Hielo + Mixer";10062982;Inicio;14.550000;16.3;0;1
+3331;http://localhost/cuenca/zona-rosa/img/p/3/3/3/1/3331.jpg;"SANTA RITA 120 SAUVIGNON BLANC 750ML";10062478;Vino;8.920000;9.99;16;0
+3332;http://localhost/cuenca/zona-rosa/img/p/3/3/3/2/3332.jpg;"NC COLECCION PRIVADA BLEND CAB.MERL.MALB";10063885;Vino;17.850000;19.99;7;0
+3333;http://localhost/cuenca/zona-rosa/img/p/3/3/3/3/3333.jpg;"AGUA IMPERIAL 550 ML";10064223;"Bebidas & Mixers";0.540000;0.6;89;0
+3334;http://localhost/cuenca/zona-rosa/img/p/3/3/3/4/3334.jpg;"20 BARRELS SYRAH 750 ML";10063958;Vino;37.940000;42.49;6;0
+3335;http://localhost/cuenca/zona-rosa/img/p/3/3/3/5/3335.jpg;"CREMA WHITE MENTHE 700 ML";10063722;"Cremas & Cocteleras";16.580000;18.57;16;0
+3336;http://localhost/cuenca/zona-rosa/img/p/3/3/3/6/3336.jpg;"TORRES VINA SOL 750ML";10062426;Vino;30.890000;34.6;11;0
+3337;http://localhost/cuenca/zona-rosa/img/p/3/3/3/7/3337.jpg;"RESERVA PRIVADA SYRAH 750 ML";10063846;Vino;12.060000;13.51;14;0
+3339;http://localhost/cuenca/zona-rosa/img/p/3/3/3/9/3339.jpg;"CERVEZA SOL 330 ML";10068477;"Cerveza & RTD";1.560000;1.75;479;0
+3342;http://localhost/cuenca/zona-rosa/img/p/3/3/4/2/3342.jpg;"CEDRO FINO SHERRY 750 ML X G";10063513;Vino;35.440000;39.69;10;0
+3343;http://localhost/cuenca/zona-rosa/img/p/3/3/4/3/3343.jpg;"ANTHONY BIANCO 1500 ML";10067257;Vino;10.260000;11.49;11;0
+3345;http://localhost/cuenca/zona-rosa/img/p/3/3/4/5/3345.jpg;"REGION MERLOT 750ML.";10064098;Vino;5.760000;6.45;10;0
+3346;http://localhost/cuenca/zona-rosa/img/p/3/3/4/6/3346.jpg;"JUGO SPLASH LIMONADA 500ML";10064256;"Bebidas & Mixers";0.400000;0.45;19;0
+3347;http://localhost/cuenca/zona-rosa/img/p/3/3/4/7/3347.jpg;"LOS CARDOS SAUVIGNON BLANC 750ML";10062964;Vino;13.380000;14.99;3;0
+3349;http://localhost/cuenca/zona-rosa/img/p/3/3/4/9/3349.jpg;"LUIGI BOSCA MERLOT 750 ML";10063563;Vino;25.440000;28.49;8;0
+3351;http://localhost/cuenca/zona-rosa/img/p/3/3/5/1/3351.jpg;"Decapsulador Deluxe";10080078;Inicio;2.553571;2.86;0;1
+3353;http://localhost/cuenca/zona-rosa/img/p/3/3/5/3/3353.jpg;"SMIRNOFF RED 750ML+JACKET LONDON";10063779;Vodka;10.520000;11.78;5;0
+3355;http://localhost/cuenca/zona-rosa/img/p/3/3/5/5/3355.jpg;"TEQUILA CUERVO ESPECIAL GOLD 375 ML";10063531;Tequila;25.440000;28.49;7;0
+3356;http://localhost/cuenca/zona-rosa/img/p/3/3/5/6/3356.jpg;"APEROL APERITIVO 750 ML";10067373;"Aperitivos & Cordiales";24.120000;27.01;28;0
+3357;http://localhost/cuenca/zona-rosa/img/p/3/3/5/7/3357.jpg;"NC COLECCION PRIVADA MERLOT";10063898;Vino;17.850000;19.99;8;0
+3358;http://localhost/cuenca/zona-rosa/img/p/3/3/5/8/3358.jpg;"PERLA BIANCA GRAPPA ALEXANDER 200 ML";10063983;Aguardiente;66.900000;74.93;6;0
+3359;http://localhost/cuenca/zona-rosa/img/p/3/3/5/9/3359.jpg;"CONDE DE CARALT VINO BLANCO 750 ML";10063746;"Champaña & Espumantes";13.420000;15.03;41;0
+3362;http://localhost/cuenca/zona-rosa/img/p/3/3/6/2/3362.jpg;"RESERVA MERLOT 750 ML";10063866;Vino;22.320000;25;10;0
+3363;http://localhost/cuenca/zona-rosa/img/p/3/3/6/3/3363.jpg;"KANNIA RESERVA 750ML";10062682;Aguardiente;8.920000;9.99;19;0
+3365;http://localhost/cuenca/zona-rosa/img/p/3/3/6/5/3365.jpg;"AGUA LAS ROCAS S.G 500ML";10064177;"Bebidas & Mixers";0.270000;0.3;77;0
+3366;http://localhost/cuenca/zona-rosa/img/p/3/3/6/6/3366.jpg;"COCA COLA CONTOUR 500ML (12)P";10070518;"Bebidas & Mixers";0.760000;0.85;6;0
+3367;http://localhost/cuenca/zona-rosa/img/p/3/3/6/7/3367.jpg;"VODKA GREY GOOSE 375ML";10062897;Vodka;39.280000;43.99;6;0
+3368;http://localhost/cuenca/zona-rosa/img/p/3/3/6/8/3368.jpg;"GRAND OLD PARR 12 AÑOS 750 ML";10062074;Whisky;37.340000;41.82;102;0
+3375;http://localhost/cuenca/zona-rosa/img/p/3/3/7/5/3375.jpg;"SANTIAGO RUIZ VINO BLANCO 750 ML";10062990;Vino;47.680000;53.4;7;0
+3376;http://localhost/cuenca/zona-rosa/img/p/3/3/7/6/3376.jpg;"AGUARDIENTE 34° CRISTAL 750ML";10061698;Aguardiente;5.830000;6.53;3;0
+3381;http://localhost/cuenca/zona-rosa/img/p/3/3/8/1/3381.jpg;"ORGANICO CABERNET SAUVIG.CARMENERE";10063947;Vino;13.800000;15.46;9;0
+3382;http://localhost/cuenca/zona-rosa/img/p/3/3/8/2/3382.jpg;"RON APPLETON ORO 750ML";10064048;Ron;10.140000;11.36;14;0
+3383;http://localhost/cuenca/zona-rosa/img/p/3/3/8/3/3383.jpg;"Exprimidor Limones";10080092;Inicio;7.428571;8.32;0;1
+3384;http://localhost/cuenca/zona-rosa/img/p/3/3/8/4/3384.jpg;"NORTON VARIETAL CHARDONNAY 750 ML";10063548;Vino;10.500000;11.76;12;0
+3389;http://localhost/cuenca/zona-rosa/img/p/3/3/8/9/3389.jpg;"Tapón Metal Cava 2 en 1";10080066;Inicio;7.892857;8.84;0;1
+3390;http://localhost/cuenca/zona-rosa/img/p/3/3/9/0/3390.jpg;"RITTER LECHE C.ALMENDRAS ENTERAS 100GR";10062095;Snacks;3.210000;3.6;5;0
+3391;http://localhost/cuenca/zona-rosa/img/p/3/3/9/1/3391.jpg;"VODKA SMIRNOFF 700 ML";10075156;Vodka;9.810000;10.99;1;0
+3392;http://localhost/cuenca/zona-rosa/img/p/3/3/9/2/3392.jpg;"CONDE DE CARALT BRUT 750 ML";10063763;"Champaña & Espumantes";13.630000;15.27;20;0
+3393;http://localhost/cuenca/zona-rosa/img/p/3/3/9/3/3393.jpg;"SANTA RITA120 CABERNET SAUVI 750ML";10062486;Vino;8.920000;9.99;4;0
+3394;http://localhost/cuenca/zona-rosa/img/p/3/3/9/4/3394.jpg;"KIT GIN&TONIC KLIK (MADERA)";10075402;Regalos;57.010000;63.85;0;1
+3395;http://localhost/cuenca/zona-rosa/img/p/3/3/9/5/3395.jpg;"MAX RESERVA MERLOT 750ML";10062709;Vino;39.120000;43.81;14;0
+3396;http://localhost/cuenca/zona-rosa/img/p/3/3/9/6/3396.jpg;"CRYM'S TRIPLE SEC 750ML";10064088;"Cremas & Cocteleras";8.690000;9.73;3;0
+3397;http://localhost/cuenca/zona-rosa/img/p/3/3/9/7/3397.jpg;"KRAUTERMEISTER 650ML";10064226;"Aperitivos & Cordiales";13.390000;15;18;0
+3398;http://localhost/cuenca/zona-rosa/img/p/3/3/9/8/3398.jpg;"RON 2300 ORO 750ML";10062460;Ron;9.810000;10.99;13;0
+3399;http://localhost/cuenca/zona-rosa/img/p/3/3/9/9/3399.jpg;"CRISTAL SECO SUVE 28G 750ML";10061841;Aguardiente;5.800000;6.5;17;0

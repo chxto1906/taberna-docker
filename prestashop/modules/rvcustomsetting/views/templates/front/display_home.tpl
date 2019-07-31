@@ -1,0 +1,5 @@
+{*
+*  @author    RV Templates
+*  @copyright 2017-2018 RV Templates. All Rights Reserved.
+*  @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*}

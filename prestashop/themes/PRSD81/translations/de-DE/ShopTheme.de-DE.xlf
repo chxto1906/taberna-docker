@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="/var/www/html/Prestashop/PRS03/PRSD58/themes/PRSD58/templates/_partials/header.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="b61541208db7fa7dba42c85224405911">
+        <source>Menu</source>
+        <target>Menu</target>
+        <note>Context:
+File: /var/www/html/Prestashop/PRS03/PRSD58/themes/PRSD58/templates/_partials/header.tpl:113</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>redirectToShopByLocation</name>
+	<displayName><![CDATA[Redirect To Shop By Location]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Redirect To Shop By Location. Poner en la dirección2 de cada tienda la latitud y longitud. Ejm: -1234444;-344433 (Separada por un punto y coma como se muestra)]]></description>
+	<author><![CDATA[Henry Campoverde]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

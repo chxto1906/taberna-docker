@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>yandexmetrica</name>
+    <displayName><![CDATA[Yandex Metrica]]></displayName>
+    <version><![CDATA[1.1.3]]></version>
+    <description><![CDATA[Integra el c&oacute;digo de Yandex Metrica en PrestaShop]]></description>
+    <author><![CDATA[Jose Antonio Ruiz]]></author>
+    <tab><![CDATA[analytics_stats]]></tab>
+	<confirmUninstall><![CDATA[¿Estás seguro que quieres borrar el código de Yandes Metrica?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

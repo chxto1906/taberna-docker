@@ -1,0 +1,13 @@
+.productcountdown {
+    font-size: 12px;
+}
+.productcountdown h4 {
+    margin-top: 0;
+}
+.productcountdown .hide_zero_weeks .weeks {
+    display: none;
+}
+
+#product .pb-center-column .productcountdown {
+    text-align: left;
+}

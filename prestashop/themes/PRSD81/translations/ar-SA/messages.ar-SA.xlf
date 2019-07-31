@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\catalog\_partials\customize\button-cart.tpl" source-language="ar-SA" target-language="ar-SA" datatype="plaintext">
+    <body>
+      <trans-unit id="2d0f6b8300be19cf35e89e66f0677f95">
+        <source>Add to cart</source>
+        <target>Add to cart</target>
+        <note>Context:
+File: D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\catalog\_partials\customize\button-cart.tpl:36</note>
+      </trans-unit>
+      <trans-unit id="b55197a49e8c4cd8c314bc2aa39d6feb">
+        <source>Out of stock</source>
+        <target>Out of stock</target>
+        <note>Context:
+File: D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\catalog\_partials\customize\button-cart.tpl:42</note>
+      </trans-unit>
+      <trans-unit id="2e7b98e864e4018e01209ea80f66e712">
+        <source>out of stock</source>
+        <target>out of stock</target>
+        <note>Context:
+File: D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\catalog\_partials\customize\button-cart.tpl:43</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

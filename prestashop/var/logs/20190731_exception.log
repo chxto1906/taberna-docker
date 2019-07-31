@@ -1,0 +1,2 @@
+*ERROR* 	v1.7.5.0	2019/07/31 - 17:26:44: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php
+*ERROR* 	v1.7.5.0	2019/07/31 - 17:26:46: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\_partials\header.tpl" source-language="ar-SA" target-language="ar-SA" datatype="plaintext">
+    <body>
+      <trans-unit id="b61541208db7fa7dba42c85224405911">
+        <source>Menu</source>
+        <target>Menu</target>
+        <note>Context:
+File: D:\wamp64\www\Prestashop\PRSD81\themes\PRSD81\templates\_partials\header.tpl:118</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
