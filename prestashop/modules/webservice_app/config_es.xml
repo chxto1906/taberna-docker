@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>webservice_app</name>
+    <displayName><![CDATA[App Webservice]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Servicios web de la Taberna, para poder ser consumidos por la aplicaci&oacute;n m&oacute;vil]]></description>
+    <author><![CDATA[Henry Campoverde]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `asociacion_categorias` (
+  `id_asociacion_categorias` int NOT NULL AUTO_INCREMENT,
+  `id_categoria_sistema` int NOT NULL,  
+  `id_categoria_tienda` int NOT NULL,  
+   PRIMARY KEY (`id_asociacion_categorias`)
+ 
+)
+

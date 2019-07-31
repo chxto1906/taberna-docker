@@ -1,0 +1,1 @@
+*ERROR* 	v1.7.5.0	2019/03/13 - 12:31:52: La propiedad OrderHistory->id_order_state está vacía. at line 984 in file classes/ObjectModel.php

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>cotizadortaberna</name>
+    <displayName><![CDATA[Cotizador, productos recomendados y de inter&eacute;s de la Taberna Liquor Store.]]></displayName>
+    <version><![CDATA[1]]></version>
+    <description><![CDATA[Cotizador de licores. Configurable para agregar emails a los que se les enviar&aacute; la cotizaci&oacute;n que los clientes hagan.]]></description>
+    <author><![CDATA[Henry Campoverde]]></author>
+    <tab><![CDATA[lataberna]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

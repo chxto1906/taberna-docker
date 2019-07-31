@@ -1,0 +1,89 @@
+version: '2'
+services:
+  nginx:
+    container_name: nginx
+    build: docker-images/nginx
+    ports:
+      - "80:80"
+      #- "443:443"
+    #volumes:
+     #- /etc/letsencrypt/:/etc/letsencrypt/
+     #- /etc/nginx/ssl/:/etc/nginx/ssl/
+    volumes:
+      - ./docker-images/nginx/ssl/:/etc/nginx/ssl/:delegated
+      #- ./docker-images/nginx/ssl/secure/:/etc/ssl/secure/:delegated
+    volumes_from:
+      - php-fpm
+
+    networks:
+      - front-tier
+
+  php-fpm:
+    container_name: php
+    build: docker-images/php-fpm
+    volumes:
+      - ./prestashop/:/html/:delegated
+      #- ./en_construccion/:/html/:delegated
+      - ./docker-images/php-fpm/php.ini/:/usr/local/etc/php/php.ini
+      - ./docker-images/php-fpm/error_log/:/var/log/fpm-php.www.log
+    networks:
+      - front-tier
+      - back-tier
+
+  mysql:
+    container_name: mysql
+    build: docker-images/mysql
+    hostname: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - back-tier
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+
+  java:
+    container_name: java
+    build: docker-images/java
+    volumes:
+      #- ./prestashop/facturas/pruebas/:/home/pruebas/:delegated
+      - ./prestashop/facturas/produccion/:/home/produccion/:delegated
+      - ./docker-images/java/firma/:/home/firma/
+    networks:
+      - back-tier
+    restart: always
+
+  phpadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "9010:80"
+    networks:
+      - back-tier
+    environment:
+      PMA_HOST: "mysql"
+      PMA_PORT: "3306"
+
+  # For debugging purposes only
+  # portainer:
+  #   image: portainer/portainer:latest
+  #   privileged: true
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge

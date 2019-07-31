@@ -1,0 +1,32 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{rvwishlistblock}prestashop>rvwishlistblock_9ae79c1fccd231ac7fbbf3235dbf6326'] = 'Mi lista de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_db872ea537236c60874d5b0e859fe4b5'] = 'Lista de Productos';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_a0623b78a5f2cfe415d9dbbd4428ea40'] = 'Tu cuenta';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_fe79fa73879a385e472f6d3a1502391e'] = 'Tu lista de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_7ec9cceb94985909c6994e95c31c1aa8'] = 'Mi lista de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_06c335f27f292a096a9bf39e3a58e97b'] = 'Nueva lista';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_49ee3087348e8d44e1feda1917443987'] = 'Nombre';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_c9cc8cce247e49bae79f15173ce97354'] = 'Guardar';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_03ab340b3f99e03cff9e84314ead38c0'] = 'Cantidad';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_5e729042e30967c9d6f65c6eab73e2fe'] = 'Visto';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_0eceeb45861f9585dd7a97a3e36f85c6'] = 'Creado';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_45284ef16392f85ff424b2ef36ab5948'] = 'Enlace directo';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_7a1920d61156abc05a60135aefe8bc67'] = 'Defecto';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_f2a6c498fb90ee345d997f888fce3b18'] = 'Eliminar';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Ver';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_d025259319054206be54336a00defe89'] = '¿Realmente quieres borrar esta lista de deseos?';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_a958dbb46713e59856c35f89e5092a5e'] = 'Volver a tu cuenta';
+$_MODULE['<{rvwishlistblock}prestashop>mywishlist_8cf04a9734132302f96da8e113e80ce5'] = 'Inicio';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_30820a1bf6a285e45cda2beda3d7738d'] = 'Enviar mi lista de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_694e8d1f2ee056f98ee488bdc4982d73'] = 'Cantidad';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_502996d9790340c5fd7b86a5b93b1c9f'] = 'Prioridad';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_655d20c1ca69519ca647684edbb2db35'] = 'Alta';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_87f8a6ab85c9ced3702b4ea641ad4bb5'] = 'Media';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_28d0edd045e05cf5af64e35ae0c4c6ef'] = 'Baja';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_c9cc8cce247e49bae79f15173ce97354'] = 'Guardar';
+$_MODULE['<{rvwishlistblock}prestashop>managewishlist_55a91805ff69e2f99672b96b9f210c1b'] = 'Enviar mi lista de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>rvwishlist_top_e0fd9b310aba555f96e76738ff192ac3'] = 'Listas de deseos';
+$_MODULE['<{rvwishlistblock}prestashop>rvwishlist_top_641254d77e7a473aa5910574f3f9453c'] = 'Deseados';

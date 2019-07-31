@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>payphone</name>
+    <displayName><![CDATA[PayPhone button]]></displayName>
+    <version><![CDATA[2.1.3]]></version>
+    <description><![CDATA[Accept payments for your products via payphone button.]]></description>
+    <author><![CDATA[Ornolis V&aacute;zquez]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Are you sure about removing?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,94 @@
+/**
+*  @author    RV Templates
+*  @copyright 2017-2018 RV Templates. All Rights Reserved.
+*  @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+
+.rvcmsall-pattern-show {
+	height: auto;
+    width: 200px;
+}
+.rvall-pattern-show {
+	border: 1px solid #ccc;
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    margin: 0 5px 5px 0;
+    width: 22px;
+}
+.rv_custom_setting_active {
+	border-color: #f00 !important;
+}
+
+.rvall-pattern-show:hover {
+	border-color: #000;
+}
+.custom_pattern {
+    margin-top: 5px;
+}
+
+
+.rvadmincustom-setting {
+    width: 100%;
+}
+.rvadmincustom-setting .panel {
+    display: none;
+}
+.rvadmincustom-setting-all-tabs {
+    display: block;
+    padding: 5px 10px 0 10px;
+    margin: 0 !important;
+
+}
+.rvadmincustom-setting-tab {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 14px;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    border-left: 1px solid #eff1f2;
+    border-right:1px solid #eff1f2;
+    border-top:1px solid #eff1f2;
+}
+
+.rvadmincustom-setting-tab:hover,
+.rvadmincustom-setting-active {
+    cursor: pointer;
+    border-left: 1px solid #8b8b8b;
+    border-right:1px solid #8b8b8b;
+    border-top:1px solid #8b8b8b;
+    border-radius:5px 5px 0px 0px;
+}
+
+#RVCUSTOMSETTING_THEME_OPTION input[type="radio"]{
+    float: left;
+
+}
+.color-wrapper{
+    float: left;
+}
+#RVCUSTOMSETTING_THEME_OPTION .col-lg-9 p{
+    float: left;
+    margin-right: 10px;
+}
+#RVCUSTOMSETTING_THEME_OPTION .col-lg-9 p.help-block{
+    width: 18%;
+}
+
+.color-wrapper.theme1 .first{
+    background-color: #232f3e;
+}
+.color-wrapper.theme1 .second{
+    background-color: #ffd05f;
+}
+
+.color-wrapper .first,
+.color-wrapper .second{
+    width: 20px; 
+    height: 6px; 
+    margin: 2px;
+    border: 1px solid #eee;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>mipilotoshipping</name>
+    <displayName><![CDATA[Mi Piloto Shipping]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Mi Piloto Shipping para env&iacute;o y c&aacute;lculo de costo de env&iacute;o]]></description>
+    <author><![CDATA[Henry Campoverde]]></author>
+    <tab><![CDATA[shipping_logistics]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
