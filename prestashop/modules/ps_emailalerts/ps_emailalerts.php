@@ -426,51 +426,55 @@ class Ps_EmailAlerts extends Module
         // Send 1 email by merchant mail, because Mail::Send doesn't work with an array of recipients
         $merchant_mails = explode(self::__MA_MAIL_DELIMITOR__, $this->merchant_mails);
         foreach ($merchant_mails as $merchant_mail) {
-            // Default language
-            $mail_id_lang = $id_lang;
-            $mail_iso = $iso;
 
-            // Use the merchant lang if he exists as an employee
-            $results = Db::getInstance()->executeS('
-				SELECT `id_lang` FROM `'._DB_PREFIX_.'employee`
-				WHERE `email` = \''.pSQL($merchant_mail).'\'
-			');
-            if ($results) {
-                $user_iso = Language::getIsoById((int) $results[0]['id_lang']);
-                if ($user_iso) {
-                    $mail_id_lang = (int) $results[0]['id_lang'];
-                    $mail_iso = $user_iso;
+            //if ((int) $order_state->id != 14) {
+
+                // Default language
+                $mail_id_lang = $id_lang;
+                $mail_iso = $iso;
+
+                // Use the merchant lang if he exists as an employee
+                $results = Db::getInstance()->executeS('
+    				SELECT `id_lang` FROM `'._DB_PREFIX_.'employee`
+    				WHERE `email` = \''.pSQL($merchant_mail).'\'
+    			');
+                if ($results) {
+                    $user_iso = Language::getIsoById((int) $results[0]['id_lang']);
+                    if ($user_iso) {
+                        $mail_id_lang = (int) $results[0]['id_lang'];
+                        $mail_iso = $user_iso;
+                    }
                 }
-            }
 
-            $dir_mail = false;
-            if (file_exists(dirname(__FILE__).'/mails/'.$mail_iso.'/new_order.txt') &&
-                file_exists(dirname(__FILE__).'/mails/'.$mail_iso.'/new_order.html')) {
-                $dir_mail = dirname(__FILE__).'/mails/';
-            }
+                $dir_mail = false;
+                if (file_exists(dirname(__FILE__).'/mails/'.$mail_iso.'/new_order.txt') &&
+                    file_exists(dirname(__FILE__).'/mails/'.$mail_iso.'/new_order.html')) {
+                    $dir_mail = dirname(__FILE__).'/mails/';
+                }
 
-            if (file_exists(_PS_MAIL_DIR_.$mail_iso.'/new_order.txt') &&
-                file_exists(_PS_MAIL_DIR_.$mail_iso.'/new_order.html')) {
-                $dir_mail = _PS_MAIL_DIR_;
-            }
+                if (file_exists(_PS_MAIL_DIR_.$mail_iso.'/new_order.txt') &&
+                    file_exists(_PS_MAIL_DIR_.$mail_iso.'/new_order.html')) {
+                    $dir_mail = _PS_MAIL_DIR_;
+                }
 
-            if ($dir_mail) {
-                Mail::Send(
-                    $mail_id_lang,
-                    'new_order',
-                    sprintf(Mail::l('New order : #%d - %s', $mail_id_lang), $order->id, $order->reference),
-                    $template_vars,
-                    $merchant_mail,
-                    null,
-                    $configuration['PS_SHOP_EMAIL'],
-                    $configuration['PS_SHOP_NAME'],
-                    null,
-                    null,
-                    $dir_mail,
-                    null,
-                    $id_shop
-                );
-            }
+                if ($dir_mail) {
+                    Mail::Send(
+                        $mail_id_lang,
+                        'new_order',
+                        sprintf(Mail::l('New order : #%d - %s', $mail_id_lang), $order->id, $order->reference),
+                        $template_vars,
+                        $merchant_mail,
+                        null,
+                        $configuration['PS_SHOP_EMAIL'],
+                        $configuration['PS_SHOP_NAME'],
+                        null,
+                        null,
+                        $dir_mail,
+                        null,
+                        $id_shop
+                    );
+                }
+            //}
         }
     }
 

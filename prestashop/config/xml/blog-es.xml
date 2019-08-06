@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/es/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/es/blog/feed.xml</link>
+    <description></description>
+    <language>es</language>
+     <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>¿Cómo usar un Heatmap para optimizar la Web de tu negocio online?</title>
+    <link>https://www.prestashop.com/es/blog/heatmap-mapa-de-calor-web</link>
+    <description>¿Conoces la importancia de integrar un heatmap o mapa de calor dentro de la web de tu tienda online?</description>
+     <pubDate>Mon, 05 Aug 2019 09:47:49 +0200</pubDate>
+ <dc:creator>Marlén Hernandez Perez</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/heatmap-mapa-de-calor-web</guid>
+  </item>
+  <item>
+    <title>¿Qué es el Networking y para qué sirve esta estrategia de marketing?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-el-networking</link>
+    <description>¿Aún no sabes qué es el Networking ni la importancia que tiene para todo reponsable de un negocio online?</description>
+     <pubDate>Mon, 29 Jul 2019 09:30:36 +0200</pubDate>
+ <dc:creator>Toñi Rodriguez</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-el-networking</guid>
+  </item>
+  <item>
+    <title>Breadcrumbs o &amp;quot;Migas de Pan&amp;quot; ¿cómo influyen en el SEO de tu Web?</title>
+    <link>https://www.prestashop.com/es/blog/breadcrumbs</link>
+    <description>¿Sabes qué son las &quot;migas de pan&quot; o Breadcrumbs en diseño web?</description>
+     <pubDate>Fri, 26 Jul 2019 11:35:52 +0200</pubDate>
+ <dc:creator>Sergio Escriba</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/breadcrumbs</guid>
+  </item>
+  <item>
+    <title>Guía de Instagram Ads ¿cómo crear una campaña para tu negocio?</title>
+    <link>https://www.prestashop.com/es/blog/instagram-ads</link>
+    <description>¿Aún no conoces Instagram Ads, la plataforma publicitaria de esta red social?</description>
+     <pubDate>Mon, 22 Jul 2019 12:12:26 +0200</pubDate>
+ <dc:creator>Isabel Romero Carretero</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/instagram-ads</guid>
+  </item>
+  <item>
+    <title>7 Mejores plantillas para vender bañadores online con tu PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/plantillas-banadores-online</link>
+    <description>¿Aún no tienes una plantilla profesional para tu tienda de bañadores online?</description>
+     <pubDate>Mon, 22 Jul 2019 10:43:29 +0200</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-banadores-online</guid>
+  </item>
+  <item>
+    <title>Machine Learning: ¿cómo afecta esta tecnología al éxito de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-machine-learning</link>
+    <description>¿Has oído en repetidas ocasiones el concepto &quot;Machine Learning&quot;, pero aún no sabes qué es ni cómo puedes aplicarlo en tu propio negocio?</description>
+     <pubDate>Mon, 15 Jul 2019 15:47:57 +0200</pubDate>
+ <dc:creator>Rubén Abad</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-machine-learning</guid>
+  </item>
+  <item>
+    <title>Nueva &amp;quot;Versión 1.7.6&amp;quot; de PrestaShop: descubre todas sus novedades</title>
+    <link>https://www.prestashop.com/es/blog/prestashop-1-7-6</link>
+    <description>¿Has instalado ya la versión 1.7.6 de nuestro software en tu PrestaShop?</description>
+     <pubDate>Thu, 11 Jul 2019 11:04:55 +0200</pubDate>
+ <dc:creator>Méguy Solvet</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/prestashop-1-7-6</guid>
+  </item>
+  <item>
+    <title>¿Cuáles son los tamaños y formatos por defecto de las fotos en una tienda PrestaShop?</title>
+    <link>https://www.prestashop.com/es/blog/tamanos-y-formatos-de-imagenes-para-la-plantilla-predeterminada-de-prestashop</link>
+    <description>¿Conoces cuáles son los tamaños y formatos de imágenes de la plantilla por defecto de una Web en PrestaShop?</description>
+     <pubDate>Wed, 10 Jul 2019 16:14:05 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/tamanos-y-formatos-de-imagenes-para-la-plantilla-predeterminada-de-prestashop</guid>
+  </item>
+  <item>
+    <title>Comentarios de clientes: la funcionalidad nativa de la nueva versión 1.7.6</title>
+    <link>https://www.prestashop.com/es/blog/comentarios-de-clientes</link>
+    <description>¿Conoces la nueva funcionalidad nativa de la versión 1.7.6 de PrestaShop de &quot;comentarios de clientes&quot;?</description>
+     <pubDate>Tue, 09 Jul 2019 11:50:47 +0200</pubDate>
+ <dc:creator>Eva Lacalle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/comentarios-de-clientes</guid>
+  </item>
+  <item>
+    <title>¿Qué es Pinterest, para qué sirve y cómo funciona esta plataforma visual?</title>
+    <link>https://www.prestashop.com/es/blog/sacale-partido-al-pinterest-de-tu-tienda-online</link>
+    <description>¿Aún no conoces Pinterest como plataforma complementaria para tu negocio online?</description>
+     <pubDate>Mon, 08 Jul 2019 13:33:38 +0200</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/sacale-partido-al-pinterest-de-tu-tienda-online</guid>
+  </item>
+  </channel>
+</rss>

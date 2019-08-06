@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-24 11:29:34
+/* Smarty version 3.1.33, created on 2019-08-06 08:16:39
   from '/html/backoffice/themes/default/template/helpers/list/list_action_enable.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d38876e31b482_67153445',
+  'unifunc' => 'content_5d497db740e823_59554034',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d38876e31b482_67153445 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d497db740e823_59554034 (Smarty_Internal_Template $_smarty_tpl) {
 ?><a class="list-action-enable<?php if (isset($_smarty_tpl->tpl_vars['ajax']->value) && $_smarty_tpl->tpl_vars['ajax']->value) {?> ajax_table_link<?php }
 if ($_smarty_tpl->tpl_vars['enabled']->value) {?> action-enabled<?php } else { ?> action-disabled<?php }?>" href="<?php echo call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['url_enable']->value,'html','UTF-8' ));?>
 "<?php if (isset($_smarty_tpl->tpl_vars['confirm']->value)) {?> onclick="return confirm('<?php echo $_smarty_tpl->tpl_vars['confirm']->value;?>

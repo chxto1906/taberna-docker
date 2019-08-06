@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-31 17:26:41
+/* Smarty version 3.1.33, created on 2019-08-06 09:48:59
   from 'module:rvcategorysearchviewstemp' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4215a1c87d67_52312870',
+  'unifunc' => 'content_5d49935ba52938_62103074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4215a1c87d67_52312870 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d49935ba52938_62103074 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="_desktop_rvsearch" class="col-lg-10">
 <div class="rvcategorysearch">
     <div id="category_search">

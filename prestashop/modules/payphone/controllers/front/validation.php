@@ -171,8 +171,7 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
         }
     }
 
-
-    private function reversePayphone($transactionId) {
+    public function reversePayphone($transactionId) {
         $config = ConfigurationManager::Instance();
         $config->Token = Configuration::get('PAYPHONE_TOKEN');
         $pb = new PayphoneButton();

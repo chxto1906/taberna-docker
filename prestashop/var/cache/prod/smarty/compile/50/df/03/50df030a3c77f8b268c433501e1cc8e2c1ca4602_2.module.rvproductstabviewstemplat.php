@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-31 17:26:32
+/* Smarty version 3.1.33, created on 2019-08-06 09:43:16
   from 'module:rvproductstabviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d421598558527_08223951',
+  'unifunc' => 'content_5d499204c9eea6_93510840',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product-slider.tpl' => 1,
   ),
 ),false)) {
-function content_5d421598558527_08223951 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d499204c9eea6_93510840 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<div id="rvproductstab" class="products_block clearfix container">
 		<div class="products_block_inner">
 			<div class="rv-titletab">

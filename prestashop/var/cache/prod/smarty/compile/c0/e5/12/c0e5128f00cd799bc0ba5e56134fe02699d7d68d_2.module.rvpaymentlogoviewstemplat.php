@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-31 17:26:41
+/* Smarty version 3.1.33, created on 2019-08-06 09:49:06
   from 'module:rvpaymentlogoviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4215a1645268_56375131',
+  'unifunc' => 'content_5d499362636652_04369886',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4215a1645268_56375131 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d499362636652_04369886 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['cms_payment_logo']->value) && $_smarty_tpl->tpl_vars['cms_payment_logo']->value) {?>
 	<div id="payment_logo_block_left" class="payment_logo_block col-lg-4 col-md-12">
 	<span>Payment</span>

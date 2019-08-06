@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-24 11:57:30
+/* Smarty version 3.1.33, created on 2019-08-06 09:32:58
   from '/html/backoffice/themes/new-theme/template/components/layout/employee_dropdown.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d388dfa0a8a34_03538760',
+  'unifunc' => 'content_5d498f9abb8bc2_35491594',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d388dfa0a8a34_03538760 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d498f9abb8bc2_35491594 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['employee']->value)) {?>
 <div class="dropdown employee-dropdown">
   <div class="rounded-circle person" data-toggle="dropdown">

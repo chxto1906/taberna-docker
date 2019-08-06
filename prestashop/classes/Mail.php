@@ -27,6 +27,7 @@
 /**
  * Class MailCore.
  */
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 class MailCore extends ObjectModel
 {
     public $id;
@@ -150,6 +151,8 @@ class MailCore extends ObjectModel
         if (!$idShop) {
             $idShop = Context::getContext()->shop->id;
         }
+
+        $log = new LoggerTools();
 
         $keepGoing = array_reduce(
             Hook::exec(
@@ -340,6 +343,23 @@ class MailCore extends ObjectModel
 
                     return false;
                 }
+
+
+                $log->add("<br>***SEND EMAIL***<br>");
+                $log->add("<br>SERVER: ".$configuration['PS_MAIL_SERVER']."<br>");
+                $log->add("<br>PORT: ".$configuration['PS_MAIL_SMTP_PORT']."<br>");
+                $log->add("<br>ENCRIPTACION: ".$configuration['PS_MAIL_SMTP_ENCRYPTION']."<br>");
+                $log->add("<br>LOGIN: ".$configuration['PS_MAIL_USER']."<br>");
+                $log->add("<br>PASSWORD: ".$configuration['PS_MAIL_PASSWD']."<br>");
+                $log->add("<br>FROM NAME: ".$fromName."<br>");
+                $log->add("<br>FROM: ".$from."<br>");
+
+                /*echo "<br>FROM: $fromName<br>";
+                echo "<br>TO: $to<br>";
+                echo "<br>SUBJECT: $subject<br>";
+                echo "<br>CONTENT: $content<br>";*/
+
+
 
                 $connection = \Swift_SmtpTransport::newInstance(
                     $configuration['PS_MAIL_SERVER'],
@@ -577,7 +597,10 @@ class MailCore extends ObjectModel
                 }
             }
             /* Send mail */
-            $message->setFrom(array($from => $fromName));
+            /*** MODIFICADO POR Henry ****/
+            //$message->setFrom(array($from => $fromName));
+            $message->setFrom(array("digital@lataberna.com.ec" => $fromName));
+            
 
             // Hook to alter Swift Message before sending mail
             Hook::exec('actionMailAlterMessageBeforeSend', [
@@ -699,22 +722,24 @@ class MailCore extends ObjectModel
         $smtpEncryption
     ) {
         $result = false;
+        $log = new LoggerTools();
+
         try {
             if ($smtpChecked) {
                 if (Tools::strtolower($smtpEncryption) === 'off') {
                     $smtpEncryption = false;
                 }
 
-                /*echo "<br>SERVER: $smtp_server<br>";
-                echo "<br>PORT: $smtpPort<br>";
-                echo "<br>ENCRIPTACION: $smtpEncryption<br>";
-                echo "<br>LOGIN: $smtpLogin<br>";
-                echo "<br>PASSWORD: $smtpPassword<br>";
-                echo "<br>FROM: $from<br>";
-                echo "<br>TO: $to<br>";
-                echo "<br>SUBJECT: $subject<br>";
-                echo "<br>CONTENT: $content<br>";*/
-                
+                $log->add("<br>***TEST***<br>");
+                $log->add("<br>SERVER: $smtp_server<br>");
+                $log->add("<br>PORT: $smtpPort<br>");
+                $log->add("<br>ENCRIPTACION: $smtpEncryption<br>");
+                $log->add("<br>LOGIN: $smtpLogin<br>");
+                $log->add("<br>PASSWORD: $smtpPassword<br>");
+                $log->add("<br>FROM: $from<br>");
+                $log->add("<br>TO: $to<br>");
+                $log->add("<br>SUBJECT: $subject<br>");
+                $log->add("<br>CONTENT: $content<br>");
 
                 $smtp = \Swift_SmtpTransport::newInstance($smtp_server, $smtpPort, $smtpEncryption)
                     ->setUsername($smtpLogin)

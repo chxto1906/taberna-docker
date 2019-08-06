@@ -50,6 +50,51 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
     }
 
 
+    private function generateParamsCustomer($address){
+        
+        $customer = Context::getContext()->customer;
+        if ($address->type_dni == "Cédula")
+            $type_dni = "02";
+        elseif ($address->type_dni == "Ruc") {
+            $type_dni = "01";
+        }else{
+            $type_dni = "03";
+        }
+        
+        return array(
+            "PaBarr"    =>  DISTRITO, //distrito
+            "PaBran1"   =>  "",
+            "PA_BRSCH"  =>  "",
+            "PaCelu"    =>  $address->phone_mobile,
+            "PaEmail"   =>  $address->email,
+            "PaExt1"    =>  "",
+            "PaExt2"    =>  "",
+            "PaFamst"   =>  "0",
+            "PaFax"     =>  "",
+            "PaFityp"   =>  ($address->type_dni == "Cédula" || $address->type_dni == "Pasaporte") ? "PN" : "PJ",
+            "PaKdgrp"   =>  "01",
+            "PaKtokd"   =>  "DRET",
+            "PaParge"   =>  $customer->id_gender,
+            "PaParh1"   =>  "I",
+            "PaPobl"    =>  "101",
+            "PaPriap"   =>  $address->lastname,
+            "PaPrinom"  =>  $address->firstname,
+            "PaRecco"   =>  "SI",
+            "PaRegi"    =>  "01",
+            "PaStcd1"   =>  $address->dni,
+            "PaStcdt"   =>  $type_dni,
+            "PaStr1"    =>  $address->address1,
+            "PaStr2"    =>  "",
+            "PaStr3"    =>  "",
+            "PaTel1"    =>  $address->phone,
+            "PaTel2"    =>  "000",
+            "PaTrata"   =>  "002",
+            "PA_UCAJA"  =>  CEDULA_CAJERO,
+            "PA_VKBUR"  =>  "ZPRU"
+        );
+    }
+
+
     public function processCreateRowsFacturacionDB($order,$cart,$address,$write){
         $result = false;
         $secuencial = $this->getSecuencialFactura();
@@ -99,8 +144,31 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
         return $secuencial;
     }
 
+    private function generateDataItemTransporte($order,$secuencial){
+        return array(
+            'ruc_empresa' => RUC_EMPRESA,
+            'ambiente' => AMBIENTE,
+            'documento' => DOCUMENTO,
+            'establecimiento' => ESTABLECIMIENTO,
+            'punto_emision' => PUNTO_EMISION,
+            'secuencial' => $secuencial,
+            'codigo_principal' => SERV_VARIOS_TABERNAS,
+            'descripcion' => SERV_VARIOS_TABERNAS_DESCRIPCION,
+            'cantidad' => 1,
+            'precio' => $order->total_shipping_tax_excl,
+            'descuento' => 0,
+            'total_sin_impuesto' => $order->total_shipping_tax_excl,
+            'codigo_impuesto_iva' => 2,
+            'codigo_porcentaje_iva' => 2,
+            'tarifa_iva' => 12,
+            'base_imponible_iva' => $order->total_shipping_tax_excl,
+            'valor_iva' => $order->total_shipping_tax_incl - $order->total_shipping_tax_excl
+        );   
+    }
+
     public function generateDataCabeceraFacturacion($order,$cart,$address,$secuencial,$write){
-        $shop = Context::getContext()->shop;
+        //$shop = Context::getContext()->shop;
+        $shop = $this->context->shop;
         $address1 = $shop->address->address1;
         if ($address->type_dni == "Cédula")
             $type_dni = "05";

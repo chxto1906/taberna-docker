@@ -71,7 +71,7 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
         INNER JOIN factura_cabecera as fc
         ON po.id_order = fc.id_order
         WHERE po.id_shop = '.$id_shop.' AND
-        (po.current_state = 15 or po.current_state = 14)  AND po.print = "N" AND po.valid = 1 AND
+        (po.current_state = 15 or po.current_state = 2)  AND po.print = "N" AND po.valid = 1 AND
         fc.numero_pedido IS NOT NULL AND fc.documento_contable_recaudo IS NOT NULL') ;
 
         return $pedidos;

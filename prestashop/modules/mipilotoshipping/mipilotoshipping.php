@@ -335,11 +335,11 @@ class Mipilotoshipping extends CarrierModule
     }
 
 
-    public function agendarPedido($order,$cart=null){
+    public function agendarPedido($order,$efectivo){
         $result = null;
 
 
-
+        $total = (float) $order->total_paid;
 
         /*if (Context::getContext()->customer->logged == true)   
         {*/
@@ -378,8 +378,9 @@ class Mipilotoshipping extends CarrierModule
                 "direccion_entrega" => $address->address1,
                 "referencia_entrega" => $address->address2,
                 "cedula_entrega" => $address->dni,
-                "tiempo_llegada" => "60"
-
+                "tiempo_llegada" => "60",
+                "email_usuario" => $address->email,
+                "monto" => $total
             );
 
             echo "Si se está llamando al API DE MiPiloto ";
@@ -387,7 +388,7 @@ class Mipilotoshipping extends CarrierModule
             echo "Se está enviando: <br>";
             var_dump($body);
 
-            $resultHacerPedido = $curlmipiloto->hacerPedido($body);
+            $resultHacerPedido = $curlmipiloto->hacerPedido($body,$efectivo);
 
             if ($resultHacerPedido["status"] == 1){
                 $result = $resultHacerPedido["result"];

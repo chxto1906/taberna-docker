@@ -23,6 +23,8 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
     	parent::initContent();
 
         include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/include/config.php');
+
+
         echo "Empieza FacturaSAP " . date('m/d/Y G:i:s a', time()) . "<br>";
         $id_carrier = $this->context->cart->id_carrier;
         echo "<br>ID_CARRIER: ".$id_carrier."<br>";
@@ -66,8 +68,20 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         $in = 0;
         foreach ($facturas as $factura) {
             $in++;
+            var_dump($factura);
             $detalle = $this->getDetalleFacturas($factura["establecimiento"],$factura["punto_emision"],$factura["secuencial"]);
+
+
             $payment = $this->getPaymentPayphone($factura["transaction_id_pay"]);
+            echo "<br>***PAYMENT payphone return***<br>";
+            var_dump($payment);
+            $efectivo = count($payment) > 0 ? false : true;
+            $payment[0] = count($payment) > 0 ? $payment[0] : "";
+
+            echo "<br>PAYENT[0] **<br>";
+            var_dump($payment[0]);
+
+            echo "<br>¿EFECTIVO?: $efectivo<br>";
 
             $dataFacturaSAP = $this->generateDataFacturaSAP($factura,$detalle,$payment[0]);
             echo '<pre>' . var_export($dataFacturaSAP, true) . '</pre>';
@@ -90,7 +104,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                             $this->log->add("save_respuesta_facturaSAP_db: ".$resSaveRespuestaFacturaSapdb);
                             if ($resSaveRespuestaFacturaSapdb) {
                                 $this->log->add("inicia recaudo");
-                                $this->recaudoSap($resDoFacturaSAP,$factura,$payment[0]);
+                                $this->recaudoSap($resDoFacturaSAP,$factura,$payment[0],$efectivo);
                             }else{
                                 echo "<br>No se pudo guardar FacturaSAP<br>";
                                 $this->log->add("<br>No se pudo guardar FacturaSAP<br>");
@@ -113,7 +127,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                             $factura["numero_documento_contable"]
                         ];
                         $this->log->add("recaudoSap cuando ya está hecho la factura");
-                        $this->recaudoSap($dataResSapFactura,$factura,$payment[0]);
+                        $this->recaudoSap($dataResSapFactura,$factura,$payment[0],$efectivo);
                     }
                 }
             }else{
@@ -151,12 +165,12 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
     }
 
 
-    private function notificarAMiPiloto($order){
+    private function notificarAMiPiloto($order,$efectivo){
     // MI piloto Henry Campoverde add
         $log = new LoggerTools();
         $result = null;
         $mipiloto = new Mipilotoshipping();
-        $resultadoAgendar = $mipiloto->agendarPedido($order);
+        $resultadoAgendar = $mipiloto->agendarPedido($order,$efectivo);
         $guia_numero=0; $hora_llegada = 0;
         $log->add("entro a notificarAMiPiloto");
         if ($resultadoAgendar){
@@ -167,10 +181,16 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
             $tiempo_llegada = 60;
             $resultadoActivar = $mipiloto->activarPedido($guia_numero,$tipo_vehiculo,$tipo_producto,$tiempo_llegada);
             if (!empty($resultadoActivar)){
-                $guia_numero = $resultadoActivar->guia_numero;
-                $hora_llegada = $resultadoActivar->hora_llegada;
-                //$this->changeOrderStatus($order, 17); 
-                $result = $guia_numero;
+                echo "<br>RESULTADO ACTIVAR ***<br>";
+                var_dump($resultadoActivar);
+                if (isset($resultadoActivar->guia_numero)) {
+                    $guia_numero = $resultadoActivar->guia_numero;
+                    $hora_llegada = $resultadoActivar->hora_llegada;
+                    //$this->changeOrderStatus($order, 17); 
+                    $result = $guia_numero;    
+                } else {
+                    $log->add("Resultado ACTIVAR: ".$resultadoActivar);
+                }
             }
         }
         return $result;
@@ -187,8 +207,8 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
     }
 
 
-    private function recaudoSap($resDoFacturaSAP,$factura,$payment) {
-        $dataRecaudoSAP = $this->generateDataRecaudoSAP($resDoFacturaSAP,$factura,$payment);
+    private function recaudoSap($resDoFacturaSAP,$factura,$payment,$efectivo) {
+        $dataRecaudoSAP = $this->generateDataRecaudoSAP($resDoFacturaSAP,$factura,$payment,$efectivo);
 
         $resDoRecaudoSAP = $this->doRecaudoSAP($dataRecaudoSAP);
         $this->log->add($resDoRecaudoSAP);
@@ -202,7 +222,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                     $this->log->add("<br>Recaudo en el SAP generado exitosamente. Factura cabecera id: ".$factura["id"]."<br>");   
 
                     $order = new Order($factura["id_order"]);
-                    $guia_numero = $this->notificarAMiPiloto($order);
+                    $guia_numero = $this->notificarAMiPiloto($order,$efectivo);
                     if ($guia_numero) {
                         $agregadoGuiaOrder = $this->addNumGuiaMiPilotoOrder($order,$guia_numero);
                         if ($agregadoGuiaOrder) {
@@ -894,7 +914,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         return array("items" => $items,"error" => $error);
     }
 
-    private function generateDataRecaudoSAP($data,$factura,$payment){
+    private function generateDataRecaudoSAP($data,$factura,$payment,$efectivo){
 
         $tabernaSOAPController = new sincronizacionwebservicesTabernaSoapModuleFrontController();
         $resCliente = $tabernaSOAPController->existCustomer($factura["identificacion_comprador"]);
@@ -908,6 +928,12 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
             $cliente = $resCliente["result"];
             $codigo_cliente_sap = $cliente[1];
         }
+
+        $tipo_tarj = $efectivo ? "" : TIPO_TARJETA;
+        $bin = isset($payment["bin"]) ? $payment["bin"] : "";
+        $texto = $efectivo ? "W" : "D;".$payment["transaction_id"].";".$bin.";;0;PAYPHONE_TARJETAS";
+        $vp = $efectivo ? "W" : "Y";
+
         return array(
                 'DOC_SAP'       =>  $data[4],
                 'FECHA'         =>  date("dmY"),
@@ -915,9 +941,9 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                 'CedulaCajero'  =>  CEDULA_CAJERO,
                 'OficinaVenta'  =>  $oficina_venta,
                 'Monto'         =>  $factura["importe_total"],
-                'Texto'         =>  "D;".$payment["transaction_id"].";".$payment["bin"].";;0;PAYPHONE",
-                'Tipot'         =>  TIPO_TARJETA,
-                'Vp'            =>  "Y"
+                'Texto'         =>  $texto,
+                'Tipot'         =>  $tipo_tarj,
+                'Vp'            =>  $vp
             );
     }
 
