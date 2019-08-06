@@ -57,6 +57,7 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
             $dataResult["id_order"] = $pedido["id_order"];
             $dataResult["num_fct"] = $pedido["establecimiento"].$pedido["punto_emision"].$pedido["secuencial"];
             $dataResult["carrier"] = $carrier->name;
+            $dataResult["payment"] = $pedido["payment"];
             $pedidosResult[] = $dataResult;
         }
         return $pedidosResult;

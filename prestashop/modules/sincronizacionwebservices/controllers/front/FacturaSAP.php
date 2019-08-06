@@ -189,7 +189,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                     //$this->changeOrderStatus($order, 17); 
                     $result = $guia_numero;    
                 } else {
-                    $log->add("Resultado ACTIVAR: ".$resultadoActivar);
+                    $log->add("NO devuelve numero_guia para poder activar PEDIDO MI Piloto");
                 }
             }
         }
@@ -487,6 +487,9 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                 echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
             }
             $response = $client->call(SERVICIO_FACTURACION, array($params), '', '', false, true);
+
+            echo "<br>FACTURACION Responseeeee *<br>";
+            var_dump($response);
             // Check for a fault
             if ($client->fault) {
                 echo '<h2>Fault</h2><pre>';
@@ -950,6 +953,10 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
     private function generateDataFacturaSAP($factura,$detalle,$payment){
         $tabernaSOAPController = new sincronizacionwebservicesTabernaSoapModuleFrontController();
         $resCliente = $tabernaSOAPController->existCustomer($factura["identificacion_comprador"]);
+        echo "<br>factura['identificacion_comprador'] : ".$factura["identificacion_comprador"];
+        echo "<br>****Res CLiente al GenerarDataFacturaSAP***<br>";
+        var_dump($resCliente);
+
         $id_shop_current = (int)$factura["id_shop"];
         $gestionarProductosController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
         $cod_almacen = $gestionarProductosController->get_code_by_id($id_shop_current);

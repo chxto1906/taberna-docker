@@ -50,7 +50,7 @@ class sincronizacionwebservicesTabernaSoapModuleFrontController extends ModuleFr
                 echo '</pre>';
                 $attempts++;
                 $log->add("FAULT existCustomer intento: ".$attempts);
-                $res = array("status" => 3, "result" => $result); // Error return 3
+                $res = array("status" => 3, "result" => $response); // Error return 3
                 sleep(1);
                 continue;
             } else {
@@ -59,7 +59,7 @@ class sincronizacionwebservicesTabernaSoapModuleFrontController extends ModuleFr
                     echo '<h2>Error</h2><pre>' . $err . '</pre>';
                     $attempts++;
                     $log->add("ERROR existCustomer intento: ".$attempts);
-                    $res = array("status" => 3, "result" => $result); // Error return 3
+                    $res = array("status" => 3, "result" => $response); // Error return 3
                     sleep(1);
                     continue;
                 } else {
