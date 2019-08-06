@@ -23,8 +23,7 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         $i = 0;
         $id_shop = Tools::getValue('id_shop');
         $parte = (int) Tools::getValue('parte');
-
-        $cantidadDividir = count($getSheet)/2;
+        $cantidadDividir = count($getSheet)/4;
         $getSheet = array_chunk($getSheet, $cantidadDividir);
         $getSheet = $getSheet[$parte-1];
 
