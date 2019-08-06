@@ -14,8 +14,8 @@ RUN mkdir -p /etc/nginx/sites-enabled/
 #COPY ssl/lataberna.com.ec.key /etc/nginx/ssl/lataberna.com.ec.key
 
 COPY nginx.conf /etc/nginx/nginx.conf
-#COPY lataberna.com.ec /etc/nginx/sites-available/lataberna.com.ec
-COPY default_local /etc/nginx/sites-available/default
+COPY lataberna.com.ec /etc/nginx/sites-available/lataberna.com.ec
+#COPY default_local /etc/nginx/sites-available/default
 #COPY timeout.conf /etc/nginx/conf.d/timeout.conf
 
 #RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/

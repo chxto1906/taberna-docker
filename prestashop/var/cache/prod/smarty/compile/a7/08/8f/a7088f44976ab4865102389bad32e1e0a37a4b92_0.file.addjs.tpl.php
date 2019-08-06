@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-24 11:57:28
+/* Smarty version 3.1.33, created on 2019-08-06 09:32:57
   from '/html/modules/smartblog/views/templates/admin/addjs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d388df85e4099_06611642',
+  'unifunc' => 'content_5d498f996efba2_61142416',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d388df85e4099_06611642 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d498f996efba2_61142416 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .icon-AdminSmartBlog:before{
   content: "\f14b";

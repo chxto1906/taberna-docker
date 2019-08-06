@@ -64,7 +64,7 @@ class sincronizacionwebservicesCheckStatusPedidosModuleFrontController extends M
         $pedidos = Db::getInstance()->executeS('
         SELECT * 
         FROM `ps_orders` as po
-        WHERE po.current_state = 15 AND 
+        WHERE (po.current_state = 15 OR po.current_state = 2) AND 
         po.print = "S" AND
         po.num_guia is not null ');
 

@@ -285,10 +285,30 @@ class CurlMiPiloto {
 	}
 
 
-	public function hacerPedido($body) {
+	public function hacerPedido($body,$efectivo) {
 
 		$attempts = 0;
 		$respuesta = array("status" => 0, "result" => null);
+
+		$params = array(
+  					'latitud_recibe' => $body["latitud_recibe"],
+  					'longitud_recibe' => $body["longitud_recibe"],
+  					'persona_recibe' => $body["persona_recibe"],
+  					'telefono_recibe' => $body["telefono_recibe"],
+  					'local_recibe' => $body["local_recibe"],
+  					'direccion_recibe' => $body["direccion_recibe"],
+  					'referencia_recibe' => $body["referencia_recibe"],
+  					'latitud_entrega' => $body["latitud_entrega"],
+  					'longitud_entrega' => $body["longitud_entrega"],
+  					'persona_entrega' => $body["persona_entrega"],
+  					'telefono_entrega' => $body["telefono_entrega"],
+  					'direccion_entrega' => $body["direccion_entrega"],
+  					'referencia_entrega' => $body["referencia_entrega"],
+  					'cedula_entrega' => $body["cedula_entrega"],
+  					'tiempo_llegada' => $body["tiempo_llegada"],
+  					'email_usuario' => $body["email_usuario"]);
+		if ($efectivo)
+			$params["monto"] = $body["monto"];
 
 		do {
 
@@ -302,23 +322,7 @@ class CurlMiPiloto {
 			  CURLOPT_FOLLOWLOCATION => false,
 			  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			  CURLOPT_CUSTOMREQUEST => "POST",
-			  CURLOPT_POSTFIELDS => 
-			  				array(
-			  					'latitud_recibe' => $body["latitud_recibe"],
-			  					'longitud_recibe' => $body["longitud_recibe"],
-			  					'persona_recibe' => $body["persona_recibe"],
-			  					'telefono_recibe' => $body["telefono_recibe"],
-			  					'local_recibe' => $body["local_recibe"],
-			  					'direccion_recibe' => $body["direccion_recibe"],
-			  					'referencia_recibe' => $body["referencia_recibe"],
-			  					'latitud_entrega' => $body["latitud_entrega"],
-			  					'longitud_entrega' => $body["longitud_entrega"],
-			  					'persona_entrega' => $body["persona_entrega"],
-			  					'telefono_entrega' => $body["telefono_entrega"],
-			  					'direccion_entrega' => $body["direccion_entrega"],
-			  					'referencia_entrega' => $body["referencia_entrega"],
-			  					'cedula_entrega' => $body["cedula_entrega"],
-			  					'tiempo_llegada' => $body["tiempo_llegada"]),
+			  CURLOPT_POSTFIELDS => $params,
 			  CURLOPT_HTTPHEADER => array(
 			    "X-Authorization: ".$this->api_key
 			  ),

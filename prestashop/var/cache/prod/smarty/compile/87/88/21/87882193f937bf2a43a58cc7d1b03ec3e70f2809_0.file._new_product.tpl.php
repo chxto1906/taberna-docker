@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-24 09:08:47
+/* Smarty version 3.1.33, created on 2019-08-05 16:29:03
   from '/html/backoffice/themes/default/template/controllers/orders/_new_product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d38666f0cd0e1_23342931',
+  'unifunc' => 'content_5d489f9f27e543_66941835',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d38666f0cd0e1_23342931 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d489f9f27e543_66941835 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('currencySymbolBeforeAmount', $_smarty_tpl->tpl_vars['currency']->value->format[0] === '¤');?>
 <tr id="new_product" style="display:none">
 	<td style="display:none;" colspan="2">

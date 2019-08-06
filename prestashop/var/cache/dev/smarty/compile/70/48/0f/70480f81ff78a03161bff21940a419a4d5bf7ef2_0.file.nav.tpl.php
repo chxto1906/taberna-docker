@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-01 10:16:02
+/* Smarty version 3.1.33, created on 2019-08-01 11:16:37
   from '/html/backoffice/themes/default/template/nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca22b3294dd86_05116701',
+  'unifunc' => 'content_5d43106566d4c7_07255846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70480f81ff78a03161bff21940a419a4d5bf7ef2' => 
     array (
       0 => '/html/backoffice/themes/default/template/nav.tpl',
-      1 => 1549981536,
+      1 => 1561677885,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca22b3294dd86_05116701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d43106566d4c7_07255846 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block" role="navigation" id="nav-sidebar">
 	<span class="menu-collapse">
 		<i class="material-icons">chevron_left</i>

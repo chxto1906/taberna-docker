@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-31 17:24:05
+/* Smarty version 3.1.33, created on 2019-08-06 09:43:38
   from '/html/modules/rvcategorysearch/views/templates/hook/search_result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4215056e1e09_84144960',
+  'unifunc' => 'content_5d49921a7e9486_88173480',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4215056e1e09_84144960 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d49921a7e9486_88173480 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="ajax-search-content">
     <div class="items-list">

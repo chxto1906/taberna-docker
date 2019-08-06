@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-31 17:26:41
+/* Smarty version 3.1.33, created on 2019-08-06 09:49:06
   from '/html/modules/yandexmetrica/views/templates/hook/footerscript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4215a15d4475_48158075',
+  'unifunc' => 'content_5d4993625c4b28_86131490',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4215a15d4475_48158075 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4993625c4b28_86131490 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['ymetrica_id']->value) && $_smarty_tpl->tpl_vars['ymetrica_id']->value) {?>
         
                 <!-- Yandex.Metrika counter for PrestaShop by http://twitter.com/jruizcantero -->
