@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 09:49:06
+/* Smarty version 3.1.33, created on 2019-08-06 17:31:43
   from 'module:pscontactinfopscontactinf' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49936239b553_53965538',
+  'unifunc' => 'content_5d49ffcfbecea7_29151747',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d49936239b553_53965538 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d49ffcfbecea7_29151747 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="block-contact footer-block col-lg-4 rv-animate-element right-to-left">
   <h4 class="title_block"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Store information','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
