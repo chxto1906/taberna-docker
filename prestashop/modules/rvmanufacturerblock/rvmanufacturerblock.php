@@ -176,11 +176,16 @@ class RvManufacturerBlock extends Module implements WidgetInterface
 
     public function getWidgetVariables($hookName = null, array $configuration = array())
     {
-        $manufacturers = Manufacturer::getManufacturers();
+
+        $lista = [63,279,342,159,268,271,355,5,54,74,38,296,283,290,139,253,354,6,83,8,336,117,2,14,281,310,15,48,141,62,155,57,160,277,64,111,168,368,39,272,183,53,31,50,364,11,223,227,37,242];
+
+        $manufacturers = Manufacturer::getManufacturers(false, 0, true, false, false, false, false, true);
         foreach ($manufacturers as &$manufacturer) {
-            $manufacturer['image'] = $this->context->language->iso_code.'-default';
-            $manufacturer['link'] = $this->context->link->getManufacturerLink($manufacturer['id_manufacturer']);
-            $manufacturer['image'] = $this->context->link->getManufacturerImageLink($manufacturer['id_manufacturer'],"m_scene_default");
+            if (in_array(intval($manufacturer["id_manufacturer"]), $lista)) {
+                $manufacturer['image'] = $this->context->language->iso_code.'-default';
+                $manufacturer['link'] = $this->context->link->getManufacturerLink($manufacturer['id_manufacturer']);
+                $manufacturer['image'] = $this->context->link->getManufacturerImageLink($manufacturer['id_manufacturer'],"m_scene_default");
+            }
         }
 
         return array(
