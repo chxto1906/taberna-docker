@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 09:43:38
+/* Smarty version 3.1.33, created on 2019-08-08 12:21:50
   from '/html/modules/rvcategorysearch/views/templates/hook/search_result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49921a7e9486_88173480',
+  'unifunc' => 'content_5d4c5a2e891c05_35237974',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fda172c5695d846ce03818a21e1c63732925f296' => 
     array (
       0 => '/html/modules/rvcategorysearch/views/templates/hook/search_result.tpl',
-      1 => 1561678042,
+      1 => 1565108981,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d49921a7e9486_88173480 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c5a2e891c05_35237974 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="ajax-search-content">
     <div class="items-list">

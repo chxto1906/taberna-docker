@@ -6,6 +6,14 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo usar Google Analytics para mejorar las métricas de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-google-analytics</link>
+    <description>Honestamente, &quot;qué es Google Analytics y para qué sirve exactamente&quot; es una pregunta que escuchamos más de lo que nos gustaría en nuestra agencia.</description>
+     <pubDate>Wed, 07 Aug 2019 09:41:00 +0200</pubDate>
+ <dc:creator>José Antonio Neto Santizo</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-google-analytics</guid>
+  </item>
+  <item>
     <title>¿Cómo usar un Heatmap para optimizar la Web de tu negocio online?</title>
     <link>https://www.prestashop.com/es/blog/heatmap-mapa-de-calor-web</link>
     <description>¿Conoces la importancia de integrar un heatmap o mapa de calor dentro de la web de tu tienda online?</description>
@@ -76,14 +84,6 @@
      <pubDate>Tue, 09 Jul 2019 11:50:47 +0200</pubDate>
  <dc:creator>Eva Lacalle</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/comentarios-de-clientes</guid>
-  </item>
-  <item>
-    <title>¿Qué es Pinterest, para qué sirve y cómo funciona esta plataforma visual?</title>
-    <link>https://www.prestashop.com/es/blog/sacale-partido-al-pinterest-de-tu-tienda-online</link>
-    <description>¿Aún no conoces Pinterest como plataforma complementaria para tu negocio online?</description>
-     <pubDate>Mon, 08 Jul 2019 13:33:38 +0200</pubDate>
- <dc:creator>Mariela Quiroga</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/sacale-partido-al-pinterest-de-tu-tienda-online</guid>
   </item>
   </channel>
 </rss>

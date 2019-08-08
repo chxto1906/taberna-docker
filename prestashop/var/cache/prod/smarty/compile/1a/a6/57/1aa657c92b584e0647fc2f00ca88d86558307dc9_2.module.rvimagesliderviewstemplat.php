@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 17:31:43
+/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
   from 'module:rvimagesliderviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49ffcfad2281_71519383',
+  'unifunc' => 'content_5d4c5a5a6eed71_23862187',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1aa657c92b584e0647fc2f00ca88d86558307dc9' => 
     array (
       0 => 'module:rvimagesliderviewstemplat',
-      1 => 1561678042,
+      1 => 1565108981,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d49ffcfad2281_71519383 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c5a5a6eed71_23862187 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Module ImageSlider -->
 <?php if ($_smarty_tpl->tpl_vars['rvimageslider']->value['rvpoh'] == 1) {?>
   <?php $_smarty_tpl->_assignInScope('autoplay_value', 'true');

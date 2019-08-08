@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 09:32:58
+/* Smarty version 3.1.33, created on 2019-08-08 12:17:38
   from '/html/backoffice/themes/new-theme/template/components/layout/warning_messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d498f9ade8364_33609006',
+  'unifunc' => 'content_5d4c593223c886_21057401',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd77c1aa142666c7037c2651990a5777682886ed' => 
     array (
       0 => '/html/backoffice/themes/new-theme/template/components/layout/warning_messages.tpl',
-      1 => 1561677885,
+      1 => 1565108980,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d498f9ade8364_33609006 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c593223c886_21057401 (Smarty_Internal_Template $_smarty_tpl) {
 if (count($_smarty_tpl->tpl_vars['warnings']->value)) {?>
   <div class="bootstrap">
     <div class="alert alert-warning">

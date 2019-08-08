@@ -11999,7 +11999,9 @@ li.product-flag {
         border: none;
         color: var(--rv-brand-primary); }
   #rvmanufacturerblock .block_content {
-    padding: 30px 15px; }
+    padding: 30px 15px;
+    background: antiquewhite; 
+   }
   #rvmanufacturerblock #manufacturer-carousel {
     margin-bottom: 0; }
     #rvmanufacturerblock #manufacturer-carousel .item {
