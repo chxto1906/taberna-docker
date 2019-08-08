@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 17:31:40
+/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
   from '/html/modules/rvwishlistblock/views/templates/hook/rvwishlist_button.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49ffcc1642e9_51430635',
+  'unifunc' => 'content_5d4c5a5a3700e9_13747566',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e7feec833c49fc5a781aa38d20ede991333f87c' => 
     array (
       0 => '/html/modules/rvwishlistblock/views/templates/hook/rvwishlist_button.tpl',
-      1 => 1561678042,
+      1 => 1565108981,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d49ffcc1642e9_51430635 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c5a5a3700e9_13747566 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['wishlists']->value) && count($_smarty_tpl->tpl_vars['wishlists']->value) > 1) {?>
     <div class="wishlist_btn">
         <?php

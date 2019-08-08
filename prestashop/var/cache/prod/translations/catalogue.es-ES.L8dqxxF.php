@@ -5213,18 +5213,18 @@ Gracias por su paciencia.',
   ),
   'ModulesCashondeliveryAdmin' => 
   array (
-    'Cash on delivery (COD)' => 'Pago contra entrega',
-    'Accept cash on delivery payments' => 'Aceptar pagos contra entrega',
+    'Cash on delivery (COD)' => 'Pago contra reembolso',
+    'Accept cash on delivery payments' => 'Aceptar pagos contra reembolso',
   ),
   'ModulesCashondeliveryShop' => 
   array (
-    'Pay by Cash on Delivery' => 'Pago contra entrega',
+    'Pay by Cash on Delivery' => 'Pago contra reembolso',
     'Your order on %s is complete.' => 'Su pedido en %s se ha completado.',
-    'You have chosen the cash on delivery method.' => 'Ha elegido el pago contra entrega.',
+    'You have chosen the cash on delivery method.' => 'Ha elegido el pago contra reembolso.',
     'Your order will be sent very soon.' => 'Le enviaremos su pedido en breve plazo.',
-    'For any questions or for further information, please contact our' => 'Para cualquier pregunta o para más información, contáctate con nosotros.',
+    'For any questions or for further information, please contact our' => 'Para cualquier pregunta o para más información, contacte con nuestro',
     'customer support' => 'servicio de atención al cliente',
-    'You pay for the merchandise upon delivery' => 'Te comprometes a pagar el valor total del pedido más el valor de transporte al momento de la entrega.',
+    'You pay for the merchandise upon delivery' => 'Usted paga la mercancía a la entrega',
   ),
   'ModulesCategoryproductsAdmin' => 
   array (

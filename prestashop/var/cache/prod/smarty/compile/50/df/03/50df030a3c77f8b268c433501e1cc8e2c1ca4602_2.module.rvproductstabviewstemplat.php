@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 17:31:39
+/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
   from 'module:rvproductstabviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49ffcb2bcd01_15175685',
+  'unifunc' => 'content_5d4c5a5a23b281_11980577',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '50df030a3c77f8b268c433501e1cc8e2c1ca4602' => 
     array (
       0 => 'module:rvproductstabviewstemplat',
-      1 => 1563291815,
+      1 => 1565108981,
       2 => 'module',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product-slider.tpl' => 1,
   ),
 ),false)) {
-function content_5d49ffcb2bcd01_15175685 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c5a5a23b281_11980577 (Smarty_Internal_Template $_smarty_tpl) {
 ?>	<div id="rvproductstab" class="products_block clearfix container">
 		<div class="products_block_inner">
 			<div class="rv-titletab">

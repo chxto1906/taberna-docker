@@ -35,8 +35,7 @@
                 <div class="block_content row">
                     <ul id="manufacturer-carousel" class="owl-carousel product_list">
                         {foreach from=$rvmanufacturer item=manufacturer name=manufacturerList}
-			{if $manufacturer['image']|strstr:"default"} 
-                        {else}
+			{if $manufacturer['image']} 
                         <li class="item">
                             <div class="manufacturer_image">
                                 <a href="{$manufacturer['link']}">

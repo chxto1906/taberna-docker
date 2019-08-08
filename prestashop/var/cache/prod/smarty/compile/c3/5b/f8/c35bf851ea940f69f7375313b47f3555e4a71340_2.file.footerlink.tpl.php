@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-06 17:31:43
+/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
   from '/html/modules/rvwishlistblock/views/templates/hook/footerlink.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d49ffcfd94339_81064330',
+  'unifunc' => 'content_5d4c5a5a731478_24726191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c35bf851ea940f69f7375313b47f3555e4a71340' => 
     array (
       0 => '/html/modules/rvwishlistblock/views/templates/hook/footerlink.tpl',
-      1 => 1561678042,
+      1 => 1565108981,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d49ffcfd94339_81064330 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4c5a5a731478_24726191 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <li>
     <a href="<?php echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['link']->value->getModuleLink('rvwishlistblock','mywishlist',array(),true),'html','UTF-8' )), ENT_QUOTES, 'UTF-8');?>

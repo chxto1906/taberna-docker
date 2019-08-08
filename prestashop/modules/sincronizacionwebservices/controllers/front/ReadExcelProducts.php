@@ -65,8 +65,10 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
                     echo "<br>STOCK seteado para product reference: $reference Es: $stock<br>";
                     if ($stock <= 0) {
                         $active = 0;
+			echo "<br>### El active se puso en 0 ###<br>";
                     } else {
                         $productPrice = $this->searchArray($reference,$productsPrices);
+			echo "<br>ProductPrice ENCONTRADO: $productPrice<br>";
                         if ($productPrice) {
                             $marca = $productPrice->Marca;
                             $precio = $productPrice->Precio;
