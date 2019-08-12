@@ -373,8 +373,8 @@ class Tarjetas_payphone extends PaymentModule
         $newOption->setModuleName($this->name)
                   ->setCallToActionText($this->l('Pagar con Tarjeta'))
                   ->setAction($this->context->link->getModuleLink('tarjetas_payphone', 'validation', array(), true))
-                  ->setForm($this->generateForm());
-                  //->setAdditionalInformation($this->fetch('module:tarjetas_payphone/views/templates/hook/paymentAdditional.tpl'));
+                  ->setForm($this->generateForm())
+                  ->setAdditionalInformation($this->fetch('module:tarjetas_payphone/views/templates/hook/paymentAdditional.tpl'));
         $payment_options = [
             $newOption
         ];

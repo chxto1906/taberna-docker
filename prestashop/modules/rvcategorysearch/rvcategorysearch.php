@@ -278,7 +278,7 @@ class RvCategorySearch extends Module implements WidgetInterface
         return $html;
     }
 
-    public function getSearchProduct($id_cat, $id_lang, $expr, $page_number = 1, $page_size = 1, $order_by = 'position', $order_way = 'asc', $ajax = false, $use_cookie = true, Context $context = null)
+    public function getSearchProduct($id_cat, $id_lang, $expr, $page_number = 1, $page_size = 1, $order_by = 'position', $order_way = 'asc', $ajax = false, $use_cookie = true, Context $context = null, $id_manufacturer = null)
     {
         if ($id_cat == 'all') {
             $id_cat = 0;
@@ -424,8 +424,16 @@ class RvCategorySearch extends Module implements WidgetInterface
         } elseif (in_array($order_by, array('date_upd', 'date_add'))) {
             $alias = 'p.';
         }
+
+        $cond_manufacturer = '';
+
+        if ($id_manufacturer) {
+            $cond_manufacturer = ' AND m.`id_manufacturer` = '.$id_manufacturer;
+        }
+
+
         $sql = 'SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity,
-            pl.`available_now`, pl.`available_later`, pl.`link_rewrite`, pl.`name`,
+            pl.`available_now`, pl.`available_later`, pl.`link_rewrite`, pl.`name`, pl.`description`,
             image_shop.`id_image` id_image, il.`legend`, m.`name` manufacturer_name '.$score.',
             DATEDIFF(
                 p.`date_add`,
@@ -447,7 +455,7 @@ class RvCategorySearch extends Module implements WidgetInterface
             LEFT JOIN `'._DB_PREFIX_.'image_shop` image_shop
             ON (image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop='.(int)$context->shop->id.')
             LEFT JOIN `'._DB_PREFIX_.'image_lang` il ON (image_shop.`id_image` = il.`id_image` AND il.`id_lang` = '.(int)$id_lang.')
-            WHERE p.`id_product` '.$product_pool.'
+            WHERE p.`id_product` '.$product_pool.$cond_manufacturer.'
             GROUP BY product_shop.id_product
             '.($order_by ? 'ORDER BY  '.$alias.$order_by : '').($order_way ? ' '.$order_way : '').'
             LIMIT 1000';

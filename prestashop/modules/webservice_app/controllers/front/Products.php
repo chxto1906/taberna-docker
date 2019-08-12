@@ -3,6 +3,7 @@
 require_once _PS_MODULE_DIR_ . 'rvproductstab/rvproductstab.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
+require_once _PS_MODULE_DIR_ . 'rvcategorysearch/rvcategorysearch.php';
         
 class Webservice_AppProductsModuleFrontController extends ModuleFrontController {
 
@@ -36,7 +37,16 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                             $type = Tools::getValue("type");
                             $products = $this->getProductsByCategories($type,$response);
                         } else {
-                            $products = "Validación fallida. Parámetros: type, page son obligatorios";
+                            $products = "Validación fallida. Parámetros: type, page son obligatorios.";
+                            $status_code = 400;
+                        }
+                        break;
+                    case "search":
+                        if ($this->valid_params(["query"])) {
+                            $query = Tools::getValue("query");
+                            $products = $this->getProductsBySearch($query);
+                        } else {
+                            $products = "Validación fallida. Parámetro: query es obligatorio.";
                             $status_code = 400;
                         }
                         break;
@@ -54,6 +64,18 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             echo $response->json_response($e->getMessage(),500);
         }
     	$this->setTemplate('productos.tpl');
+    }
+
+
+    public function getProductsBySearch($query) {
+        $rvcategorysearch = new RvCategorySearch();
+        $id_category = "all";
+        $id_manufacturer = Tools::getValue("id_manufacturer");
+
+        if (Tools::getValue("id_category"))
+            $id_category = Tools::getValue("id_category");    
+        $searchResults = $rvcategorysearch->getSearchProduct($id_category, Context::getContext()->language->id, $query, 1, 1, 'position', 'asc', false, true, null, $id_manufacturer);
+        return $this->proccessProducts($searchResults["result"]);
     }
 
 
@@ -115,16 +137,16 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             exit;
         } else {
             $dataResult = [
-                "id_product"    => null,
-                "name"          => null,
-                "description"   => null,
-                "price_tax_exc" => null,
-                "price_without_reduction" => null,
-                "quantity"      => null,
-                "reference"     => null,
-                "image_small"   => null,
-                "image_home"    => null,
-                "image_large"   => null,
+                "id_product"                => null,
+                "name"                      => null,
+                "description"               => null,
+                "price_tax_exc"             => null,
+                "price_without_reduction"   => null,
+                "quantity"                  => null,
+                "reference"                 => null,
+                "image_small"               => null,
+                "image_home"                => null,
+                "image_large"               => null,
             ];
             foreach ($products as $product) {
                 $dataResult["id_product"] = $product["id_product"]; 

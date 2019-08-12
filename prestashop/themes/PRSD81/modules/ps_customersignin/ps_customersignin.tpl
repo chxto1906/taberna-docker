@@ -22,7 +22,7 @@
   * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
   * International Registered Trademark & Property of PrestaShop SA
   *}
-  <div data-html2canvas-ignore id="_desktop_user_info">
+  <div  id="_desktop_user_info">
     <div class="user-info">
       <div class="user-info-inner dropdown js-dropdown">
         <i class="fa fa-user-circle hidden-lg-up" aria-hidden="true"></i>
@@ -30,7 +30,7 @@
           {if $logged}
             <span>{l s='Mi cuenta' d='Shop.Theme.Global'}</span> 
           {else}
-            <span>{l s='Sign Up' d='Shop.Theme.Global'}</span>
+            <span>{l s='Ingresa' d='Shop.Theme.Global'}</span>
           {/if}
         </span>
         
@@ -52,8 +52,13 @@
               <span>{l s='Sign in' d='Shop.Theme.Actions'}</span>
             </a>
           </li>
+          <li>
+            <a class="login dropdown-item" href="{$create_account_url}" title="Regístrate ahora" rel="nofollow">
+              <span>{l s='Sign Up' d='Shop.Theme.Global'}</span>
+            </a>
+          </li>
           {/if}
-          {hook h='displayRvWishlistBtn'}
+          {* {hook h='displayRvWishlistBtn'} *}
           {hook h='displayRvCompareHeader'}
         </ul>
       </div>

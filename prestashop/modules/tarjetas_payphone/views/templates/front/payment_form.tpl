@@ -1,10 +1,10 @@
 
-<form action="{$action}" id="payment-form" method="POST" class="js-customer-form">
+<form action="{$action}" id="payment-form" method="POST" class="js-customer-form" style="padding: 10px;background: beige;">
   <section>  
       <input type="hidden" name="data" id="data">
     <div class="form-group row ">
       <label class="col-md-3 form-control-label required">
-          {l s='Card number'}
+          Número de tarjeta
       </label>
       <div class="col-md-6">  
         <input class="form-control datos-tarj" id="cardNumber" name="cardNumber" autofocus type="text" size="20" autocomplete="off" required="" >
@@ -16,7 +16,7 @@
 
     <div class="form-group row " id="content-deferred">
       <label class="col-md-3 form-control-label required">
-          {l s='Deferred'}
+          Diferido
       </label>
       <div class="col-md-6">  
 
@@ -32,7 +32,7 @@
 
     <div class="form-group row ">
       <label class="col-md-3 form-control-label required">
-          {l s='Holdername'}
+          Nombre del titular
       </label>
       <div class="col-md-6">  
         <input class="form-control datos-tarj" id="holderName" name="holderName" type="text" autocomplete="off" required="">
@@ -43,7 +43,7 @@
     </div>   
     <div class="form-group row ">
       <label class="col-md-3 form-control-label required">
-          {l s='CVC'}
+          CVC
       </label>
       <div class="col-md-6">  
         <input style="width: 80px !important;" class="form-control datos-tarj" id="securityCode" name="securityCode" size="3" maxlength="3" type="text" autocomplete="off" required="">
@@ -56,7 +56,7 @@
 
     <div class="form-group row ">
       <label class="col-md-3 form-control-label required">
-          {l s='Expiration (MM/AAAA)'}
+          Expiración (MM/AAAA)
       </label>
       <div class="col-md-6">  
 
