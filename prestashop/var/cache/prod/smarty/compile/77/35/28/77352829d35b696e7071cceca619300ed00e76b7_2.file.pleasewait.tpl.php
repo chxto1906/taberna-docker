@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
+/* Smarty version 3.1.33, created on 2019-08-12 15:06:15
   from '/html/modules/pleasewait/views/templates/hook/pleasewait.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4c5a5a695a62_60730218',
+  'unifunc' => 'content_5d51c6b79f7625_23796262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77352829d35b696e7071cceca619300ed00e76b7' => 
     array (
       0 => '/html/modules/pleasewait/views/templates/hook/pleasewait.tpl',
-      1 => 1565108981,
+      1 => 1563398987,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4c5a5a695a62_60730218 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d51c6b79f7625_23796262 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['PLW_HTML']->value || $_smarty_tpl->tpl_vars['PLW_LOADING_MESSAGE']->value) {?>
     <div data-html2canvas-ignore class="plw_content" style="background: <?php echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['PLW_BACKGROUND_COLOR']->value,'htmlall','UTF-8' )), ENT_QUOTES, 'UTF-8');?>
 ;">

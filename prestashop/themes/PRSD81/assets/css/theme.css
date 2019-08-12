@@ -6124,7 +6124,9 @@ body#checkout {
   body#checkout .additional-information {
     font-size: 0.875rem;
     margin-left: 2.875rem;
-    margin-top: 1.25rem; }
+    margin-top: 1.25rem; 
+    padding-bottom: 15px;
+  }
   body#checkout .condition-label {
     margin-left: 2.5rem;
     margin-top: 0.625rem; }

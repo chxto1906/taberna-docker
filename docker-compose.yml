@@ -6,15 +6,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    #volumes:
-     #- /etc/letsencrypt/:/etc/letsencrypt/
-     #- /etc/nginx/ssl/:/etc/nginx/ssl/
     volumes:
       - ./docker-images/nginx/ssl/:/etc/nginx/ssl/:delegated
-      #- ./docker-images/nginx/ssl/secure/:/etc/ssl/secure/:delegated
     volumes_from:
       - php-fpm
-
     networks:
       - front-tier
 
@@ -23,7 +18,6 @@ services:
     build: docker-images/php-fpm
     volumes:
       - ./prestashop/:/html/:delegated
-      #- ./en_construccion/:/html/:delegated
       - ./docker-images/php-fpm/php.ini/:/usr/local/etc/php/php.ini
       - ./docker-images/php-fpm/error_log/:/var/log/fpm-php.www.log
     networks:

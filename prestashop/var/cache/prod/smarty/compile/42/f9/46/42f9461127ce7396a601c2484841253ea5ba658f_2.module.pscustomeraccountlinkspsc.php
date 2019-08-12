@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 12:22:34
+/* Smarty version 3.1.33, created on 2019-08-12 15:06:17
   from 'module:pscustomeraccountlinkspsc' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4c5a5a729dd9_33671594',
+  'unifunc' => 'content_5d51c6b9f1c4b4_76566220',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '42f9461127ce7396a601c2484841253ea5ba658f' => 
     array (
       0 => 'module:pscustomeraccountlinkspsc',
-      1 => 1565108983,
+      1 => 1561678046,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4c5a5a729dd9_33671594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d51c6b9f1c4b4_76566220 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
  <div id="block_myaccount_infos" class="footer-block col-lg-3 rv-animate-element left-to-right">
   <h4 class="title_block">

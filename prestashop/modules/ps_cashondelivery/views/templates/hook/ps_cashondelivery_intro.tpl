@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<section>
+<section style="padding: 10px;background: beige;">
   <p>
     {l s='You pay for the merchandise upon delivery' d='Modules.Cashondelivery.Shop'}
   </p>

@@ -6,6 +6,14 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Directiva DSP2: ¿En qué consiste esta normativa para servicios de pagos digitales?</title>
+    <link>https://www.prestashop.com/es/blog/directiva-psd2</link>
+    <description>¿Conoces las novedades que traerá consigo la DSP2, con las nuevas normas de autenticación en lo que respecta a pagos digitales?</description>
+     <pubDate>Mon, 12 Aug 2019 09:41:11 +0200</pubDate>
+ <dc:creator>Eva Lacalle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/directiva-psd2</guid>
+  </item>
+  <item>
     <title>¿Cómo usar Google Analytics para mejorar las métricas de tu eCommerce?</title>
     <link>https://www.prestashop.com/es/blog/que-es-google-analytics</link>
     <description>Honestamente, &quot;qué es Google Analytics y para qué sirve exactamente&quot; es una pregunta que escuchamos más de lo que nos gustaría en nuestra agencia.</description>
@@ -76,14 +84,6 @@
      <pubDate>Wed, 10 Jul 2019 16:14:05 +0200</pubDate>
  <dc:creator>Jose Facchin</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/tamanos-y-formatos-de-imagenes-para-la-plantilla-predeterminada-de-prestashop</guid>
-  </item>
-  <item>
-    <title>Comentarios de clientes: la funcionalidad nativa de la nueva versión 1.7.6</title>
-    <link>https://www.prestashop.com/es/blog/comentarios-de-clientes</link>
-    <description>¿Conoces la nueva funcionalidad nativa de la versión 1.7.6 de PrestaShop de &quot;comentarios de clientes&quot;?</description>
-     <pubDate>Tue, 09 Jul 2019 11:50:47 +0200</pubDate>
- <dc:creator>Eva Lacalle</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/comentarios-de-clientes</guid>
   </item>
   </channel>
 </rss>

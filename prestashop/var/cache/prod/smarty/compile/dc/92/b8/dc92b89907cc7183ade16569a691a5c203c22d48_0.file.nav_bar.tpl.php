@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-08 12:17:38
+/* Smarty version 3.1.33, created on 2019-08-12 12:56:45
   from '/html/backoffice/themes/new-theme/template/components/layout/nav_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4c5932216374_60003690',
+  'unifunc' => 'content_5d51a85d04ad75_99445684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dc92b89907cc7183ade16569a691a5c203c22d48' => 
     array (
       0 => '/html/backoffice/themes/new-theme/template/components/layout/nav_bar.tpl',
-      1 => 1565108980,
+      1 => 1561677885,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4c5932216374_60003690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d51a85d04ad75_99445684 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block">
   <span class="menu-collapse">
     <i class="material-icons">chevron_left</i>
