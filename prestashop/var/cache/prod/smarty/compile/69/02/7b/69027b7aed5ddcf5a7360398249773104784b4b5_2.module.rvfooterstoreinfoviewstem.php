@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-12 15:06:17
+/* Smarty version 3.1.33, created on 2019-08-13 15:12:51
   from 'module:rvfooterstoreinfoviewstem' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d51c6b9d3bc83_81650579',
+  'unifunc' => 'content_5d5319c33bfa04_69509661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d51c6b9d3bc83_81650579 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5319c33bfa04_69509661 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="rvfooterstoreinfo" class="footer-block col-lg-12 rv-animate-element bottom-to-top">
 	<h4 class="title_block">

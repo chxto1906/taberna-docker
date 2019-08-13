@@ -23,6 +23,7 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
+
 use PrestaShop\PrestaShop\Adapter\Presenter\Cart\CartPresenter;
 
 class CartControllerCore extends FrontController
@@ -68,14 +69,18 @@ class CartControllerCore extends FrontController
 
         // Send noindex to avoid ghost carts by bots
         header('X-Robots-Tag: noindex, nofollow', true);
-
+        
         // Get page main parameters
         $this->id_product = (int) Tools::getValue('id_product', null);
+        //$reference = $gestionarController->search_product_reference_by_id($this->id_product);
         $this->id_product_attribute = (int) Tools::getValue('id_product_attribute', Tools::getValue('ipa'));
         $this->customization_id = (int) Tools::getValue('id_customization');
         $this->qty = abs(Tools::getValue('qty', 1));
         $this->id_address_delivery = (int) Tools::getValue('id_address_delivery');
         $this->preview = ('1' === Tools::getValue('preview'));
+
+        //exit;
+
 
         /* Check if the products in the cart are available */
         if ('show' === Tools::getValue('action')) {

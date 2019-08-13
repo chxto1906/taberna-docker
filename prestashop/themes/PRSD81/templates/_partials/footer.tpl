@@ -50,15 +50,16 @@
         {/block}
         {block name='copyright_link'}
         <div class="copyright col-lg-4 col-md-12">
-          <a class="_blank" href="http://www.prestashop.com" target="_blank">
+          <!--<a class="_blank" href="#">-->
             {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-          </a>
+          <!--</a>-->
         </div>
         {/block}
       </div>
     </div>
   </div>
 </div>
+
 {*
 {if $page.page_name == 'index' && empty($smarty.cookies.cookie_law)}
 {hook h="displayCookieFooter"}                

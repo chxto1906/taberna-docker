@@ -3,7 +3,8 @@
 include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/FacturaSAP.php');
 require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/include/config.php');
-        include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/GestionarProductos.php');
+include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/GestionarProductos.php');
+include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/Notificaciones/Fallos.php');
 
 set_time_limit(300000000);
 
@@ -11,48 +12,40 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
 
     public function initContent() {
         parent::initcontent();
-        
 
-        //$shops_ = Shop::getShops(true, null, true);
-        //$shops = array_keys($shops_);
-        
-        
         $id_shop = Tools::getValue('id_shop');
+        echo "ID_SHOP***: ";
+        var_dump($id_shop);
+        /*
         $desde = Tools::getValue('desde');
         $hasta = Tools::getValue('hasta');
         $id_product_esp = Tools::getValue('id_product');
-
         echo "<br>ID_PRODUCT receptado: $id_product_esp<br>";
-
         $log = new LoggerTools();
         $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
         $productsPrices = $gestionarController->_get_ws_products_catalogo();
         $productsPrices = !empty($productsPrices->ARTICULOS) ? $productsPrices->ARTICULOS : [];
-        
-        $log->add("Empieza UpdateStockProductosNew " . date('m/d/Y G:i:s a', time()) . "<br>");
-
-        //foreach ($shops as $id_shop) {
-            //echo "<br>ID_SHOW: $id_shop<br>";
-            
-            $i = 0;
-            if (!empty($id_product_esp)) {
-                $product = array('reference' => $id_product_esp );
-                echo "<br>Entró a procesar solo un producto: $id_product_esp<br>";
-                $this->procesar($id_shop,$product,1,$log,1,$productsPrices);
-            } else {
-                echo "<br>Entró a procesar varios productos<br>";
-                $products = $this->getProductsByShop($id_shop,$desde,$hasta);
-                $lenProducts = count($products);
-                /*if ($id_shop == "3") {
-                    echo "<br>Desactivando todos los productos***<br>";
-                    $gestionarController->deactivate_all_products_all_stores();
-                }*/
-                foreach ($products as $product) {
-                    $i++;
-                    $this->procesar($id_shop,$product,$i,$log,$lenProducts,$productsPrices);
-                }    
-            } 
-        //}
+        if (count($productsPrices) > 0) {
+            $log->add("Empieza UpdateStockProductosNew " . date('m/d/Y G:i:s a', time()) . "<br>");
+                $i = 0;
+                if (!empty($id_product_esp)) {
+                    $product = array('reference' => $id_product_esp );
+                    echo "<br>Entró a procesar solo un producto: $id_product_esp<br>";
+                    $this->procesar($id_shop,$product,1,$log,1,$productsPrices);
+                } else {
+                    $products = $this->getProductsByShop($id_shop,$desde,$hasta);
+                    $cc = count($products);
+                    echo "<br>Entró a procesar varios productos. CANTIDAD: $cc<br>";
+                    $lenProducts = count($products);
+                    foreach ($products as $product) {
+                        $i++;
+                        $this->procesar($id_shop,$product,$i,$log,$lenProducts,$productsPrices);
+                    }    
+                }
+        } else {
+            $fallo = new Fallos();
+            $fallo->notificar("WebService SOAP Catálogo devuelve vacío. Verificar Base de Datos inmediatamente. ID_SHOP: ".$id_shop);
+        }*/
         exit;
     }
 

@@ -16927,7 +16927,7 @@ main {
   #header #header_logo {
     float: left;
     max-width: 230px;
-    padding: 5px 0; 
+    padding: 10px 0px 10px 15px;
     text-align: center;
   }
   .logo_label_shop {
@@ -17748,12 +17748,12 @@ main {
     .backtotop {
       bottom: 100px; } }
   .backtotop:before {
-    bottom: 13px;
+    bottom: 15px;
     color: var(--rv-brand-primary);
-    content: "\F10B";
+    content: "▲";
     font-family: "FontAwesome";
     font-size: 32px;
-    left: 15px;
+    left: 7px;
     position: absolute;
     text-align: center;
     transition: all 0.5s; }
