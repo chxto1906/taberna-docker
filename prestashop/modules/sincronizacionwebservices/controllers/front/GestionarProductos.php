@@ -1157,6 +1157,20 @@
             return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
         }
 
+        /**
+         * Search product by reference field
+         * @param type $reference
+         * @return type Product Object
+         */
+        public function search_product_reference_by_id($id_product) {
+            $query = new DbQuery();
+            $query->select('p.reference');
+            $query->from('product', 'p');
+            //$query->where('p.reference = \'' . pSQL($reference) . '\' AND p.id_shop_default = '.$id_shop);
+            $query->where('p.id_product = \'' . pSQL($id_product) . '\'');
+            return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
+        }
+
 
         public function deactivate_all_products_all_stores(){
             $sql = 'UPDATE ps_product_shop SET active= "0" ';

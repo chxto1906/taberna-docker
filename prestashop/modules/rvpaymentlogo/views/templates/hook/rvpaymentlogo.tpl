@@ -25,16 +25,17 @@
 {if isset($cms_payment_logo) && $cms_payment_logo}
 	<div id="payment_logo_block_left" class="payment_logo_block col-lg-4 col-md-12">
 	<span>Payment</span>
+		{*
 		<a href="{$link->getCMSLink($cms_payment_logo)|escape:'html'}">
 			<img src="{$path}views/img/payphone_icon.png" alt="Payphone" width="40" height="25">
 			<img src="{$path}views/img/visa.png" alt="Visa" width="40" height="25" />
 			<img src="{$path}views/img/mastercard.png" alt="Mastercard" width="40" height="25" />
-			{*
+			
 				<img src="{$path}views/img/paypal.png" alt="Paypal" width="40" height="25" />
 				<img src="{$path}views/img/amex.png" alt="American Express" width="40" height="25" />
 				<img src="{$path}views/img/discover.png" alt="Discover" width="40" height="25" />
 				<img src="{$path}views/img/jcb.png" alt="JCB" width="40" height="25" />
-			*}
 		</a>
+		*}
 	</div>
 {/if}
