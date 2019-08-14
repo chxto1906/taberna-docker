@@ -17218,7 +17218,7 @@ main {
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 999; }
+    z-index: 1002; }
   #header .nav-full-width {
     /*background: var(--rv-brand-primary);*/
     background: #2a2a2a;
@@ -18075,6 +18075,11 @@ img.lazy:not([data-lazyloading='1']) {
   height: 400px;
 }
 
+#map-address2 {
+  width: 100%;
+  height: 400px;
+}
+
 .estas-comprando {
   height: auto;
   font-size: 1em;
@@ -18220,3 +18225,11 @@ img.lazy:not([data-lazyloading='1']) {
     transform: translateY(0) rotate(-45deg);
   }
 }
+
+
+
+
+
+
+
+

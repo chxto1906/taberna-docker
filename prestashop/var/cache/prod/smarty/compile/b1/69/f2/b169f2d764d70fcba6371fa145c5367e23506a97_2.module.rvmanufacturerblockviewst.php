@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-13 15:12:49
+/* Smarty version 3.1.33, created on 2019-08-14 16:03:31
   from 'module:rvmanufacturerblockviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5319c1bf8d99_35037628',
+  'unifunc' => 'content_5d5477233c1653_98925763',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b169f2d764d70fcba6371fa145c5367e23506a97' => 
     array (
       0 => 'module:rvmanufacturerblockviewst',
-      1 => 1565285090,
+      1 => 1565789002,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5319c1bf8d99_35037628 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5477233c1653_98925763 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <div id="rvmanufacturerblock" class="clearfix rv-animate-element bottom-to-top">
         <div class="container">
             <div class="row">
@@ -45,7 +45,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['manufacturer']->value) {
                             <div class="manufacturer_image">
                                 <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['manufacturer']->value['link'], ENT_QUOTES, 'UTF-8');?>
 ">
-                                    <img width="170" height="65" class="img-responsive" src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['manufacturer']->value['image'], ENT_QUOTES, 'UTF-8');?>
+                                    <img width="170" height="85" class="img-responsive" src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['manufacturer']->value['image'], ENT_QUOTES, 'UTF-8');?>
 " title="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['manufacturer']->value['name'], ENT_QUOTES, 'UTF-8');?>
 " />                                
 				</a>

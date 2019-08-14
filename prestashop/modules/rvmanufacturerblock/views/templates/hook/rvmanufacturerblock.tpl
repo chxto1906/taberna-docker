@@ -39,7 +39,7 @@
                         <li class="item">
                             <div class="manufacturer_image">
                                 <a href="{$manufacturer['link']}">
-                                    <img width="170" height="65" class="img-responsive" src="{$manufacturer['image']}" title="{$manufacturer['name']}" />                                
+                                    <img width="170" height="85" class="img-responsive" src="{$manufacturer['image']}" title="{$manufacturer['name']}" />                                
 				</a>
                             </div>
                             {if $rvmanufacturername}

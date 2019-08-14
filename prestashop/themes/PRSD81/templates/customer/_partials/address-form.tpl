@@ -22,69 +22,89 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{literal}
 
 <script type="text/javascript">
-   // JavaScript source code
-  function inicializar() {
-      //Opciones del mapa
-      let $lat = $(".form-control[name='latitude']");
-      let $lng = $(".form-control[name='longitude']");
-      let latitude = $lat.val();
-      let longitude = $lng.val();
-      let address1 = $(".form-control[name='address1']").val();
-      let marker = true;
-      let Marcador = null;
-      if (!latitude){
-        latitude = -2.89162500;
-        longitude = -79.02054500;
-        marker = false;
-      }
+  
+  let ciudades_permitidas = ["cuenca"];
 
-      var OpcionesMapa = {
-          center: new google.maps.LatLng(latitude, longitude),
-          mapTypeId: google.maps.MapTypeId.ROADMAP, //ROADMAP  SATELLITE HYBRID TERRAIN
-          zoom: 16
-      };
-   
-      var miMapa;
-      //constructor
-      miMapa = new google.maps.Map(document.getElementById('map-address'), OpcionesMapa);
+  function inicio() {
 
-      //Añadimos el marcador
-      if (marker){
-        Marcador = new google.maps.Marker({
-          position: new google.maps.LatLng(latitude, longitude),
-          map: miMapa,
-          title:address1,
-          draggable: true
-        });
-        google.maps.event.addListener(Marcador, 'dragend', function() {
-          updatePosition(Marcador.getPosition());
-        });
-      }
+    let $lat = $(".form-control[name='latitude']");
+    let $lng = $(".form-control[name='longitude']");
+    let latitude = $lat.val();
+    let longitude = $lng.val();
+    let address1 = $(".form-control[name='address1']").val();
+    let marker = true;
+    let Marcador = null;
+    if (!latitude){
+      latitude = -2.897924;
+      longitude = -79.005861;
+      marker = false;
+    }
+    let zoomini = 16;
+    if ($lat)
+      zoomini = 18;
 
-      google.maps.event.addListener(miMapa, 'click', function(event) {
-        if (Marcador) {
-          Marcador.setPosition(event.latLng)
-        } else {
-          address1 = $(".form-control[name='address1']").val();
-          Marcador = new google.maps.Marker({
-            map: miMapa,
-            position: event.latLng,
-            title:address1,
-            draggable: true
+    var maxBounds = L.latLngBounds(
+        L.latLng(-2.9330, -79.0758), //Southwest
+        L.latLng(-2.8366, -78.9422)  //Northeast
+    );
+
+    var mymap = L.map('map-address2').setView([latitude, longitude], zoomini);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox.streets',
+      accessToken: 'sk.eyJ1IjoibGF0YWJlcm5hIiwiYSI6ImNqemJnM3J2ZTAwbmgzY3Q3N2JpcXNwYncifQ.CFWCvzYN_JsBJ7KOD7YYIQ'
+    }).addTo(mymap);
+
+    if (marker) {
+      Marcador = new L.marker([latitude, longitude],{title:address1}).bindPopup("<b>"+address1+"</b>");
+      Marcador.addTo(mymap).openPopup();
+    }
+
+    let geocodeService = L.esri.Geocoding.geocodeService();
+
+    mymap.on('click', function(e) {  
+
+      geocodeService.reverse().latlng(e.latlng).run(function(error, result) {
+        let permitido = checkPermitidos(result.address.City);
+        if (permitido){
+          if (Marcador)
+            mymap.removeLayer(Marcador);
+
+          Marcador = new L.marker(e.latlng,{title:address1}).bindPopup("<b>"+result.address.Match_addr+"</b>");
+          Marcador.on('dragend', function(event){
+            var Marcador = event.target;
+            var position = Marcador.getLatLng();
+            Marcador.setLatLng(position,{id:uni,draggable:'true'}).update();
           });
+          Marcador.addTo(mymap).openPopup();
+
+          updatePosition(e.latlng);
+        } else {
+          alert("Estás intentando seleccionar una área no permitida.");
         }
-        updatePosition(event.latLng);
+
       });
 
+    });
+
   }
+
+  function checkPermitidos(city) {
+    city = city.toLowerCase();
+    return ciudades_permitidas.includes(city);
+  }
+
 
   function updatePosition(latLng){
     let lat = $(".form-control[name='latitude']");
     let lng = $(".form-control[name='longitude']");
-    lat.val(latLng.lat());
-    lng.val(latLng.lng());
+    lat.val(latLng.lat);
+    lng.val(latLng.lng);
   }
    
   function CargaScript() {
@@ -95,10 +115,12 @@
       $(".form-control[name='longitude']").attr("readonly","readonly");               
   }
    
-  window.onload = CargaScript;
+  //window.onload = CargaScript;
+
+  window.onload = inicio;
 
 </script>
-
+{/literal}
 
 {block name="address_form"}
   <div class="js-address-form">
@@ -121,7 +143,9 @@
                 <div class="form-group row ">
                   <label class="col-md-3 form-control-label">Localización</label>
                   <div class="col-md-6">
-                    <div id="map-address"></div>
+                    {* <div id="map-address"></div> *}
+                    <h5>* Selecciona tu ubicación exacta en el mapa:</h5>
+                    <div id="map-address2"></div>
                   </div>
                   <div class="col-md-3 form-control-comment"></div>
                 </div>
@@ -192,3 +216,9 @@
     </form>
   </div>
 {/block}
+
+<script type="text/javascript">
+
+  
+
+</script>
