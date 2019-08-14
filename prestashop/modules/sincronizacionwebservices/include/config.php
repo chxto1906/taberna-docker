@@ -28,7 +28,7 @@ define('SERVICIO_CONSULTA_CLIENTES', "QAS_WS_POS_CONSULTA_CLIENTES");*/
 define('SERVICIO_ACTUALIZACION_AUTO_SRI_SOAP', "PRD_WS_UPDATE_DOCUMENTO");
 
 
-// FALLOS EMAILS TO //
+// FALLOS EMAILS NOTIFICATIONS TO //
 define('EMAILS_TO',array(
 							'chxto1906@gmail.com',
 							'hcampoverde@eljurilicores.com',
