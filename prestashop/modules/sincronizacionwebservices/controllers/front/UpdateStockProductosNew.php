@@ -13,10 +13,7 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
     public function initContent() {
         parent::initcontent();
 
-        $id_shop = Tools::getValue('id_shop');
-        echo "ID_SHOP***: ";
-        var_dump($id_shop);
-        /*
+
         $desde = Tools::getValue('desde');
         $hasta = Tools::getValue('hasta');
         $id_product_esp = Tools::getValue('id_product');
@@ -45,7 +42,7 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
         } else {
             $fallo = new Fallos();
             $fallo->notificar("WebService SOAP Catálogo devuelve vacío. Verificar Base de Datos inmediatamente. ID_SHOP: ".$id_shop);
-        }*/
+        }
         exit;
     }
 
