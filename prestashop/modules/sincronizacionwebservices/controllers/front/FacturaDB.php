@@ -139,6 +139,8 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
 
         if (!empty($result)){
             $secuencial = $result[0]["secuencial"] + 1;
+            if ($secuencial >= 20)
+                $secuencial = $secuencial + 1;
         }
         $secuencial = str_pad($secuencial, 9, "0", STR_PAD_LEFT);
         return $secuencial;
