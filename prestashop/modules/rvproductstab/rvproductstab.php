@@ -352,7 +352,7 @@ class Rvproductstab extends Module implements WidgetInterface
         $nb = (int)Configuration::get('RV_FEATURED_PRODUCTS_NBR');
 
 
-        $result = $category->getProducts((int) $this->context->language->id, 1, ($nb ? $nb : 8), 'position');
+        $result = $category->getProducts((int) $this->context->language->id, 1, ($nb ? $nb : 12), 'position');
 
         /* HENRY */
 
