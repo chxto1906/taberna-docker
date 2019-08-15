@@ -13,7 +13,7 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
     public function initContent() {
         parent::initcontent();
 
-
+        $id_shop = Tools::getValue('id_shop');
         $desde = Tools::getValue('desde');
         $hasta = Tools::getValue('hasta');
         $id_product_esp = Tools::getValue('id_product');
