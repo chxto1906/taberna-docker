@@ -9,7 +9,7 @@ class sincronizacionwebservicesCheckStatusPedidosModuleFrontController extends M
     public function initContent() {
     	parent::initContent();
         $pedidos = $this->getPedidos();
-        if (!empty($pedidos)){
+        if ($pedidos) {
             $data = $this->recorrerPedidos($pedidos);
         }
         $respuesta = array('status'=>true);
