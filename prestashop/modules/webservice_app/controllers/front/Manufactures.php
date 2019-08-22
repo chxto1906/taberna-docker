@@ -15,8 +15,8 @@ class Webservice_AppManufacturesModuleFrontController extends ModuleFrontControl
             $status_code = 200;
             $manufacturer = new Manufacturer();
             $manufacturers = $manufacturer->getManufacturers(true);
-            var_dump($manufacturers);
-            //echo $response->json_response($categories,$status_code);
+            //var_dump($manufacturers);
+            echo $response->json_response($manufacturers,$status_code);
             exit;
         } catch (Exception $e) {
             echo $response->json_response($e->getMessage(),500);
@@ -25,7 +25,7 @@ class Webservice_AppManufacturesModuleFrontController extends ModuleFrontControl
     	$this->setTemplate('productos.tpl');
     }
 
-    public function proccessCategories($categories) {
+    /*public function proccessCategories($categories) {
         $categoriesResult = array();
         $dataResult = [
             "id_category"    => null,
@@ -40,7 +40,7 @@ class Webservice_AppManufacturesModuleFrontController extends ModuleFrontControl
             $categoriesResult[] = $dataResult;
         }
         return $categoriesResult;
-    }
+    }*/
 
 
 }

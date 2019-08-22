@@ -38,5 +38,5 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/*
 #COPY redis.ini /etc/php/mods-available/redis.ini
 #COPY php.ini /usr/local/etc/php/php.ini
 COPY www.conf /usr/local/etc/php-fpm.d/www.conf
-#COPY hosts /etc/hosts
+COPY hosts /etc/hosts
 

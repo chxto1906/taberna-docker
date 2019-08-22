@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-14 17:14:53
+/* Smarty version 3.1.33, created on 2019-08-22 10:00:35
   from '/html/themes/PRSD81/templates/_partials/javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5487dd18cff1_25758773',
+  'unifunc' => 'content_5d5eae13573b52_34517291',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40058f86d2c2c84a5a34a98722e30d2088d3b3e4' => 
     array (
       0 => '/html/themes/PRSD81/templates/_partials/javascript.tpl',
-      1 => 1565804632,
+      1 => 1565900396,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5487dd18cff1_25758773 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5eae13573b52_34517291 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['javascript']->value['external'], 'js');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['js']->value) {
@@ -88,5 +88,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     integrity="sha512-uK5jVwR81KVTGe8KpJa1QIN4n60TsSV8+DPbL5wWlYQvb0/nYNgSOg9dZG6ViQhwx/gaMszuWllTemL+K+IXjg=="
     crossorigin=""><?php echo '</script'; ?>
 >
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<?php echo '<script'; ?>
+ async src="https://www.googletagmanager.com/gtag/js?id=UA-145820826-1"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145820826-1');
+<?php echo '</script'; ?>
+>
+
+
 <?php }
 }
