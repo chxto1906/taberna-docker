@@ -256,11 +256,11 @@ class Mipilotoshipping extends CarrierModule
                     $this->context->cart->delete();
                     $this->context->cookie->id_cart = 0;
                 }
-            } else {
+            }/* else {
                 $shipping_cost = "Error";
                 $this->context->cart->delete();
                 $this->context->cookie->id_cart = 0;
-            }
+            }*/
             //return null;
             //$shipping_cost = null;
         }
@@ -292,6 +292,9 @@ class Mipilotoshipping extends CarrierModule
                 }
             }
         }
+
+        //var_dump("SIIIII DEVOLVER");
+
 
         return $delivery_time;
     }

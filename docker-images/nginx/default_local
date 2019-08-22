@@ -3,7 +3,7 @@
 
 
 server {
-          listen 80 default_server;
+          listen 80;
           listen [::]:80 default_server;
 
           ### HTTP2 Part
@@ -16,7 +16,7 @@ server {
           #ssl_ciphers         HIGH:!aNULL:!MD5;
           rewrite_log on;
           ##server_name lataberna.com.ec www.lataberna.com.ec;
-          server_name lataberna.com.ec www.lataberna.com.ec;
+          server_name _;
           root /html;
 
           index index.php index.html;
