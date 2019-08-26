@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-22 10:01:09
+/* Smarty version 3.1.33, created on 2019-08-26 12:11:37
   from '/html/modules/rvproductcountdown/views/templates/hook/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5eae35d783b8_33534803',
+  'unifunc' => 'content_5d6412c9dae816_21550929',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fdf2c314d26e81ac7928637f3036463bcc60ca5' => 
     array (
       0 => '/html/modules/rvproductcountdown/views/templates/hook/header.tpl',
-      1 => 1561678042,
+      1 => 1566570711,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5eae35d783b8_33534803 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6412c9dae816_21550929 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/javascript">
     <?php if ($_smarty_tpl->tpl_vars['show_weeks']->value) {?>

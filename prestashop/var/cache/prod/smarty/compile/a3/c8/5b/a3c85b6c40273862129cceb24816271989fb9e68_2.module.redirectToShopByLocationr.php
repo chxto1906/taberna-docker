@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-22 10:00:35
+/* Smarty version 3.1.33, created on 2019-08-26 12:11:39
   from 'module:redirectToShopByLocationr' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5eae1377bf54_21970893',
+  'unifunc' => 'content_5d6412cba1bbe9_50821804',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c85b6c40273862129cceb24816271989fb9e68' => 
     array (
       0 => 'module:redirectToShopByLocationr',
-      1 => 1561678042,
+      1 => 1566570711,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5eae1377bf54_21970893 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6412cba1bbe9_50821804 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="location-modal" class="modal fade" tabindex="-1" role="dialog" data-show="true" data-keyboard="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-content-tienda">

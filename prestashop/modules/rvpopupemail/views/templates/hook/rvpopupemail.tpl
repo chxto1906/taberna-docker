@@ -18,10 +18,20 @@
         {/if}
         
         {if $RV_DESCRIPTION_EMAILSUB}
-            <div class="description">{$RV_DESCRIPTION_EMAILSUB}</div>
+            <div class="description">
+                <h3>{$RV_DESCRIPTION_EMAILSUB}</h3>
+            </div>
         {/if}
 
-        <form  method="post" data-url="{$URL_AJAX_EMALISUBSCRIPTION}">
+        <div class="input-group-btn">
+            <a href="/index.php?id_category=123&controller=category" style="color: #000000;">
+                <h4>Ver promociones >></h4>
+            </a>
+        </div>
+
+        <!--<form  method="post" data-url="{$URL_AJAX_EMALISUBSCRIPTION}">
+            
+            
             <div class="input-group"> 
                 <input type="email" id='rvemail' name="email" value="" class="form-control" placeholder="{l s='Your e-mail'}" />
                 <input type="hidden" id='rvaction' name="action" value="0" />
@@ -30,20 +40,24 @@
                 <button type="button" class="btn btn-primary" id="js_rvsubmitnewsletter">Subcribe</button>
             </div>
             <div class="result_email_subscription"></div>
+            -->
 
-            <div class="form-check">
-                <label class="form-check-label">
-                <input type="checkbox" id="rv_popup_hide"  class="form-check-input" value="1"> 
-                <i class="custom-checkbox"></i>
-                    Don't show this popup again  
-                </label>
-            </div>
 
-        </form>
+            
+
+        <!--</form>-->
     </div>
     <div class="btn-close">
-                    <button type="button" class="btn btn-primary close">Close</button>
-                </div>
+        <br>
+        <div class="form-check">
+            <label class="form-check-label">
+            <input type="checkbox" id="rv_popup_hide"  class="form-check-input" value="1"> 
+            <i class="custom-checkbox"></i>
+                No mostrar
+            </label>
+        </div>
+    </div>
+    
 </div>
 <div id="bg_popup_email_subscription"></div>
 {/if}

@@ -6831,7 +6831,7 @@ body#checkout {
       opacity: 1;
       font-family: "Poppins", sans-serif;
       font-size: 14px;
-      color: var(--rv-brand-primary);
+      color: red;
       font-weight: 600;
       position: absolute;
       text-transform: uppercase;
@@ -16353,7 +16353,7 @@ table#product_comparison {
   right: 0;
   margin: auto;
   text-align: center;
-  z-index: 999999; }
+  z-index: 1025; }
   @media (max-width: 767px) {
     #popup_email_subscription {
       /* max 767 */
@@ -16563,7 +16563,7 @@ table#product_comparison {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 99999;
+  z-index: 1024;
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0; }
