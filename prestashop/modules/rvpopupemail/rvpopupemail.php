@@ -42,6 +42,12 @@ class RvPopupEmail extends RvPopupEmailCore
     public function hookDisplayHeader()
     {
         $id_shop = $this->context->shop->id;
+
+
+        //$products = $this->getProducts();
+
+
+
         /*general */
         $this->context->smarty->assign(array(
             'RV_BANNER_EMAILSUB' => $this->getLinkFile($this->getValueConfig('Banner_Popup_Emailsub')),
@@ -58,6 +64,10 @@ class RvPopupEmail extends RvPopupEmailCore
         $this->context->controller->addJs($this->_path.'views/js/front/jquery.cookie.min.js');
 
          return $this->fetch($this->templateFile);
+    }
+
+    public function getProducts() {
+
     }
 
     public function getValueConfig($key = null,$lang = false)

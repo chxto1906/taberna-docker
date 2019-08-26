@@ -1,5 +1,8 @@
 FROM nginx:1.16.0
 
+ARG NGINX_CONFIG_FILE_FROM
+ARG NGINX_CONFIG_FILE_TO
+
 MAINTAINER Andreas Schlapbach <schlpbch@gmail.com>
 
 # Make snakeoil certificates available
@@ -14,7 +17,10 @@ RUN mkdir -p /etc/nginx/sites-enabled/
 #COPY ssl/lataberna.com.ec.key /etc/nginx/ssl/lataberna.com.ec.key
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY lataberna.com.ec /etc/nginx/sites-available/lataberna.com.ec
+#COPY lataberna.com.ec /etc/nginx/sites-available/lataberna.com.ec
+
+COPY $NGINX_CONFIG_FILE_FROM $NGINX_CONFIG_FILE_TO
+
 #COPY default_local /etc/nginx/sites-available/default
 #COPY timeout.conf /etc/nginx/conf.d/timeout.conf
 

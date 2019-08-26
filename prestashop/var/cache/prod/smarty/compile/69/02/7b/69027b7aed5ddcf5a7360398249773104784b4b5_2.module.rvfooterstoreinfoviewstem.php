@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-22 10:00:35
+/* Smarty version 3.1.33, created on 2019-08-26 12:11:39
   from 'module:rvfooterstoreinfoviewstem' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5eae139bde93_98965952',
+  'unifunc' => 'content_5d6412cbcb8d08_29887105',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69027b7aed5ddcf5a7360398249773104784b4b5' => 
     array (
       0 => 'module:rvfooterstoreinfoviewstem',
-      1 => 1561678042,
+      1 => 1566570711,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5eae139bde93_98965952 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6412cbcb8d08_29887105 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="rvfooterstoreinfo" class="footer-block col-lg-12 rv-animate-element bottom-to-top">
 	<h4 class="title_block">

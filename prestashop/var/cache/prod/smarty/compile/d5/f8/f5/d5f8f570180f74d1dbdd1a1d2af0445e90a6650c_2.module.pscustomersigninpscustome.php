@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-22 10:00:35
+/* Smarty version 3.1.33, created on 2019-08-26 12:11:39
   from 'module:pscustomersigninpscustome' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5eae1362b961_48847151',
+  'unifunc' => 'content_5d6412cb8c70a9_22371347',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd5f8f570180f74d1dbdd1a1d2af0445e90a6650c' => 
     array (
       0 => 'module:pscustomersigninpscustome',
-      1 => 1565300674,
+      1 => 1566570714,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5eae1362b961_48847151 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6412cb8c70a9_22371347 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <div  id="_desktop_user_info">
     <div class="user-info">
       <div class="user-info-inner dropdown js-dropdown">

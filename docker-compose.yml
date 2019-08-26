@@ -2,10 +2,15 @@ version: '2'
 services:
   nginx:
     container_name: nginx
-    build: docker-images/nginx
+    env_file: .env
+    build: 
+        context: docker-images/nginx
+        args:
+            NGINX_CONFIG_FILE_FROM: ${NGINX_CONFIG_FILE_FROM}
+            NGINX_CONFIG_FILE_TO: ${NGINX_CONFIG_FILE_TO}
     ports:
-      - "80:80"
-      - "443:443"
+      - ${NGINX_PORT}
+      - ${NGINX_PORT_SSL}
     volumes:
       - ./docker-images/nginx/ssl/:/etc/nginx/ssl/:delegated
     volumes_from:
@@ -46,7 +51,7 @@ services:
     build: docker-images/java
     volumes:
       #- ./prestashop/facturas/pruebas/:/home/pruebas/:delegated
-      - ./prestashop/facturas/produccion/:/home/produccion/:delegated
+      - ${JAVA_DIRECTORY_FACTURAS}
       - ./docker-images/java/firma/:/home/firma/
     networks:
       - back-tier

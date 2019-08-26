@@ -33,6 +33,14 @@
         $('#contenedor_de_licores_seleccionados').hide();
         
 
+        // HENRY *******
+        
+        //$("#top-menu > li.current > a").css('color','#FFFFFF');
+        //$("#lnk-cotizador-de-eventos > a").css('color','#ed2123');
+
+        // HENRY *******
+
+
         //let source = $("#title-modulo1").html();
         //  pdfDoc.fromHTML(source,10,10);
         //  pdfDoc.save('Ejemplo.pdf');

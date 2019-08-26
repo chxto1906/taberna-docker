@@ -6,6 +6,22 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo personalizar tu página de inicio en PrestaShop? 9 Módulos</title>
+    <link>https://www.prestashop.com/es/blog/modulos-prestashop-personaliza-el-aspecto-de-tu-pagina-de-inicio</link>
+    <description>¿Acabas de comenzar en el sector del comercio electrónico con PrestaShop y no sabes cómo personalizar tu página de inicio aún?</description>
+     <pubDate>Wed, 21 Aug 2019 08:30:26 +0200</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulos-prestashop-personaliza-el-aspecto-de-tu-pagina-de-inicio</guid>
+  </item>
+  <item>
+    <title>5 Mejores plantillas para vender ropa de bebé online con PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</link>
+    <description>Si actualmente tienes alguna tienda para vender ropa de bebé online o lo estás considerando, ¡este artículo es perfecto para ti!</description>
+     <pubDate>Tue, 20 Aug 2019 00:01:41 +0200</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</guid>
+  </item>
+  <item>
     <title>Directiva DSP2: ¿En qué consiste esta normativa para servicios de pagos digitales?</title>
     <link>https://www.prestashop.com/es/blog/directiva-psd2</link>
     <description>¿Conoces las novedades que traerá consigo la DSP2, con las nuevas normas de autenticación en lo que respecta a pagos digitales?</description>
@@ -68,22 +84,6 @@
      <pubDate>Mon, 22 Jul 2019 12:12:26 +0200</pubDate>
  <dc:creator>Isabel Romero Carretero</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/instagram-ads</guid>
-  </item>
-  <item>
-    <title>7 Mejores plantillas para vender bañadores online con tu PrestaShop</title>
-    <link>https://www.prestashop.com/es/blog/plantillas-banadores-online</link>
-    <description>¿Aún no tienes una plantilla profesional para tu tienda de bañadores online?</description>
-     <pubDate>Mon, 22 Jul 2019 10:43:29 +0200</pubDate>
- <dc:creator>Mariela Quiroga</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-banadores-online</guid>
-  </item>
-  <item>
-    <title>Machine Learning: ¿cómo afecta esta tecnología al éxito de tu eCommerce?</title>
-    <link>https://www.prestashop.com/es/blog/que-es-machine-learning</link>
-    <description>¿Has oído en repetidas ocasiones el concepto &quot;Machine Learning&quot;, pero aún no sabes qué es ni cómo puedes aplicarlo en tu propio negocio?</description>
-     <pubDate>Mon, 15 Jul 2019 15:47:57 +0200</pubDate>
- <dc:creator>Rubén Abad</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-machine-learning</guid>
   </item>
   </channel>
 </rss>

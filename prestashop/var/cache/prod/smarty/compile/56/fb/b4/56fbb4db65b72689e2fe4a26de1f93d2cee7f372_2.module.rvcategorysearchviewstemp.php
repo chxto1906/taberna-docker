@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-22 10:00:35
+/* Smarty version 3.1.33, created on 2019-08-26 12:11:39
   from 'module:rvcategorysearchviewstemp' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d5eae1381e4e5_30627259',
+  'unifunc' => 'content_5d6412cbaec1e4_41031619',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '56fbb4db65b72689e2fe4a26de1f93d2cee7f372' => 
     array (
       0 => 'module:rvcategorysearchviewstemp',
-      1 => 1563288288,
+      1 => 1566570711,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d5eae1381e4e5_30627259 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6412cbaec1e4_41031619 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="_desktop_rvsearch" class="col-lg-10">
 <div class="rvcategorysearch">
     <div id="category_search">
