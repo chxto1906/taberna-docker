@@ -256,7 +256,10 @@ class Mipilotoshipping extends CarrierModule
                     $this->context->cart->delete();
                     $this->context->cookie->id_cart = 0;
                 }
-            }/* else {
+            }
+
+
+            /* else {
                 $shipping_cost = "Error";
                 $this->context->cart->delete();
                 $this->context->cookie->id_cart = 0;

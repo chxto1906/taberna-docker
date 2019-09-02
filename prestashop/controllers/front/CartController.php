@@ -79,8 +79,6 @@ class CartControllerCore extends FrontController
         $this->id_address_delivery = (int) Tools::getValue('id_address_delivery');
         $this->preview = ('1' === Tools::getValue('preview'));
 
-        //exit;
-
 
         /* Check if the products in the cart are available */
         if ('show' === Tools::getValue('action')) {
@@ -106,11 +104,13 @@ class CartControllerCore extends FrontController
         $presenter = new CartPresenter();
         $presented_cart = $presenter->present($this->context->cart, $shouldSeparateGifts = true);
 
+
         $this->context->smarty->assign([
             'cart' => $presented_cart,
             'delivery_time' => $this->context->cart->getOrderDeliveryTime(),
             'static_token' => Tools::getToken(false),
         ]);
+
 
         if (count($presented_cart['products']) > 0) {
             $this->setTemplate('checkout/cart');

@@ -152,8 +152,8 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $dataResult["id_product"] = $product["id_product"]; 
                 $dataResult["name"] = $product["name"];
                 $dataResult["description"] = $product["description"];
-                $dataResult["price_tax_exc"] = $product["price_tax_exc"];
-                $dataResult["price_without_reduction"] = $product["price_without_reduction"];
+                $dataResult["price_tax_exc"] = $this->formatPrice($product["price_tax_exc"]);
+                $dataResult["price_without_reduction"] = $this->formatPrice($product["price_without_reduction"]);
                 $dataResult["quantity"] = $product["quantity"];
                 $dataResult["reference"] = $product["reference"];
                 $dataResult["manufacturer_name"] = $product["manufacturer_name"];
@@ -169,6 +169,16 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             }
         }
         return $productsResult;
+    }
+
+    public function formatPrice($price, $curr = '')
+    {
+        return Tools::displayPrice(
+            $price,
+            $this->context->currency,
+            false,
+            $this->context
+        );
     }
 
 
