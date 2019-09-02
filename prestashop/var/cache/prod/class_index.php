@@ -2419,7 +2419,7 @@
   ),
   'Hook' => 
   array (
-    'path' => '',
+    'path' => 'override/classes/Hook.php',
     'type' => 'class',
     'override' => false,
   ),

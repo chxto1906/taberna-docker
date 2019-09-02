@@ -1125,7 +1125,6 @@ class FrontControllerCore extends Controller
         if (!Configuration::get('PS_TOKEN_ENABLE')) {
             return true;
         }
-
         return strcasecmp(Tools::getToken(false), Tools::getValue('token')) == 0;
     }
 

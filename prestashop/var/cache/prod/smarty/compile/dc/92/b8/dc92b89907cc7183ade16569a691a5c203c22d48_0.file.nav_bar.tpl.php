@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 11:51:07
+/* Smarty version 3.1.33, created on 2019-09-02 10:07:50
   from '/html/backoffice/themes/new-theme/template/components/layout/nav_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d640dfb838c88_15254615',
+  'unifunc' => 'content_5d6d3046adcfe5_65397082',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d640dfb838c88_15254615 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6d3046adcfe5_65397082 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block">
   <span class="menu-collapse">
     <i class="material-icons">chevron_left</i>

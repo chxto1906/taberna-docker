@@ -26,7 +26,9 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
 
 
         echo "Empieza FacturaSAP " . date('m/d/Y G:i:s a', time()) . "<br>";
-        $id_carrier = $this->context->cart->id_carrier;
+        echo "<hr>";
+        echo "AMBIENTE: ".AMBIENTE;
+        /*$id_carrier = $this->context->cart->id_carrier;
         echo "<br>ID_CARRIER: ".$id_carrier."<br>";
 
         $this->log = new LoggerTools();
@@ -48,7 +50,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
             }
         }
         $respuesta = array('status'=>true);
-        echo json_encode($respuesta);
+        echo json_encode($respuesta);*/
 
     	exit;
     	$this->setTemplate('productos.tpl');

@@ -11,58 +11,161 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
 
     public function initContent() {
     	parent::initContent();
-        try {
-            $response = new Response();
-            $status_code = 200;
-            
-            $email = Tools::getValue("email");
-            $password = Tools::getValue("password");
+        $response = new Response();
+        $status_code = 401;
+        $email = Tools::getValue('email', '');
+        $password = Tools::getValue('password', '');
+        $cart_id = Tools::getValue('cart_id', '');
 
+        if (!empty($cart_id)) {
+            $this->context->cart->id_currency = $this->context->currency->id;
+            $this->context->cart = new Cart($cart_id);
+            $this->context->cookie->id_cart = (int) $this->context->cart->id;
+            $this->context->cookie->write();
+        }
+        if (empty($email)) {
             $status_code = 400;
-            $resultDecode = "Email y contraseña son obligatorios";
+            $resultDecode = "Email es requerido";
+        } elseif (!Validate::isEmail($email)) {
+            $status_code = 400;
+            $resultDecode = "Dirección de email es inválido";
+        } elseif (empty($password)) {
+            $status_code = 400;
+            $resultDecode = "Password es requerido";
+        } elseif (!Validate::isPasswd($password)) {
+            $status_code = 400;
+            $resultDecode = "Password es incorrecto";
+        } else {
+            $customer = new Customer();
+            Hook::exec('actionBeforeAuthentication');
+            $authentication = $customer->getByEmail(trim($email), trim($password));
+            if (isset($authentication->active) && !$authentication->active) {
+                $resultDecode = "Cuenta no está activa";
+            } elseif (!$authentication || !$customer->id) {
+                $resultDecode = "Autenticación fallida";
+            } else {
+                $this->context->cookie->id_customer = (int) ($customer->id);
+                $this->context->cookie->customer_lastname = $customer->lastname;
+                $this->context->cookie->customer_firstname = $customer->firstname;
+                $this->context->cookie->logged = 1;
+                $customer->logged = 1;
+                $this->context->cookie->is_guest = $customer->isGuest();
+                $this->context->cookie->passwd = $customer->passwd;
+                $this->context->cookie->email = $customer->email;
 
-            if ($email && $password) {
-                $resultDecode = "Email y contraseña incorrectos";                
-                $status_code = 401;
-                $customer = new Customer();
+                $this->context->customer = $customer;
+                if (Configuration::get('PS_CART_FOLLOWING') &&
+                        (empty($this->context->cookie->id_cart) ||
+                        Cart::getNbProducts($this->context->cookie->id_cart) == 0) &&
+                        $id_cart = (int) Cart::lastNoneOrderedCart($this->context->customer->id)) {
+                    $this->context->cart = new Cart($id_cart);
+                } else {
+                    $id_carrier = (int) $this->context->cart->id_carrier;
+                    if (!$this->context->cart->id_address_delivery) {
+                        $this->context->cart->id_carrier = 0;
+                        $this->context->cart->setDeliveryOption(null);
+                        $d_id = (int) Address::getFirstCustomerAddressId((int) ($customer->id));
+                        $this->context->cart->id_address_delivery = $d_id;
+                        $i_id = (int) Address::getFirstCustomerAddressId((int) ($customer->id));
+                        $this->context->cart->id_address_invoice = $i_id;
+                    }
+                }
+                $this->context->cart->id_customer = (int) $customer->id;
+                $this->context->cart->secure_key = $customer->secure_key;
 
-                $customer = $customer->getByEmail($email,$password);
+                if (isset($id_carrier) && $id_carrier && Configuration::get('PS_ORDER_PROCESS_TYPE')) {
+                    $delivery_option = array($this->context->cart->id_address_delivery => $id_carrier . ',');
+                    $this->context->cart->setDeliveryOption($delivery_option);
+                }
+
+                $this->context->cart->id_currency = $this->context->currency->id;
+                $this->context->cart->save();
+                $this->context->cookie->id_cart = (int) $this->context->cart->id;
+                $this->context->cookie->write();
+                $this->context->cart->autosetProductAddress();
+
+                Hook::exec('actionAuthentication', array('customer' => $this->context->customer));
+                $wishlist_count = $this->getWishListCount($customer->id);
 
                 $address = new Address();
-                $first_address = $address->getFirstCustomerAddressId($customer->id);
+                $first_address = $address->getFirstCustomerAddressId($authentication->id);
+                $authentication->id_address = $first_address ? $first_address : null;
 
-                //$address = $customer->getAddresses(1);
-                //var_dump($address);
-                if ($customer) {
-                    $customer->id_address = $first_address ? $first_address : null;
-                    $customer = $this->proccessCustomer($customer);
-                    $status_code = 200;
-                    $resultDecode = $customer;
-                }
+                $authentication->customer_id = $customer->id;
+                $authentication->wishlist_count = $wishlist_count;
+                $authentication->cart_id = (int)$this->context->cart->id;
+                $authentication->cart_count = Cart::getNbProducts($this->context->cookie->id_cart);
+
+                $resultDecode = $this->proccessCustomer($authentication);
+                $status_code = 200;
+
+                CartRule::autoRemoveFromCart($this->context);
+                CartRule::autoAddToCart($this->context);
             }
-
-            echo $response->json_response($resultDecode,$status_code);
-        } catch (Exception $e) {
-            echo $response->json_response($e->getMessage(),500);
         }
+
+        //echo $this->context;
+        echo $response->json_response($resultDecode,$status_code);
 
         exit;
 
     	$this->setTemplate('productos.tpl');
     }
 
+    /*
+     * Function to get the wishlist item count
+     * 
+     * @param int $customer_id id of customer
+     * @return int wishlist item count
+     */
+    public function getWishListCount($customer_id)
+    {
+        if (!Module::isInstalled('blockwishlist') || !Module::isEnabled('blockwishlist')) {
+            $wishlist_count = 0;
+        } else {
+            $deafult_wishlist_id = $this->getDefaultWishlist($customer_id);
+            if ($deafult_wishlist_id) {
+                $wishlist_products = $this->getProductByIdCustomer(
+                    $deafult_wishlist_id,
+                    $customer_id,
+                    $this->context->language->id
+                );
+                if (!$wishlist_products) {
+                    $wishlist_count = 0;
+                } else {
+                    $wishlist_count = count($wishlist_products);
+                }
+            } else {
+                $wishlist_count = 0;
+            }
+        }
+
+        return $wishlist_count;
+    }
+
+
+
+
 
     public function proccessCustomer($customer) {
-        $categoriesResult = array();
+        $context_session = array(
+                                'customer_id'   => $customer->id,
+                                'cart_id'       => $customer->cart_id
+                            );
+        $context_session_str = json_encode((object)$context_session);
+        $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);
+
         $dataResult = [
-            "id"            => $customer->id,
-            "secure_key"    => $customer->secure_key,
             "id_gender"     => $customer->id_gender,
             "last_name"     => $customer->lastname,
             "first_name"    => $customer->firstname,
             "birthday"      => $customer->birthday,
             "email"         => $customer->email,
-            "id_address"    => $customer->id_address
+            "id_address"    => $customer->id_address,
+            "wishlist_count"=> $customer->wishlist_count,
+            "session_data"  => $context_session_encrypt,
+            "cart_count"    => $customer->cart_count,
+            "cart_id"       => $customer->cart_id
         ];
         
         return (object) $dataResult;

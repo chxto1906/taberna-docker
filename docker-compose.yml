@@ -25,6 +25,7 @@ services:
       - ./prestashop/:/html/:delegated
       - ./docker-images/php-fpm/php.ini/:/usr/local/etc/php/php.ini
       - ./docker-images/php-fpm/error_log/:/var/log/fpm-php.www.log
+      - ./.env/:/var/.env
     networks:
       - front-tier
       - back-tier

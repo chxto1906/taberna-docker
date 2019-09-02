@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 12:11:38
+/* Smarty version 3.1.33, created on 2019-09-02 11:37:11
   from 'module:rvmanufacturerblockviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6412cad5bc24_47477691',
+  'unifunc' => 'content_5d6d4537a93793_22819880',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6412cad5bc24_47477691 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6d4537a93793_22819880 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <div id="rvmanufacturerblock" class="clearfix rv-animate-element bottom-to-top">
         <div class="container">
             <div class="row">
