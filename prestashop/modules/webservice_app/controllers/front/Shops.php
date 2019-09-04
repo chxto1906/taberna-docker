@@ -20,7 +20,6 @@ class Webservice_AppShopsModuleFrontController extends ModuleFrontController {
 
         echo $response->json_response($shops,200);
 
-    	exit;
         exit;
     	$this->setTemplate('productos.tpl');
     }
