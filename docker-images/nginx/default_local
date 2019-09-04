@@ -21,6 +21,14 @@ server {
 
           index index.php index.html;
 
+
+          add_header Access-Control-Allow-Origin *;
+          add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+          add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
+          add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
+          add_header Access-Control-Max-Age 1728000;
+
+
           location /web-api {
             index index.php index.html index.htm;
             try_files $uri $uri/ /web-api/index.php$is_args$args;
@@ -50,11 +58,7 @@ server {
           }
 
 
-          add_header Access-Control-Allow-Origin *;
-          add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-          add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
-          add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
-          add_header Access-Control-Max-Age 1728000;
+          
 
 
           ## Adding Caching
