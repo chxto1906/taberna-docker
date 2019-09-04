@@ -27,10 +27,21 @@
 /**
  * @since 1.5.0
  */
+
+header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range');
+    header('Access-Control-Expose-Headers: Content-Length,Content-Range');
+    header('Access-Control-Max-Age: 1728000');
+    
 class ModuleFrontControllerCore extends FrontController
 {
     /** @var Module */
     public $module;
+
+
+    
+
 
     public function __construct()
     {
