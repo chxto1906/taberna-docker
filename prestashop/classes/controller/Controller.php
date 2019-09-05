@@ -776,16 +776,19 @@ abstract class ControllerCore
 
     public function isSession() {
         $result = null;
-        $context_session_encrypt = $_SERVER["HTTP_AUTHORIZATION"];
-        $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
-        $context_session_decrypt_obj = json_decode($context_session_decrypt);
+        $context_session_encrypt = isset($_SERVER["HTTP_AUTHORIZATION"])?$_SERVER["HTTP_AUTHORIZATION"]:null;
+        if (isset($context_session_encrypt)) {
+            $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
+            $context_session_decrypt_obj = json_decode($context_session_decrypt);
+            if ((isset($context_session_decrypt_obj->cart_id)) && (isset($context_session_decrypt_obj->customer_id)) ) {
+                $result = $context_session_decrypt_obj;
+            }
+        }
 
         //var_dump($context_session_decrypt_obj);
         //exit;
 
-        if ((isset($context_session_decrypt_obj->cart_id)) && (isset($context_session_decrypt_obj->customer_id)) ) {
-            $result = $context_session_decrypt_obj;
-        }
+        
 
         return $result;
     }
