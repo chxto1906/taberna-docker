@@ -37,6 +37,20 @@
             login();
         });
 
+        $("#btn_get_cart").click(function(e){
+            var cart_id = $("#txt_cart_id").val();
+            getCart(cart_id);
+        });
+
+        $("#btn_add_to_cart").click(function(e){
+            var cart_id = $("#txt_cart_id").val();
+            addCart(cart_id);
+        });
+
+        $("#btn_cerrar_sesion").click(function(e){
+            cerrarSesion();
+        });
+
 
         function login() {
             $.ajax({
@@ -67,13 +81,13 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
                 success: function (data,r,xhr) {
                     console.log('RESPONSE ADD TO CART')
                     console.dir(data);
-                    getCart(cart_id);
+                    //getCart(cart_id);
                     console.dir(r);
                     console.dir(xhr);
                     console.dir(document.cookie);
@@ -89,7 +103,7 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&cart_id='+cart_id,
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&cart_id='+cart_id,
                 type: "GET",
                 xhrFields: { withCredentials: true },
                 dataType: "json",
@@ -106,6 +120,31 @@
                 }
             });
         }
+
+        function cerrarSesion(){
+
+            $.ajax({
+                //data: {email: email_destino, base: img},
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Logout',
+                type: "GET",
+                xhrFields: { withCredentials: true },
+                dataType: "json",
+                success: function (data,r,xhr) {
+                    console.log('RESPONSE LOGOUT')
+                    console.dir(data);
+                    console.dir(r);
+                    console.dir(xhr);
+                    console.dir(document.cookie);
+                },
+                error: function (error) {
+                    console.log("ERROR");
+                    console.dir(error);
+                }
+            });
+        }
+
+
+
 
 
 
