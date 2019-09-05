@@ -83,7 +83,7 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&customer_id=2&cart_id='+cart_id,
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
                 beforeSend: function(request) {
@@ -108,10 +108,11 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&customer_id=2&cart_id='+cart_id,
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
                 beforeSend: function(request) {
+                    console.log('authorizationToken: '+authorizationToken);
                     request.setRequestHeader("Authorization", authorizationToken);
                 },
                 success: function (data,r,xhr) {
