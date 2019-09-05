@@ -41,11 +41,12 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
             }
         }*/
 
-        //echo $this->context;
+        var_dump($this->context->cart);
+        exit;
 
         if (!(int) $cart_id) {
             $this->status_code = 404;
-            $this->content = "Carrito no encontrado";
+            $this->content = "Carrito no encontrado 1";
         } else {
             if (Tools::getIsset('order_id')) {
                 $oldCart = new Cart((int) $cart_id);
@@ -93,7 +94,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
     {
         if (!Validate::isLoadedObject($this->context->cart)) {
             $this->status_code = 404;
-            $this->content = "Carrito no encontrado";
+            $this->content = "Carrito no encontrado 2";
         } else {
             $this->status_code = 200;
             $this->content['checkout_page']['per_products_shipping'] = "0";
