@@ -32,36 +32,42 @@
         //});
         $('#contenedor_de_licores_seleccionados').hide();
 
-        $.ajax({
-            //data: {email: email_destino, base: img},
-            url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Login&email=chxto1906@gmail.com&password=chato1906',
-            type: "GET",
-            xhrFields: { withCredentials: true },
-            dataType: "json",
-            success: function (data,r,xhr) {
-                console.log("RESPONSE LOGIN");
-                console.dir(data);
 
-                var setCookie = xhr.getResponseHeader('Set-Cookie');
-                console.log('SET_COOKIE: '+setCookie);
-
-                /*addCart(data.cart_id);
-                console.dir(r);
-                console.dir(xhr);
-                console.dir(document.cookie);*/
-            },
-            error: function (error) {
-                console.log("ERROR");
-                console.dir(error);
-            }
+        $("#btn_iniciar_sesion").click(function(e){
+            login();
         });
+
+
+        function login() {
+            $.ajax({
+                //data: {email: email_destino, base: img},
+                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Login&email=chxto1906@gmail.com&password=chato1906',
+                type: "GET",
+                success: function (data,r,xhr) {
+                    console.log("RESPONSE LOGIN");
+                    console.dir(data);
+
+                    var setCookie = xhr.getResponseHeader('Set-Cookie');
+                    console.log('SET_COOKIE: '+setCookie);
+
+                    //addCart(data.cart_id);
+                    console.dir(r);
+                    console.dir(xhr.getAllResponseHeaders());
+                    console.dir(document.cookie);
+                },
+                error: function (error) {
+                    console.log("ERROR");
+                    console.dir(error);
+                }
+            });
+        }
 
         
         function addCart(cart_id){
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
+                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
                 success: function (data,r,xhr) {
@@ -83,8 +89,9 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&cart_id='+cart_id,
+                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&cart_id='+cart_id,
                 type: "GET",
+                xhrFields: { withCredentials: true },
                 dataType: "json",
                 success: function (data,r,xhr) {
                     console.log('RESPONSE GET CART')
