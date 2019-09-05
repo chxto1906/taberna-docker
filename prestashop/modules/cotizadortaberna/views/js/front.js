@@ -51,6 +51,8 @@
             cerrarSesion();
         });
 
+        var authorizationToken = null;
+
 
         function login() {
             $.ajax({
@@ -60,7 +62,7 @@
                 success: function (data,r,xhr) {
                     console.log("RESPONSE LOGIN");
                     console.dir(data);
-
+                    authorizationToken = data.session_data;
                     var setCookie = xhr.getResponseHeader('Set-Cookie');
                     console.log('SET_COOKIE: '+setCookie);
 
@@ -84,6 +86,9 @@
                 url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&customer_id=2&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
+                beforeSend: function(request) {
+                    request.setRequestHeader("Authorization", authorizationToken);
+                },
                 success: function (data,r,xhr) {
                     console.log('RESPONSE ADD TO CART')
                     console.dir(data);
@@ -106,6 +111,9 @@
                 url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=GetCart&customer_id=2&cart_id='+cart_id,
                 type: "GET",
                 dataType: "json",
+                beforeSend: function(request) {
+                    request.setRequestHeader("Authorization", authorizationToken);
+                },
                 success: function (data,r,xhr) {
                     console.log('RESPONSE GET CART')
                     console.dir(data);
@@ -127,6 +135,9 @@
                 url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Logout',
                 type: "GET",
                 dataType: "json",
+                beforeSend: function(request) {
+                    request.setRequestHeader("Authorization", authorizationToken);
+                },
                 success: function (data,r,xhr) {
                     console.log('RESPONSE LOGOUT')
                     console.dir(data);
