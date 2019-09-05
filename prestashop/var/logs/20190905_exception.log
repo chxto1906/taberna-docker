@@ -7,3 +7,4 @@
 *ERROR* 	v1.7.5.0	2019/09/05 - 12:52:07: La propiedad Cart->id_currency está vacía. at line 984 in file classes/ObjectModel.php
 *ERROR* 	v1.7.5.0	2019/09/05 - 12:57:48: La propiedad Cart->id_currency está vacía. at line 984 in file classes/ObjectModel.php
 *ERROR* 	v1.7.5.0	2019/09/05 - 12:58:02: La propiedad Cart->id_currency está vacía. at line 984 in file classes/ObjectModel.php
+*ERROR* 	v1.7.5.0	2019/09/05 - 15:30:25: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php
