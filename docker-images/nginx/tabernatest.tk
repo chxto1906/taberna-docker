@@ -1,50 +1,43 @@
-#default LOCAL
-
-
+#default SERVER 
 
 server {
-          listen 80;
-          listen [::]:80 default_server;
+      listen 80;
+      listen [::]:80;
+      server_name tabernatest.tk www.tabernatest.tk;
+      return 301 https://$server_name$request_uri;
+}
+
+server {
 
           ### HTTP2 Part
           #listen 443 ssl http2 default_server;
-          #listen [::]:443 ssl http2 default_server;
-  
-          #ssl_certificate /etc/nginx/ssl/lataberna.com.ec.crt;
-          #ssl_certificate_key /etc/nginx/ssl/lataberna.com.ec.key;
-          #ssl_protocols       SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-          #ssl_ciphers         HIGH:!aNULL:!MD5;
+          listen 443 ssl http2;
+          listen [::]:443 ssl http2;
+          
           rewrite_log on;
-          ##server_name lataberna.com.ec www.lataberna.com.ec;
-          server_name tabernatest.tk tabernatest.tk;
+          server_name tabernatest.tk www.tabernatest.tk;
+          
+          
+
+          ssl_certificate           /etc/letsencrypt/live/tabernatest.tk/fullchain.pem;
+          ssl_certificate_key       /etc/letsencrypt/live/tabernatest.tk/privkey.pem;
+          ssl_trusted_certificate   /etc/letsencrypt/live/tabernatest.tk/chain.pem;
+
+          
+          # Improve HTTPS performance with session resumption
+            ssl_session_cache shared:SSL:10m;
+            ssl_session_timeout 10m;
+
+          # Enable server-side protection against BEAST attacks
+            ssl_protocols       SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+
+          ssl_ciphers         HIGH:!aNULL:!MD5;
+
+
           root /html;
 
           index index.php index.html;
-
-
-          add_header Access-Control-Allow-Origin *;
-          add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-          add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
-          add_header Access-Control-Allow-Credentials true;
-          add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
-          add_header Access-Control-Max-Age 1728000;
-
-
-          location /web-api {
-            index index.php index.html index.htm;
-            try_files $uri $uri/ /web-api/index.php$is_args$args;
-          }
-
-          location ^~ /.well-known {
-            allow all;
-            root  /data/letsencrypt/;
-          }
-
-             
          
-
-
-          
        
           location = /favicon.ico {
             log_not_found off;
@@ -58,8 +51,17 @@ server {
             access_log off;
           }
 
+          add_header Access-Control-Allow-Origin *;
+          add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
+          add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
+          add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
+          add_header Access-Control-Max-Age 1728000;
 
           
+          location ^~ /.well-known {
+            allow all;
+            root  /data/letsencrypt/;
+          }
 
 
           ## Adding Caching
@@ -87,13 +89,7 @@ server {
       
 
     rewrite ^/[a-zA-Z][a-zA-Z]/(index\.php.*)$ /$1 last; #Remove language code when index.php is called directly
-    
-    
-    
-
-
-
-
+     
       # Global rewrite not depending on languages
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
     rewrite "^/c/([0-9]+)(\-[_a-zA-Z0-9-]*)/(.*)\.jpg$" /img/c/$1$2.jpg last;
@@ -262,7 +258,7 @@ server {
     rewrite "^/stock/([_a-zA-Z0-9-]*)/([_a-zA-Z0-9-]*)$" /index.php?controller=$1$2 last;
 
 
-       rewrite ^/cuenca/showroom/(.*) /$1;
+       rewrite ^/cuenca/tienda-nueva/(.*) /$1;
          
          rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
        rewrite "^/c/([0-9]+)(\-[_a-zA-Z0-9-]*)/(.*)\.jpg$" /img/c/$1$2.jpg last;
@@ -541,6 +537,31 @@ server {
     rewrite "^/content/category/([0-9]+)\-([a-zA-Z0-9-]*)(.*)$" /index.php?controller=cms&id_cms_category=$1$3 last;
     rewrite "^/module/([_a-zA-Z0-9-]*)/([_a-zA-Z0-9-]*)$" /index.php?fc=module&module=$1&controller=$2 last;
     rewrite "^/stock/([_a-zA-Z0-9-]*)/([_a-zA-Z0-9-]*)$" /index.php?controller=$1$2 last;
+
+        rewrite ^/cuenca/showroom(.*) /$1;
+     
+     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
+       rewrite "^/c/([0-9]+)(\-[_a-zA-Z0-9-]*)/(.*)\.jpg$" /img/c/$1$2.jpg last;
+    rewrite "^/c/([_a-zA-Z-]+)/(.*)\.jpg$" /img/c/$1.jpg last;
+    rewrite "^/([a-z0-9]+)\-([a-z0-9]+)(\-[_a-zA-Z0-9-]*)/(\P{M}\p{M}*)*\.jpg$" /img/p/$1-$2$3.jpg last;
+    rewrite "^/([0-9]+)\-([0-9]+)/(\P{M}\p{M}*)*\.jpg$" /img/p/$1-$2.jpg last;
+    rewrite "^/([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$1$2.jpg last;
+    rewrite "^/([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$1$2$3.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$1$2$3$4.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$4/$1$2$3$4$5.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8.jpg last;
+    rewrite "^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?/(\P{M}\p{M}*)*\.jpg$" /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9.jpg last;
+    rewrite "^/([0-9]+)\-(\P{M}\p{M}*)+\.html(.*)$" /index.php?controller=product&id_product=$1$3 last;
+    rewrite "^/([0-9]+)\-([a-zA-Z0-9-]*)(.*)$" /index.php?controller=category&id_category=$1$3 last;
+    rewrite "^/([a-zA-Z0-9-]*)/([0-9]+)\-([a-zA-Z0-9-]*)\.html(.*)$" /index.php?controller=product&id_product=$2$4 last;
+    rewrite "^/([0-9]+)__([a-zA-Z0-9-]*)(.*)$" /index.php?controller=supplier&id_supplier=$1$3 last;
+    rewrite "^/([0-9]+)_([a-zA-Z0-9-]*)(.*)$" /index.php?controller=manufacturer&id_manufacturer=$1$3 last;
+    rewrite "^/content/([0-9]+)\-([a-zA-Z0-9-]*)(.*)$" /index.php?controller=cms&id_cms=$1$3 last;
+    rewrite "^/content/category/([0-9]+)\-([a-zA-Z0-9-]*)(.*)$" /index.php?controller=cms&id_cms_category=$1$3 last;
+    rewrite "^/module/([_a-zA-Z0-9-]*)/([_a-zA-Z0-9-]*)$" /index.php?fc=module&module=$1&controller=$2 last;
+    rewrite "^/stock/([_a-zA-Z0-9-]*)/([_a-zA-Z0-9-]*)$" /index.php?controller=$1$2 last;
      
      
      try_files $uri $uri/ /index.php?$args;
@@ -559,6 +580,7 @@ server {
     }
 
     location / {
+
         if (!-e $request_filename) {
             rewrite ^/.*$ /index.php last;
         }
@@ -604,7 +626,5 @@ server {
           fastcgi_busy_buffers_size 256k;
           fastcgi_temp_file_write_size 256k;
       }
-
-      
 
 }
