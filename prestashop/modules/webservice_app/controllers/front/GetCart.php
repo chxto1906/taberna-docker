@@ -41,8 +41,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
             }
         }*/
 
-        var_dump($this->context->cart);
-        exit;
+        
 
         if (!(int) $cart_id) {
             $this->status_code = 404;
