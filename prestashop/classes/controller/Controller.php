@@ -219,10 +219,12 @@ abstract class ControllerCore
         if (is_null($this->display_footer)) {
             $this->display_footer = true;
         }
+
         $this->context = Context::getContext();
         $this->context->controller = $this;
         $this->translator = Context::getContext()->getTranslator();
         $this->ajax = $this->isAjax();
+        
 
         if (
             !headers_sent() &&
@@ -770,5 +772,21 @@ abstract class ControllerCore
     public function getParameter($parameterId)
     {
         return $this->container->getParameter($parameterId);
+    }
+
+    public function isSession() {
+        $result = null;
+        $context_session_encrypt = $_SERVER["HTTP_AUTHORIZATION"];
+        $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
+        $context_session_decrypt_obj = json_decode($context_session_decrypt);
+
+        //var_dump($context_session_decrypt_obj);
+        //exit;
+
+        if ((isset($context_session_decrypt_obj->cart_id)) && (isset($context_session_decrypt_obj->customer_id)) ) {
+            $result = $context_session_decrypt_obj;
+        }
+
+        return $result;
     }
 }

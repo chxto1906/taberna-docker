@@ -63,6 +63,11 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                     $customer_id = $session_obj->customer_id;
                 }else{*/
                     $cart_id = Tools::getValue('cart_id', '');
+
+                    if (isset($this->context->cart->id)) {
+                        $cart_id = $this->context->cart->id;
+                    }
+
                 //}
 
 
