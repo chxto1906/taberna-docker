@@ -129,11 +129,6 @@ class ModuleFrontControllerCore extends FrontController
         return $output;
     }
 
-    public function isSession() {
-        $context_session_encrypt = $_SERVER["HTTP_AUTHORIZATION"];
-        $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
-        $context_session_decrypt_obj = json_decode($context_session_decrypt);
-        return $context_session_decrypt_obj;
-    }
+    
 
 }
