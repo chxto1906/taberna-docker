@@ -38,7 +38,7 @@
 
                     <button id="btn_iniciar_sesion">Iniciar Sesión</button>
                     <button id="btn_add_to_cart">Add To Cart</button>
-                    <input id="txt_cart_id" type="text" placeholder="car_id" name="txt_cart_id">
+                    <input id="txt_cart_id" type="text" placeholder="cart_id" name="txt_cart_id">
                     <button id="btn_get_cart">Get Cart</button>
                     <button id="btn_cerrar_sesion">Cerrar Sesión</button>
 

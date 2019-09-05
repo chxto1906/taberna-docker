@@ -166,7 +166,8 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
             "wishlist_count"=> $customer->wishlist_count,
             "session_data"  => $context_session_encrypt,
             "cart_count"    => $customer->cart_count,
-            "cart_id"       => $customer->cart_id
+            "cart_id"       => $customer->cart_id,
+            "customer_id"   => $customer->id
         ];
         
         return (object) $dataResult;
