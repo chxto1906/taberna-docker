@@ -41,7 +41,7 @@
         function login() {
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://localhost/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Login&email=chxto1906@gmail.com&password=chato1906',
+                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Login&email=chxto1906@gmail.com&password=chato1906',
                 type: "GET",
                 success: function (data,r,xhr) {
                     console.log("RESPONSE LOGIN");
