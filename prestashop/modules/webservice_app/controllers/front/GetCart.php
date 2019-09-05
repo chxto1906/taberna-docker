@@ -30,9 +30,9 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
             $this->context->cookie->id_customer = $customer_id;
             $this->context->cookie->write();
         }else{*/
-            $cart_id = Tools::getValue('cart_id', '');
+            $cart_id = (int) Tools::getValue('cart_id', '');
             if (isset($this->context->cart->id)) {
-                $cart_id = $this->context->cart->id;
+                $cart_id = (int) $this->context->cart->id;
             }
             /*if ($this->context->customer->id){
                 $customer = new Customer((int) $this->context->customer->id);
