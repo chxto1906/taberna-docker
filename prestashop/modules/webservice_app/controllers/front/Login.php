@@ -104,7 +104,8 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
             }
         }
 
-        //echo $this->context;
+        /*var_dump($this->context);
+        exit;*/
         echo $response->json_response($resultDecode,$status_code);
 
         exit;
