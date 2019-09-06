@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/es/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/es/blog/feed.xml</link>
+    <description></description>
+    <language>es</language>
+     <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Error http 404 : ¿qué es y cómo solucionarlo en tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/http-error-404</link>
+    <description>¿Has oído hablar del &quot;http error 404&quot; alguna vez?</description>
+     <pubDate>Fri, 06 Sep 2019 10:50:43 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/http-error-404</guid>
+  </item>
+  <item>
+    <title>“AliExpress” ¡Todo lo que debes saber para mejorar tus ventas en este Marketplace!</title>
+    <link>https://www.prestashop.com/es/blog/webinar-todo-sobre-aliexpress</link>
+    <description>¡Todo lo que necesitas saber sobre AliExpress!
+12 de septiembre de 2019 a las 16 horas (de España)
+</description>
+     <pubDate>Wed, 04 Sep 2019 12:34:24 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-todo-sobre-aliexpress</guid>
+  </item>
+  <item>
+    <title>¿Qué es AliExpress y cómo vender tus productos en este Marketplace?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-aliexpress</link>
+    <description>¿Conoces Aliexpress y las ventajas que te aporta vender tus productos en este &quot;gigante&quot; del mundo online?</description>
+     <pubDate>Fri, 30 Aug 2019 12:03:51 +0200</pubDate>
+ <dc:creator>Bertrand Amaraggi</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-aliexpress</guid>
+  </item>
+  <item>
+    <title>¿Cuáles son las relaciones existentes entre PrestaShop, su comunidad y socios?</title>
+    <link>https://www.prestashop.com/es/blog/relaciones-prestashop-comunidad-socios</link>
+    <description>PrestaShop es una solución de eCommerce de código abierto, accesible a todos y diseñada para crear rápidamente una tienda online eficiente y fiable.</description>
+     <pubDate>Tue, 27 Aug 2019 18:04:48 +0200</pubDate>
+ <dc:creator>Cécile Dubouis</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/relaciones-prestashop-comunidad-socios</guid>
+  </item>
+  <item>
+    <title>¿Cómo personalizar tu página de inicio en PrestaShop? 9 Módulos</title>
+    <link>https://www.prestashop.com/es/blog/modulos-prestashop-personaliza-el-aspecto-de-tu-pagina-de-inicio</link>
+    <description>¿Acabas de comenzar en el sector del comercio electrónico con PrestaShop y no sabes cómo personalizar tu página de inicio aún?</description>
+     <pubDate>Wed, 21 Aug 2019 08:30:26 +0200</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulos-prestashop-personaliza-el-aspecto-de-tu-pagina-de-inicio</guid>
+  </item>
+  <item>
+    <title>¿Cómo conseguir que tu migración a PrestaShop 1.7 sea un éxito?</title>
+    <link>https://www.prestashop.com/es/blog/consejos-migracion-prestashop-1-7</link>
+    <description>Si tienes pensado migrar tu tienda online a PrestaShop 1.7, estás en el sitio correcto.</description>
+     <pubDate>Tue, 20 Aug 2019 15:41:05 +0200</pubDate>
+ <dc:creator>Méguy Solvet</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/consejos-migracion-prestashop-1-7</guid>
+  </item>
+  <item>
+    <title>5 Mejores plantillas para vender ropa de bebé online con PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</link>
+    <description>Si actualmente tienes alguna tienda para vender ropa de bebé online o lo estás considerando, ¡este artículo es perfecto para ti!</description>
+     <pubDate>Tue, 20 Aug 2019 00:01:41 +0200</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</guid>
+  </item>
+  <item>
+    <title>Directiva DSP2: ¿En qué consiste esta normativa para servicios de pagos digitales?</title>
+    <link>https://www.prestashop.com/es/blog/directiva-psd2</link>
+    <description>¿Conoces las novedades que traerá consigo la DSP2, con las nuevas normas de autenticación en lo que respecta a pagos digitales?</description>
+     <pubDate>Mon, 12 Aug 2019 09:41:11 +0200</pubDate>
+ <dc:creator>Eva Lacalle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/directiva-psd2</guid>
+  </item>
+  <item>
+    <title>Control horario de trabajadores: ¿cómo afecta esta normativa a los eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/control-horario-trabajadores</link>
+    <description>¿Aún no aplicas la nueva normativa sobre el control horario de trabajadores en tu eCommerce o negocio digital?</description>
+     <pubDate>Mon, 12 Aug 2019 07:25:50 +0200</pubDate>
+ <dc:creator>David Egea</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/control-horario-trabajadores</guid>
+  </item>
+  <item>
+    <title>¿Cómo medir el ROAS de tu negocio online y qué indicadores analizar?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-el-roas</link>
+    <description>¿Tienes un negocio online y quieres saber su rendimiento? ¿Has oído hablar de qué es el ROAS o los KPI?</description>
+     <pubDate>Wed, 07 Aug 2019 16:36:29 +0200</pubDate>
+ <dc:creator>Daniel Díaz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-el-roas</guid>
+  </item>
+  </channel>
+</rss>

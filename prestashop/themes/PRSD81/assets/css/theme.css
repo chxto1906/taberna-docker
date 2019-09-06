@@ -16364,27 +16364,27 @@ table#product_comparison {
   #popup_email_subscription img {
     border-radius: 10px; }
   #popup_email_subscription .btn-close {
-    bottom: 2.625rem;
+    top: 0.625rem;
     opacity: 1;
     position: absolute;
     right: auto;
     text-shadow: none;
     font-weight: 600;
-    left: 32.5%; }
+    left: 33.5%; }
     @media (min-width: 2560px) {
       #popup_email_subscription .btn-close {
         left: 36.5%; } }
     @media (max-width: 1366px) {
       #popup_email_subscription .btn-close {
-        left: 23.5%; } }
+        left: 34.5%; } }
     @media (max-width: 991px) {
       #popup_email_subscription .btn-close {
         /* max 991 */
-        left: 13.5%; } }
+        left: 25.5%; } }
     @media (max-width: 767px) {
       #popup_email_subscription .btn-close {
         /* max 767 */
-        left: 8.5%; } }
+        left: 25.5%; } }
     @media (max-width: 543px) {
       #popup_email_subscription .btn-close {
         /* max 543 */
@@ -16392,8 +16392,8 @@ table#product_comparison {
         bottom: 25px; } }
     @media (max-width: 530px) and (min-width: 320px) {
       #popup_email_subscription .btn-close {
-        left: 28.5%;
-        bottom: 25px; } }
+        left: 8.5%;
+        bottom: 3px; } }
     #popup_email_subscription .btn-close .btn {
       border: medium none;
       color: var(--rv-brand-primary);
@@ -16412,25 +16412,27 @@ table#product_comparison {
         color: var(--rv-brand-secondary); }
   #popup_email_subscription .close {
     position: absolute;
-    right: 28.5%;
+    right: 34.5%;
     top: 7px;
     text-shadow: none;
     opacity: 1;
-    color: #ed2123; }
+    color: #ed2123;
+    z-index: 1; }
     @media (min-width: 2560px) {
       #popup_email_subscription .close {
         right: 34%; } }
     @media (max-width: 1366px) {
       #popup_email_subscription .close {
-        right: 19.5%; } }
+        right: 33.5%;
+         } }
     @media (max-width: 991px) {
       #popup_email_subscription .close {
         /* max 991 */
-        right: 8.5%; } }
+        right: 25.5%; } }
     @media (max-width: 767px) {
       #popup_email_subscription .close {
         /* max 767 */
-        right: 1.5%; } }
+        right: 20.5%; } }
     #popup_email_subscription .close i {
       font-size: 22px;
       color: #ed2123; }
@@ -16441,9 +16443,10 @@ table#product_comparison {
       color: #ed2123; }
   #popup_email_subscription .emailsub-text-wrapper {
     position: absolute;
-    right: 53%;
-    top: 50%;
-    left: 29.5%;
+    right: 52%;
+    top: 49%;
+    left: 21.5%;
+    min-height: 400px;
     transform: translate(0, -50%); }
     @media (min-width: 2560px) {
       #popup_email_subscription .emailsub-text-wrapper {
@@ -16451,13 +16454,30 @@ table#product_comparison {
         left: 34.5%; } }
     @media (max-width: 1366px) {
       #popup_email_subscription .emailsub-text-wrapper {
+        right: 52%;
+        left: 19%; } }
+    @media (max-width: 1230px) {
+      #popup_email_subscription .emailsub-text-wrapper {
         right: 53%;
-        left: 20%; } }
+        left: 17%; } }
+    @media (max-width: 1130px) {
+      #popup_email_subscription .emailsub-text-wrapper {
+        right: 53%;
+        left: 15%; } }
     @media (max-width: 991px) {
       #popup_email_subscription .emailsub-text-wrapper {
         /* max 991 */
         right: 55%;
         left: 9%; } }
+    @media (max-width: 880px) {
+      #popup_email_subscription .emailsub-text-wrapper {
+        right: 55%;
+        left: 5%; } }
+    @media (max-width: 812px) {
+      #popup_email_subscription .emailsub-text-wrapper {
+        right: 55%;
+        top: 55%;
+        left: 1%; } }
     @media (max-width: 767px) {
       #popup_email_subscription .emailsub-text-wrapper {
         /* max 767 */
@@ -18225,6 +18245,23 @@ img.lazy:not([data-lazyloading='1']) {
     transform: translateY(0) rotate(-45deg);
   }
 }
+
+
+.film_roll_child{
+  width: 350px !important;
+}
+
+.content-descuento {
+  background-color: #FFF;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+
+.text-promo-click {
+  color: #ed2123;
+    text-shadow: 0 0 30px red;
+}
+
 
 
 
