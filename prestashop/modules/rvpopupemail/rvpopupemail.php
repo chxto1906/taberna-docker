@@ -62,6 +62,9 @@ class RvPopupEmail extends RvPopupEmailCore
         $this->context->controller->addJs($this->_path.'views/js/front/custom.js');
 
         $this->context->controller->addJs($this->_path.'views/js/front/jquery.cookie.min.js');
+        //$this->context->controller->addJs($this->_path.'views/js/front/jquery.film_roll.min.js');
+        $this->context->controller->addJs($this->_path.'views/js/front/jssor.slider.min.js');
+        
 
          return $this->fetch($this->templateFile);
     }
