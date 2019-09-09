@@ -4,116 +4,39 @@ require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
 
         
-class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController {
+class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontController {
 
     public $log = null;
     public $limit = "0";
     private $product = null;
     private $status_code = 400;
+    private $img_1 = 'large';
+    private $img_2 = 'medium';
+    private $img_3 = '_default';
 
     public function initContent() {
     	parent::initContent();
         
         $response = new Response();
-        $id_product = Tools::getValue('id_product', '');
-        $qty = Tools::getValue('qty', '');
         
-
-        /**********************************/
-
-
-        if (empty($id_product) || empty($qty)) {
-            /*$this->content['cart_add_result'] = array(
-                'status' => 'failure',
-                'message' => parent::getTranslatedTextByFileAndISO(
-                    Tools::getValue('iso_code', false),
-                    $this->l('Product data is missing'),
-                    'AppAddToCart'
-                )
-            );
-            $this->writeLog('Product data is missing.');*/
-            $this->content = "Los parámetros del producto para agregar al carrito son necesarios";
-        } else {
-            //$id_product = $product_data->cart_products[0]->product_id;
-            if (empty($id_product)) {
-                $id_product = 0;
-            }
-            $this->product = new Product(
-                $id_product,
-                true,
-                $this->context->language->id,
-                $this->context->shop->id,
-                $this->context
-            );
-            if (!Validate::isLoadedObject($this->product)) {
-                /*$this->content['status'] = 'failure';
-                $this->content['message'] = parent::getTranslatedTextByFileAndISO(
-                    Tools::getValue('iso_code', false),
-                    $this->l('Product not found'),
-                    'AppAddToCart'
-                );
-                $this->writeLog('Product with the provided data is not found.');*/
-                $this->content = "Información de producto no encontrado";
-            } else {
-
-                /*$session_obj = $this->isSession();
-
-                if ($session_obj){
-                    $cart_id = $session_obj->cart_id;
-                    $customer_id = $session_obj->customer_id;
-                }else{*/
-                    $cart_id = Tools::getValue('cart_id', '');
-                //}
-
-
-                if (empty($cart_id)) {
-                    /* Add new cart to save product data */
-                    $this->context->cart->id_currency = $this->context->currency->id;
-                    $this->context->cart->add();
-                    if ($this->context->cart->id) {
-                        $this->context->cookie->id_cart = (int) $this->context->cart->id;
-                    }
-                } else {
-                    $this->context->cart = new Cart($cart_id, false, null, null, $this->context);
-                    if (!Validate::isLoadedObject($this->context->cart)) {
-                        $this->context->cart->id_currency = $this->context->currency->id;
-                        $this->context->cart->add();
-                    }
-                    $this->context->cart->id_currency = $this->context->currency->id;
-                    if ($this->context->cart->id) {
-                        $this->context->cookie->id_cart = (int) $this->context->cart->id;
-                    }
-                }
-                /*if ($this->product->customizable) {
-                    $post_customizable_data = $product_data->customization_details;
-                    if (!empty($post_customizable_data)) {
-                        if (!$this->saveCustomizedData($post_customizable_data)) {
-                            $this->content['status'] = 'failure';
-                            $this->content['message'] = parent::getTranslatedTextByFileAndISO(
-                                Tools::getValue('iso_code', false),
-                                $this->l('Invalid Message'),
-                                'AppAddToCart'
-                            );
-                            $this->writeLog('Invalid message in customization field');
-                        }
-                    }
-                }*/
-                //$qty = $product_data->cart_products[0]->minimal_quantity;
-                //$id_product_attribute = $product_data->cart_products[0]->id_product_attribute;
-                $id_product_attribute = 0;
-                
-                $this->addKbProduct($id_product, $id_product_attribute, $qty);
-                /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
-                $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
-                /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
-                $this->content['cart_id'] = (int)$this->context->cart->id;
-            }
+        $cart_id = Tools::getValue('cart_id', 0);
+        if (isset($this->context->cart->id)) {
+            $cart_id = (int) $this->context->cart->id;
         }
 
-        //$this->content['install_module'] = '';
-        //return $this->fetchJSONContent();
 
-
+        if (!(int) $cart_id) {
+            $this->content = "Carrito no encontrado";
+        } else {
+            $this->context->cart = new Cart(
+                (int) $cart_id,
+                false,
+                null,
+                null,
+                $this->context
+            );
+            $this->getCartData();
+        }
 
         /**********************************/
 
@@ -127,39 +50,711 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
     }
 
 
+
     /**
-     * Add product into cart with provided quantity
-     *
-     * @param int $id_product product id
-     * @param int $id_product_attribute product attruibute id
-     * @param int $qty product quantity
+     * Validate Cart and get its data
      */
-    public function addKbProduct($id_product, $id_product_attribute, $qty)
+    public function getCartData()
     {
-        if ($qty == 0) {
-            $qty = 1;
-        }
-        if (!empty($id_product_attribute)) {
-            $minimal_quantity = (int) Attribute::getAttributeMinimalQty($id_product_attribute);
+        if (!Validate::isLoadedObject($this->context->cart)) {
+            $this->content = "No se pudo cargar el carrito.";
         } else {
-            $minimal_quantity = (int) $this->product->minimal_quantity;
-        }
-        if ($minimal_quantity == 0) {
-            $minimal_quantity = 1;
-        }
-        if ((int) $qty < $minimal_quantity) {
-            $this->status_code = 400;
-            $this->content = "Error al agregar producto en el carrito. Debes agregar la mínima cantidad: $minimal_quantity";
-        } else {
-            $update_status = $this->context->cart->updateQty($qty, $id_product, $id_product_attribute);
-            if (!$update_status) {
-                $this->status_code = 400;
-                $this->content = "Error al agregar producto al carrito.";
+            $this->content['checkout_page']['per_products_shipping'] = "0";
+            $this->context->cart->autosetProductAddress();
+            $this->context->cart->update();
+            $this->context->cookie->id_cart = (int) $this->context->cart->id;
+            $this->context->cookie->write();
+            if (isset($this->context->customer->id)
+                && $this->context->customer->id
+                && isset($this->context->cart->id_customer)
+                && $this->context->cart->id_customer) {
+                if ($this->context->cart->id_customer != $this->context->customer->id) {
+                    $customer = new Customer($this->context->cart->id_customer);
+                    $this->context->customer = $customer;
+                }
+            }
+            $this->context->cart->id_customer = (int) $this->context->customer->id;
+            $this->context->cart->secure_key = $this->context->customer->secure_key;
+            $this->context->cart->update();
+            CartRule::autoAddToCart();
+            $this->processDeleteProductInCart();
+            $this->context->cart->update();
+            if ($this->context->cart->isVirtualCart()) {
+                $this->context->cart->gift = 0;
+                $this->context->cart->update();
+            }
+            $cart_data = $this->fetchList();
+
+            $cart_summary = $cart_data['summary'];
+            $customized_data = $cart_data['customized_data'];
+            $cart_products = array();
+            $index = 0;
+            foreach ($cart_summary['products'] as $product) {
+                $quantity_displayed = 0;
+                $extra_product_line = false;
+                $customization = false;
+                $product_obj = new Product(
+                    (int) $product['id_product'],
+                    true,
+                    $this->context->language->id,
+                    $this->context->shop->id
+                );
+                $cart_products[$index] = array(
+                    'product_id' => $product_obj->id,
+                    'title' => $product['name'],
+                    'is_gift_product' => "0",
+                    'id_product_attribute' => $product['id_product_attribute'],
+                    'id_address_delivery' => $product['id_address_delivery']
+                );
+                if ($product['cart_quantity'] <= StockAvailable::getQuantityAvailableByProduct(
+                    $product_obj->id,
+                    $product['id_product_attribute']
+                )) {
+                    $cart_products[$index]['stock'] = true;
+                } else {
+                    $cart_products[$index]['stock'] = false;
+                }
+                if (!$cart_products[$index]['stock']) {
+                    if ((int) $product_obj->out_of_stock == 1) {
+                        $cart_products[$index]['stock'] = true;
+                    } elseif ((int) $product_obj->out_of_stock == 2
+                        && (int) Configuration::get('PS_ORDER_OUT_OF_STOCK') == 1) {
+                        $cart_products[$index]['stock'] = true;
+                    }
+                }
+                $cart_products[$index]['discount_price'] = '';
+                $cart_products[$index]['discount_percentage'] = '';
+                /* Changes started by rishabh jain on 3rd sep 2018
+                * Added urlencode perimeter in image link if enabled by admin
+                */
+                /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
+                    $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                        urlencode($product['link_rewrite']),
+                        $product['id_image'],
+                        $this->getImageType('large')
+                    );
+                } else {*/
+                    $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                        $product['link_rewrite'],
+                        $product['id_image'],
+                        $this->getImageType('large')
+                    );
+                //}
+                /* Changes over */
+
+                $p_id = $product['id_product'];
+                $p_aid = $product['id_product_attribute'];
+                $da_id = $product['id_address_delivery'];
+                if (isset($customized_data[$p_id][$p_aid][$da_id])) {
+                    $ci = 0;
+                    $customization = true;
+                    foreach ($customized_data[$p_id][$p_aid][$da_id] as $id_customization => $customization) {
+                        foreach ($customization['datas'] as $type => $custom_data) {
+                            if ($type == Product::CUSTOMIZE_TEXTFIELD) {
+                                foreach ($custom_data as $tf) {
+                                    $cart_products[$index]['customizable_items'][$ci] = array(
+                                        'id_customization_field' => $id_customization,
+                                        'type' => "text",
+                                        'text_value' => $tf['value'],
+                                        'quantity' => $customization['quantity']
+                                    );
+                                    $t_i = 0;
+                                    if ($tf['name']) {
+                                        $cart_products[$index]['customizable_items'][$ci]['title'] = $tf['name'];
+                                    } else {
+                                        $cart_products[$index]['customizable_items'][$ci]['title'] = "Text #".($t_i+1);
+                                        $t_i++;
+                                    }
+                                    $ci++;
+                                }
+                            }
+                        }
+                        $quantity_displayed = $quantity_displayed + $customization['quantity'];
+                    }
+                    if (($product['quantity'] - $quantity_displayed) > 0) {
+                        $extra_product_line = true;
+                    }
+                }
+                if ($customization) {
+                    $cart_products[$index]['price'] = $this->formatPrice($product['total_customization_wt']);
+                    $cart_products[$index]['quantity'] = $product['customizationQuantityTotal'];
+                    $cart_products[$index]['product_items'] = array(
+                        array(
+                            'name' => 'Cantidad',
+                            'value' => $product['customizationQuantityTotal']
+                        ),
+                        array(
+                            'name' => 'SKU',
+                            'value' => $product['reference']
+                        )
+                    );
+                } else {
+                    $cart_products[$index]['price'] = $this->formatPrice($product['total_wt']);
+                    $cart_products[$index]['quantity'] = $product['cart_quantity'];
+                    $cart_products[$index]['product_items'] = array(
+                        array(
+                            'name' => 'Cantidad',
+                            'value' => $product['cart_quantity']
+                        ),
+                        array(
+                            'name' => 'SKU',
+                            'value' => $product['reference']
+                        )
+                    );
+                }
+                if (isset($product['attributes']) && $product['attributes']) {
+                    $cart_products[$index]['product_items'][] = array(
+                        'name' => 'Atributos',
+                        'value' => $product['attributes']
+                    );
+                }
+                if (!isset($cart_products[$index]['customizable_items'])) {
+                    $cart_products[$index]['customizable_items'] = array();
+                } else {
+                    $temp_array = array();
+                    $temp_customized_data = $cart_products[$index]['customizable_items'];
+                    unset($cart_products[$index]['customizable_items']);
+                    $cust_index = 0;
+                    foreach ($temp_customized_data as $key => $data) {
+                        if (isset($temp_array[$data['id_customization_field']])) {
+                            $t_arr = $temp_array[$data['id_customization_field']];
+                            $cart_products[$index]['customizable_items'][$t_arr]['customizable_grp_items'][] = $data;
+                        } else {
+                            $temp_array[$data['id_customization_field']] = $cust_index;
+                            $t_txt = 'customizable_grp_items';
+                            $cart_products[$index]['customizable_items'][$cust_index][$t_txt][] = $data;
+                            $cust_index++;
+                        }
+                    }
+                    unset($temp_array);
+                    unset($temp_customized_data);
+                }
+                $index++;
+                if ($extra_product_line) {
+                    $cart_products[$index] = array(
+                        'product_id' => $product_obj->id,
+                        'title' => $product['name'],
+                        'is_gift_product' => "0",
+                        'id_product_attribute' => $product['id_product_attribute'],
+                        'id_address_delivery' => $product['id_address_delivery']
+                    );
+                    if ($product['cart_quantity'] <= StockAvailable::getQuantityAvailableByProduct(
+                        $product_obj->id,
+                        $product['id_product_attribute']
+                    )) {
+                        $cart_products[$index]['stock'] = true;
+                    } else {
+                        $cart_products[$index]['stock'] = false;
+                    }
+                    $cart_products[$index]['price'] = $this->formatPrice($product['total_wt']);
+                    $cart_products[$index]['discount_price'] = '';
+                    $cart_products[$index]['discount_percentage'] = '';
+                    /* Changes started by rishabh jain on 3rd sep 2018
+                    * Added urlencode perimeter in image link if enabled by admin
+                    */
+                    /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
+                        $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                            urlencode($product['link_rewrite']),
+                            $product['id_image'],
+                            $this->getImageType('large')
+                        );
+                    } else {*/
+                        $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                            $product['link_rewrite'],
+                            $product['id_image'],
+                            $this->getImageType('large')
+                        );
+                    //}
+                    /* Changes over */
+
+                    $cart_products[$index]['product_items'] = array(
+                        array(
+                            'name' => 'Cantidad',
+                            'value' => ($product['cart_quantity'] - $quantity_displayed)
+                        ),
+                        array(
+                            'name' => 'SKU',
+                            'value' => $product['reference']
+                        )
+                    );
+                    if (isset($product['attributes']) && $product['attributes']) {
+                        $cart_products[$index]['product_items'][] = array(
+                            'name' => 'Atributos',
+                            'value' => $product['attributes']
+                        );
+                    }
+                    $cart_products[$index]['quantity'] = $product['cart_quantity'] - $quantity_displayed;
+                    $cart_products[$index]['customizable_items'] = array();
+                    $index++;
+                }
+            }
+
+            if (!empty($cart_summary['gift_products'])) {
+                foreach ($cart_summary['gift_products'] as $product) {
+                    $cart_products[$index] = array(
+                        'product_id' => $product['id_product'],
+                        'title' => $product['name'],
+                        'is_gift_product' => "1",
+                        'stock' => true,
+                        'id_product_attribute' => $product['id_product_attribute'],
+                        'id_address_delivery' => $product['id_address_delivery'],
+                        'price' => "Gift",
+                        'discount_price' => "",
+                        'discount_percentage' => ""
+                    );
+                    /* Changes started by rishabh jain on 3rd sep 2018
+                    * Added urlencode perimeter in image link if enabled by admin
+                    */
+                    /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
+                        $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                            urlencode($product['link_rewrite']),
+                            $product['id_image'],
+                            $this->getImageType('large')
+                        );
+                    } else {*/
+                        $cart_products[$index]['images'] = $this->context->link->getImageLink(
+                            $product['link_rewrite'],
+                            $product['id_image'],
+                            $this->getImageType('large')
+                        );
+                    //}
+                    /* Changes over */
+
+                    $cart_products[$index]['product_items'] = array(
+                        array(
+                            'name' => 'Cantidad',
+                            'value' => $product['cart_quantity']
+                        ),
+                        array(
+                            'name' => 'SKU',
+                            'value' => $product['reference']
+                        )
+                    );
+                    if (isset($product['attributes']) && $product['attributes']) {
+                        $cart_products[$index]['product_items'][] = array(
+                            'name' => 'Atributos',
+                            'value' => $product['attributes']
+                        );
+                    }
+                    $cart_products[$index]['quantity'] = $product['cart_quantity'];
+                    $cart_products[$index]['customizable_items'] = array();
+                    $index++;
+                }
+            }
+
+            $this->content['products'] = $cart_products;
+
+            $cart_total_details = array();
+            $cart_total_details[] = array(
+                'name' => 'Total productos (impuestos excl.)',
+                'value' => $this->formatPrice($cart_summary['total_products'])
+            );
+            if ($cart_summary['total_discounts'] > 0) {
+                $cart_total_details[] = array(
+                    'name' => 'Total descuentos',
+                    'value' => "-" .$this->formatPrice($cart_summary['total_discounts'])
+                );
+            }
+            if ($cart_summary['total_wrapping'] > 0 && $this->context->cart->gift) {
+                $cart_total_details[] = array(
+                    'name' => 'Total papel de regalo',
+                    'value' => $this->formatPrice($cart_summary['total_wrapping'])
+                );
+            }
+            if ($cart_summary['total_shipping'] > 0) {
+                $cart_total_details[] = array(
+                    'name' => 'Total envío',
+                    'value' => $this->formatPrice($cart_summary['total_shipping'])
+                );
             } else {
-                $this->status_code = 200;
+                if (!$cart_summary['is_virtual_cart']) {
+                    $cart_total_details[] = array(
+                        'name' => 'Total envío',
+                        'value' => 'Envío gratis'
+                    );
+                }
+            }
+
+            $cart_total_details[] = array(
+                'name' => 'Tiempo entrega',
+                'value' => $this->context->cart->getOrderDeliveryTime()." mins. (máximo)"
+            );
+
+            if ($cart_summary['total_tax'] > 0) {
+                $cart_total_details[] = array(
+                    'name' => 'Total impuestos',
+                    'value' => $this->formatPrice($cart_summary['total_tax'])
+                );
+            }
+            $cart_total_details[] = array(
+                'name' => 'Precio Total',
+                'value' => $this->formatPrice($cart_summary['total_price'])
+            );
+
+            if (!empty($cart_summary['discounts'])) {
+                $index = 0;
+                $voucher_data = array();
+                foreach ($cart_summary['discounts'] as $voucher) {
+                    if ((float) $voucher['value_real'] == 0) {
+                        continue;
+                    }
+                    $voucher_data[$index] = array(
+                        'id' => $voucher['id_cart_rule'],
+                        'name' => $voucher['name'],
+                        'value' => "-" . $this->formatPrice($voucher['value_real']),
+                    );
+                    $index++;
+                }
+                $this->content['vouchers'] = $voucher_data;
+            } else {
+                $this->content['vouchers'] = array();
+            }
+            $a_txt = '(Costo Adicional de ';
+            if (!$cart_summary['is_virtual_cart']) {
+                $gift_wrapping_cost = Tools::convertPriceFull(
+                    $this->context->cart->getGiftWrappingPrice(),
+                    null,
+                    $this->context->currency
+                );
+                $this->content['gift_wrapping'] = array(
+                    'available' => Configuration::get('PS_GIFT_WRAPPING'),
+                    'applied' => ($this->context->cart->gift) ? "1" : "0",
+                    'message' => ($this->context->cart->gift_message) ? $this->context->cart->gift_message : "",
+                    'cost_text' => ($this->context->cart->getGiftWrappingPrice() > 0) ?
+                        $a_txt.$this->formatPrice($gift_wrapping_cost) . " )" : ""
+                );
+                
+            } else {
+                $gift_wrapping_cost = Tools::convertPriceFull(
+                    $this->context->cart->getGiftWrappingPrice(),
+                    null,
+                    $this->context->currency
+                );
+                $this->content['gift_wrapping'] = array(
+                    'available' => 0,
+                    'applied' => ($this->context->cart->gift) ? "1" : "0",
+                    'message' => ($this->context->cart->gift_message) ? $this->context->cart->gift_message : "",
+                    'cost_text' => ($this->context->cart->getGiftWrappingPrice() > 0) ?
+                        $a_txt. $this->formatPrice($gift_wrapping_cost) . " )" : ""
+                );
+            }
+            $this->content['guest_checkout_enabled'] = Configuration::get('PS_GUEST_CHECKOUT_ENABLED');
+            
+            /***** henry *****/
+            //$this->content['cart'] = ['total_cart_items' => 2];
+            //$this->content['cart']['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
+
+            if (CartRule::isFeatureActive()) {
+                $this->content['voucher_allowed'] = "1";
+            } else {
+                $this->content['voucher_allowed'] = "0";
+            }
+
+
+            $currency = Currency::getCurrency((int) $this->context->cart->id_currency);
+            $minimal_purchase = Tools::convertPrice((float) Configuration::get('PS_PURCHASE_MINIMUM'), $currency);
+            if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimal_purchase) {
+                    $this->content['minimum_purchase_message'] = 
+                        'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
+                                $this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS),
+                                $currency
+                            );
+            } else {
+                $this->content['minimum_purchase_message'] = "";
+            }
+
+            $this->content['totals'] = $cart_total_details;
+
+            // Get available cart rules and unset the cart rules already in the cart
+            $available_cart_rules = CartRule::getCustomerCartRules(
+                $this->context->language->id,
+                (isset($this->context->customer->id) ? $this->context->customer->id : 0),
+                true,
+                true,
+                true,
+                $this->context->cart,
+                false,
+                true
+            );
+            $cart_cart_rules = $this->context->cart->getCartRules();
+            foreach ($available_cart_rules as $key => $available_cart_rule) {
+                foreach ($cart_cart_rules as $cart_cart_rule) {
+                    if ($available_cart_rule['id_cart_rule'] == $cart_cart_rule['id_cart_rule']) {
+                        unset($available_cart_rules[$key]);
+                        continue 2;
+                    }
+                }
+            }
+            if ($available_cart_rules) {
+                $voucher_text = 'Aprovecha nuestras ofertas exclusivas';
+                $template_dir =  $this->getFrontTemplateDir();
+                $this->context->smarty->assign('voucher_text', $voucher_text);
+                $this->context->smarty->assign('available_cart_rules', $available_cart_rules);
+                $vocher_html = $this->context->smarty->fetch($template_dir.'voucher_html.tpl');
+                $this->content['voucher_html'] = $vocher_html;
+            } else {
+                $this->content['voucher_html'] = '';
+            }
+            $show_option_allow_separate_package = (!$this->context->cart->isAllProductsInStock(true)
+                && Configuration::get('PS_SHIP_WHEN_AVAILABLE'));
+            if ($show_option_allow_separate_package) {
+                $this->content['delay_shipping'] = array(
+                    'available' => '1',
+                    'applied' => $this->context->cart->allow_seperated_package
+                );
+            } else {
+                $this->content['delay_shipping'] = array(
+                    'available' => '0',
+                    'applied' => $this->context->cart->allow_seperated_package
+                );
+            }
+            $this->content['cart_id'] = $this->context->cart->id;
+        }
+    }
+
+
+    /**
+     * This process delete a product from the cart
+     */
+    public function processDeleteProductInCart()
+    {
+        $id_product = Tools::getValue('id_product', '');
+        //$product_data = Tools::getValue('cart_products', Tools::jsonEncode(array()));
+        //$product_data = Tools::jsonDecode($product_data);
+        if (empty($id_product)) {
+            $this->content = "Producto no encontrado.";
+        } else {
+            
+            $id_address_delivery = $this->context->cart->id_address_delivery;
+            $id_customization = 0;
+            $id_product_attribute = 0;
+            $product = new Product((int) $id_product);
+            if (!Validate::isLoadedObject($product)) {
+                $this->content = "No se ha encontrado información del producto.";
+            } else {
+                $customization_product = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
+                    'SELECT * FROM `' . _DB_PREFIX_ . 'customization`
+                    WHERE `id_cart` = ' . (int) $this->context->cart->id.
+                    ' AND `id_product` = ' . (int) $id_product .
+                    ' AND `id_customization` != ' . (int) $id_customization
+                );
+
+                if ($customization_product && count($customization_product) > 0) {
+                    $product = new Product((int) $id_product);
+                    if ($id_product_attribute > 0) {
+                        $minimal_quantity = (int) Attribute::getAttributeMinimalQty($id_product_attribute);
+                    } else {
+                        $minimal_quantity = (int) $product->minimal_quantity;
+                    }
+
+                    $total_quantity = 0;
+                    foreach ($customization_product as $custom) {
+                        $total_quantity += $custom['quantity'];
+                    }
+
+                    if ($total_quantity < $minimal_quantity) {
+                        $this->content = "Cantidad mínima requerida en caso de personalización del producto";
+                        return;
+                    }
+                }
+                if ($this->context->cart->deleteProduct(
+                    $id_product,
+                    $id_product_attribute,
+                    $id_customization,
+                    $id_address_delivery
+                )) {
+                    Hook::exec('actionAfterDeleteProductInCart', array(
+                        'id_cart' => (int) $this->context->cart->id,
+                        'id_product' => (int) $id_product,
+                        'id_product_attribute' => (int) $id_product_attribute,
+                        'customization_id' => (int) $id_customization,
+                        'id_address_delivery' => $id_address_delivery
+                    ));
+
+                    if (!Cart::getNbProducts((int) $this->context->cart->id)) {
+                        $this->context->cart->setDeliveryOption(null);
+                        $this->context->cart->gift = 0;
+                        $this->context->cart->gift_message = '';
+                        $this->context->cart->update();
+                    }
+                    $this->status_code = 200;
+                    //$this->content = "Producto eliminado correctamente.";
+                } else {
+                    $this->status_code = 200;
+                    //$this->content = 'Puede existir un producto en el carrito con un atributo similar';
+                }
+                CartRule::autoRemoveFromCart();
+                CartRule::autoAddToCart();
             }
         }
     }
+
+
+    /**
+     * Fetch cart summary
+     *
+     * @return array cart summary
+     */
+    public function fetchList()
+    {
+        $summary = $this->context->cart->getSummaryDetails();
+        $customizedDatas = Product::getAllCustomizedDatas($this->context->cart->id);
+
+        // override customization tax rate with real tax (tax rules)
+        if ($customizedDatas) {
+            foreach ($summary['products'] as &$productUpdate) {
+                /* Changes started by rishabh jain on 3rd sep 2018
+                * Added urlencode perimeter in image link if enabled by admin
+                */
+                /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
+                    $productUpdate['image'] = $this->context->link->getImageLink(
+                        urlencode($productUpdate['link_rewrite']),
+                        $productUpdate['id_image'],
+                        $this->getImageType('medium')
+                    );
+                } else {*/
+                    $productUpdate['image'] = $this->context->link->getImageLink(
+                        $productUpdate['link_rewrite'],
+                        $productUpdate['id_image'],
+                        $this->getImageType('medium')
+                    );
+                //}
+                /* Changes over */
+                
+                $productId = (int) isset($productUpdate['id_product']) ?
+                    $productUpdate['id_product'] : $productUpdate['product_id'];
+                $productAttributeId = (int) isset($productUpdate['id_product_attribute']) ?
+                    $productUpdate['id_product_attribute'] : $productUpdate['product_attribute_id'];
+
+                if (isset($customizedDatas[$productId][$productAttributeId])) {
+                    $productUpdate['tax_rate'] = Tax::getProductTaxRate(
+                        $productId,
+                        $this->context->cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')}
+                    );
+                }
+            }
+
+            Product::addCustomizationPrice($summary['products'], $customizedDatas);
+        }
+
+        $cart_product_context = $this->context->cloneContext();
+        foreach ($summary['products'] as $key => &$product) {
+            $product['quantity'] = $product['cart_quantity']; // for compatibility with 1.2 themes
+
+            if ($cart_product_context->shop->id != $product['id_shop']) {
+                $cart_product_context->shop = new Shop((int) $product['id_shop']);
+            }
+            $null = '';
+            $product['price_without_specific_price'] = Product::getPriceStatic(
+                $product['id_product'],
+                !Product::getTaxCalculationMethod(),
+                $product['id_product_attribute'],
+                6,
+                null,
+                false,
+                false,
+                1,
+                false,
+                null,
+                null,
+                null,
+                $null,
+                true,
+                true,
+                $cart_product_context
+            );
+
+            if (Product::getTaxCalculationMethod()) {
+                $product['is_discounted'] = Tools::ps_round(
+                    $product['price_without_specific_price'],
+                    _PS_PRICE_COMPUTE_PRECISION_
+                ) != Tools::ps_round(
+                    $product['price'],
+                    _PS_PRICE_COMPUTE_PRECISION_
+                );
+            } else {
+                $product['is_discounted'] = Tools::ps_round(
+                    $product['price_without_specific_price'],
+                    _PS_PRICE_COMPUTE_PRECISION_
+                ) != Tools::ps_round(
+                    $product['price_wt'],
+                    _PS_PRICE_COMPUTE_PRECISION_
+                );
+            }
+        }
+
+        // Get available cart rules and unset the cart rules already in the cart
+        $available_cart_rules = CartRule::getCustomerCartRules(
+            $this->context->language->id,
+            (isset($this->context->cart->id_customer) ? $this->context->cart->id_customer : 0),
+            true,
+            true,
+            true,
+            $this->context->cart,
+            false,
+            true
+        );
+        $cart_cart_rules = $this->context->cart->getCartRules();
+        foreach ($available_cart_rules as $key => $available_cart_rule) {
+            foreach ($cart_cart_rules as $cart_cart_rule) {
+                if ($available_cart_rule['id_cart_rule'] == $cart_cart_rule['id_cart_rule']) {
+                    unset($available_cart_rules[$key]);
+                    continue 2;
+                }
+            }
+        }
+
+        unset($summary['delivery']);
+        unset($summary['delivery_state']);
+        unset($summary['invoice']);
+        unset($summary['invoice_state']);
+        unset($summary['formattedAddresses']);
+        unset($summary['carrier']);
+
+        return array('summary' => $summary, 'customized_data' => $customizedDatas);
+    }
+
+
+    /*
+     * To get the type of image
+     * 
+     * @param string $type type of image large/medium/default
+     * @return string 
+     */
+    public function getImageType($type = 'large')
+    {
+        if ($type == 'large') {
+            return $this->img_1 . $this->img_3;
+        } elseif ($type == 'medium') {
+            return $this->img_2 . $this->img_3;
+        } else {
+            return $this->img_1 . $this->img_3;
+        }
+    }
+
+
+    public function getFrontTemplateDir() {
+        return _PS_MODULE_DIR_.'webservice_app/views/templates/front/';
+    }
+
+
+    /*
+     * Function to format price in API's
+     * 
+     * @param float $price
+     * @param object $curr
+     * @return string formated price
+     */
+    public function formatPrice($price, $curr = '')
+    {
+        return Tools::displayPrice(
+            $price,
+            $this->context->currency,
+            false,
+            $this->context
+        );
+    }
+    
 
 
 
