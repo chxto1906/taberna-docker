@@ -20,42 +20,47 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             $status_code = 200;
             $products = [];
             //$this->limit = Tools::getValue('limit')?Tools::getValue('limit'):$this->limit;
-            if ($this->valid_params(["by"])) {
-                $by = Tools::getValue("by");
-                switch ($by) {
-                    case "classification":
-                        if ($this->valid_params(["type"])) {
-                            $type = Tools::getValue("type");
-                            $products = $this->getProductsByClassification($type);
-                        } else {
-                            $products = "Validación fallida. Parámetro: type es obligatorio.";
-                            $status_code = 400;
-                        }
-                        break;
-                    case "categories":
-                        if ($this->valid_params(["type","page"])) {
-                            $type = Tools::getValue("type");
-                            $products = $this->getProductsByCategories($type,$response);
-                        } else {
-                            $products = "Validación fallida. Parámetros: type, page son obligatorios.";
-                            $status_code = 400;
-                        }
-                        break;
-                    case "search":
-                        if ($this->valid_params(["query"])) {
-                            $query = Tools::getValue("query");
-                            $products = $this->getProductsBySearch($query);
-                        } else {
-                            $products = "Validación fallida. Parámetro: query es obligatorio.";
-                            $status_code = 400;
-                        }
-                        break;
-                    default:
-                        $products = [];
-                }
+            $id_product = Tools::getValue("id_product");
+            if ($id_product) {
+                $products = $this->getProduct($id_product);
             } else {
-                $products = "Validación fallida. Parámetro: by es obligatorio.";
-                $status_code = 400;
+                if ($this->valid_params(["by"])) {
+                    $by = Tools::getValue("by");
+                    switch ($by) {
+                        case "classification":
+                            if ($this->valid_params(["type"])) {
+                                $type = Tools::getValue("type");
+                                $products = $this->getProductsByClassification($type);
+                            } else {
+                                $products = "Validación fallida. Parámetro: type es obligatorio.";
+                                $status_code = 400;
+                            }
+                            break;
+                        case "categories":
+                            if ($this->valid_params(["type","page"])) {
+                                $type = Tools::getValue("type");
+                                $products = $this->getProductsByCategories($type,$response);
+                            } else {
+                                $products = "Validación fallida. Parámetros: type, page son obligatorios.";
+                                $status_code = 400;
+                            }
+                            break;
+                        case "search":
+                            if ($this->valid_params(["query"])) {
+                                $query = Tools::getValue("query");
+                                $products = $this->getProductsBySearch($query);
+                            } else {
+                                $products = "Validación fallida. Parámetro: query es obligatorio.";
+                                $status_code = 400;
+                            }
+                            break;
+                        default:
+                            $products = [];
+                    }
+                } else {
+                    $products = "Validación fallida. Parámetro: by es obligatorio.";
+                    $status_code = 400;
+                }
             }
             echo $response->json_response($products,$status_code);
 
@@ -88,6 +93,26 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
         } elseif ($type == "destacados") {
             $products = $rvproductstab->getFeaturedProducts(true);
         }
+        return $this->proccessProducts($products);
+    }
+
+    public function getProduct($id_product) {
+        $id_shop = (int)Context::getContext()->shop->id;
+        $product = new Product((int) $id_product,true,1,$id_shop,Context::getContext());
+        $price_tax_exc = $product->getPriceStatic($id_product,false,null,2);
+        $price_tax_inc = $product->getPriceStatic($id_product,true,null,2);
+        $products = array([
+            "id_product"    =>  $product->id,
+            "name"          =>  $product->name,
+            "description"   =>  $product->description,
+            "price_tax_exc" =>  $this->formatPrice($price_tax_exc),
+            "price_without_reduction"   =>  $this->formatPrice($price_tax_inc),
+            "quantity"      =>  $product->quantity,
+            "reference"     =>  $product->reference,
+            "manufacturer_name" => $product->manufacturer_name,
+            "id_image"      =>  $product->id_image,
+            "link_rewrite"  =>  $product->link_rewrite
+        ]);
         return $this->proccessProducts($products);
     }
 

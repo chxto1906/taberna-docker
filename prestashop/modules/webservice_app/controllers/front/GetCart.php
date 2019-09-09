@@ -10,6 +10,9 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
     public $limit = "0";
     private $product = null;
     private $status_code = 400;
+    private $img_1 = 'large';
+    private $img_2 = 'medium';
+    private $img_3 = '_default';
 
     public function initContent() {
     	parent::initContent();
@@ -421,7 +424,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                 );
             }
             $cart_total_details[] = array(
-                'name' => 'Total precio',
+                'name' => 'Precio Total',
                 'value' => $this->formatPrice($cart_summary['total_price'])
             );
 
@@ -473,6 +476,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                 );
             }
             $this->content['guest_checkout_enabled'] = Configuration::get('PS_GUEST_CHECKOUT_ENABLED');
+            
             $this->content['cart']['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
             if (CartRule::isFeatureActive()) {
                 $this->content['voucher_allowed'] = "1";
