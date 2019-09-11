@@ -158,6 +158,7 @@ window.onload = function(){
         },2000);
 	}
     
+  inicio();
     
     
     

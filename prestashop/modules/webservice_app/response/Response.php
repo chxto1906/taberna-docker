@@ -27,7 +27,6 @@ class Response {
             http_response_code(204);
             exit;
         }
-
         echo json_encode($message);
     }
 

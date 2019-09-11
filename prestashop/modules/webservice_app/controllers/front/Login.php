@@ -25,24 +25,24 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
         }
         if (empty($email)) {
             $status_code = 400;
-            $resultDecode = "Email es requerido";
+            $resultDecode = ["message" => "Email es requerido"];
         } elseif (!Validate::isEmail($email)) {
             $status_code = 400;
-            $resultDecode = "Dirección de email es inválido";
+            $resultDecode = ["message" => "Dirección de email es inválido"];
         } elseif (empty($password)) {
             $status_code = 400;
-            $resultDecode = "Password es requerido";
+            $resultDecode = ["message" => "Password es requerido"];
         } elseif (!Validate::isPasswd($password)) {
             $status_code = 400;
-            $resultDecode = "Password es incorrecto";
+            $resultDecode = ["message" => "Password es incorrecto"];
         } else {
             $customer = new Customer();
             Hook::exec('actionBeforeAuthentication');
             $authentication = $customer->getByEmail(trim($email), trim($password));
             if (isset($authentication->active) && !$authentication->active) {
-                $resultDecode = "Cuenta no está activa";
+                $resultDecode = ["message" => "Cuenta no está activa"];
             } elseif (!$authentication || !$customer->id) {
-                $resultDecode = "Autenticación fallida";
+                $resultDecode = ["message" => "Autenticación fallida"];
             } else {
                 $this->context->cookie->id_customer = (int) ($customer->id);
                 $this->context->cookie->customer_lastname = $customer->lastname;
@@ -89,7 +89,7 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
 
                 $address = new Address();
                 $first_address = $address->getFirstCustomerAddressId($authentication->id);
-                $authentication->id_address = $first_address ? $first_address : null;
+                $authentication->id_address = $first_address ? $first_address : '0';
 
                 $authentication->customer_id = $customer->id;
                 $authentication->wishlist_count = $wishlist_count;

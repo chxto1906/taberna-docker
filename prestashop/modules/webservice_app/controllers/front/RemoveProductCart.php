@@ -26,7 +26,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
 
 
         if (!(int) $cart_id) {
-            $this->content = "Carrito no encontrado";
+            $this->content = ["message" => "Carrito no encontrado"];
         } else {
             $this->context->cart = new Cart(
                 (int) $cart_id,
@@ -57,7 +57,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
     public function getCartData()
     {
         if (!Validate::isLoadedObject($this->context->cart)) {
-            $this->content = "No se pudo cargar el carrito.";
+            $this->content = ["message" => "No se pudo cargar el carrito."];
         } else {
             $this->content['checkout_page']['per_products_shipping'] = "0";
             $this->context->cart->autosetProductAddress();
@@ -522,7 +522,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
         //$product_data = Tools::getValue('cart_products', Tools::jsonEncode(array()));
         //$product_data = Tools::jsonDecode($product_data);
         if (empty($id_product)) {
-            $this->content = "Producto no encontrado.";
+            $this->content = ["message" => "Producto no encontrado."];
         } else {
             
             $id_address_delivery = $this->context->cart->id_address_delivery;
@@ -530,7 +530,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
             $id_product_attribute = 0;
             $product = new Product((int) $id_product);
             if (!Validate::isLoadedObject($product)) {
-                $this->content = "No se ha encontrado información del producto.";
+                $this->content = ["message" => "No se ha encontrado información del producto."];
             } else {
                 $customization_product = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
                     'SELECT * FROM `' . _DB_PREFIX_ . 'customization`
@@ -553,7 +553,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                     }
 
                     if ($total_quantity < $minimal_quantity) {
-                        $this->content = "Cantidad mínima requerida en caso de personalización del producto";
+                        $this->content = ["message" => "Cantidad mínima requerida en caso de personalización del producto"];
                         return;
                     }
                 }
