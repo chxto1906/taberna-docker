@@ -48,15 +48,15 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
 
         if (!(int) $cart_id) {
             $this->status_code = 404;
-            $this->content = "Carrito no encontrado 1";
+            $this->content = ["message" => "Carrito no encontrado"];
         } else {
             if (Tools::getIsset('order_id')) {
                 $oldCart = new Cart((int) $cart_id);
                 $duplication = $oldCart->duplicate();
                 if (!$duplication) {
-                    $this->content = "No se pudo renovar la orden";
+                    $this->content = ["message" => "No se pudo renovar la orden"];
                 } elseif (!$duplication['success']) {
-                    $this->content = "Algunos ítems ya no están disponibles y no podemos renovar la orden";
+                    $this->content = ["message" => "Algunos ítems ya no están disponibles y no podemos renovar la orden"];
                 } else {
                     $this->context->cart = $duplication['cart'];
                     $this->context->cookie->id_cart = $duplication['cart']->id;
@@ -96,7 +96,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
     {
         if (!Validate::isLoadedObject($this->context->cart)) {
             $this->status_code = 404;
-            $this->content = "Carrito no encontrado 2";
+            $this->content = ["message" => "Carrito no encontrado"];
         } else {
             $this->status_code = 200;
             $this->content['checkout_page']['per_products_shipping'] = "0";
@@ -476,7 +476,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                 );
             }
             $this->content['guest_checkout_enabled'] = Configuration::get('PS_GUEST_CHECKOUT_ENABLED');
-            
+
             $this->content['cart']['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
             if (CartRule::isFeatureActive()) {
                 $this->content['voucher_allowed'] = "1";

@@ -17,6 +17,10 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         $response = new Response();
         $id_product = Tools::getValue('id_product', '');
         $qty = Tools::getValue('qty', '');
+        $operator = Tools::getValue('operator', '');
+        if (!$operator) {
+            $operator = "up";
+        }
         
 
         /**********************************/
@@ -32,7 +36,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 )
             );
             $this->writeLog('Product data is missing.');*/
-            $this->content = "Los parámetros del producto para agregar al carrito son necesarios";
+            $this->content = ["message" => "Los parámetros del producto para agregar al carrito son necesarios"];
         } else {
             //$id_product = $product_data->cart_products[0]->product_id;
             if (empty($id_product)) {
@@ -53,7 +57,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                     'AppAddToCart'
                 );
                 $this->writeLog('Product with the provided data is not found.');*/
-                $this->content = "Información de producto no encontrado";
+                $this->content = ["message" => "Información de producto no encontrado"];
             } else {
 
                 /*$session_obj = $this->isSession();
@@ -107,7 +111,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 //$id_product_attribute = $product_data->cart_products[0]->id_product_attribute;
                 $id_product_attribute = 0;
                 
-                $this->addKbProduct($id_product, $id_product_attribute, $qty);
+                $this->addKbProduct($id_product, $id_product_attribute, $qty, $operator);
                 /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
                 $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
                 /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
@@ -139,7 +143,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
      * @param int $id_product_attribute product attruibute id
      * @param int $qty product quantity
      */
-    public function addKbProduct($id_product, $id_product_attribute, $qty)
+    public function addKbProduct($id_product, $id_product_attribute, $qty, $operator)
     {
         if ($qty == 0) {
             $qty = 1;
@@ -154,14 +158,20 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         }
         if ((int) $qty < $minimal_quantity) {
             $this->status_code = 400;
-            $this->content = "Error al agregar producto en el carrito. Debes agregar la mínima cantidad: $minimal_quantity";
+            $this->content = ["message" => "Error al agregar producto en el carrito. Debes agregar la mínima cantidad: $minimal_quantity"];
         } else {
-            $update_status = $this->context->cart->updateQty($qty, $id_product, $id_product_attribute);
-            if (!$update_status) {
-                $this->status_code = 400;
-                $this->content = "Error al agregar producto al carrito.";
+            $qty_original = Cart::getNbProducts($this->context->cart->id);
+            if (($qty_original == 1) && ($operator == "down")) {
+                $this->status_code = 401;
+                $this->content = ["message" => "No se puede disminuir a cantidad menor que 1"];
             } else {
-                $this->status_code = 200;
+                $update_status = $this->context->cart->updateQty($qty, $id_product, $id_product_attribute, false, $operator);
+                if (!$update_status) {
+                    $this->status_code = 400;
+                    $this->content = [ "message" => "Error al agregar producto al carrito."];
+                } else {
+                    $this->status_code = 200;
+                }
             }
         }
     }
