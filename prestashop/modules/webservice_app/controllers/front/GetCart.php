@@ -79,9 +79,9 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
 
         /**********************************/
 
-        $resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
+        //$resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
 
-        echo $response->json_response($resultDecode,$this->status_code);
+        echo $response->json_response($this->content,$this->status_code);
 
         exit;
 

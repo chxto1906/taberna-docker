@@ -17,14 +17,14 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
         $response = new Response();
 
         if (!$this->context->customer->logged){
-            $this->content = "Usuario no logueado";
+            $this->content = ["message" => "Usuario no logueado"];
         } else {
             $this->getCustomerAddresses();
         }
 
-        $resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
+        //$resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
 
-        echo $response->json_response($resultDecode,$this->status_code);
+        echo $response->json_response($this->content,$this->status_code);
 
         exit;
 
@@ -41,47 +41,63 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
         $total = 0;
         $items = array();
         $multiple_addresses = array();
-        $addresses = $this->context->customer->getAddresses($this->context->language->id);
-        if (!empty($addresses)) {
-            foreach ($addresses as $detail) {
-                $address = new Address($detail['id_address']);
-                $multiple_addresses['id_shipping_address'] = $address->id;
-                $multiple_addresses['alias'] = $address->alias;
-                $multiple_addresses['type_dni'] = $address->type_dni;
-                $multiple_addresses['dni'] = $address->dni;
-                $multiple_addresses['firstname'] = $address->firstname;
-                $multiple_addresses['lastname'] = $address->lastname;
-                $multiple_addresses['email'] = $address->email;
-                $multiple_addresses['company'] = $address->company;
-                $multiple_addresses['address_1'] = $address->address1;
-                $multiple_addresses['address_2'] = $address->address2;
-                $multiple_addresses['postcode'] = $address->postcode;
-                $multiple_addresses['city'] = $address->city;
-                $multiple_addresses['phone'] = $address->phone;
-                $multiple_addresses['latitude'] = $address->latitude;
-                $multiple_addresses['longitude'] = $address->longitude;
-
-                $multiple_addresses['country'] = Country::getNameById(
-                    $this->context->language->id,
-                    $address->id_country
-                );
-                $items[] = $multiple_addresses;
-                
-                unset($address);
-                ++$total;
+        $id_address = Tools::getValue('id_address');
+        if (!$id_address) {
+            $addresses = $this->context->customer->getAddresses($this->context->language->id);
+            if (!empty($addresses)) {
+                foreach ($addresses as $detail) {
+                    $address = new Address($detail['id_address']);
+                    $items[] = $this->proccessAddress($address);
+                    unset($address);
+                    ++$total;
+                }
+                $this->status_code = 200;
+            }else{
+                http_response_code(204);
+                exit;
             }
-            $this->status_code = 200;
-            //$this->content['default_address'] = '1';
-        }else{
-            http_response_code(204);
-            exit;
+        } else {
+            $address = new Address((int) $id_address);
+            if ($address->id){
+                $this->status_code = 200;
+                $items = $this->proccessAddress($address);
+                unset($address);
+            }else{
+                http_response_code(204);
+                exit;
+            }
+            
         }
         $this->content = $items;
         
     }
 
 
-    
+    public function proccessAddress($address) {
+        return [
+                "id_shipping_address"   =>  $address->id,
+                "alias"                 =>  $address->alias,
+                "type_dni"              =>  $address->type_dni,
+                "dni"                   =>  $address->dni,
+                "firstname"             =>  $address->firstname,
+                "lastname"              =>  $address->lastname,
+                "email"                 =>  $address->email,
+                "company"               =>  $address->company,
+                "address1"              =>  $address->address1,
+                "address2"              =>  $address->address2,
+                "postcode"              =>  $address->postcode,
+                "city"                  =>  $address->city,
+                "country_id"            =>  $address->id_country,
+                "country"               =>  Country::getNameById(
+                                                $this->context->language->id,
+                                                $address->id_country
+                                            ),
+                "phone"                 =>  $address->phone,
+                "latitude"              =>  $address->latitude,
+                "longitude"             =>  $address->longitude,
+                
+            ];
+    }
 
 
 
