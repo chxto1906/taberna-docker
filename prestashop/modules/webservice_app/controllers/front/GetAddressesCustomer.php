@@ -39,32 +39,34 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
     public function getCustomerAddresses()
     {
         $total = 0;
+        $items = array();
         $multiple_addresses = array();
         $addresses = $this->context->customer->getAddresses($this->context->language->id);
         if (!empty($addresses)) {
             foreach ($addresses as $detail) {
                 $address = new Address($detail['id_address']);
-                $multiple_addresses[$total]['id_shipping_address'] = $address->id;
-                $multiple_addresses[$total]['firstname'] = $address->firstname;
-                $multiple_addresses[$total]['lastname'] = $address->lastname;
-                $multiple_addresses[$total]['mobile_no'] = (!empty($address->phone_mobile)) ?
-                    $address->phone_mobile . "," . $address->phone : $address->phone . "," . $address->phone_mobile;
-                $multiple_addresses[$total]['mobile_no'] = rtrim($multiple_addresses[$total]['mobile_no'], ',');
-                $multiple_addresses[$total]['company'] = $address->company;
-                $multiple_addresses[$total]['address_1'] = $address->address1;
-                $multiple_addresses[$total]['address_2'] = $address->address2;
-                $multiple_addresses[$total]['city'] = $address->city;
-                if ($address->id_state != 0) {
-                    $multiple_addresses[$total]['state'] = State::getNameById($address->id_state);
-                } else {
-                    $multiple_addresses[$total]['state'] = "";
-                }
-                $multiple_addresses[$total]['country'] = Country::getNameById(
+                $multiple_addresses['id_shipping_address'] = $address->id;
+                $multiple_addresses['alias'] = $address->alias;
+                $multiple_addresses['type_dni'] = $address->type_dni;
+                $multiple_addresses['dni'] = $address->dni;
+                $multiple_addresses['firstname'] = $address->firstname;
+                $multiple_addresses['lastname'] = $address->lastname;
+                $multiple_addresses['email'] = $address->email;
+                $multiple_addresses['company'] = $address->company;
+                $multiple_addresses['address_1'] = $address->address1;
+                $multiple_addresses['address_2'] = $address->address2;
+                $multiple_addresses['postcode'] = $address->postcode;
+                $multiple_addresses['city'] = $address->city;
+                $multiple_addresses['phone'] = $address->phone;
+                $multiple_addresses['latitude'] = $address->latitude;
+                $multiple_addresses['longitude'] = $address->longitude;
+
+                $multiple_addresses['country'] = Country::getNameById(
                     $this->context->language->id,
                     $address->id_country
                 );
-                $multiple_addresses[$total]['postcode'] = $address->postcode;
-                $multiple_addresses[$total]['alias'] = $address->alias;
+                $items[] = $multiple_addresses;
+                
                 unset($address);
                 ++$total;
             }
@@ -74,7 +76,7 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
             http_response_code(204);
             exit;
         }
-        $this->content = $multiple_addresses;
+        $this->content = $items;
         
     }
 

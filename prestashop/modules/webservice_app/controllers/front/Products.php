@@ -113,7 +113,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             "id_image"      =>  $product->id_image,
             "link_rewrite"  =>  $product->link_rewrite
         ]);
-        return $this->proccessProducts($products);
+        return $this->proccessProducts($products,true);
     }
 
     public function getProductsByCategories($category_id,$response) {
@@ -155,7 +155,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
         return $result;
     }
 
-    public function proccessProducts($products=null) {
+    public function proccessProducts($products=null, $unique = false) {
         $productsResult = array();
         if (!$products) {
             http_response_code(204);
@@ -193,6 +193,9 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $productsResult[] = $dataResult;
             }
         }
+
+        $productsResult = $unique ? $productsResult[0] : $productsResult;
+
         return $productsResult;
     }
 
