@@ -30,6 +30,8 @@
 
   function inicio() {
 
+    $(".form-control[name='latitude']").attr("readonly","readonly");
+    $(".form-control[name='longitude']").attr("readonly","readonly");
     let $lat = $(".form-control[name='latitude']");
     let $lng = $(".form-control[name='longitude']");
     let latitude = $lat.val();
@@ -111,8 +113,7 @@
       var script = document.createElement('script');
       script.src = 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=inicializar&key=AIzaSyBOQnXRSLyOJL6nmGR_p9_Lc_AZvYMlkXA';
       document.body.appendChild(script);  
-      $(".form-control[name='latitude']").attr("readonly","readonly");
-      $(".form-control[name='longitude']").attr("readonly","readonly");               
+                     
   }
    
   //window.onload = CargaScript;
