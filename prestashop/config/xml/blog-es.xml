@@ -6,6 +6,14 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Publicidad Offline ¿Cómo puede mejorar la notoriedad de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/piensa-en-la-publicidad-offline-para-aumentar-tu-notoriedad</link>
+    <description>Si tienes una tienda online con la que quieres triunfar y alcanzar el ansiado éxito, la publicidad Offline es una forma de darse a conocer a más gente, así como de llegar a otro ti</description>
+     <pubDate>Fri, 13 Sep 2019 08:34:52 +0200</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/piensa-en-la-publicidad-offline-para-aumentar-tu-notoriedad</guid>
+  </item>
+  <item>
     <title>Error http 404 : ¿qué es y cómo solucionarlo en tu eCommerce?</title>
     <link>https://www.prestashop.com/es/blog/http-error-404</link>
     <description>¿Has oído hablar del &quot;http error 404&quot; alguna vez?</description>
@@ -78,14 +86,6 @@
      <pubDate>Tue, 20 Aug 2019 00:01:41 +0200</pubDate>
  <dc:creator>Ismael Ruiz</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</guid>
-  </item>
-  <item>
-    <title>Directiva DSP2: ¿En qué consiste esta normativa para servicios de pagos digitales?</title>
-    <link>https://www.prestashop.com/es/blog/directiva-psd2</link>
-    <description>¿Conoces las novedades que traerá consigo la DSP2, con las nuevas normas de autenticación en lo que respecta a pagos digitales?</description>
-     <pubDate>Mon, 12 Aug 2019 09:41:11 +0200</pubDate>
- <dc:creator>Eva Lacalle</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/directiva-psd2</guid>
   </item>
   </channel>
 </rss>
