@@ -1322,23 +1322,41 @@
          */
         public function get_code_by_id($id) {
             switch ($id) {
-                case 4: return 2930;  // Cuenca Remigio Crespo
+
+                // Sierra SUR
                 case 3: return 2931;  // Cuenca Gran Colombia Zona Rosa
+                case 4: return 2930;  // Cuenca Remigio Crespo
                 case 5: return 2932;  // Cuenca Estadio
                 case 17: return 2942; // Cuenca Showroom
+                case 18: return 2945; // Cuenca Winery
+                case 14: return 2937; // Loja
 
+
+                // Sierra NORTE
                 case 6: return 2933;  // Quito Orellana
                 case 7: return 2934;  // Quito Cumbayá
                 case 12: return 2956; // Quito Brasil
+                case 19: return 2957; // Quito Eloy Alfaro
+                case 16: return 2941; // Ambato
+                case 20: return 2962; // Quito El Condado
+                case 21: return 2960; // Quito Winery Eloy Alfaro
+                case 22: return 2963; // Santo Domingo 
+                case 23: return 2964; // Quito Boliche Botellas
 
+
+                // Costa
                 case 9: return 2935;  // Guayaquil Urdesa
                 case 11: return 2938; // Guayaquilil Samborondón
-                case 10: return 2939; // Guayaquil Kennedy Norte
-
                 case 1: return 2936;  // Manta
-                case 14: return 2937; // Loja
-                case 16: return 2941; // Ambato
                 case 15: return 2943; // Machala
+                case 10: return 2939; // Guayaquil Hilton Kennedy Norte
+                case 24: return 2959; // Manta Plazaventura
+                case 25: return 2961; // Playas
+
+                
+                
+                
+                
                 
                 default: return null; // 
 
@@ -1354,8 +1372,8 @@
          */
         public function get_id__by_code($code) {
             switch ($code) {
-                case 2930: return 4;
                 case 2931: return 3;
+                case 2930: return 4;
                 case 2932: return 5;
                 case 2933: return 6;
                 case 2934: return 7;
@@ -1368,6 +1386,15 @@
                 case 2943: return 15;
                 case 2956: return 12;
                 case 2942: return 17;
+                case 2945: return 18;
+                case 2957: return 19;
+                case 2962: return 20;
+                case 2960: return 21;
+                case 2963: return 22;
+                case 2964: return 23;
+                case 2959: return 24;
+                case 2961: return 25;
+
 
                 default: return null;
             }
@@ -1395,6 +1422,15 @@
                 case 2943: return "0943";
                 case 2956: return "0952";
                 case 2942: return "0942";
+
+                case 2945: return "0945";
+                case 2957: return "0957";
+                case 2962: return "0962";
+                case 2960: return "0960";
+                case 2963: return "0963";
+                case 2964: return "0964";
+                case 2959: return "0959";
+                case 2961: return "0961";
                 
                 default: return null;
             }
