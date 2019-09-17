@@ -217,7 +217,7 @@ class Webservice_AppRegisterModuleFrontController extends ModuleFrontController 
                 $customer->cart_count = Cart::getNbProducts($this->context->cookie->id_cart);
 
                 $this->proccessCustomer($customer);
-                $status_code = 200;
+                $status_code = 201;
 
                 CartRule::autoRemoveFromCart($this->context);
                 CartRule::autoAddToCart($this->context);

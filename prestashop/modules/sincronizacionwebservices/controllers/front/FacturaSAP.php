@@ -27,8 +27,8 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
 
         echo "Empieza FacturaSAP " . date('m/d/Y G:i:s a', time()) . "<br>";
         echo "<hr>";
-        echo "AMBIENTE: ".AMBIENTE;
-        /*$id_carrier = $this->context->cart->id_carrier;
+        
+        $id_carrier = $this->context->cart->id_carrier;
         echo "<br>ID_CARRIER: ".$id_carrier."<br>";
 
         $this->log = new LoggerTools();
@@ -50,7 +50,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
             }
         }
         $respuesta = array('status'=>true);
-        echo json_encode($respuesta);*/
+        echo json_encode($respuesta);
 
     	exit;
     	$this->setTemplate('productos.tpl');
@@ -169,31 +169,39 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
 
     private function notificarAMiPiloto($order,$efectivo){
     // MI piloto Henry Campoverde add
-        $log = new LoggerTools();
-        $result = null;
-        $mipiloto = new Mipilotoshipping();
-        $resultadoAgendar = $mipiloto->agendarPedido($order,$efectivo);
-        $guia_numero=0; $hora_llegada = 0;
-        $log->add("entro a notificarAMiPiloto");
-        if ($resultadoAgendar){
-            $guia_numero = $resultadoAgendar->guia_numero;
-            $quantity = $this->getQuantityProductsCart($order);
-            $tipo_vehiculo = $this->getTipoVehiculo($quantity); //1-Moto 2-Carro
-            $tipo_producto = $this->getTipoProducto($quantity); //1-Sobre 2-Pequeno 3-Grande 4-Comida
-            $tiempo_llegada = 60;
-            $resultadoActivar = $mipiloto->activarPedido($guia_numero,$tipo_vehiculo,$tipo_producto,$tiempo_llegada);
-            if (!empty($resultadoActivar)){
-                echo "<br>RESULTADO ACTIVAR ***<br>";
-                var_dump($resultadoActivar);
-                if (isset($resultadoActivar->guia_numero)) {
-                    $guia_numero = $resultadoActivar->guia_numero;
-                    $hora_llegada = $resultadoActivar->hora_llegada;
-                    //$this->changeOrderStatus($order, 17); 
-                    $result = $guia_numero;    
-                } else {
-                    $log->add("NO devuelve numero_guia para poder activar PEDIDO MI Piloto");
+
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        if ($config["FACTURACION_AMBIENTE"] == 2) {
+            echo "AMBIENTE PRODUCCION";
+            $log = new LoggerTools();
+            $result = null;
+            $mipiloto = new Mipilotoshipping();
+            $resultadoAgendar = $mipiloto->agendarPedido($order,$efectivo);
+            $guia_numero=0; $hora_llegada = 0;
+            $log->add("entro a notificarAMiPiloto");
+            if ($resultadoAgendar){
+                $guia_numero = $resultadoAgendar->guia_numero;
+                $quantity = $this->getQuantityProductsCart($order);
+                $tipo_vehiculo = $this->getTipoVehiculo($quantity); //1-Moto 2-Carro
+                $tipo_producto = $this->getTipoProducto($quantity); //1-Sobre 2-Pequeno 3-Grande 4-Comida
+                $tiempo_llegada = 60;
+                $resultadoActivar = $mipiloto->activarPedido($guia_numero,$tipo_vehiculo,$tipo_producto,$tiempo_llegada);
+                if (!empty($resultadoActivar)){
+                    echo "<br>RESULTADO ACTIVAR ***<br>";
+                    var_dump($resultadoActivar);
+                    if (isset($resultadoActivar->guia_numero)) {
+                        $guia_numero = $resultadoActivar->guia_numero;
+                        $hora_llegada = $resultadoActivar->hora_llegada;
+                        //$this->changeOrderStatus($order, 17); 
+                        $result = $guia_numero;    
+                    } else {
+                        $log->add("NO devuelve numero_guia para poder activar PEDIDO MI Piloto");
+                    }
                 }
             }
+        }else{
+            $result = "desarrollo";
         }
         return $result;
     // FIN MI Piloto
