@@ -6,12 +6,31 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Fijación de precios en tu tienda online ¿Qué criterios adoptar?</title>
+    <link>https://www.prestashop.com/es/blog/6-preguntas-clave-la-hora-de-fijar-el-precio-de-un-nuevo-producto</link>
+    <description>A la hora de emprender tu propia tienda online, ¿tomaste en cuenta la fijación de precios como factor decisivo?</description>
+     <pubDate>Mon, 16 Sep 2019 08:30:59 +0200</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/6-preguntas-clave-la-hora-de-fijar-el-precio-de-un-nuevo-producto</guid>
+  </item>
+  <item>
     <title>Publicidad Offline ¿Cómo puede mejorar la notoriedad de tu eCommerce?</title>
     <link>https://www.prestashop.com/es/blog/piensa-en-la-publicidad-offline-para-aumentar-tu-notoriedad</link>
     <description>Si tienes una tienda online con la que quieres triunfar y alcanzar el ansiado éxito, la publicidad Offline es una forma de darse a conocer a más gente, así como de llegar a otro ti</description>
      <pubDate>Fri, 13 Sep 2019 08:34:52 +0200</pubDate>
  <dc:creator>Mariela Quiroga</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/piensa-en-la-publicidad-offline-para-aumentar-tu-notoriedad</guid>
+  </item>
+  <item>
+    <title>¿Cómo migrar paso a paso tu PrestaShop a la versión 1.7.6? (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-como-migrar-prestashop-1-7-6</link>
+    <description>¿Cómo migrar paso a paso y con éxito tu PrestaShop a la versión 1.7.6?
+ 
+19 de septiembre de 2019 a las 16 horas (de España)
+</description>
+     <pubDate>Wed, 11 Sep 2019 13:18:02 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-como-migrar-prestashop-1-7-6</guid>
   </item>
   <item>
     <title>Error http 404 : ¿qué es y cómo solucionarlo en tu eCommerce?</title>
@@ -70,22 +89,6 @@
      <pubDate>Wed, 21 Aug 2019 08:30:26 +0200</pubDate>
  <dc:creator>Mariela Quiroga</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulos-prestashop-personaliza-el-aspecto-de-tu-pagina-de-inicio</guid>
-  </item>
-  <item>
-    <title>¿Cómo conseguir que tu migración a PrestaShop 1.7 sea un éxito?</title>
-    <link>https://www.prestashop.com/es/blog/consejos-migracion-prestashop-1-7</link>
-    <description>Si tienes pensado migrar tu tienda online a PrestaShop 1.7, estás en el sitio correcto.</description>
-     <pubDate>Tue, 20 Aug 2019 15:41:05 +0200</pubDate>
- <dc:creator>Méguy Solvet</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/consejos-migracion-prestashop-1-7</guid>
-  </item>
-  <item>
-    <title>5 Mejores plantillas para vender ropa de bebé online con PrestaShop</title>
-    <link>https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</link>
-    <description>Si actualmente tienes alguna tienda para vender ropa de bebé online o lo estás considerando, ¡este artículo es perfecto para ti!</description>
-     <pubDate>Tue, 20 Aug 2019 00:01:41 +0200</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-ropa-de-bebe-online</guid>
   </item>
   </channel>
 </rss>

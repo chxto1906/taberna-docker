@@ -5589,7 +5589,7 @@ small.label, small.value {
       padding: 15px;
       top: 100%;
       position: absolute;
-      z-index: 18;
+      z-index: 10000;
       border-radius: 5px; }
       #top-menu > li .sub-menu.collapse {
         display: none; }
