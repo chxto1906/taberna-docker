@@ -24,7 +24,6 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
             $cart_id = (int) $this->context->cart->id;
         }
 
-
         if (!(int) $cart_id) {
             $this->content = ["message" => "Carrito no encontrado"];
         } else {
@@ -519,15 +518,13 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
     public function processDeleteProductInCart()
     {
         $id_product = Tools::getValue('id_product', '');
-        //$product_data = Tools::getValue('cart_products', Tools::jsonEncode(array()));
-        //$product_data = Tools::jsonDecode($product_data);
+        
         if (empty($id_product)) {
             $this->content = ["message" => "Producto no encontrado."];
         } else {
-            
             $id_address_delivery = $this->context->cart->id_address_delivery;
-            $id_customization = 0;
-            $id_product_attribute = 0;
+            $id_customization = null;
+            $id_product_attribute = null;
             $product = new Product((int) $id_product);
             if (!Validate::isLoadedObject($product)) {
                 $this->content = ["message" => "No se ha encontrado información del producto."];
@@ -557,12 +554,14 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                         return;
                     }
                 }
+
                 if ($this->context->cart->deleteProduct(
                     $id_product,
                     $id_product_attribute,
                     $id_customization,
                     $id_address_delivery
                 )) {
+
                     Hook::exec('actionAfterDeleteProductInCart', array(
                         'id_cart' => (int) $this->context->cart->id,
                         'id_product' => (int) $id_product,
@@ -580,7 +579,8 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                     $this->status_code = 200;
                     //$this->content = "Producto eliminado correctamente.";
                 } else {
-                    $this->status_code = 200;
+                    $this->status_code = 400;
+                    $this->content = ["message" => "No se pudo eliminar producto"];
                     //$this->content = 'Puede existir un producto en el carrito con un atributo similar';
                 }
                 CartRule::autoRemoveFromCart();

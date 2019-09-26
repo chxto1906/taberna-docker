@@ -224,7 +224,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                             'value' => $product['customizationQuantityTotal']
                         ),
                         array(
-                            'name' => 'SKU',
+                            'name' => 'reference',
                             'value' => $product['reference']
                         )
                     );
@@ -237,7 +237,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                             'value' => $product['cart_quantity']
                         ),
                         array(
-                            'name' => 'SKU',
+                            'name' => 'reference',
                             'value' => $product['reference']
                         )
                     );
@@ -312,7 +312,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                             'value' => ($product['cart_quantity'] - $quantity_displayed)
                         ),
                         array(
-                            'name' => 'SKU',
+                            'name' => 'reference',
                             'value' => $product['reference']
                         )
                     );
@@ -363,7 +363,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                             'value' => $product['cart_quantity']
                         ),
                         array(
-                            'name' => 'SKU',
+                            'name' => 'reference',
                             'value' => $product['reference']
                         )
                     );

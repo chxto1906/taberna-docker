@@ -513,12 +513,20 @@ class FrontControllerCore extends Controller
                     $this->context->cart->setDeliveryOption($delivery_option);
             }
 
+
+            $id_shipping = Tools::getValue('id_shipping_address', '');
+            if ($id_shipping) {
+                $this->context->cart->id_address_delivery = $id_shipping;
+            }
+
+
             $this->context->cart->id_currency = $this->context->currency->id;
 
             $this->context->cart->save();
             $this->context->cookie->id_cart = (int) $this->context->cart->id;
             $this->context->cookie->write();
             $this->context->cart->autosetProductAddress();
+
 
         }
 

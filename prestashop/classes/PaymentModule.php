@@ -213,7 +213,8 @@ abstract class PaymentModuleCore extends Module
         $currency_special = null,
         $dont_touch_amount = false,
         $secure_key = false,
-        Shop $shop = null
+        Shop $shop = null,
+        $jsonResponse = false
     ) {
         if (self::DEBUG_MODE) {
             PrestaShopLogger::addLog('PaymentModule::validateOrder - Function called', 1, null, 'Cart', (int) $id_cart, true);
@@ -906,7 +907,11 @@ abstract class PaymentModuleCore extends Module
         } else {
             $error = $this->trans('Cart cannot be loaded or an order has already been placed using this cart', array(), 'Admin.Payment.Notification');
             PrestaShopLogger::addLog($error, 4, '0000001', 'Cart', intval($this->context->cart->id));
-            die($error);
+
+            if ($jsonResponse)
+                return $error;
+            else
+                die($error);
         }
     }
 
