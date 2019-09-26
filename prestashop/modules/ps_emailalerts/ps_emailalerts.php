@@ -459,7 +459,7 @@ class Ps_EmailAlerts extends Module
 
                 if ($dir_mail) {
 
-                    if (((int) $order_state->id != 16) && ((int) $order_state->id != 14))
+                    if (((int) $order_state->id != 16) && ((int) $order_state->id != 14) && ((int) $order_state->id != 3))
                         Mail::Send(
                             $mail_id_lang,
                             'new_order',

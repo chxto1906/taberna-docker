@@ -99,10 +99,10 @@ class Ps_CashondeliveryValidationModuleFrontController extends ModuleFrontContro
             $this->changeOrderStatus($order, 6); //6 Order Cancelada
             //$this->eliminarPedidoMiPiloto($guia_numero);
             //$this->reversePayphone($data->transactionId);
-            return $this->showErrors(null,$this->payphone->l('Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+            return $this->showErrors(null,$this->payphone->l('Ocurrió un inconveniente al guardar datos de la orden. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
         } else {
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, 2);
+            $this->changeOrderStatus($order, 2, true);
             Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
         }
 
@@ -148,7 +148,7 @@ class Ps_CashondeliveryValidationModuleFrontController extends ModuleFrontContro
     }
 
 
-    function changeOrderStatus($order, $state) {
+    function changeOrderStatus($order, $state, $send_email_hook=false) {
         ShopUrl::cacheMainDomainForShop((int) $order->id_shop);
         $order_state = new OrderState($state);
 
@@ -164,6 +164,18 @@ class Ps_CashondeliveryValidationModuleFrontController extends ModuleFrontContro
         }
         $history->changeIdOrderState((int) $order_state->id, $order, $use_existings_payment);
         $history->addWithemail(true);
+
+        if ($send_email_hook) {
+            $order_status = new OrderState((int) $state, (int) $this->context->language->id);
+            // Hook validate order
+            Hook::exec('actionValidateOrder', array(
+                'cart' => $this->context->cart,
+                'order' => $order,
+                'customer' => $this->context->customer,
+                'currency' => $this->context->currency,
+                'orderStatus' => $order_status,
+            ));
+        }
     }
 
     function validateArticulosSAP($order) {
