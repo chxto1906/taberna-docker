@@ -26,9 +26,19 @@
 * to avoid any conflicts with others containers.
 */
 
+
+// PRODUCCION //
+/*
 const token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
 const url = "https://pay.payphonetodoesposible.com/api/transaction/Deferred";
-const passCode = "b52c37acf1a941c395915197642e39c9";
+const passCode = "b52c37acf1a941c395915197642e39c9";*/
+
+
+// DESARROLLO //
+const token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
+const url = "https://pay.payphonetodoesposible.com/api/transaction/Deferred";
+const passCode = "2457a64ab9584d05b7ea90ec9f6a2b2f";
+
 const datos = {
 				cardNumber: "", 
 				expirationMonth: "", 
@@ -38,7 +48,7 @@ const datos = {
             };
 
 $(".datos-tarj").change(function(e) {
-	let name = e.target.name;
+	let name = e.target.id;
 	let value = e.target.value;
 	/*if (name == "cardNumber") {
 		let wordArray = CryptoJS.enc.Utf8.parse(value);
@@ -71,10 +81,13 @@ $(".datos-tarj").change(function(e) {
 
 
 function proccessDatosEncode() {
+	datos["expirationMonth"] = $("#expirationMonth").val();
+	datos["expirationYear"] = $("#expirationYear").val();
 	let key = CryptoJS.enc.Utf8.parse(passCode);
 	let iv = CryptoJS.enc.Utf8.parse(''); 
 	let encrypted = CryptoJS.AES.encrypt(JSON.stringify(datos), key,{ iv: iv });
 	let codificado = encrypted.ciphertext.toString(CryptoJS.enc.Base64);
+	console.dir(codificado);
 	$("#data").val(codificado);
 }
 

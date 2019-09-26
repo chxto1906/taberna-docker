@@ -458,21 +458,23 @@ class Ps_EmailAlerts extends Module
                 }
 
                 if ($dir_mail) {
-                    Mail::Send(
-                        $mail_id_lang,
-                        'new_order',
-                        sprintf(Mail::l('New order : #%d - %s', $mail_id_lang), $order->id, $order->reference),
-                        $template_vars,
-                        $merchant_mail,
-                        null,
-                        $configuration['PS_SHOP_EMAIL'],
-                        $configuration['PS_SHOP_NAME'],
-                        null,
-                        null,
-                        $dir_mail,
-                        null,
-                        $id_shop
-                    );
+
+                    if (((int) $order_state->id != 16) && ((int) $order_state->id != 14))
+                        Mail::Send(
+                            $mail_id_lang,
+                            'new_order',
+                            sprintf(Mail::l('New order : #%d - %s', $mail_id_lang), $order->id, $order->reference),
+                            $template_vars,
+                            $merchant_mail,
+                            null,
+                            $configuration['PS_SHOP_EMAIL'],
+                            $configuration['PS_SHOP_NAME'],
+                            null,
+                            null,
+                            $dir_mail,
+                            null,
+                            $id_shop
+                        );
                 }
             //}
         }

@@ -33,10 +33,10 @@ require_once _PS_MODULE_DIR_ . 'payphone/controllers/front/validation.php';
 class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontController
 {
 
-    protected $token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
-    protected $url = "https://pay.payphonetodoesposible.com/api/v2/transaction/Create";
-    protected $passCode = "b52c37acf1a941c395915197642e39c9";
-    private $storeId = "567c247c-16aa-4f26-a90e-283a3c454ca9";
+    protected $token = null;
+    protected $url = null;
+    protected $passCode = null;
+    private $storeId = null;
 
     public function initContent() {
         parent::initContent();
@@ -51,6 +51,13 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
     public function postProcess()
     {
         //return true;
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        $this->token = $config["PAYPHONE_API_TOKEN"];
+        $this->url = $config["PAYPHONE_API_URL"];
+        $this->passCode = $config["PAYPHONE_API_PASSCODE"];
+        $this->storeId = $config["PAYPHONE_API_STORE_ID"];
+
         //return $this->showErrors($order,"Tienda se encuentra fuera de su horario de atención.");
         $log = new LoggerTools();
         $cart = $this->context->cart;
@@ -269,7 +276,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
             return $this->showErrors(null,'Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.');
         } else {
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'));
+            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
             //$this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
             Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key);
         }
@@ -378,7 +385,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
     }
 
 
-    function changeOrderStatus($order, $state) {
+    function changeOrderStatus($order, $state, $send_email_hook=false) {
         ShopUrl::cacheMainDomainForShop((int) $order->id_shop);
         $order_state = new OrderState($state);
 
@@ -394,6 +401,18 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
         }
         $history->changeIdOrderState((int) $order_state->id, $order, $use_existings_payment);
         $history->addWithemail(true);
+
+        if ($send_email_hook) {
+            $order_status = new OrderState((int) $state, (int) $this->context->language->id);
+            // Hook validate order
+            Hook::exec('actionValidateOrder', array(
+                'cart' => $this->context->cart,
+                'order' => $order,
+                'customer' => $this->context->customer,
+                'currency' => $this->context->currency,
+                'orderStatus' => $order_status,
+            ));
+        }
     }
 
 

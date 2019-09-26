@@ -505,7 +505,7 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
      * @param type $order
      * @param type $state
      */
-    private function changeOrderStatus($order, $state) {
+    private function changeOrderStatus($order, $state, $send_email_hook=false) {
         ShopUrl::cacheMainDomainForShop((int) $order->id_shop);
         $order_state = new OrderState($state);
 
@@ -521,6 +521,18 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
         }
         $history->changeIdOrderState((int) $order_state->id, $order, $use_existings_payment);
         $history->addWithemail(true);
+
+        if ($send_email_hook) {
+            $order_status = new OrderState((int) $state, (int) $this->context->language->id);
+            // Hook validate order
+            Hook::exec('actionValidateOrder', array(
+                'cart' => $this->context->cart,
+                'order' => $order,
+                'customer' => $this->context->customer,
+                'currency' => $this->context->currency,
+                'orderStatus' => $order_status,
+            ));
+        }
     }
 
     /**
