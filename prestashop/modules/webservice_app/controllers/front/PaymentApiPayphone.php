@@ -32,15 +32,19 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
 
     public function postProcess() {
         $response = new Response();
+        if (!$this->context->customer->logged) {
+            $this->status_code = 401;
+            $this->content = "Usuario no logueado";
+        } else {
+            $env = realpath("/var/.env");
+            $config = parse_ini_file($env, true);
+            $this->token = $config["PAYPHONE_API_TOKEN"];
+            $this->url = $config["PAYPHONE_API_URL"];
+            $this->passCode = $config["PAYPHONE_API_PASSCODE"];
+            $this->storeId = $config["PAYPHONE_API_STORE_ID"];
 
-        $env = realpath("/var/.env");
-        $config = parse_ini_file($env, true);
-        $this->token = $config["PAYPHONE_API_TOKEN"];
-        $this->url = $config["PAYPHONE_API_URL"];
-        $this->passCode = $config["PAYPHONE_API_PASSCODE"];
-        $this->storeId = $config["PAYPHONE_API_STORE_ID"];
-
-        $this->process_payment();
+            $this->process_payment();
+        }
         
         echo $response->json_response($this->content,$this->status_code);
     }
@@ -68,6 +72,8 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 return;
             }
 
+            $module = new Tarjetas_payphone();
+
             $cart = $this->context->cart;
             $cart_id = (int) $cart->id;
 
@@ -76,7 +82,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 return;
             }
 
-            if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 || $cart->id_address_invoice == 0 || !$this->module->active) {
+            if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 || $cart->id_address_invoice == 0 || !$module->active) {
                 $this->content = ["message" => "Carrito no es válido"];
                 return;
             }
@@ -151,7 +157,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 $this->content = ["message" => $resValidateArticulos];
                 return;
             }
-            $module = new Tarjetas_payphone();
+            
             $respValido = $module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key, NULL, true);
 
             if ($respValido !== true){

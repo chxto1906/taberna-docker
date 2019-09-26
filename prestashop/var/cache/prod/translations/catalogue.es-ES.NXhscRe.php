@@ -1078,6 +1078,21 @@ $catalogue = new MessageCatalogue('es-ES', array (
     'Disable selection' => 'Desactivar selección',
     'out of stock' => 'out of stock',
   ),
+  'ModulesCashondeliveryAdmin' => 
+  array (
+    'Cash on delivery (COD)' => 'Pago contra entrega',
+    'Accept cash on delivery payments' => 'Aceptar pagos contra entrega',
+  ),
+  'ModulesCashondeliveryShop' => 
+  array (
+    'Pay by Cash on Delivery' => 'Pago contra entrega',
+    'You have chosen the cash on delivery method.' => 'Ha elegido el pago contra entrega.',
+    'Your order on %s is complete.' => 'Su pedido en %s se ha completado.',
+    'Your order will be sent very soon.' => 'Le enviaremos su pedido en breve plazo.',
+    'For any questions or for further information, please contact our' => 'Para cualquier pregunta o para más información, contacte con nuestro',
+    'customer support' => 'servicio de atención al cliente',
+    'You pay for the merchandise upon delivery' => 'Usted paga la mercancía a la entrega',
+  ),
   'ModulesRssfeedShop' => 
   array (
     'No RSS feed added' => 'No se ha añadido ninguna fuente RSS',
@@ -6385,11 +6400,6 @@ Gracias por su paciencia.',
     'New password' => 'Nueva contraseña',
     'Confirmation' => 'Confirmación',
   ),
-  'ModulesCashondeliveryAdmin' => 
-  array (
-    'Cash on delivery (COD)' => 'Pago contra reembolso',
-    'Accept cash on delivery payments' => 'Aceptar pagos contra reembolso',
-  ),
   'ModulesFaviconnotificationboAdmin' => 
   array (
     'Order Notifications on the Favicon' => 'Notificaciones de Pedidos sobre el Favicon',
@@ -7326,16 +7336,6 @@ Las categorías desactivadas se muestran en cursiva.',
     'Delete' => 'Eliminar',
     'Name' => 'Nombre',
     'URL' => 'URL',
-  ),
-  'ModulesCashondeliveryShop' => 
-  array (
-    'Pay by Cash on Delivery' => 'Pago contra reembolso',
-    'Your order on %s is complete.' => 'Su pedido en %s se ha completado.',
-    'You have chosen the cash on delivery method.' => 'Ha elegido el pago contra reembolso.',
-    'Your order will be sent very soon.' => 'Le enviaremos su pedido en breve plazo.',
-    'For any questions or for further information, please contact our' => 'Para cualquier pregunta o para más información, contacte con nuestro',
-    'customer support' => 'servicio de atención al cliente',
-    'You pay for the merchandise upon delivery' => 'Usted paga la mercancía a la entrega',
   ),
   'ModulesLinklistShop' => 
   array (
