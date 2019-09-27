@@ -49,6 +49,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 $this->context->shop->id,
                 $this->context
             );
+
             if (!Validate::isLoadedObject($this->product)) {
                 /*$this->content['status'] = 'failure';
                 $this->content['message'] = parent::getTranslatedTextByFileAndISO(
@@ -83,14 +84,26 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                         $this->context->cookie->id_cart = (int) $this->context->cart->id;
                     }
                 } else {
-                    $this->context->cart = new Cart($cart_id, false, null, null, $this->context);
-                    if (!Validate::isLoadedObject($this->context->cart)) {
+
+                    $tmp_cart = new Cart($cart_id);
+                    $shop_cart_id = $tmp_cart->id_shop;
+                    $shop_id_context = $this->context->shop->id;
+
+
+
+                    if ($shop_cart_id == $shop_id_context) {
+                        $this->context->cart = new Cart($cart_id, false, null, null, $this->context);
+                        if (!Validate::isLoadedObject($this->context->cart)) {
+                            $this->context->cart->id_currency = $this->context->currency->id;
+                            $this->context->cart->add();
+                        }
                         $this->context->cart->id_currency = $this->context->currency->id;
-                        $this->context->cart->add();
-                    }
-                    $this->context->cart->id_currency = $this->context->currency->id;
-                    if ($this->context->cart->id) {
-                        $this->context->cookie->id_cart = (int) $this->context->cart->id;
+                        if ($this->context->cart->id) {
+                            $this->context->cookie->id_cart = (int) $this->context->cart->id;
+                        }
+                    } else {
+                        $this->status_code = 401;
+                        $this->content = ["message" => "El carrito al que quieres agregar el producto no pertenece a tu tienda actual"];
                     }
                 }
                 /*if ($this->product->customizable) {
@@ -109,13 +122,19 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 }*/
                 //$qty = $product_data->cart_products[0]->minimal_quantity;
                 //$id_product_attribute = $product_data->cart_products[0]->id_product_attribute;
-                $id_product_attribute = 0;
-                
-                $this->addKbProduct($id_product, $id_product_attribute, $qty, $operator);
-                /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
-                $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
-                /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
-                $this->content['cart_id'] = (int)$this->context->cart->id;
+                if ($this->status_code != 401) {
+
+                    $id_product_attribute = 0;
+                    
+                    $this->addKbProduct($id_product, $id_product_attribute, $qty, $operator);
+                    /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
+
+                    if ($this->status_code == 200) {
+                        $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
+                        /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
+                        $this->content['cart_id'] = (int)$this->context->cart->id;
+                    }
+                }
             }
         }
 
@@ -127,7 +146,6 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         /**********************************/
 
         //$resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
-
         echo $response->json_response($this->content,$this->status_code);
 
         exit;
