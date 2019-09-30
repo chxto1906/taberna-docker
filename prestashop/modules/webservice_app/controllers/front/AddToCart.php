@@ -2,6 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 
         
 class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController {
@@ -13,7 +14,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
 
     public function initContent() {
     	parent::initContent();
-        
+        $log = new LoggerTools();
         $response = new Response();
         $id_product = Tools::getValue('id_product', '');
         $qty = Tools::getValue('qty', '');
@@ -22,6 +23,8 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
             $operator = "up";
         }
         
+        $log->add("ID_PRODUCT: ".$id_product);
+        $log->add("CANTIDAD: ".$qty);
 
         /**********************************/
 
@@ -126,6 +129,9 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
 
                     $id_product_attribute = 0;
                     
+                    $log->add("Antes de addKbProduct -- Context CART_ID: ".$this->context->cart->id);
+
+
                     $this->addKbProduct($id_product, $id_product_attribute, $qty, $operator);
                     /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
 
@@ -146,6 +152,8 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         /**********************************/
 
         //$resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
+        $log->add('***Response ADD to CART***');
+        $log->add(implode(", ",$this->content));
         echo $response->json_response($this->content,$this->status_code);
 
         exit;
@@ -163,6 +171,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
      */
     public function addKbProduct($id_product, $id_product_attribute, $qty, $operator)
     {
+        $log = new LoggerTools();
         if ($qty == 0) {
             $qty = 1;
         }
@@ -183,6 +192,12 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 $this->status_code = 401;
                 $this->content = ["message" => "No se puede disminuir a cantidad menor que 1"];
             } else {
+
+                $log->add("Antes de updateQty -- Context CART_ID: ".$this->context->cart->id);
+                $log->add("Antes de updateQty -- ID_PRODUCT: ".$id_product);
+                $log->add("Antes de updateQty -- ID_PRODUCT_ATTIBUTE: ".$id_product_attribute);
+                $log->add("Antes de updateQty -- OPERATOR: ".$operator);
+
                 $update_status = $this->context->cart->updateQty($qty, $id_product, $id_product_attribute, false, $operator);
                 if (!$update_status) {
                     $this->status_code = 400;

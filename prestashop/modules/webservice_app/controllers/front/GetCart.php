@@ -2,6 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 
         
 class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
@@ -18,7 +19,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
     	parent::initContent();
         
         $response = new Response();
-
+        $log = new LoggerTools();
         /*$session_obj = $this->isSession();
 
 
@@ -80,7 +81,9 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
         /**********************************/
 
         //$resultDecode = is_string($this->content) ? $this->content :(object) $this->content;
-
+        $log->add('***Response GET CART***');
+        $log->add(implode(", ",$this->content));
+        $log->add("total_cart_items: ".$this->content["cart"]["total_cart_items"]);
         echo $response->json_response($this->content,$this->status_code);
 
         exit;
