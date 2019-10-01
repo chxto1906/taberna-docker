@@ -10,18 +10,18 @@ server {
 server {
 
           ### HTTP2 Part
-          listen 443 default_server;
-          #listen 443 ssl http2;
-          #listen [::]:443 ssl http2;
+          #listen 443 ssl http2 default_server;
+          listen 443 ssl http2;
+          listen [::]:443 ssl http2;
           
           rewrite_log on;
           server_name tabernatest.tk www.tabernatest.tk;
           
           
 
-          #ssl_certificate           /etc/letsencrypt/live/tabernatest.tk/fullchain.pem;
-          #ssl_certificate_key       /etc/letsencrypt/live/tabernatest.tk/privkey.pem;
-          #ssl_trusted_certificate   /etc/letsencrypt/live/tabernatest.tk/chain.pem;
+          ssl_certificate           /etc/letsencrypt/live/tabernatest.tk/fullchain.pem;
+          ssl_certificate_key       /etc/letsencrypt/live/tabernatest.tk/privkey.pem;
+          ssl_trusted_certificate   /etc/letsencrypt/live/tabernatest.tk/chain.pem;
 
           
           # Improve HTTPS performance with session resumption
