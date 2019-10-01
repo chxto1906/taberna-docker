@@ -13,6 +13,7 @@ services:
       - ${NGINX_PORT_SSL}
     volumes:
       - ./docker-images/nginx/ssl/:/etc/nginx/ssl/:delegated
+      - /root/certs-data/:/data/letsencrypt/
     volumes_from:
       - php-fpm
     networks:

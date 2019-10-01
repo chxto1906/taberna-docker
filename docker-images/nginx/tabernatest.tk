@@ -19,9 +19,9 @@ server {
           
           
 
-          ssl_certificate           /etc/letsencrypt/live/tabernatest.tk/fullchain.pem;
-          ssl_certificate_key       /etc/letsencrypt/live/tabernatest.tk/privkey.pem;
-          ssl_trusted_certificate   /etc/letsencrypt/live/tabernatest.tk/chain.pem;
+          #ssl_certificate           /etc/letsencrypt/live/tabernatest.tk/fullchain.pem;
+          #ssl_certificate_key       /etc/letsencrypt/live/tabernatest.tk/privkey.pem;
+          #ssl_trusted_certificate   /etc/letsencrypt/live/tabernatest.tk/chain.pem;
 
           
           # Improve HTTPS performance with session resumption
