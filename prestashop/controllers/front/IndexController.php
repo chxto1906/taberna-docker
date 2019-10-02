@@ -27,6 +27,8 @@ class IndexControllerCore extends FrontController
 {
     public $php_self = 'index';
 
+    public $days = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+
     /**
      * Assign template vars related to page content.
      *
@@ -35,9 +37,37 @@ class IndexControllerCore extends FrontController
     public function initContent()
     {
         parent::initContent();
+
+        if (Tools::getIsset("social")) {
+            if ($this->validateSocial(Tools::getValue("social"))) {
+                $this->process_social(Tools::getValue("social"));
+            }
+        }
+
         $this->context->smarty->assign(array(
             'HOOK_HOME' => Hook::exec('displayHome'),
         ));
         $this->setTemplate('index');
+    }
+
+    public function process_social($social) {
+        $write = array();
+        $write['date_time'] = date("Y-m-d H:i:s");
+        $write['time'] = date("H:i:s");
+        $write['day'] = $this->days[date("N")-1];
+        $write['month'] = date("n");
+        $write['year'] = date("Y");
+        $write['format_date'] = date("d/m/Y H:i:s");
+        $write['social'] = $social;
+
+        Db::getInstance()->insert('social_count', $write);
+    }
+
+    public function validateSocial($social) {
+        $result = false;
+        if ($social == "fb" || $social == "ig") {
+           $result = true; 
+        }
+        return $result;
     }
 }
