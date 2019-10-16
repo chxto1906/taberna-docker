@@ -110,7 +110,6 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             "quantity"      =>  $product->quantity,
             "reference"     =>  $product->reference,
             "manufacturer_name" => $product->manufacturer_name,
-            "id_image"      =>  $product->id_image,
             "link_rewrite"  =>  $product->link_rewrite
         ]);
         return $this->proccessProducts($products,true);
@@ -182,7 +181,6 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $dataResult["quantity"] = $product["quantity"];
                 $dataResult["reference"] = $product["reference"];
                 $dataResult["manufacturer_name"] = $product["manufacturer_name"];
-                $id_image = $product["id_image"];
                 $images = Product::getCover($product["id_product"]);
                 $image_url_small = $this->context->link->getImageLink($product["link_rewrite"], $images['id_image'], ImageType::getFormatedName('small'));
                 $image_url_home = $this->context->link->getImageLink($product["link_rewrite"], $images['id_image'], ImageType::getFormatedName('home'));

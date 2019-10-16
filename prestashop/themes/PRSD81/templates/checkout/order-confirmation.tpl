@@ -5,7 +5,6 @@
       <div class="card-block">
         <div class="row">
           <div class="col-md-12">
-
             {block name='order_confirmation_header'}
               <h3 class="h1 card-title">
                 <i class="fa fa-check done"></i>{l s='Your order is confirmed' d='Shop.Theme.Checkout'}
@@ -70,6 +69,9 @@
               {/if}
               {if isset($delivery_time)}
                 <li>Tiempo entrega: {$delivery_time} mins. (máximo)</li>
+              {/if}
+              {if isset($cct)}
+                <li>Token: {$cct}</li>
               {/if}
             </ul>
           </div>

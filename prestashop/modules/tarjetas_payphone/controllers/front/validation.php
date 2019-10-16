@@ -27,6 +27,7 @@
 require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 require_once _PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/ValidacionProductosBeforeFacturaSAP.php';
 require_once _PS_MODULE_DIR_ . 'tarjetas_payphone/models/PrepareCreateRequestModel.php';
+require_once _PS_MODULE_DIR_ . 'tarjetas_payphone/models/PrepareCreateRequestTokenModel.php';
 require_once _PS_MODULE_DIR_ . 'payphone/controllers/front/validation.php';
 
 
@@ -35,6 +36,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
 
     protected $token = null;
     protected $url = null;
+    protected $urlToken = null;
     protected $passCode = null;
     private $storeId = null;
 
@@ -55,25 +57,35 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
         $config = parse_ini_file($env, true);
         $this->token = $config["PAYPHONE_API_TOKEN"];
         $this->url = $config["PAYPHONE_API_URL"];
+        $this->urlToken = $config["PAYPHONE_API_TOKEN_URL"];
         $this->passCode = $config["PAYPHONE_API_PASSCODE"];
         $this->storeId = $config["PAYPHONE_API_STORE_ID"];
 
         //return $this->showErrors($order,"Tienda se encuentra fuera de su horario de atención.");
         $log = new LoggerTools();
         $cart = $this->context->cart;
-
+        $datos_card_token = null;
         //return $this->module->validateOrder($cart_id, $payment_status, $amount, $module_name, $message, array(), $currency_id, false, $secure_key);
 
         try {
+            $add_card = Tools::getIsset('add_card') ? Tools::getValue("add_card") : null;
 
+            $id_card = Tools::getValue('id_card',null);
+            $cardHolder = Tools::getValue('cardHolder',null);
             $dataEnc = Tools::getValue('data');
             $log->add("TOOLS dataEnc: ".$dataEnc);
+            $log->add("id_card: ".$id_card);
+
 
             $deferredType = Tools::getValue('deferred') ? Tools::getValue('deferred') : "00000000";
             $log->add("TOOLS deferredType: ".$deferredType);
 
-            if (!$dataEnc && !$deferredType){
-                return $this->showErrors(null,"Datos de la tarjeta incorrectos.");
+            if (!$id_card){
+                if (!$dataEnc && !$deferredType){
+                    return $this->showErrors(null,"Datos de la tarjeta incorrectos.");
+                }
+            }else{
+                $datos_card_token = $this->getDataCard($id_card);
             }
 
             if ($this->module->active == false) {
@@ -178,9 +190,20 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
 
             $id_address_invoice = $cart->id_address_invoice;
             $address = new Address($id_address_invoice);
+            $log = new LoggerTools();
+            if ($datos_card_token){
+                $data = new PrepareCreateRequestTokenModel();
+                $data->cardToken = $datos_card_token["cardToken"];
+                $data->cardHolder = $cardHolder;
+                $log->add("cardToken: ".$data->cardToken);
+                $log->add("cardHolder: ".$cardHolder);
+                $this->url = $this->urlToken;
+            }else{
+                $data = new PrepareCreateRequestModel();
+                $data->data = $dataEnc;
+                $log->add("data: ".$data->data);
+            }
 
-            $data = new PrepareCreateRequestModel();
-            $data->data = $dataEnc;
             $data->email = $address->email;
             $data->phoneNumber = $address->phone;
             $data->documentId = $address->dni;
@@ -192,9 +215,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
             $data->storeId = $this->storeId;
             $data->deferredType = $deferredType;
 
-
-            $log = new LoggerTools();
-            $log->add("data: ".$data->data);
+            
             $log->add("email: ".$data->email);
             $log->add("phoneNumber: ".$data->phoneNumber);
             $log->add("documentId: ".$data->documentId);
@@ -233,9 +254,13 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
         try {
             $json = json_encode($data);
             $responsePay = $this->ApiPay($json);
+
+            //->cardToken
+            //var_dump($responsePay);
+            //exit;
             
             if (isset($responsePay->authorizationCode)) {
-               $this->asentarPagoEnDB($responsePay,$order,$cart,$customer,$data,$total); 
+               $this->asentarPagoEnDB($responsePay,$order,$cart,$customer,$data,$total,$add_card,$dataEnc,$datos_card_token); 
             } else {
                 $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
                 return $this->showErrors(null, "OCURRIÓ UN INCONVENIENTE AL PROCESAR LA TRANSACCIÓN"); 
@@ -247,7 +272,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
 
     }
 
-    public function asentarPagoEnDB($responsePay,$order,$cart,$customer,$dataRequest,$total) {
+    public function asentarPagoEnDB($responsePay,$order,$cart,$customer,$dataRequest,$total,$add_card,$dataEnc,$datos_card_token) {
         $log = new LoggerTools();
         $data = $responsePay;
         $write = array();
@@ -278,9 +303,48 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
             $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
             //$this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
-            Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key);
+
+            if ($dataEnc && !$datos_card_token)
+                if ($add_card == "on")
+                    $this->saveCard($data->cardToken);
+
+            Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key . '&cct='.$data->cardToken);
         }
 
+    }
+
+   
+
+
+    public function getDataCard($card_id){
+        $card = Db::getInstance()->executeS('
+        SELECT * 
+        FROM '._DB_PREFIX_.'credit_card_tokens
+        WHERE id ='. $card_id);
+
+        $res = is_array($card) ? $card[0] : null;
+        return $res;
+    }
+
+    public function saveCard($cardToken) {
+        $dueDate = null;
+        $last_digits = Tools::getValue("lastDigits");
+        $type_card = Tools::getValue("type_card");
+        $holder_name = Tools::getValue("holderName");
+        $expirationMonth = Tools::getValue("expirationMonth");
+        $expirationYear = Tools::getValue("expirationYear");
+        if ($expirationMonth && $expirationYear)
+            $dueDate = $expirationMonth."/".$expirationYear;
+
+        $write = array();
+        $write["cardToken"] = $cardToken;
+        $write["description"] = $holder_name;
+        $write["type"] = $type_card;
+        $write["lastDigits"] = $last_digits;
+        $write["dueDate"] = $dueDate;
+        $write["id_customer"] = $this->context->customer->id;
+
+        Db::getInstance()->insert('credit_card_tokens', $write);
     }
 
 
@@ -294,7 +358,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
         $log = new LoggerTools();
 
         $log->add("REQUEST API Payphone DATA: ".$post_data);
-
+        $log->add("URL: ".$this->url);
 
         $curl = curl_init($this->url);
         $headers = array();

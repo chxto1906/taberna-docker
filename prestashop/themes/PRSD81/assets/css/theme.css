@@ -5337,7 +5337,7 @@ small.label, small.value {
     color: #BBCDD2; }
 
 .alert {
-  font-size: 0.8125rem; }
+  font-size: 25px; }
 
 .nav-item .nav-link,
 .nav-item .nav-separtor {
@@ -18260,6 +18260,10 @@ img.lazy:not([data-lazyloading='1']) {
 .text-promo-click {
   color: #ed2123;
     text-shadow: 0 0 30px red;
+}
+
+.error-pay-input {
+  border: solid red 1px;
 }
 
 

@@ -24,6 +24,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  */
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 
 /**
  * @TODO Move undeclared variables and methods to this (base) class: $errors, $layout, checkLiveEditAccess, etc.
@@ -776,7 +777,10 @@ abstract class ControllerCore
 
     public function isSession() {
         $result = null;
-        $context_session_encrypt = isset($_SERVER["HTTP_AUTHORIZATION"])?$_SERVER["HTTP_AUTHORIZATION"]:null;
+        $context_session_encrypt = Tools::getIsset('session_data') ? Tools::getValue('session_data',null) : null;
+        ##$context_session_encrypt = isset($_SERVER["HTTP_AUTHORIZATION"])?$_SERVER["HTTP_AUTHORIZATION"]:null;
+        $log = new LoggerTools();
+        $log->add("AUTHORIZATION: ".$context_session_encrypt);
         if (isset($context_session_encrypt)) {
             $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
             $context_session_decrypt_obj = json_decode($context_session_decrypt);
