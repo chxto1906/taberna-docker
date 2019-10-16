@@ -394,13 +394,26 @@ class Tarjetas_payphone extends PaymentModule
             $years[] = date('Y', strtotime('+'.$i.' years'));
         }
 
+        $cards = $this->getCardsCustomer();
+
         $this->context->smarty->assign([
             'action' => $this->context->link->getModuleLink($this->name, 'validation', array(), true),
             'months' => $months,
-            'years' => $years
-
+            'years' => $years,
+            'cards' => $cards
         ]);
         return $this->context->smarty->fetch('module:tarjetas_payphone/views/templates/front/payment_form.tpl');
+    }
+
+
+    public function getCardsCustomer() {
+        $id_customer = $this->context->customer->id;
+        $cards = Db::getInstance()->executeS('
+        SELECT * 
+        FROM '._DB_PREFIX_.'credit_card_tokens
+        WHERE id_customer ='. $id_customer);
+
+        return $cards;
     }
 
 
