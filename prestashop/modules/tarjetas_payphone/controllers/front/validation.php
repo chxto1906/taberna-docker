@@ -69,7 +69,6 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
 
         try {
             $add_card = Tools::getIsset('add_card') ? Tools::getValue("add_card") : null;
-
             $id_card = Tools::getValue('id_card',null);
             $cardHolder = Tools::getValue('cardHolder',null);
             $dataEnc = Tools::getValue('data');
@@ -81,7 +80,7 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
             $log->add("TOOLS deferredType: ".$deferredType);
 
             if (!$id_card){
-                if (!$dataEnc && !$deferredType){
+                if (!$dataEnc){
                     return $this->showErrors(null,"Datos de la tarjeta incorrectos.");
                 }
             }else{

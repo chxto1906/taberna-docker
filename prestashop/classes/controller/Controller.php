@@ -777,7 +777,7 @@ abstract class ControllerCore
 
     public function isSession() {
         $result = null;
-        $context_session_encrypt = Tools::getIsset('session_data') ? Tools::getValue('session_data',null) : null;
+        $context_session_encrypt = Tools::getIsset('session_data') ? Tools::getValue("session_data",null) : null;
         ##$context_session_encrypt = isset($_SERVER["HTTP_AUTHORIZATION"])?$_SERVER["HTTP_AUTHORIZATION"]:null;
         $log = new LoggerTools();
         $log->add("AUTHORIZATION: ".$context_session_encrypt);

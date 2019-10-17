@@ -516,7 +516,7 @@ class ToolsCore
         if (is_string($value)) {
             return stripslashes(urldecode(preg_replace('/((\%5C0+)|(\%00+))/i', '', urlencode($value))));
         }
-
+        
         return $value;
     }
 
