@@ -104,8 +104,8 @@ class ModuleFrontControllerCore extends FrontController
         $action = trim($action);
         $output = false;
 
-        $myKey = 'oW%c76+jb2';
-        $myIV = 'A)2!u467a^';
+        $myKey = 'taberna2019';
+        $myIV = '';
         $encrypt_method = 'AES-256-CBC';
 
         $secret_key = hash('sha256',$myKey);
@@ -117,12 +117,14 @@ class ModuleFrontControllerCore extends FrontController
 
             if ( $action == 'encrypt' )
             {
-                $output = openssl_encrypt($string, $encrypt_method, $secret_key, 0, $secret_iv);
+                $output = openssl_encrypt($string, $encrypt_method, $secret_key, 0, '');
+                $output = urlencode($output);
             }
 
             if ( $action == 'decrypt' )
             {
-                $output = openssl_decrypt($string, $encrypt_method, $secret_key, 0, $secret_iv);
+                //$string = urldecode($string);
+                $output = openssl_decrypt($string, $encrypt_method, $secret_key, 0, '');
             }
         }
 
