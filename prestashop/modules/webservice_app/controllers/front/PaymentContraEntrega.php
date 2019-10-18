@@ -117,7 +117,7 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
             $this->changeOrderStatus($order, 2, true);
             //Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
             $this->status_code = 201;
-            $this->content = ["message" => "Se ha procesado el pedido correctamente."];
+            $this->content = ["message" => "Se ha procesado el pago correctamente."];
             $this->process_session_data();
         }
 

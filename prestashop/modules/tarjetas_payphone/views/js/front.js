@@ -40,7 +40,7 @@ const url = "https://pay.payphonetodoesposible.com/api/transaction/Deferred";
 const passCode = "2457a64ab9584d05b7ea90ec9f6a2b2f";
 let validate = false;
 let type_card = null;
-const datos = {
+let datos = {
 				cardNumber: "", 
 				expirationMonth: "", 
 				expirationYear: "", 
