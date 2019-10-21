@@ -6,12 +6,72 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Google Shopping ¿qué es y cómo utilizarlo en tu tienda PrestaShop?</title>
+    <link>https://www.prestashop.com/es/blog/implementacion-de-google-shooping-en-prestashop</link>
+    <description>¿Qué es Google Shopping? ¿Cómo utilizarla en tu tienda PrestaShop? ¿Sabes que puedes darle mayor visibilidad a tu producto con esta combinación?</description>
+     <pubDate>Fri, 18 Oct 2019 10:54:05 +0200</pubDate>
+ <dc:creator>Hao Xu</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/implementacion-de-google-shooping-en-prestashop</guid>
+  </item>
+  <item>
+    <title>Análisis y Optimización de la arquitectura Web de mi eCommerce (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/arquitectura-web-webinar</link>
+    <description>Análisis y Optimización de la arquitectura Web de mi eCommerce
+24 de octubre a las 16h (de España)
+</description>
+     <pubDate>Thu, 17 Oct 2019 10:46:03 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/arquitectura-web-webinar</guid>
+  </item>
+  <item>
+    <title>Cómo poner en marcha tu tienda online: consejos para los que empiezan (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</link>
+    <description>¿Cómo poner en marcha tu tienda online?
+17 de octubre a las 16 h (de España)
+</description>
+     <pubDate>Wed, 16 Oct 2019 13:33:52 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</guid>
+  </item>
+  <item>
+    <title>¿Cómo mejorar el Posicionamiento de Marca de tu negocio o proyecto?</title>
+    <link>https://www.prestashop.com/es/blog/posicionamiento-de-marca</link>
+    <description>¿Necesitas mejorar el posicionamiento de marca de tu empresa de eCommerce?</description>
+     <pubDate>Mon, 14 Oct 2019 11:16:03 +0200</pubDate>
+ <dc:creator>Daniel Urda</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/posicionamiento-de-marca</guid>
+  </item>
+  <item>
+    <title>PrestaShop Day Mexico City: el evento eCommerce del año en Latinoamérica</title>
+    <link>https://www.prestashop.com/es/blog/prestashop-day-mexico-city</link>
+    <description>¿Te apuntas al PrestaShop Day Mexico City? Aquí te contamos todos sus alicientes para que no te lo pierdas...</description>
+     <pubDate>Mon, 07 Oct 2019 16:48:21 +0200</pubDate>
+ <dc:creator>Jehyson Bustamante</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/prestashop-day-mexico-city</guid>
+  </item>
+  <item>
+    <title>¿Qué es el Domain Authority y cómo aumentar la autoridad de tu Web?</title>
+    <link>https://www.prestashop.com/es/blog/domain-authority</link>
+    <description>Tener un buen &quot;domain authority&quot; es una de las obsesiones que tenemos todos los que queremos para nuestros negocios online un mejor posicionamiento en buscadores.</description>
+     <pubDate>Mon, 07 Oct 2019 16:23:43 +0200</pubDate>
+ <dc:creator>Roberto Diaz Samper</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/domain-authority</guid>
+  </item>
+  <item>
     <title>Edición especial de fin de año: Calendario e-commerce 2019</title>
     <link>https://www.prestashop.com/es/blog/Calendario-ecommerce-2019</link>
     <description>Los últimos 4 meses del año son muy importantes y están marcados por fechas indispensables. Black Friday, Cyber Monday, Navidad...</description>
      <pubDate>Mon, 07 Oct 2019 15:53:14 +0200</pubDate>
  <dc:creator>Anonymous</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/Calendario-ecommerce-2019</guid>
+  </item>
+  <item>
+    <title>Email Automation: ¿cómo automatizar el Email Marketing de tu tienda online?</title>
+    <link>https://www.prestashop.com/es/blog/email-automation</link>
+    <description>Cuando nos preguntan qué puede hacer el Email Marketing por las Tiendas Online, lo primero que pensamos es en el poder del Email Automation.</description>
+     <pubDate>Mon, 07 Oct 2019 13:23:38 +0200</pubDate>
+ <dc:creator>María Díaz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/email-automation</guid>
   </item>
   <item>
     <title>Brexit: Descubre el impacto que tendrá en tu eCommerce</title>
@@ -30,64 +90,6 @@
      <pubDate>Tue, 01 Oct 2019 18:08:54 +0200</pubDate>
  <dc:creator>Jose Facchin</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/black-hat-seo</guid>
-  </item>
-  <item>
-    <title>Clinic Summit 2019: el congreso sobre tendencias del mundo online</title>
-    <link>https://www.prestashop.com/es/blog/clinic-summit</link>
-    <description>¡Tan sólo faltan 6 días para el Clinic Summit’19!</description>
-     <pubDate>Tue, 01 Oct 2019 13:26:49 +0200</pubDate>
- <dc:creator>Bertrand Amaraggi</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/clinic-summit</guid>
-  </item>
-  <item>
-    <title>¿Cómo encontrar nichos y rentabilizarlos con un eCommerce? (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/como-encontrar-nichos</link>
-    <description>¿Cómo encontrar nichos y rentabilizarlos con un eCommerce?
-3 de octubre a las 16 horas (de España)
-</description>
-     <pubDate>Tue, 24 Sep 2019 19:22:48 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-encontrar-nichos</guid>
-  </item>
-  <item>
-    <title>Google Merchant: ¿qué es y cómo crear una cuenta para tu negocio online?</title>
-    <link>https://www.prestashop.com/es/blog/google-merchant-center</link>
-    <description>Google Merchant Center es sin duda un aliado innegociable para cualquier tienda online.</description>
-     <pubDate>Tue, 24 Sep 2019 07:04:52 +0200</pubDate>
- <dc:creator>José Antonio Neto Santizo</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/google-merchant-center</guid>
-  </item>
-  <item>
-    <title>¿Cómo encontrar proveedores de Dropshipping y negociar con ellos?</title>
-    <link>https://www.prestashop.com/es/blog/proveedores-dropshipping</link>
-    <description>¿Estás pensando en abrir tu tienda online, pero no tienes muy claro cómo encontrar a los mejores proveedores de Dropshipping?</description>
-     <pubDate>Mon, 23 Sep 2019 18:28:52 +0200</pubDate>
- <dc:creator>Gemma Gálvez</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/proveedores-dropshipping</guid>
-  </item>
-  <item>
-    <title>Escalabilidad ¿cómo aplicarla para hacer crecer tu eCommerce?</title>
-    <link>https://www.prestashop.com/es/blog/escalabilidad</link>
-    <description>¿Aplicas la escalabilidad como mentalidad empresarial para hacer que tu negocio crezca día a día?</description>
-     <pubDate>Mon, 23 Sep 2019 08:19:48 +0200</pubDate>
- <dc:creator>Julia Zakharova</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/escalabilidad</guid>
-  </item>
-  <item>
-    <title>PrestaShop Checkout: gestiona de manera simplificada los pagos en tu eCommerce</title>
-    <link>https://www.prestashop.com/es/blog/prestashop-checkout</link>
-    <description>PrestaShop y PayPal se asocian para ofrecerte la mejor solución de pago simplificada en esta vuelta de las vacaciones: &quot;PrestaSho</description>
-     <pubDate>Fri, 20 Sep 2019 18:29:20 +0200</pubDate>
- <dc:creator>Eva Lacalle</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/prestashop-checkout</guid>
-  </item>
-  <item>
-    <title>¿Qué es el SEO On-Page y qué factores tener en cuenta en tu Web?</title>
-    <link>https://www.prestashop.com/es/blog/seo-on-page</link>
-    <description>¿Conoces todos los factores que intervienen en un óptimo SEO On-Page?</description>
-     <pubDate>Fri, 20 Sep 2019 14:21:03 +0200</pubDate>
- <dc:creator>Emilio Miguel López - Madre SEOperiora</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/seo-on-page</guid>
   </item>
   </channel>
 </rss>

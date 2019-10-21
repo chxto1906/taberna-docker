@@ -545,8 +545,6 @@ class FrontControllerCore extends Controller
     public function isOpen(){
         $open = false;
         $horarioHoy = $this->getHorarioParaHoy();
-
-
         $horaActual = strtotime(date("G:i", time()));
 
         if (count($horarioHoy) == 4) {
@@ -564,11 +562,10 @@ class FrontControllerCore extends Controller
     protected function getHorarioParaHoy() {
         $shop = Context::getContext()->shop;
         $hours = $this->getHoursStoreCurrent($shop->id);
-        $horarioHoy = array("none", "none");
+        $horarioHoy = array("none");
         if (is_array($hours)) {
             if (array_key_exists("hours", $hours[0])) {
                 $arrayHorarios = explode('"],["', $hours[0]["hours"]);
-                
                 $horarioHoy = $arrayHorarios[date("N")-1];
                 $horarioHoy = str_replace('","', "-", $horarioHoy);
                 $horarioHoy = str_replace('[["', "", $horarioHoy);
@@ -576,29 +573,31 @@ class FrontControllerCore extends Controller
                 $horarioHoy = trim($horarioHoy);
                 $horarioHoy = explode("-", $horarioHoy);
 
-                $horarioHoy[0] = trim(str_replace("H", ":", $horarioHoy[0]));
-                $horarioHoy[1] = trim(str_replace("H", ":", $horarioHoy[1]));
+                if (isset($horarioHoy[1])){
+                    $horarioHoy[0] = trim(str_replace("H", ":", $horarioHoy[0]));
+                    $horarioHoy[1] = trim(str_replace("H", ":", $horarioHoy[1]));
 
-                $desdeArray = explode(":", $horarioHoy[0]);
-                $hastaArray = explode(":", $horarioHoy[1]);
-                $hastaMinuto = (int)$hastaArray[0] - 1;
-                $hastaArray[1] = "30";
-                $horarioHoy[1] = $hastaMinuto.":".$hastaArray[1];
+                    $desdeArray = explode(":", $horarioHoy[0]);
+                    $hastaArray = explode(":", $horarioHoy[1]);
+                    $hastaMinuto = (int)$hastaArray[0] - 1;
+                    $hastaArray[1] = "30";
+                    $horarioHoy[1] = $hastaMinuto.":".$hastaArray[1];
 
-                if (count($horarioHoy) == 4) {
-                    $horarioHoy[2] = str_replace("H", ":", $horarioHoy[2]);
-                    $horarioHoy[3] = str_replace("H", ":", $horarioHoy[3]);    
-                    $desdeArrayJornada2 = explode(":", $horarioHoy[2]);
-                    $hastaArrayJordana2 = explode(":", $horarioHoy[3]);
-                    $hastaMinutoJornada2 = (int)$hastaArrayJordana2[0] - 1;
-                    $hastaArrayJordana2[1] = "30";
-                    $horarioHoy[3] = $hastaMinutoJornada2.":".$hastaArrayJordana2[1];
-                    $horarioHoy[2] = strtotime($horarioHoy[2]);
-                    $horarioHoy[3] = strtotime($horarioHoy[3]);
+                    if (count($horarioHoy) == 4) {
+                        $horarioHoy[2] = str_replace("H", ":", $horarioHoy[2]);
+                        $horarioHoy[3] = str_replace("H", ":", $horarioHoy[3]);    
+                        $desdeArrayJornada2 = explode(":", $horarioHoy[2]);
+                        $hastaArrayJordana2 = explode(":", $horarioHoy[3]);
+                        $hastaMinutoJornada2 = (int)$hastaArrayJordana2[0] - 1;
+                        $hastaArrayJordana2[1] = "30";
+                        $horarioHoy[3] = $hastaMinutoJornada2.":".$hastaArrayJordana2[1];
+                        $horarioHoy[2] = strtotime($horarioHoy[2]);
+                        $horarioHoy[3] = strtotime($horarioHoy[3]);
+                    }
+
+                    $horarioHoy[0] = strtotime($horarioHoy[0]);
+                    $horarioHoy[1] = strtotime($horarioHoy[1]);
                 }
-
-                $horarioHoy[0] = strtotime($horarioHoy[0]);
-                $horarioHoy[1] = strtotime($horarioHoy[1]);
             }
         }
         return $horarioHoy;

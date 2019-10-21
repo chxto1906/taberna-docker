@@ -429,3 +429,603 @@
 *DEBUG* 	v1.7.5.0	2019/10/17 - 16:06:07: <br>FROM: hdcb1906@yahoo.com<br>
 *DEBUG* 	v1.7.5.0	2019/10/17 - 16:22:39: AUTHORIZATION: 5d8p8I+CRrluI2mB8mt5IY3eD5qWTnZ3iVgPVqPd6rc=
 *DEBUG* 	v1.7.5.0	2019/10/17 - 16:23:10: AUTHORIZATION: 5d8p8I+CRrluI2mB8mt5IY3eD5qWTnZ3iVgPVqPd6rc=
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:36: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:36: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:36: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:37: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:37: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:37: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:38: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:38: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:38: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:39: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:39: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:39: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:45: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:45: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/18 - 18:01:45: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:38:09: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:13: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQkYdd8HPXhqty6nxSj9EN2/uVm1DxEzIkvWr7xBVUWus
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: CANTIDAD: 1
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: Antes de addKbProduct -- Context CART_ID: 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: Antes de updateQty -- Context CART_ID: 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:14: 1, 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:20: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQkYdd8HPXhqty6nxSj9EN2/uVm1DxEzIkvWr7xBVUWus
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:23: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:23: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:23: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:24: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:24: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:24: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:25: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:25: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:25: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: CANTIDAD: 1
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: Antes de addKbProduct -- Context CART_ID: 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: Antes de updateQty -- Context CART_ID: 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:39:27: 2, 108
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:06: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQkYdd8HPXhqty6nxSj9EN2/uVm1DxEzIkvWr7xBVUWus
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:06: WebService TOOLS dataEnc: luRRskyOVGpgQTHeC8y9gAacxS0PhlPTRDrpPObhZTFdzH6TrOhDFGTG3Qac9crOi1zU5NPqQ2/RZbUWxmB6depNnJ04YoND2nfZCpXAcHPjC9ul4usxIdBG9rL6jmd3xcmzgQRYc1QBBNq9u7ey+u+xpMmXnSHpzYkOHDP5JZNFTCNThGYKDMJ0LyHB94Bt
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:06: WebService id_card: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:06: WebService TOOLS deferredType: 00000000
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:07: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:07: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:07: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:09: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:09: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:09: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:10: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:10: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:10: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:11: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:11: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/20 - 21:42:11: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 08:38:58: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQiNmcizbJlUCbXveUhln0sQovkrDSQ6KXtdoueFFn3Zb
+*DEBUG* 	v1.7.5.0	2019/10/21 - 08:39:03: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 08:39:03: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 08:39:03: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:51:37: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:10: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQoVnaDARG+onLsjkxQ3ZuV57t6JMjGJfuX+PSCgIP1uQ
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: CANTIDAD: 2
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: Antes de addKbProduct -- Context CART_ID: 110
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: Antes de updateQty -- Context CART_ID: 110
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:11: 2, 110
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:44: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQoVnaDARG+onLsjkxQ3ZuV57t6JMjGJfuX+PSCgIP1uQ
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:46: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:46: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:46: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:48: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:48: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:48: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:49: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:49: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:49: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:50: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:50: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:50: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:52: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:52: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 09:53:52: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:49: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQoVnaDARG+onLsjkxQ3ZuV57t6JMjGJfuX+PSCgIP1uQ
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:51: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:51: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:51: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:52: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:52: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:52: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:53: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:53: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:53: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:54: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:54: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:54: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:57: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: PLgort: 2931
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: PMatnr: 10068477
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: PVtweg: 20
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:06:59: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:00: RESPUESTA recuperaArticulo: 0|000000000010068477|ST|SOL_CERVEZA SOL 330 ml_Cerveza|75001629||Z1001691|SOL|66|X||HAWA|         1.39|1|Sujeto. IVA Bienes|      451.000|        1.21|1009||5328484EL1|BVN
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:00: RESPUESTA validarLoteSerie: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: RESPONSE existCustomer: 0|0900049539|DRET|01|02|0104632674|CAMPOVERDE BORJA|HENRY DANIEL|01|000000000101|00010101|Cdla. Bosque de Monay 1|EC|S|1|0002|0|A|chxto1906@gmail.com|000|0997027238|7.07|VIG1||N
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: EFECTIVO contraentrega - processFacturacionDB : 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:01: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:07:02: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:40: AUTHORIZATION: 5d8p8I+CRrluI2mB8mt5ITBfyVVdR/gyws96iq55x7c=
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: CANTIDAD: 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: Antes de addKbProduct -- Context CART_ID: 111
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: Antes de updateQty -- Context CART_ID: 111
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:26:42: 1, 111
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:17: AUTHORIZATION: 5d8p8I+CRrluI2mB8mt5ITBfyVVdR/gyws96iq55x7c=
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:19: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:19: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:19: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:20: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:20: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:20: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:21: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:21: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:21: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:22: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:22: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:22: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:24: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:24: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:27:24: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:14: AUTHORIZATION: 5d8p8I+CRrluI2mB8mt5ITBfyVVdR/gyws96iq55x7c=
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:16: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:16: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:16: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:18: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:18: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:18: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:21: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:21: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:21: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:23: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:23: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:23: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:24: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:26: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: PLgort: 2931
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: PMatnr: 10068477
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: PVtweg: 20
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:28: RESPUESTA recuperaArticulo: 0|000000000010068477|ST|SOL_CERVEZA SOL 330 ml_Cerveza|75001629||Z1001691|SOL|66|X||HAWA|         1.39|1|Sujeto. IVA Bienes|      451.000|        1.21|1009||5328484EL1|BVN
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:31: RESPUESTA validarLoteSerie: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: RESPONSE existCustomer: 0|0900049539|DRET|01|02|0104632674|CAMPOVERDE BORJA|HENRY DANIEL|01|000000000101|00010101|Cdla. Bosque de Monay 1|EC|S|1|0002|0|A|chxto1906@gmail.com|000|0997027238|7.07|VIG1||N
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: EFECTIVO contraentrega - processFacturacionDB : 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:32: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:28:33: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:55: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: CANTIDAD: 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: Antes de addKbProduct -- Context CART_ID: 113
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: Antes de updateQty -- Context CART_ID: 113
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:50:56: 1, 113
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:25: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:27: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:27: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:27: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:28: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:28: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:28: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:29: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:29: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:29: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:30: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:30: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:30: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:31: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:31: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:51:31: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:51: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:52: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:52: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:52: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:53: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:53: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:53: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:54: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:54: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:54: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:56: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:56: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:53:56: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 10:59:28: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:01:29: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:02:10: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:03:11: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:08:09: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQrBuY02xpFQBNVL+7sbX0Kjgk/GeToJ8gaMjPg2F9dkr
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:13:47: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQlXcl4JlcUUdu2u+U22DUmQ5Q/9yzVM4Gwgoh50qDy6s
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: CANTIDAD: 3
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: Antes de addKbProduct -- Context CART_ID: 114
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: Antes de updateQty -- Context CART_ID: 114
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:20: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:21: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:21: 3, 114
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:47: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQlXcl4JlcUUdu2u+U22DUmQ5Q/9yzVM4Gwgoh50qDy6s
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:50: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:50: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:50: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:51: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:51: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:51: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:52: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:52: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:52: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:53: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:53: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:53: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:55: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:55: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:14:55: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:01: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQlXcl4JlcUUdu2u+U22DUmQ5Q/9yzVM4Gwgoh50qDy6s
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:03: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:03: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:03: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:04: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:04: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:04: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:05: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:05: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:05: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:06: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:06: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:17:06: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:22: AUTHORIZATION: apM9CJ20Q1rlrfyutOqVQlXcl4JlcUUdu2u+U22DUmQ5Q/9yzVM4Gwgoh50qDy6s
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:23: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:23: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:23: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:24: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:24: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:24: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:25: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:25: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:25: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:26: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:26: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:26: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:27: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: PLgort: 2931
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: PMatnr: 10068477
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: PVtweg: 20
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:29: RESPUESTA recuperaArticulo: 0|000000000010068477|ST|SOL_CERVEZA SOL 330 ml_Cerveza|75001629||Z1001691|SOL|66|X||HAWA|         1.39|1|Sujeto. IVA Bienes|      451.000|        1.21|1009||5328484EL1|BVN
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: RESPUESTA validarLoteSerie: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: RESPONSE existCustomer: 0|0900049539|DRET|01|02|0104632674|CAMPOVERDE BORJA|HENRY DANIEL|01|000000000101|00010101|Cdla. Bosque de Monay 1|EC|S|1|0002|0|A|chxto1906@gmail.com|000|0997027238|7.07|VIG1||N
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: EFECTIVO contraentrega - processFacturacionDB : 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:30: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:21:31: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:23:55: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:25: AUTHORIZATION: t3YMe+BOphuxZ1qd5bZvXiYbBhV6vTX7jeXarQ++7J+BQTW5V0r1QKDVLOu4kX/I
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: CANTIDAD: 5
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: Antes de addKbProduct -- Context CART_ID: 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: Antes de updateQty -- Context CART_ID: 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:26: 5, 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:35: AUTHORIZATION: t3YMe+BOphuxZ1qd5bZvXiYbBhV6vTX7jeXarQ++7J+BQTW5V0r1QKDVLOu4kX/I
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:37: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:37: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:37: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:38: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:38: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:38: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:39: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:39: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:39: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: CANTIDAD: 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: Antes de addKbProduct -- Context CART_ID: 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: Antes de updateQty -- Context CART_ID: 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:24:40: 6, 116
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:02: AUTHORIZATION: t3YMe+BOphuxZ1qd5bZvXiYbBhV6vTX7jeXarQ++7J+BQTW5V0r1QKDVLOu4kX/I
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:03: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:03: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:03: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:04: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:04: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:04: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:06: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:06: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:06: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:07: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:07: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:07: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:08: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:08: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:25:08: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:19: AUTHORIZATION: t3YMe+BOphuxZ1qd5bZvXiYbBhV6vTX7jeXarQ++7J+BQTW5V0r1QKDVLOu4kX/I
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:21: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:21: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:21: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:21: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:21: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:22: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:22: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:22: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:22: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:24: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:24: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:24: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:25: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:26: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: PLgort: 2931
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: PMatnr: 10068477
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: PVtweg: 20
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: RESPUESTA recuperaArticulo: 0|000000000010068477|ST|SOL_CERVEZA SOL 330 ml_Cerveza|75001629||Z1001691|SOL|66|X||HAWA|         1.39|1|Sujeto. IVA Bienes|      451.000|        1.21|1009||5328484EL1|BVN
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: RESPUESTA validarLoteSerie: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: RESPONSE existCustomer: 0|0900049539|DRET|01|02|0104632674|CAMPOVERDE BORJA|HENRY DANIEL|01|000000000101|00010101|Cdla. Bosque de Monay 1|EC|S|1|0002|0|A|chxto1906@gmail.com|000|0997027238|7.07|VIG1||N
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:27: EFECTIVO contraentrega - processFacturacionDB : 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:26:28: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:28:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:18: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:57: AUTHORIZATION: wM0fxKYWrGqbcZA3UL9XWrleH3eZddpwaBll2Zho0PAewSFBVNiLo8POJGaGzuIs
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: CANTIDAD: 4
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: Antes de addKbProduct -- Context CART_ID: 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: Antes de updateQty -- Context CART_ID: 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:30:58: 4, 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:10: AUTHORIZATION: wM0fxKYWrGqbcZA3UL9XWrleH3eZddpwaBll2Zho0PAewSFBVNiLo8POJGaGzuIs
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:12: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:12: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:12: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:13: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:13: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:13: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:14: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:14: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:14: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: CANTIDAD: 3
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: Antes de addKbProduct -- Context CART_ID: 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: Antes de updateQty -- Context CART_ID: 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: Antes de updateQty -- ID_PRODUCT: 3048
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: Antes de updateQty -- ID_PRODUCT_ATTIBUTE: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: Antes de updateQty -- OPERATOR: up
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: ***Response ADD to CART***
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:31:16: 7, 119
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:34: AUTHORIZATION: wM0fxKYWrGqbcZA3UL9XWrleH3eZddpwaBll2Zho0PAewSFBVNiLo8POJGaGzuIs
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:35: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:35: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:35: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:36: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:36: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:36: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:37: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:37: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:37: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:38: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":6,"kmIni":"4.41","kmFin":"5.00","valor":"2.60","created_at":"2018-03-08 16:25:09","updated_at":"2018-12-19 19:03:33","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":1,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":47,"kmIni":"4.41","kmFin":"5.00","valor":"3.00","created_at":"2018-09-18 10:53:45","updated_at":"2018-12-20 10:29:18","valorNoche1":"3.50","valorNoche2":"4.50","ciudadId":1,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:38: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:38: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:39: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:40: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: PLgort: 2931
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: PMatnr: 10068477
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: PVtweg: 20
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: ----------
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: RESPUESTA recuperaArticulo: 0|000000000010068477|ST|SOL_CERVEZA SOL 330 ml_Cerveza|75001629||Z1001691|SOL|66|X||HAWA|         1.39|1|Sujeto. IVA Bienes|      451.000|        1.21|1009||5328484EL1|BVN
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: RESPUESTA validarLoteSerie: 0
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: RESPONSE existCustomer: 0|0900049539|DRET|01|02|0104632674|CAMPOVERDE BORJA|HENRY DANIEL|01|000000000101|00010101|Cdla. Bosque de Monay 1|EC|S|1|0002|0|A|chxto1906@gmail.com|000|0997027238|7.07|VIG1||N
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:41: EFECTIVO contraentrega - processFacturacionDB : 1
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM: hdcb1906@yahoo.com<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>***SEND EMAIL***<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>SERVER: mail.lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PORT: 465<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>ENCRIPTACION: ssl<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>LOGIN: digital@lataberna.com.ec<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>PASSWORD: dig.2019.$<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM NAME: La Taberna Gran Colombia<br>
+*DEBUG* 	v1.7.5.0	2019/10/21 - 11:32:42: <br>FROM: hdcb1906@yahoo.com<br>
