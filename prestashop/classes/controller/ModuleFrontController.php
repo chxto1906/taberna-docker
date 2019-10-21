@@ -99,13 +99,15 @@ class ModuleFrontControllerCore extends FrontController
         }
     }
 
+
     public function openCypher ($action='encrypt',$string=false)
     {
         $action = trim($action);
         $output = false;
 
         $myKey = 'taberna2019';
-        $myIV = '';
+        //$myIV = '';
+        $myIV = '2019taberna20190';
         $encrypt_method = 'AES-256-CBC';
 
         $secret_key = hash('sha256',$myKey);
@@ -117,14 +119,14 @@ class ModuleFrontControllerCore extends FrontController
 
             if ( $action == 'encrypt' )
             {
-                $output = openssl_encrypt($string, $encrypt_method, $secret_key, 0, '');
+                $output = openssl_encrypt($string, $encrypt_method, $secret_key, 0, $myIV);
                 $output = urlencode($output);
             }
 
             if ( $action == 'decrypt' )
             {
                 //$string = urldecode($string);
-                $output = openssl_decrypt($string, $encrypt_method, $secret_key, 0, '');
+                $output = openssl_decrypt($string, $encrypt_method, $secret_key, 0, $myIV);
             }
         }
 
