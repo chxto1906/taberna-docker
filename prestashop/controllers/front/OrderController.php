@@ -52,6 +52,12 @@ class OrderControllerCore extends FrontController
     {
         parent::init();
         $this->cartChecksum = new CartChecksum(new AddressChecksum());
+        $info_city = $this->get_city_by_id($this->context->shop->id);
+        if (is_array($info_city)){
+            $this->context->smarty->assign('ciudad', $info_city["city"]);
+            $this->context->smarty->assign('lat', $info_city["lat"]);
+            $this->context->smarty->assign('lng', $info_city["lng"]);
+        }
     }
 
     public function postProcess()
@@ -321,8 +327,9 @@ class OrderControllerCore extends FrontController
         if (Tools::getIsset('id_country')) {
             $addressForm->fillWith(array('id_country' => Tools::getValue('id_country')));
         }
-
+        
         $stepTemplateParameters = array();
+        
         foreach ($this->checkoutProcess->getSteps() as $step) {
             if ($step instanceof CheckoutAddressesStep) {
                 $stepTemplateParameters = $step->getTemplateParameters();

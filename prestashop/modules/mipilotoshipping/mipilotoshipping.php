@@ -233,13 +233,14 @@ class Mipilotoshipping extends CarrierModule
                     if (!empty($resultCotizar["result"])) {
                         $result = $resultCotizar["result"];
                         $result = json_decode($result);
-
                         /*if ($this->isNight())
                             $shipping_cost = $result->tarifa[0]->valorNoche1;  
                         else
                             $shipping_cost = $result->tarifa[0]->valor;*/
 
-                        $shipping_cost = $result->tarifa[0]->valor;                            
+                        $shipping_cost = $result->tarifa[0]->valor;
+                        if (!isset($shipping_cost))
+                            $shipping_cost = "Error"; 
 
                         /*$valor = $result->tarifa[0]->valor;
                         $valorNoche1 = $result->tarifa[0]->valorNoche1;

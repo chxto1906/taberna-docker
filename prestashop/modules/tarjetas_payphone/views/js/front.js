@@ -28,16 +28,16 @@
 
 
 // PRODUCCION //
-/*
+
 const token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
 const url = "https://pay.payphonetodoesposible.com/api/transaction/Deferred";
-const passCode = "b52c37acf1a941c395915197642e39c9";*/
+const passCode = "b52c37acf1a941c395915197642e39c9";
 
 
 // DESARROLLO //
-const token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
+/*const token = "DW979R0e-Fl8HTwYwHWj6sSUPaRLSvBIKSHzTjfI7-PT94PWFYc2GPPVSDVXRDbrg6W1W_r4NxZBCSICeEZn9IENm_j9FG6iDiyCGkrn6SzbWvH8K578wVd-X_usATnacAEYFeJqqfnUG5KQ8RPnmoWJZJi4ng5Uo4UKnoA6Q_aFIX6PmUwbpcMrONW3Z3-PUvwSfW-P7rkg24OgO90y5arBMVo9nb5f-HO9z-nyXfmiK3lcjmYf3q87CmbH2CbB8_pTS6qFofy5TIZj73-kA-AIgukqyQw47aSLrjb_Vx76BkK1V2vwtu3F_IiFeaJH29t_bGcUKD60wGRsSd3_swH3tVs";
 const url = "https://pay.payphonetodoesposible.com/api/transaction/Deferred";
-const passCode = "2457a64ab9584d05b7ea90ec9f6a2b2f";
+const passCode = "2457a64ab9584d05b7ea90ec9f6a2b2f";*/
 let validate = false;
 let type_card = null;
 let datos = {

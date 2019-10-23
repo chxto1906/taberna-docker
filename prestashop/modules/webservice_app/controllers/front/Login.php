@@ -54,12 +54,19 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
                 $this->context->cookie->email = $customer->email;
 
                 $this->context->customer = $customer;
-                if (Configuration::get('PS_CART_FOLLOWING') &&
+
+
+                if (empty($cart_id)) {
+                    $id_cart = (int) Cart::lastNoneOrderedCart($this->context->customer->id);
+                    $this->context->cart->id = $id_cart;
+                }
+
+                /*if (Configuration::get('PS_CART_FOLLOWING') &&
                         (empty($this->context->cookie->id_cart) ||
                         Cart::getNbProducts($this->context->cookie->id_cart) == 0) &&
                         $id_cart = (int) Cart::lastNoneOrderedCart($this->context->customer->id)) {
                     $this->context->cart = new Cart($id_cart);
-                } else {
+                } else {*/
                     $id_carrier = (int) $this->context->cart->id_carrier;
                     if (!$this->context->cart->id_address_delivery) {
                         $this->context->cart->id_carrier = 0;
@@ -69,7 +76,7 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
                         $i_id = (int) Address::getFirstCustomerAddressId((int) ($customer->id));
                         $this->context->cart->id_address_invoice = $i_id;
                     }
-                }
+                //}
                 $this->context->cart->id_customer = (int) $customer->id;
                 $this->context->cart->secure_key = $customer->secure_key;
 
@@ -80,6 +87,7 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
 
                 $this->context->cart->id_currency = $this->context->currency->id;
                 $this->context->cart->save();
+                
                 $this->context->cookie->id_cart = (int) $this->context->cart->id;
                 $this->context->cookie->write();
                 $this->context->cart->autosetProductAddress();
@@ -151,7 +159,8 @@ class Webservice_AppLoginModuleFrontController extends ModuleFrontController {
     public function proccessCustomer($customer) {
         $context_session = array(
                                 'customer_id'   => $customer->id,
-                                'cart_id'       => $customer->cart_id
+                                'cart_id'       => $customer->cart_id,
+                                'random'        => $this->generateRandom(5)
                             );
         $context_session_str = json_encode((object)$context_session);
         $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);

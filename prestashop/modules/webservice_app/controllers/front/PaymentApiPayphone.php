@@ -338,7 +338,8 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
     public function proccessCustomer($customer) {
         $context_session = array(
                                 'customer_id'   => $customer->id,
-                                'cart_id'       => $customer->cart_id
+                                'cart_id'       => $customer->cart_id,
+                                'random'        => $this->generateRandom(5)
                             );
         $context_session_str = json_encode((object)$context_session);
         $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);
