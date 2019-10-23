@@ -240,7 +240,7 @@ class Mipilotoshipping extends CarrierModule
 
                         $shipping_cost = $result->tarifa[0]->valor;
                         if (!isset($shipping_cost))
-                            $shipping_cost = "Error"; 
+                            $shipping_cost = false; 
 
                         /*$valor = $result->tarifa[0]->valor;
                         $valorNoche1 = $result->tarifa[0]->valorNoche1;
@@ -248,12 +248,12 @@ class Mipilotoshipping extends CarrierModule
                         //$tiempo = $result->tiempo_llegada;
                         //return $valor;
                     } else {
-                        $shipping_cost = "Error";
+                        $shipping_cost = false;
                         $this->context->cart->delete();
                         $this->context->cookie->id_cart = 0;
                     }
                 } else {
-                    $shipping_cost = "Error";
+                    $shipping_cost = false;
                     $this->context->cart->delete();
                     $this->context->cookie->id_cart = 0;
                 }
