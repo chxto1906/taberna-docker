@@ -6,6 +6,30 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Cómo poner en marcha tu tienda online: consejos para los que empiezan (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</link>
+    <description>Las estadísticas son contundentes: cada día se crean en España 40 tiendas online con la plataforma PrestaShop, líder del mercado.</description>
+     <pubDate>Tue, 22 Oct 2019 13:33:52 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</guid>
+  </item>
+  <item>
+    <title>Tendencias y cifras clave del eCommerce europeo en 2019</title>
+    <link>https://www.prestashop.com/es/blog/tendencias-ecommerce-europeo</link>
+    <description>El Informe europeo sobre eCommerce 2019, publicado a finales de agosto en Francia, arroja un balance m</description>
+     <pubDate>Sun, 20 Oct 2019 22:05:34 +0200</pubDate>
+ <dc:creator>Eva Lacalle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/tendencias-ecommerce-europeo</guid>
+  </item>
+  <item>
+    <title>Guía de &amp;quot;Social Login&amp;quot;: el módulo que permite iniciar sesión en tu tienda en 1 clic</title>
+    <link>https://www.prestashop.com/es/blog/modulo-social-login</link>
+    <description>¿Has probado ya el módulo &quot;Social login&quot;, con el que permitir a tus clientes loguearse en su propia cuenta cuando entren repetidamente?</description>
+     <pubDate>Fri, 18 Oct 2019 12:00:12 +0200</pubDate>
+ <dc:creator>Antony Bautista</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulo-social-login</guid>
+  </item>
+  <item>
     <title>Google Shopping ¿qué es y cómo utilizarlo en tu tienda PrestaShop?</title>
     <link>https://www.prestashop.com/es/blog/implementacion-de-google-shooping-en-prestashop</link>
     <description>¿Qué es Google Shopping? ¿Cómo utilizarla en tu tienda PrestaShop? ¿Sabes que puedes darle mayor visibilidad a tu producto con esta combinación?</description>
@@ -22,16 +46,6 @@
      <pubDate>Thu, 17 Oct 2019 10:46:03 +0200</pubDate>
  <dc:creator>Jose Facchin</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/arquitectura-web-webinar</guid>
-  </item>
-  <item>
-    <title>Cómo poner en marcha tu tienda online: consejos para los que empiezan (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</link>
-    <description>¿Cómo poner en marcha tu tienda online?
-17 de octubre a las 16 h (de España)
-</description>
-     <pubDate>Wed, 16 Oct 2019 13:33:52 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</guid>
   </item>
   <item>
     <title>¿Cómo mejorar el Posicionamiento de Marca de tu negocio o proyecto?</title>
@@ -72,24 +86,6 @@
      <pubDate>Mon, 07 Oct 2019 13:23:38 +0200</pubDate>
  <dc:creator>María Díaz</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/email-automation</guid>
-  </item>
-  <item>
-    <title>Brexit: Descubre el impacto que tendrá en tu eCommerce</title>
-    <link>https://www.prestashop.com/es/blog/brexit-que-va-cambiar-para-el-e-commerce-desde-un-punto-de-vista-legal-y-fiscal</link>
-    <description>Tras varios meses de debate, el Brexit entrará por fin en vigor el 31 de octubre 2019 pero, ¿sabes qué es exactamente y cómo puede impactar esto a tu negocio y tus clientes?</description>
-     <pubDate>Mon, 07 Oct 2019 10:28:33 +0200</pubDate>
- <dc:creator>Rhina Matingu</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/brexit-que-va-cambiar-para-el-e-commerce-desde-un-punto-de-vista-legal-y-fiscal</guid>
-  </item>
-  <item>
-    <title>¿Cómo utilizar el Black Hat SEO en eCommerce? (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/black-hat-seo</link>
-    <description>¿Cómo utilizar el Black Hat SEO en eCommerce?
-10 de octubre a las 16 horas (de España)
-</description>
-     <pubDate>Tue, 01 Oct 2019 18:08:54 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/black-hat-seo</guid>
   </item>
   </channel>
 </rss>

@@ -2638,7 +2638,6 @@ class CartCore extends ObjectModel
                     if (!isset($carriers_instance[$id_carrier])) {
                         $carriers_instance[$id_carrier] = new Carrier($id_carrier);
                     }
-
                     $price_with_tax = $this->getPackageShippingCost((int) $id_carrier, true, $country, $package['product_list']);
                     $price_without_tax = $this->getPackageShippingCost((int) $id_carrier, false, $country, $package['product_list']);
                     if (is_null($best_price) || $price_with_tax < $best_price) {
@@ -3230,7 +3229,6 @@ class CartCore extends ObjectModel
             $_total_shipping['with_tax'] += $delivery_option_list[$id_address][$key]['total_price_with_tax'];
             $_total_shipping['without_tax'] += $delivery_option_list[$id_address][$key]['total_price_without_tax'];
         }
-
         return ($use_tax) ? $_total_shipping['with_tax'] : $_total_shipping['without_tax'];
     }
 
@@ -3585,6 +3583,7 @@ class CartCore extends ObjectModel
 
         //get external shipping cost from module
         $shipping_cost = $this->getPackageShippingCostFromModule($carrier, $shipping_cost, $products);
+        
         if ($shipping_cost === false) {
             Cache::store($cache_id, false);
 
@@ -3600,13 +3599,17 @@ class CartCore extends ObjectModel
         } else {
             // Apply tax
             if ($use_tax && isset($carrier_tax)) {
-                $shipping_cost *= 1 + ($carrier_tax / 100);
+                if ($shipping_cost !== "No se pudo calcular."){
+                    $shipping_cost *= 1 + ($carrier_tax / 100);
+                }
             }
         }
 
-        $shipping_cost = (float) Tools::ps_round((float) $shipping_cost, 2);
-        Cache::store($cache_id, $shipping_cost);
 
+        if ($shipping_cost !== "No se pudo calcular."){
+            $shipping_cost = (float) Tools::ps_round((float) $shipping_cost, 2);
+            Cache::store($cache_id, $shipping_cost);
+        }
         return $shipping_cost;
     }
 

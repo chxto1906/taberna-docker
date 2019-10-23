@@ -604,12 +604,102 @@ class CustomerCore extends ObjectModel
         $sql = $this->getSimpleAddressSql(null, $idLang);
         $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
         $addresses = array();
+        Context::getContext()->cart->id_address_delivery = null;
+        Context::getContext()->cart->id_address_invoice = null;
+//        var_dump(Context::getContext()->cart);
+//        exit;
         foreach ($result as $addr) {
-            $addresses[$addr['id']] = $addr;
+
+            //var_dump($addr["id"]);
+            $latitude = $addr["latitude"];
+            $longitude = $addr["longitude"];
+            $infoCiudad = $this->getCiudad($addr["latitude"],$addr["longitude"]);
+            if ($infoCiudad["status"] == 1){
+                $result = json_decode($infoCiudad["result"]);
+                $ciudad = trim(strtolower($result->results[0]->components->city));
+                $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id)["city"];
+                //echo "ciudad: ".$ciudad." - ciudad_shop: ".$ciudad_shop;
+                if ($ciudad == $ciudad_shop){
+                    $addresses[$addr['id']] = $addr;
+                    Context::getContext()->cart->id_address_delivery = $addr['id'];
+                    Context::getContext()->cart->id_address_invoice = $addr['id']; 
+                }
+
+            }
+
+            
         }
 
         return $addresses;
     }
+
+
+    public function get_city_by_id($id) {
+
+        $city_cuenca = ["city" => "cuenca", "lat"=>"-2.900195","lng"=>"-79.005582"];
+        $city_guayaquil = ["city" => "guayaquil", "lat"=>"-2.189424","lng"=>"-79.892960"];
+        $city_quito = ["city" => "quito", "lat"=>"-0.181787","lng"=>"-78.476895"];
+        $city_manta = ["city" => "manta", "lat"=>"-0.967887","lng"=>"-80.708786"];
+        $city_loja = ["city" => "loja", "lat"=>"-4.008022","lng"=>"-79.210975"];
+        $city_machala = ["city" => "machala", "lat"=>"-3.258315","lng"=>"-79.955901"];
+        $city_ambato = ["city" => "ambato", "lat"=>"-1.254440","lng"=>"-78.622670"];
+        $city_santo_domingo = ["city" => "santo domingo", "lat"=>"-0.253698","lng"=>"-79.176053"];
+        $city_playas = ["city" => "general villamil", "lat"=>"-2.628456","lng"=>"-80.389473"];
+
+        switch ((int)$id) {
+            case 3: return $city_cuenca;
+            case 4: return $city_cuenca;
+            case 5: return $city_cuenca;
+            case 17: return $city_cuenca;
+            case 18: return $city_cuenca;
+            case 9: return $city_guayaquil;
+            case 10: return $city_guayaquil;
+            case 11: return $city_guayaquil;
+            case 12: return $city_quito;
+            case 6: return $city_quito;
+            case 7: return $city_quito;
+            case 19: return $city_quito;
+            case 20: return $city_quito;
+            case 21: return $city_quito;
+            case 23: return $city_quito;
+            case 1: return $city_manta;
+            case 24: return $city_manta;
+            case 14: return $city_loja;
+            case 15: return $city_machala;
+            case 16: return $city_ambato;
+            case 22: return $city_santo_domingo;
+            case 25: return $city_playas;
+            default: return null; 
+        }
+
+    }
+
+
+    public function getCiudad($lat,$lng) {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://api.opencagedata.com/geocode/v1/json?q=".$lat."+".$lng."&key=d787ef2345f841429efd7f5f6249d4e7",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => false,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          return array("status" => 0, "result" => "cURL Error #:" . $err);
+        } else {
+          return array("status" => 1, "result" => $response);
+        }
+    }
+
 
     /**
      * Get Address as array.
