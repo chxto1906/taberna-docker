@@ -71,19 +71,17 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
 
         $customer = new Customer((int)$this->context->cart->id_customer);
         $total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+        $cart = $this->context->cart;
+        $resValidateArticulos = $this->validateArticulosSAP($cart);
+        if ($resValidateArticulos) {
+            $this->content = ["message" => $resValidateArticulos];
+            return;
+        }
         $respValido = $moduleCash->validateOrder((int)$this->context->cart->id, Configuration::get('PS_OS_PREPARATION'), $total, $moduleCash->displayName, null, array(), null, false, $customer->secure_key);
 
         if ($respValido !== true){
             $this->process_session_data();
             $this->content["message"] = $respValido;
-            return;
-        }
-
-
-        $cart = $this->context->cart;
-        $resValidateArticulos = $this->validateArticulosSAP($cart);
-        if ($resValidateArticulos){
-            $this->content = ["message" => $resValidateArticulos];
             return;
         }
 
@@ -175,7 +173,8 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
     public function proccessCustomer($customer) {
         $context_session = array(
                                 'customer_id'   => $customer->id,
-                                'cart_id'       => $customer->cart_id
+                                'cart_id'       => $customer->cart_id,
+                                'random'        => $this->generateRandom(5)
                             );
         $context_session_str = json_encode((object)$context_session);
         $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);

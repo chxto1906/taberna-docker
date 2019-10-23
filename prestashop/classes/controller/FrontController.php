@@ -2094,6 +2094,48 @@ class FrontControllerCore extends Controller
         return $form;
     }
 
+
+    public function get_city_by_id($id) {
+
+        $city_cuenca = ["city" => "cuenca", "lat"=>"-2.900195","lng"=>"-79.005582"];
+        $city_guayaquil = ["city" => "guayaquil", "lat"=>"-2.189424","lng"=>"-79.892960"];
+        $city_quito = ["city" => "quito", "lat"=>"-0.181787","lng"=>"-78.476895"];
+        $city_manta = ["city" => "manta", "lat"=>"-0.967887","lng"=>"-80.708786"];
+        $city_loja = ["city" => "loja", "lat"=>"-4.008022","lng"=>"-79.210975"];
+        $city_machala = ["city" => "machala", "lat"=>"-3.258315","lng"=>"-79.955901"];
+        $city_ambato = ["city" => "ambato", "lat"=>"-1.254440","lng"=>"-78.622670"];
+        $city_santo_domingo = ["city" => "santo domingo", "lat"=>"-0.253698","lng"=>"-79.176053"];
+        $city_playas = ["city" => "general villamil", "lat"=>"-2.628456","lng"=>"-80.389473"];
+
+        switch ((int)$id) {
+            case 3: return $city_cuenca;
+            case 4: return $city_cuenca;
+            case 5: return $city_cuenca;
+            case 17: return $city_cuenca;
+            case 18: return $city_cuenca;
+            case 9: return $city_guayaquil;
+            case 10: return $city_guayaquil;
+            case 11: return $city_guayaquil;
+            case 12: return $city_quito;
+            case 6: return $city_quito;
+            case 7: return $city_quito;
+            case 19: return $city_quito;
+            case 20: return $city_quito;
+            case 21: return $city_quito;
+            case 23: return $city_quito;
+            case 1: return $city_manta;
+            case 24: return $city_manta;
+            case 14: return $city_loja;
+            case 15: return $city_machala;
+            case 16: return $city_ambato;
+            case 22: return $city_santo_domingo;
+            case 25: return $city_playas;
+            default: return null; 
+        }
+
+    }
+
+
     private function initDebugguer()
     {
         if (true === _PS_MODE_DEV_) {

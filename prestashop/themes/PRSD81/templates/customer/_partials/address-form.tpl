@@ -22,14 +22,20 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
 {literal}
-
 <script type="text/javascript">
-  
-  let ciudades_permitidas = ["cuenca"];
-
+  let ciudades_permitidas = ["-"];
   function inicio() {
 
+    let lat_centro = null;
+    let long_centro = null;
+    let ciudad = $("#ciudad").val();
+    let ciudad_lat = $("#ciudad_lat").val();
+    let ciudad_lng = $("#ciudad_lng").val();
+    
+    ciudades_permitidas.push(ciudad);
+    
     $(".form-control[name='latitude']").attr("readonly","readonly");
     $(".form-control[name='longitude']").attr("readonly","readonly");
     let $lat = $(".form-control[name='latitude']");
@@ -40,8 +46,8 @@
     let marker = true;
     let Marcador = null;
     if (!latitude){
-      latitude = -2.897924;
-      longitude = -79.005861;
+      latitude = ciudad_lat;
+      longitude = ciudad_lng;
       marker = false;
     }
     let zoomini = 16;
@@ -87,7 +93,7 @@
 
           updatePosition(e.latlng);
         } else {
-          alert("Estás intentando seleccionar una área no permitida.");
+          alert("Estás intentando seleccionar una área no permitida para la tienda actual.");
         }
 
       });
@@ -139,6 +145,9 @@
       {block name="address_form_fields"}
         <section class="form-fields">
           {block name='form_fields'}
+          <input type="hidden" id="ciudad" value="{$ciudad}">
+              <input type="hidden" id="ciudad_lat" value="{$lat}">
+              <input type="hidden" id="ciudad_lng" value="{$lng}">
             {foreach key="key" from=$formFields item="field"}
               {if $key eq 'latitude'}
                 <div class="form-group row ">

@@ -23,6 +23,7 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
+
 class AddressControllerCore extends FrontController
 {
     public $auth = false;
@@ -44,7 +45,16 @@ class AddressControllerCore extends FrontController
         parent::init();
         $this->address_form = $this->makeAddressForm();
         $this->context->smarty->assign('address_form', $this->address_form->getProxy());
+
+        $info_city = $this->get_city_by_id($this->context->shop->id);
+        if (is_array($info_city)){
+            $this->context->smarty->assign('ciudad', $info_city["city"]);
+            $this->context->smarty->assign('lat', $info_city["lat"]);
+            $this->context->smarty->assign('lng', $info_city["lng"]);
+        }
+        
     }
+
 
     /**
      * Start forms process.
