@@ -13,9 +13,42 @@ class Webservice_AppCategoriesModuleFrontController extends ModuleFrontControlle
         try {
             $response = new Response();
             $status_code = 200;
-            $category = new Category(36);
-            $categories = $category->getSubCategories(1);
-            $categories = $this->proccessCategories($categories);
+
+            $home = Tools::getValue("home",0);
+            $categories = array();
+            if ($home == 1){
+                $whisky = array('id_category' => "44", 
+                                    'name' => "Whisky",
+                                    "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/whisky.jpg"
+                                    );
+                $ron = array('id_category' => "39", 
+                                    'name' => "Ron",
+                                    "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/ron.jpg"
+                                    );
+                $tequila = array('id_category' => "41", 
+                                    'name' => "Tequila",
+                                    "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/tequila.jpg"
+                                    );
+                $gin = array('id_category' => "47", 
+                                    'name' => "Gin",
+                                    "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/gin.jpg"
+                                    );
+                $mixers = array('id_category' => "75", 
+                                    'name' => "Mixers",
+                                    "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/mixers.jpg"
+                                    );
+                array_push($categories, $whisky);
+                array_push($categories, $ron);
+                array_push($categories, $tequila);
+                array_push($categories, $gin);
+                array_push($categories, $mixers);
+            } else {
+
+                $category = new Category(36);
+                $categories = $category->getSubCategories(1);
+                
+                $categories = $this->proccessCategories($categories,$home);
+            }
             echo $response->json_response($categories,$status_code);
             exit;
         } catch (Exception $e) {
@@ -25,17 +58,21 @@ class Webservice_AppCategoriesModuleFrontController extends ModuleFrontControlle
     	$this->setTemplate('productos.tpl');
     }
 
-    public function proccessCategories($categories) {
+    public function proccessCategories($categories,$home) {
         $categoriesResult = array();
         $dataResult = [
             "id_category"    => null,
             "name"          => null,
-            "description"   => null
+            //"description"   => null
         ];
         foreach ($categories as $category) {
             $dataResult["id_category"] = $category["id_category"]; 
             $dataResult["name"] = $category["name"];
-            $dataResult["description"] = $category["description"];
+
+            if ($home==1)
+                $dataResult["image_url"] = Context::getContext()->shop->getBaseURL(true);
+
+            //$dataResult["description"] = $category["description"];
             
             $categoriesResult[] = $dataResult;
         }

@@ -106,7 +106,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             "name"          =>  $product->name,
             "description"   =>  $product->description,
             "price_tax_exc" =>  $this->formatPrice($price_tax_exc),
-            "price_without_reduction"   =>  $this->formatPrice($price_tax_inc),
+            "price_tax_inc"   =>  $this->formatPrice($price_tax_inc),
             "quantity"      =>  $product->quantity,
             "reference"     =>  $product->reference,
             "manufacturer_name" => $product->manufacturer_name,
@@ -165,8 +165,8 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 "name"                      => null,
                 "description"               => null,
                 "price_tax_exc"             => null,
-                "price_without_reduction"   => null,
-                "quantity"                  => null,
+                "price_tax_inc"   => null,
+                "stock"                  => null,
                 "reference"                 => null,
                 "image_small"               => null,
                 "image_home"                => null,
@@ -177,8 +177,8 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $dataResult["name"] = $product["name"];
                 $dataResult["description"] = $product["description"];
                 $dataResult["price_tax_exc"] = $this->formatPrice($product["price_tax_exc"]);
-                $dataResult["price_without_reduction"] = $this->formatPrice($product["price_without_reduction"]);
-                $dataResult["quantity"] = $product["quantity"];
+                $dataResult["price_tax_inc"] = $this->formatPrice($product["price_tax_inc"]);
+                $dataResult["stock"] = $product["quantity"];
                 $dataResult["reference"] = $product["reference"];
                 $dataResult["manufacturer_name"] = $product["manufacturer_name"];
                 $images = Product::getCover($product["id_product"]);

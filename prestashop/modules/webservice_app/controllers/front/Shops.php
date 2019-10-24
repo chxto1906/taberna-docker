@@ -11,8 +11,7 @@ class Webservice_AppShopsModuleFrontController extends ModuleFrontController {
     public function initContent() {
     	parent::initContent();
         $response = new Response();
-
-        $id_shop = Tools::getValue('id_shop');
+        $id_shop = Tools::getValue("shop_id");
         if (!$id_shop)
             $shops = $this->getShopsFull();
         else
@@ -28,7 +27,7 @@ class Webservice_AppShopsModuleFrontController extends ModuleFrontController {
         //15 payment payphone
 
         $sql = "
-        SELECT ps.id_shop, ps.name, psu.domain, psu.domain_ssl, psu.virtual_uri, psl.address1, psl.hours, pst.city, pst.postcode, pst.latitude, pst.longitude, pst.phone, pst.email
+        SELECT ps.id_shop, ps.name, psu.domain, psu.domain_ssl, psu.virtual_uri, psl.address1, pst.city, pst.postcode, pst.latitude, pst.longitude, pst.phone, pst.email
         FROM `ps_shop` as ps
         INNER JOIN `ps_shop_url` as psu
         ON ps.`id_shop` = psu.`id_shop`
@@ -46,10 +45,18 @@ class Webservice_AppShopsModuleFrontController extends ModuleFrontController {
 
         $consultas = new Consultas();
         $shops = $consultas->list($sql,Tools::getValue('limit'));
+        if (!$id_shop) {
+            $result = array();
+            foreach ($shops as $shop) {
+                $result[$shop['city']][] = $shop;
+            }
+        }else{
+            $result = $shops[0];
+        }
 
         //$shops = Db::getInstance()->executeS($cadena) ;
 
-        return $shops;
+        return $result;
     }
 
 
