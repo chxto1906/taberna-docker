@@ -39,7 +39,7 @@ class Webservice_AppListCardsCustomerModuleFrontController extends ModuleFrontCo
     public function getCardsCustomer() {
         $id_customer = $this->context->customer->id;
         $cards = Db::getInstance()->executeS('
-        SELECT * 
+        SELECT id,description,type,lastDigits,dueDate,id_customer 
         FROM '._DB_PREFIX_.'credit_card_tokens
         WHERE id_customer ='. $id_customer);
 

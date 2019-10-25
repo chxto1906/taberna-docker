@@ -91,8 +91,8 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     $this->context->cart->update();
                     $this->context->cookie->id_cart = (int) $this->context->cart->id;
                     $this->context->cookie->write();
-                    $this->content['checkout_page']['per_products_shipping'] = "0";
-                    $this->content['checkout_page']['per_products_shipping_methods'] = array();
+                    //$this->content['checkout_page']['per_products_shipping'] = "0";
+                    //$this->content['checkout_page']['per_products_shipping_methods'] = array();
                     $this->getKbCarrierList();
                     $cart_data = $this->fetchList();
                     /*Set currency code and cart total */
@@ -100,8 +100,8 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         (float)$this->context->cart->getOrderTotal(true, Cart::BOTH),
                         2
                     );
-                    $this->content['currency_code'] = $this->context->currency->iso_code;
-                    $this->content['currency_symbol'] = $this->context->currency->sign;
+                    //$this->content['currency_code'] = $this->context->currency->iso_code;
+                    //$this->content['currency_symbol'] = $this->context->currency->sign;
                     $cart_summary = $cart_data['summary'];
                     $customized_data = $cart_data['customized_data'];
                     $cart_products = array();
@@ -110,235 +110,48 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         $quantity_displayed = 0;
                         $extra_product_line = false;
                         $customization = false;
-                        $product_obj = new Product((int) $product['id_product']);
+                        $product_obj = new Product(
+                            (int) $product['id_product'],
+                            true,
+                            $this->context->language->id,
+                            $this->context->shop->id
+                        );
                         $cart_products[$index] = array(
                             'product_id' => $product_obj->id,
-                            'title' => $product['name'],
-                            'is_gift_product' => "0",
-                            'id_product_attribute' => $product['id_product_attribute'],
-                            'id_address_delivery' => $product['id_address_delivery'],
-                            'stock' => true
+                            'name' => $product['name'],
+                            'description' => $product['description'],
+                            'stock' => StockAvailable::getQuantityAvailableByProduct(
+                                    $product_obj->id,
+                                    $product['id_product_attribute']
+                                )
                         );
-                        $cart_products[$index]['discount_price'] = '';
-                        $cart_products[$index]['discount_percentage'] = '';
-                        /* Changes started by rishabh jain on 3rd sep 2018
-                        * Added urlencode perimeter in image link if enabled by admin
-                        */
-                        /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
-                            $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                urlencode($product['link_rewrite']),
-                                $product['id_image'],
-                                $this->getImageType('large')
-                            );
-                        } else {*/
-                            $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                $product['link_rewrite'],
-                                $product['id_image'],
-                                $this->getImageType('large')
-                            );
-                        //}
+                        $cart_products[$index]['image_small'] = $this->context->link->getImageLink(
+                            $product['link_rewrite'],
+                            $product['id_image'],
+                            $this->getImageType('small')
+                        );
+                        $cart_products[$index]['image_home'] = $this->context->link->getImageLink(
+                            $product['link_rewrite'],
+                            $product['id_image'],
+                            $this->getImageType('home')
+                        );
+                        $cart_products[$index]['image_large'] = $this->context->link->getImageLink(
+                            $product['link_rewrite'],
+                            $product['id_image'],
+                            $this->getImageType('large')
+                        );
                         /* Changes over */
                         $p_id = $product['id_product'];
                         $p_aid = $product['id_product_attribute'];
                         $da_id = $product['id_address_delivery'];
-                        if (isset($customized_data[$p_id][$p_aid][$da_id])) {
-                            $c_i = 0;
-                            $customization = true;
-                            foreach ($customized_data[$p_id][$p_aid][$da_id] as $id_c => $customization) {
-                                foreach ($customization['datas'] as $type => $custom_data) {
-                                    if ($type == Product::CUSTOMIZE_TEXTFIELD) {
-                                        foreach ($custom_data as $tf) {
-                                            $cart_products[$index]['customizable_items'][$c_i] = array(
-                                                'id_customization_field' => $id_c,
-                                                'type' => "text",
-                                                'text_value' => $tf['value'],
-                                                'quantity' => $customization['quantity']
-                                            );
-                                            $t_i = 0;
-                                            $t_str = 'customizable_items';
-                                            if ($tf['name']) {
-                                                $cart_products[$index][$t_str][$c_i]['title'] = $tf['name'];
-                                            } else {
-                                                $cart_products[$index][$t_str][$c_i]['title'] = "Text #"
-                                                        .($t_i+1);
-                                                $t_i++;
-                                            }
-                                            $c_i++;
-                                        }
-                                    }
-                                }
-                                $quantity_displayed = $quantity_displayed + $customization['quantity'];
-                            }
-                            if (($product['quantity'] - $quantity_displayed) > 0) {
-                                $extra_product_line = true;
-                            }
-                        }
-                        if ($customization) {
-                            $cart_products[$index]['price'] = $this->formatPrice(
-                                $product['total_customization_wt']
-                            );
-                            $cart_products[$index]['quantity'] = $product['customizationQuantityTotal'];
-                            $cart_products[$index]['product_items'] = array(
-                                array(
-                                    'name' => 'Cantidad',
-                                    'value' => $product['customizationQuantityTotal']
-                                ),
-                                array(
-                                    'name' => 'reference',
-                                    'value' => $product['reference']
-                                )
-                            );
-                        } else {
-                            $cart_products[$index]['price'] = $this->formatPrice($product['total_wt']);
-                            $cart_products[$index]['quantity'] = $product['cart_quantity'];
-                            $cart_products[$index]['product_items'] = array(
-                                array(
-                                    'name' => 'Cantidad',
-                                    'value' => $product['cart_quantity']
-                                ),
-                                array(
-                                    'name' => 'reference',
-                                    'value' => $product['reference']
-                                )
-                            );
-                        }
-                        if (isset($product['attributes']) && $product['attributes']) {
-                            $cart_products[$index]['product_items'][] = array(
-                                'name' => 'Atributos',
-                                'value' => $product['attributes']
-                            );
-                        }
-                        if (!isset($cart_products[$index]['customizable_items'])) {
-                            $cart_products[$index]['customizable_items'] = array();
-                        } else {
-                            $temp_array = array();
-                            $temp_customized_data = $cart_products[$index]['customizable_items'];
-                            unset($cart_products[$index]['customizable_items']);
-                            $cust_index = 0;
-                            foreach ($temp_customized_data as $data) {
-                                $t_str = 'customizable_grp_items';
-                                if (isset($temp_array[$data['id_customization_field']])) {
-                                    $t1 = $temp_array[$data['id_customization_field']];
-                                    $cart_products[$index]['customizable_items'][$t1][$t_str][] = $data;
-                                } else {
-                                    $temp_array[$data['id_customization_field']] = $cust_index;
-                                    $cart_products[$index]['customizable_items'][$cust_index][$t_str][] = $data;
-                                    $cust_index++;
-                                }
-                            }
-                            unset($temp_array);
-                            unset($temp_customized_data);
-                        }
+                        $cart_products[$index]['price_tax_inc'] = $this->formatPrice($product['price_with_reduction']);
+                        $cart_products[$index]['price_tax_exc'] = $this->formatPrice($product['price_with_reduction_without_tax']);                
+                        $cart_products[$index]['quantity'] = $product['cart_quantity'];
+                        $cart_products[$index]['reference'] = $product['reference'];
+                        $cart_products[$index]['manufacturer_name'] = $product["manufacturer_name"];
                         $index++;
-                        if ($extra_product_line) {
-                            $cart_products[$index] = array(
-                                'product_id' => $product_obj->id,
-                                'title' => $product['name'],
-                                'is_gift_product' => "0",
-                                'id_product_attribute' => $product['id_product_attribute'],
-                                'id_address_delivery' => $product['id_address_delivery']
-                            );
-                            if ($product['cart_quantity'] <= StockAvailable::getQuantityAvailableByProduct(
-                                $product_obj->id,
-                                $product['id_product_attribute']
-                            )) {
-                                $cart_products[$index]['stock'] = true;
-                            } else {
-                                $cart_products[$index]['stock'] = false;
-                            }
-                            $cart_products[$index]['price'] = $this->formatPrice($product['total_wt']);
-                            $cart_products[$index]['discount_price'] = '';
-                            $cart_products[$index]['discount_percentage'] = '';
-                            /* Changes started by rishabh jain on 3rd sep 2018
-                            * Added urlencode perimeter in image link if enabled by admin
-                            */
-                            /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
-                                $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                    urlencode($product['link_rewrite']),
-                                    $product['id_image'],
-                                    $this->getImageType('large')
-                                );
-                            } else {*/
-                                $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                    $product['link_rewrite'],
-                                    $product['id_image'],
-                                    $this->getImageType('large')
-                                );
-                            //}
-                            /* Changes over */
-                            $cart_products[$index]['product_items'] = array(
-                                array(
-                                    'name' => 'Cantidad',
-                                    'value' => ($product['cart_quantity'] - $quantity_displayed)
-                                ),
-                                array(
-                                    'name' => 'reference',
-                                    'value' => $product['reference']
-                                )
-                            );
-                            if (isset($product['attributes']) && $product['attributes']) {
-                                $cart_products[$index]['product_items'][] = array(
-                                    'name' => 'Atributos',
-                                    'value' => $product['attributes']
-                                );
-                            }
-                            $tot_qty = $product['cart_quantity'] - $quantity_displayed;
-                            $cart_products[$index]['quantity'] = $tot_qty;
-                            $cart_products[$index]['customizable_items'] = array();
-                            $index++;
-                        }
                     }
-                    if (!empty($cart_summary['gift_products'])) {
-                        foreach ($cart_summary['gift_products'] as $product) {
-                            $cart_products[$index] = array(
-                                'product_id' => $product['id_product'],
-                                'title' => $product['name'],
-                                'is_gift_product' => "1",
-                                'stock' => true,
-                                'id_product_attribute' => $product['id_product_attribute'],
-                                'id_address_delivery' => $product['id_address_delivery'],
-                                'price' => "Gift",
-                                'discount_price' => "",
-                                'discount_percentage' => ""
-                            );
-                            /* Changes started by rishabh jain on 3rd sep 2018
-                            * Added urlencode perimeter in image link if enabled by admin
-                            */
-                            /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
-                                $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                    urlencode($product['link_rewrite']),
-                                    $product['id_image'],
-                                    $this->getImageType('large')
-                                );
-                            } else {*/
-                                $cart_products[$index]['images'] = $this->context->link->getImageLink(
-                                    $product['link_rewrite'],
-                                    $product['id_image'],
-                                    $this->getImageType('large')
-                                );
-                            //}
-                            /* Changes over */
-                            $cart_products[$index]['product_items'] = array(
-                                array(
-                                    'name' => 'Cantidad',
-                                    'value' => $product['cart_quantity']
-                                ),
-                                array(
-                                    'name' => 'reference',
-                                    'value' => $product['reference']
-                                )
-                            );
-                            if (isset($product['attributes']) && $product['attributes']) {
-                                $cart_products[$index]['product_items'][] = array(
-                                    'name' => 'Atributos',
-                                    'value' => $product['attributes']
-                                );
-                            }
-                            $cart_products[$index]['quantity'] = $product['cart_quantity'];
-                            $cart_products[$index]['customizable_items'] = array();
-                            $index++;
-                        }
-                    }
+                    
 
                     $this->status_code = 200;
                     /*$this->content['status'] = "success";
@@ -349,7 +162,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     );
                     $this->writeLog("Cart information loaded successfully");*/
 
-                    $this->content['checkout_page']['products'] = $cart_products;
+                    $this->content['products'] = $cart_products;
 
                     $cart_total_details = array();
                     $cart_total_details[] = array(
@@ -398,50 +211,9 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         'value' => $this->formatPrice($cart_summary['total_price'])
                     );
 
-                    if (!empty($cart_summary['discounts'])) {
-                        $index = 0;
-                        $voucher_data = array();
-                        foreach ($cart_summary['discounts'] as $voucher) {
-                            if ((float) $voucher['value_real'] == 0) {
-                                continue;
-                            }
-                            $voucher_data[$index] = array(
-                                'id' => $voucher['id_cart_rule'],
-                                'name' => $voucher['name'],
-                                'value' => "-" . $this->formatPrice($voucher['value_real']),
-                            );
-                            $index++;
-                        }
-                        $this->content['checkout_page']['vouchers'] = $voucher_data;
-                    } else {
-                        $this->content['checkout_page']['vouchers'] = array();
-                    }
+                    
 
-                    $a_txt = '(';
-                    $a_txt .= 'Costo adicional de ';
-                    $gift_wrapping_cost = Tools::convertPriceFull(
-                        $this->context->cart->getGiftWrappingPrice(),
-                        null,
-                        $this->context->currency
-                    );
-                    $this->content['gift_wrapping'] = array(
-                        'available' => Configuration::get('PS_GIFT_WRAPPING'),
-                        'applied' => ($this->context->cart->gift) ? "1" : "0",
-                        'message' => $this->context->cart->gift_message
-                            ? $this->context->cart->gift_message
-                            : "",
-                        'cost_text' => ($this->context->cart->getGiftWrappingPrice() > 0) ?
-                            $a_txt . $this->formatPrice($gift_wrapping_cost) . " )" : ""
-                    );
-                    $g_c = Configuration::get('PS_GUEST_CHECKOUT_ENABLED');
-                    $c_item = Cart::getNbProducts($this->context->cart->id);
-                    $this->content['checkout_page']['guest_checkout_enabled'] = $g_c;
-                    $this->content['checkout_page']['cart']['total_cart_items'] = $c_item;
-                    if (CartRule::isFeatureActive()) {
-                        $this->content['checkout_page']['voucher_allowed'] = "1";
-                    } else {
-                        $this->content['checkout_page']['voucher_allowed'] = "0";
-                    }
+                    
 
 
                     $currency = Currency::getCurrency((int) $this->context->cart->id_currency);
@@ -457,10 +229,10 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                                 $currency
                             );
                     } else {
-                        $this->content['checkout_page']['minimum_purchase_message'] = "";
+                        $this->content['minimum_purchase_message'] = "";
                     }
 
-                    $this->content['checkout_page']['totals'] = $cart_total_details;
+                    $this->content['totals'] = $cart_total_details;
                 }
             }
         }
@@ -477,43 +249,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
     {
         $summary = $this->context->cart->getSummaryDetails();
 
-        $customizedDatas = Product::getAllCustomizedDatas($this->context->cart->id);
-
-        /* override customization tax rate with real tax (tax rules) */
-        if ($customizedDatas) {
-            foreach ($summary['products'] as &$productUpdate) {
-                /* Changes started by rishabh jain on 3rd sep 2018
-                * Added urlencode perimeter in image link if enabled by admin
-                */
-                /*if (Configuration::get('KB_MOBILEAPP_URL_ENCODING') == 1) {
-                    $productUpdate['image'] = $this->context->link->getImageLink(
-                        urlencode($productUpdate['link_rewrite']),
-                        $productUpdate['id_image'],
-                        $this->getImageType('medium')
-                    );
-                } else {*/
-                    $productUpdate['image'] = $this->context->link->getImageLink(
-                        $productUpdate['link_rewrite'],
-                        $productUpdate['id_image'],
-                        $this->getImageType('medium')
-                    );
-                //}
-                /* Changes over */
-                $productId = (int) isset($productUpdate['id_product']) ?
-                    $productUpdate['id_product'] : $productUpdate['product_id'];
-                $productAttributeId = (int) isset($productUpdate['id_product_attribute']) ?
-                    $productUpdate['id_product_attribute'] : $productUpdate['product_attribute_id'];
-
-                if (isset($customizedDatas[$productId][$productAttributeId])) {
-                    $productUpdate['tax_rate'] = Tax::getProductTaxRate(
-                        $productId,
-                        $this->context->cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')}
-                    );
-                }
-            }
-
-            Product::addCustomizationPrice($summary['products'], $customizedDatas);
-        }
+        
 
         $cart_product_context = $this->context->cloneContext();
         foreach ($summary['products'] as $key => &$product) {
@@ -588,7 +324,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         unset($summary['invoice_state']);
         unset($summary['formattedAddresses']);
 
-        return array('summary' => $summary, 'customized_data' => $customizedDatas);
+        return array('summary' => $summary);
     }
 
 
@@ -611,15 +347,15 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         }
         $carrier_array = array();
         if ($is_virtual_cart) {
-            $this->content['checkout_page']['shipping_available'] = "1";
-            $this->content['checkout_page']['shipping_message'] = 'No se requiere método de envío';
-            $this->content['checkout_page']['shipping_methods'] = array();
+            $this->content['shipping_available'] = "1";
+            $this->content['shipping_message'] = 'No se requiere método de envío';
+            $this->content['shipping_methods'] = array();
         } else {
             $index = 0;
             foreach ($delivery_option_list as $id_address => $option_list) {
                 foreach ($option_list as $key => $option) {
                     if (isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key) {
-                        $this->content['checkout_page']['default_shipping'] = rtrim($key, ",");
+                        $this->content['default_shipping'] = rtrim($key, ",");
                     }
                     if ($option['unique_carrier']) {
                         foreach ($option['carrier_list'] as $carrier) {
@@ -666,15 +402,15 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             //die(print_r($updated_carrier_array));
             //end: added by aayushi on 1 Nov 2018 to not to allow transport methods which are disabled in module
             if (empty($carrier_array)) {
-                $this->content['checkout_page']['shipping_available'] = "0";
-                $this->content['checkout_page']['shipping_message'] = 'No hay método de entrega disponible';
-                $this->content['checkout_page']['shipping_methods'] = array();
+                $this->content['shipping_available'] = "0";
+                $this->content['shipping_message'] = 'No hay método de entrega disponible';
+                $this->content['shipping_methods'] = array();
             } else {
-                $this->content['checkout_page']['shipping_available'] = "1";
-                $this->content['checkout_page']['shipping_message'] = "";
+                $this->content['shipping_available'] = "1";
+                $this->content['shipping_message'] = "";
                 //$this->content['checkout_page']['shipping_methods'] = $carrier_array;
                 //start: added by aayushi on 1 Nov 2018 to not to allow transport methods which are disabled in module
-                $this->content['checkout_page']['shipping_methods'] = $updated_carrier_array;
+                $this->content['shipping_methods'] = $updated_carrier_array;
                 //end: added by aayushi on 1 Nov 2018 to not to allow transport methods which are disabled in module
             }
         }
@@ -740,7 +476,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             );
             $billing_address['postcode'] = $address->postcode;
             $billing_address['alias'] = $address->alias;
-            $this->content['checkout_page']['billing_address'] = $billing_address;
+            $this->content['billing_address'] = $billing_address;
             return true;
         }
     }
@@ -830,7 +566,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             );
             $shipping_address['postcode'] = $address->postcode;
             $shipping_address['alias'] = $address->alias;
-            $this->content['checkout_page']['shipping_address'] = $shipping_address;
+            $this->content['shipping_address'] = $shipping_address;
             return true;
         }
     }

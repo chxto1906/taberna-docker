@@ -57,19 +57,12 @@
         function login() {
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=Login&email=chxto1906@gmail.com&password=chato1906',
+                url: 'https://tabernatest.tk/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Shops',
                 type: "GET",
                 success: function (data,r,xhr) {
-                    console.log("RESPONSE LOGIN");
+                    console.log("RESPONSE LIST TIENDAS");
                     console.dir(data);
-                    authorizationToken = data.session_data;
-                    var setCookie = xhr.getResponseHeader('Set-Cookie');
-                    console.log('SET_COOKIE: '+setCookie);
-
-                    //addCart(data.cart_id);
-                    console.dir(r);
-                    console.dir(xhr.getAllResponseHeaders());
-                    console.dir(document.cookie);
+                    
                 },
                 error: function (error) {
                     console.log("ERROR");
