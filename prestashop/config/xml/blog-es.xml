@@ -6,6 +6,40 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo funciona el Crowdlending y cómo aplicarlo en mi eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-crowdlending</link>
+    <description>¿Conoces el concepto de Crowdlending y cómo aplicarlo en tu propio eCommerce?</description>
+     <pubDate>Mon, 28 Oct 2019 11:13:52 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-crowdlending</guid>
+  </item>
+  <item>
+    <title>¿Qué es el Marketing Omnicanal y cómo puede ayudarte en tu negocio?</title>
+    <link>https://www.prestashop.com/es/blog/como-puede-ayudar-el-marketing-omnicanal-tu-pequeno-negocio</link>
+    <description>¿Sabes cómo puedes usar el Marketing Omnicanal para potenciar las conversiones en tu eCommerce?</description>
+     <pubDate>Fri, 25 Oct 2019 09:30:06 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-puede-ayudar-el-marketing-omnicanal-tu-pequeno-negocio</guid>
+  </item>
+  <item>
+    <title>Análisis y Optimización de la arquitectura Web de mi eCommerce (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/arquitectura-web-webinar</link>
+    <description>Estructurar correctamente la información que queramos mostrar a nuestros usuarios y clientes dentro de nuestra página web es vital para ayudarles a encontrarla mejor.</description>
+     <pubDate>Thu, 24 Oct 2019 10:46:03 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/arquitectura-web-webinar</guid>
+  </item>
+  <item>
+    <title>¿Cómo gestionar las campañas de venta en tu eCommerce? (Black Friday, Navidad, etc.)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-gestionar-campanas-ventas</link>
+    <description>¿Cómo gestionar las campañas de venta en tu eCommerce? (Black Friday, Navidad, etc.)
+31 de octubre a las 16h (de España)
+</description>
+     <pubDate>Wed, 23 Oct 2019 22:38:31 +0200</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-gestionar-campanas-ventas</guid>
+  </item>
+  <item>
     <title>Cómo poner en marcha tu tienda online: consejos para los que empiezan (Webinar)</title>
     <link>https://www.prestashop.com/es/blog/webinar-poner-en-marcha-tienda</link>
     <description>Las estadísticas son contundentes: cada día se crean en España 40 tiendas online con la plataforma PrestaShop, líder del mercado.</description>
@@ -38,16 +72,6 @@
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/implementacion-de-google-shooping-en-prestashop</guid>
   </item>
   <item>
-    <title>Análisis y Optimización de la arquitectura Web de mi eCommerce (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/arquitectura-web-webinar</link>
-    <description>Análisis y Optimización de la arquitectura Web de mi eCommerce
-24 de octubre a las 16h (de España)
-</description>
-     <pubDate>Thu, 17 Oct 2019 10:46:03 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/arquitectura-web-webinar</guid>
-  </item>
-  <item>
     <title>¿Cómo mejorar el Posicionamiento de Marca de tu negocio o proyecto?</title>
     <link>https://www.prestashop.com/es/blog/posicionamiento-de-marca</link>
     <description>¿Necesitas mejorar el posicionamiento de marca de tu empresa de eCommerce?</description>
@@ -62,30 +86,6 @@
      <pubDate>Mon, 07 Oct 2019 16:48:21 +0200</pubDate>
  <dc:creator>Jehyson Bustamante</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/prestashop-day-mexico-city</guid>
-  </item>
-  <item>
-    <title>¿Qué es el Domain Authority y cómo aumentar la autoridad de tu Web?</title>
-    <link>https://www.prestashop.com/es/blog/domain-authority</link>
-    <description>Tener un buen &quot;domain authority&quot; es una de las obsesiones que tenemos todos los que queremos para nuestros negocios online un mejor posicionamiento en buscadores.</description>
-     <pubDate>Mon, 07 Oct 2019 16:23:43 +0200</pubDate>
- <dc:creator>Roberto Diaz Samper</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/domain-authority</guid>
-  </item>
-  <item>
-    <title>Edición especial de fin de año: Calendario e-commerce 2019</title>
-    <link>https://www.prestashop.com/es/blog/Calendario-ecommerce-2019</link>
-    <description>Los últimos 4 meses del año son muy importantes y están marcados por fechas indispensables. Black Friday, Cyber Monday, Navidad...</description>
-     <pubDate>Mon, 07 Oct 2019 15:53:14 +0200</pubDate>
- <dc:creator>Anonymous</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/Calendario-ecommerce-2019</guid>
-  </item>
-  <item>
-    <title>Email Automation: ¿cómo automatizar el Email Marketing de tu tienda online?</title>
-    <link>https://www.prestashop.com/es/blog/email-automation</link>
-    <description>Cuando nos preguntan qué puede hacer el Email Marketing por las Tiendas Online, lo primero que pensamos es en el poder del Email Automation.</description>
-     <pubDate>Mon, 07 Oct 2019 13:23:38 +0200</pubDate>
- <dc:creator>María Díaz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/email-automation</guid>
   </item>
   </channel>
 </rss>

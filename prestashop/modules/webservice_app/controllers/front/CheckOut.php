@@ -21,7 +21,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         
         /*var_dump(Module::getPaymentModules());
         exit;*/
-
+        //die($this->context->cart->id_address_delivery);
         if (!$this->context->customer->logged){
             $this->content = ["message" => "Usuario no logueado"];
         } else {

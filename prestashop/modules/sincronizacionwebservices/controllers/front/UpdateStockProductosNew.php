@@ -26,7 +26,8 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
             $log->add("Empieza UpdateStockProductosNew " . date('m/d/Y G:i:s a', time()) . "<br>");
                 $i = 0;
                 if (!empty($id_product_esp)) {
-                    $product = array('reference' => $id_product_esp );
+                    $reference = $gestionarController->search_product_reference_by_id($id_product_esp);
+                    $product = array('reference' => $reference);
                     echo "<br>Entró a procesar solo un producto: $id_product_esp<br>";
                     $this->procesar($id_shop,$product,1,$log,1,$productsPrices);
                 } else {
@@ -55,8 +56,9 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
         $ini = substr($reference,0,1);
         $id_product = $gestionarController->search_product_by_reference($reference);
         $cod_almacen = $gestionarController->get_code_by_id($id_shop);
-
         $articulo = $facturaSAP->recuperaArticulo($cod_almacen,$reference);
+        echo "<br>ARTICULOO</br>";
+        var_dump($articulo);
         if (is_array($articulo)) {
             if ($articulo[0] == "0"){
                 $stock = $articulo[15];
@@ -77,6 +79,9 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
                         $added = $gestionarController->create_update_product($id_product,$reference,$marca,$precio);
                         if ($added) {
                             $active = 1;
+                            //$gestionarController->update_stock_available_price_state($reference, $stock, $precio, $active, $id_shop);
+
+
                             $message = "<br> Guardado producto reference: $reference correctamente <br>";
                             echo $message;
                             // $gestionarController->addLog($message, 1, 612, 612);

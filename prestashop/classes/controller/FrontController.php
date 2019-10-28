@@ -500,14 +500,14 @@ class FrontControllerCore extends Controller
 
 
 
-            if (!$this->context->cart->id_address_delivery) {
+            /*if (!$this->context->cart->id_address_delivery) {
                 $this->context->cart->id_carrier = 0;
                 $this->context->cart->setDeliveryOption(null);
                 $d_id = (int) Address::getFirstCustomerAddressId((int) ($customer->id));
                 $this->context->cart->id_address_delivery = $d_id;
                 $i_id = (int) Address::getFirstCustomerAddressId((int) ($customer->id));
                 $this->context->cart->id_address_invoice = $i_id;
-            }
+            }*/
             if (isset($id_carrier) && $id_carrier && Configuration::get('PS_ORDER_PROCESS_TYPE')) {
                     $delivery_option = array($this->context->cart->id_address_delivery => $id_carrier . ',');
                     $this->context->cart->setDeliveryOption($delivery_option);
@@ -517,25 +517,24 @@ class FrontControllerCore extends Controller
             $id_shipping = Tools::getValue('id_shipping_address', '');
             if ($id_shipping) {
                 $this->context->cart->id_address_delivery = $id_shipping;
+
             }
+
+
 
 
             $this->context->cart->id_currency = $this->context->currency->id;
 
             $this->context->cart->save();
             $this->context->cookie->id_cart = (int) $this->context->cart->id;
+
             $this->context->cookie->write();
             $this->context->cart->autosetProductAddress();
 
 
         }
 
-
-
-
-
-
-
+        //die($this->context->cart->id_address_delivery);
 
         Hook::exec('actionFrontControllerAfterInit');
     }

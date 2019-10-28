@@ -316,7 +316,7 @@
             }else{
                 $product = new Product($id_product);
                 $product->price = (float)$precio;
-
+                $product->id_tax_rules_group = 1;
                 echo "<br>Actualizando producto id_producto: $id_product, reference: $reference, price: $precio<br>";
                 //$product->id_tax_rules_group = 1;
                 $product->id_manufacturer = $id_manufacturer;
