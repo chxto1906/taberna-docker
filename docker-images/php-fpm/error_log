@@ -1,0 +1,8 @@
+[28-Oct-2019 17:08:34 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /html/classes/controller/FrontController.php on line 566
+[28-Oct-2019 17:08:34 America/Guayaquil] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /html/classes/controller/FrontController.php on line 566
+[28-Oct-2019 17:08:48 America/Guayaquil] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /html/vendor/icanboogie/cldr/lib/FileProvider.php on line 69
+[28-Oct-2019 17:13:04 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /html/classes/controller/FrontController.php on line 566
+[28-Oct-2019 17:13:04 America/Guayaquil] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /html/classes/controller/FrontController.php on line 566
+[28-Oct-2019 17:13:14 America/Guayaquil] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /html/vendor/icanboogie/cldr/lib/FileProvider.php on line 69
+[28-Oct-2019 17:23:57 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /html/classes/controller/FrontController.php on line 566
+[28-Oct-2019 17:23:57 America/Guayaquil] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /html/classes/controller/FrontController.php on line 566
