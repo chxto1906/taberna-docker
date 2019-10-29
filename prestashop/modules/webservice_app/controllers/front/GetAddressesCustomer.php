@@ -43,10 +43,10 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
         $multiple_addresses = array();
         $id_address = Tools::getValue('id_address');
         if (!$id_address) {
-            $addresses = $this->context->customer->getAddresses($this->context->language->id);
+            $addresses = $this->context->customer->getSimpleAddresses($this->context->language->id);
             if (!empty($addresses)) {
                 foreach ($addresses as $detail) {
-                    $address = new Address($detail['id_address']);
+                    $address = new Address($detail['id']);
                     $items[] = $this->proccessAddress($address);
                     unset($address);
                     ++$total;

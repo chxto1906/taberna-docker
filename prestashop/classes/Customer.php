@@ -584,6 +584,10 @@ class CustomerCore extends ObjectModel
         return Cache::retrieve($cacheId);
     }
 
+
+    /******** MODIFICADO POR HENRY *********/
+
+
     /**
      * Get simplified Addresses arrays.
      *
@@ -611,6 +615,7 @@ class CustomerCore extends ObjectModel
         foreach ($result as $addr) {
 
             //var_dump($addr["id"]);
+            /******** MODIFICADO POR HENRY *********/
             $latitude = $addr["latitude"];
             $longitude = $addr["longitude"];
             $infoCiudad = $this->getCiudad($addr["latitude"],$addr["longitude"]);
@@ -633,7 +638,7 @@ class CustomerCore extends ObjectModel
         return $addresses;
     }
 
-
+    /******** AGREGADO POR HENRY *********/
     public function get_city_by_id($id) {
 
         $city_cuenca = ["city" => "cuenca", "lat"=>"-2.900195","lng"=>"-79.005582"];
@@ -674,7 +679,7 @@ class CustomerCore extends ObjectModel
 
     }
 
-
+    /******** AGREGADO POR HENRY *********/
     public function getCiudad($lat,$lng) {
         $curl = curl_init();
         curl_setopt_array($curl, array(

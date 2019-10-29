@@ -176,6 +176,31 @@ class FrontControllerCore extends Controller
      *
      * @global bool $useSSL SSL connection flag
      */
+
+    protected $content;
+    protected $output_format = 'json';
+    protected $request_url = '';
+    protected $key;
+    protected $authenticated = false;
+    
+    public $controller_type = 'front';
+    private $startTime;
+    public $shop = null;
+    
+    protected $header_params = array();
+    public $order_by = 'price';
+    public $order_way = 'ASC';
+    public $page_number = 1;
+    public $limit = 10;
+    private $img_1 = 'large';
+    private $img_2 = 'medium';
+    private $img_3 = '_default';
+    private $log_obj = null;
+    public $customer_wishlist;
+
+
+
+
     public function __construct()
     {
         $this->controller_type = 'front';
@@ -472,8 +497,15 @@ class FrontControllerCore extends Controller
         $this->context->cart = $cart;
         $this->context->currency = $currency;
 
+        //die($this->context->cart->id_address_delivery);
+
+        Hook::exec('actionFrontControllerAfterInit');
+
+        $this->checkSession();
+    }
 
 
+    public function checkSession() {
         $object_session = $this->isSession();
         if ($object_session){
 
@@ -533,11 +565,8 @@ class FrontControllerCore extends Controller
 
 
         }
-
-        //die($this->context->cart->id_address_delivery);
-
-        Hook::exec('actionFrontControllerAfterInit');
     }
+
 
 
     /**** HENRY ******/

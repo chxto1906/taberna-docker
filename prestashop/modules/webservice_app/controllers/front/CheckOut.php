@@ -14,9 +14,14 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
     private $img_2 = 'medium';
     private $img_3 = '_default';
 
+
+
+
     public function initContent() {
     	parent::initContent();
         
+        $this->checkSession();
+
         $response = new Response();
         
         /*var_dump(Module::getPaymentModules());
