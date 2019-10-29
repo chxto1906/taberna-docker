@@ -176,8 +176,12 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $dataResult["id_product"] = $product["id_product"]; 
                 $dataResult["name"] = $product["name"];
                 $dataResult["description"] = $product["description"];
-                $dataResult["price_tax_exc"] = $this->formatPrice($product["price_tax_exc"]);
-                $dataResult["price_tax_inc"] = $this->formatPrice($product["price_tax_inc"]);
+                $producto = new Product($product["id_product"]);
+                $price_tax_exc = $producto->getPriceStatic($product["id_product"],false,null,2);
+                $price_tax_inc = $producto->getPriceStatic($product["id_product"],true,null,2);
+
+                $dataResult["price_tax_exc"] = $this->formatPrice($price_tax_exc);
+                $dataResult["price_tax_inc"] = $this->formatPrice($price_tax_inc);
                 $dataResult["stock"] = $product["quantity"];
                 $dataResult["reference"] = $product["reference"];
                 $dataResult["manufacturer_name"] = $product["manufacturer_name"];
