@@ -8,11 +8,12 @@ class Webservice_AppRegisterModuleFrontController extends ModuleFrontController 
 
     public $log = null;
     public $limit = "0";
+    private $status_code = 400;
 
     public function initContent() {
     	parent::initContent();
         $response = new Response();
-        $status_code = 400;
+        
         $user_data = (object) [
                         "gender"        =>  Tools::getValue('gender', ''),
                         "first_name"    =>  Tools::getValue('first_name', ''),
@@ -217,7 +218,7 @@ class Webservice_AppRegisterModuleFrontController extends ModuleFrontController 
                 $customer->cart_count = Cart::getNbProducts($this->context->cookie->id_cart);
 
                 $this->proccessCustomer($customer);
-                $status_code = 201;
+                $this->status_code = 201;
 
                 CartRule::autoRemoveFromCart($this->context);
                 CartRule::autoAddToCart($this->context);

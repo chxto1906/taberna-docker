@@ -68,6 +68,8 @@ class CurlMiPiloto {
 			  ),
 			));
 
+			$this->log->add("BODYYY cotizar al API MIpiloto: ".json_encode($body));
+
 			$response = curl_exec($curl);
 			$this->log->add("RESPUESTA cotizar mi piloto API: ".$response);
 			$httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);

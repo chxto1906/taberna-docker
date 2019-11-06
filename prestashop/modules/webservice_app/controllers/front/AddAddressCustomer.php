@@ -143,8 +143,8 @@ class Webservice_AppAddAddressCustomerModuleFrontController extends ModuleFrontC
                         $this->status_code = 201;
                     }
                     $this->content['cart_id'] = $this->context->cart->id;
-                    $addresses = $this->context->customer->getAddresses($this->context->language->id);
-                    $this->content['shipping_address_count'] = count($addresses);
+                    //$addresses = $this->context->customer->getAddresses($this->context->language->id);
+                    //$this->content['shipping_address_count'] = count($addresses);
                     $this->context->cart->id_currency = $this->context->currency->id;
                     $this->context->cart->update();
                     $this->context->cookie->id_cart = (int) $this->context->cart->id;

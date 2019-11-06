@@ -65,6 +65,7 @@ $(".card_id").change(function(e) {
 	let value = e.target.value;
 	console.log(e.target.dataset.holder);
 	let holder = encripta(e.target.dataset.holder,false);
+	console.log('encriptado cardHolder: '+holder);
 
 	$("#id_card").val(value);
 	$("#cardHolder").val(holder);

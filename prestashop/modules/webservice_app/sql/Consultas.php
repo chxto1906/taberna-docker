@@ -4,7 +4,7 @@ class Consultas {
 
     public $log = null;
 
-    public function list($sql, $limit) {
+    public function list($sql, $limit = null) {
         //15 payment payphone
 
         $cadena = $sql;
