@@ -13,8 +13,8 @@ services:
       - ${NGINX_PORT_SSL}
     volumes:
       - ./docker-images/nginx/ssl/:/etc/nginx/ssl/:delegated
-      - /root/certs-data/:/data/letsencrypt/
-      - /etc/letsencrypt/:/etc/letsencrypt/
+      #- /root/certs-data/:/data/letsencrypt/
+      #- /etc/letsencrypt/:/etc/letsencrypt/
     volumes_from:
       - php-fpm
     networks:
@@ -53,7 +53,6 @@ services:
     container_name: java
     build: docker-images/java
     volumes:
-      #- ./prestashop/facturas/pruebas/:/home/pruebas/:delegated
       - ${JAVA_DIRECTORY_FACTURAS}
       - ./docker-images/java/firma/:/home/firma/
     networks:
