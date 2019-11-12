@@ -51,6 +51,9 @@ class Webservice_AppForgotPasswordModuleFrontController extends ModuleFrontContr
                 $this->content = ["message" => "Puedes generar tu contraseña solo cada ".$min_time." minuto(s)"];
                 return;
             } else {
+                $customer->stampResetPasswordToken();
+                $customer->update();
+
                 $mail_params = array(
                     '{email}' => $customer->email,
                     '{lastname}' => $customer->lastname,
@@ -59,7 +62,7 @@ class Webservice_AppForgotPasswordModuleFrontController extends ModuleFrontContr
                         'password',
                         true,
                         null,
-                        'token=' . $customer->secure_key . '&id_customer=' . (int) $customer->id
+                        'token=' . $customer->secure_key . '&id_customer=' . (int) $customer->id . '&reset_token=' . $customer->reset_password_token
                     )
                 );
                 if (Mail::Send(

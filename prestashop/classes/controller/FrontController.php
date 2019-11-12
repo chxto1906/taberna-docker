@@ -654,8 +654,9 @@ class FrontControllerCore extends Controller
     /***** HENRY *****/
     protected function getListSqlShopsStores($id_lang)
     {
+        $id_shop = (int)Context::getContext()->shop->id;
         return  Db::getInstance()->executeS('
-         SELECT sh.`id_shop`, sh.`name`, shu.`domain`, shu.`virtual_uri`, st.`latitude`, st.`longitude` 
+         SELECT sh.`id_shop`, sh.`name`, st.`city`, shu.`domain`, shu.`virtual_uri`, st.`latitude`, st.`longitude` 
          FROM `'._DB_PREFIX_.'store_shop` as stsh
          LEFT JOIN `'._DB_PREFIX_.'shop` as sh
          ON sh.`id_shop` = stsh.`id_shop`
@@ -664,7 +665,9 @@ class FrontControllerCore extends Controller
          LEFT JOIN `'._DB_PREFIX_.'shop_url` as shu
          ON shu.`id_shop` = stsh.`id_shop`
          WHERE sh.`active` = 1 AND sh.`deleted` = 0 
-         AND shu.`active` = 1 AND st.`active` = 1');
+         AND shu.`active` = 1 AND st.`active` = 1 
+         AND shu.`id_shop` != '.$id_shop.' 
+         ORDER BY shu.`virtual_uri` ASC ');
     }
 
 

@@ -153,10 +153,15 @@
               Cambiar de tienda
             </button>
             <div class="dropdown-menu" style="font-size: 0.8em !important;" id="change-tiendas" aria-labelledby="dropdownMenuButton">
-              {foreach from=$shops item=shop}
-                {if $shop.id_shop ne $shop_current}
+              {foreach from=$shops key=k item=shop}
+                {if $shops[$k-1].city|lower eq $shops[$k].city|lower}
                   <a class="dropdown-item d-item item-change-tienda" title="http://{$shop.domain}/{$shop.virtual_uri}" href="#">{$shop.name}</a>
-                {/if}
+                {else}
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" style="background: #5f5f5f;color: #fff;" >{$shop.city|upper}</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item d-item item-change-tienda" title="http://{$shop.domain}/{$shop.virtual_uri}" href="#">{$shop.name}</a>
+                {/if} 
               {/foreach}
             </div>
           </span>
