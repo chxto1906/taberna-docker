@@ -49,10 +49,16 @@ class Webservice_AppCategoriesModuleFrontController extends ModuleFrontControlle
                 
                 $categories = $this->proccessCategories($categories,$home);
             }
-            echo $response->json_response($categories,$status_code);
+            if ($categories)
+                echo $response->json_response($categories,$status_code);
+            else{
+                http_response_code(204);
+                exit;
+            }
             exit;
         } catch (Exception $e) {
             echo $response->json_response($e->getMessage(),500);
+            exit;
         }
 
     	$this->setTemplate('productos.tpl');

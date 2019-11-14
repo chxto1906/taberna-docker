@@ -12,12 +12,23 @@ class Webservice_AppShopsModuleFrontController extends ModuleFrontController {
     	parent::initContent();
         $response = new Response();
         $id_shop = Tools::getValue("shop_id");
-        if (!$id_shop)
+        if (!$id_shop){
             $shops = $this->getShopsFull();
-        else
-            $shops = $this->getShopsFull($id_shop);
-
-        echo $response->json_response($shops,200);
+            if ($shops){
+                echo $response->json_response($shops,200);
+            }else{
+                http_response_code(204);
+                exit;
+            }    
+        }else{
+            $shop = $this->getShopsFull($id_shop);
+            if ($shop){
+                echo $response->json_response($shop,200);
+            }else{
+                $shops = ["message" => "Tienda no encontrada"];
+                echo $response->json_response($shops,404);
+            }
+        }
 
         exit;
     	$this->setTemplate('productos.tpl');

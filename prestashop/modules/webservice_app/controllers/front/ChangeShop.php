@@ -33,7 +33,6 @@ class Webservice_AppChangeShopModuleFrontController extends ModuleFrontControlle
 
             $this->context->customer = $customer;
 
-            
             $id_cart = (int) Cart::lastNoneOrderedCart($this->context->customer->id);
             $this->context->cart->id = $id_cart;
             
@@ -49,6 +48,8 @@ class Webservice_AppChangeShopModuleFrontController extends ModuleFrontControlle
             //}
             $this->context->cart->id_customer = (int) $customer->id;
             $this->context->cart->secure_key = $customer->secure_key;
+            $this->context->cart->id_shop = $this->context->shop->id;
+            $this->context->cart->id_shop_group = $this->context->shop->id_shop_group;
 
             if (isset($id_carrier) && $id_carrier && Configuration::get('PS_ORDER_PROCESS_TYPE')) {
                 $delivery_option = array($this->context->cart->id_address_delivery => $id_carrier . ',');

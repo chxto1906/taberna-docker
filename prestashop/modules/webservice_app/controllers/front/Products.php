@@ -22,7 +22,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             //$this->limit = Tools::getValue('limit')?Tools::getValue('limit'):$this->limit;
             $id_product = Tools::getValue("id_product");
             if ($id_product) {
-                $products = $this->getProduct($id_product);
+                $products = $this->getProduct($id_product,$response);
             } else {
                 if ($this->valid_params(["by"])) {
                     $by = Tools::getValue("by");
@@ -32,7 +32,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                                 $type = Tools::getValue("type");
                                 $products = $this->getProductsByClassification($type);
                             } else {
-                                $products = "Validación fallida. Parámetro: type es obligatorio.";
+                                $products = ["message" => "Validación fallida. Parámetro: type es obligatorio."];
                                 $status_code = 400;
                             }
                             break;
@@ -41,7 +41,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                                 $type = Tools::getValue("type");
                                 $products = $this->getProductsByCategories($type,$response);
                             } else {
-                                $products = "Validación fallida. Parámetros: type, page son obligatorios.";
+                                $products = ["message" => "Validación fallida. Parámetros: type, page son obligatorios."];
                                 $status_code = 400;
                             }
                             break;
@@ -50,7 +50,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                                 $query = Tools::getValue("query");
                                 $products = $this->getProductsBySearch($query);
                             } else {
-                                $products = "Validación fallida. Parámetro: query es obligatorio.";
+                                $products = ["message" => "Validación fallida. Parámetro: query es obligatorio."];
                                 $status_code = 400;
                             }
                             break;
@@ -58,7 +58,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                             $products = [];
                     }
                 } else {
-                    $products = "Validación fallida. Parámetro: by es obligatorio.";
+                    $products = ["message" => "Validación fallida. Parámetro: by es obligatorio."];
                     $status_code = 400;
                 }
             }
@@ -67,6 +67,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             exit;
         } catch (Exception $e) {
             echo $response->json_response($e->getMessage(),500);
+            exit;
         }
     	$this->setTemplate('productos.tpl');
     }
@@ -96,23 +97,30 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
         return $this->proccessProducts($products);
     }
 
-    public function getProduct($id_product) {
+    public function getProduct($id_product,$response) {
+        $result = ["message" => "Producto no encontrado"];
         $id_shop = (int)Context::getContext()->shop->id;
         $product = new Product((int) $id_product,true,1,$id_shop,Context::getContext());
-        $price_tax_exc = $product->getPriceStatic($id_product,false,null,2);
-        $price_tax_inc = $product->getPriceStatic($id_product,true,null,2);
-        $products = array([
-            "id_product"    =>  $product->id,
-            "name"          =>  $product->name,
-            "description"   =>  $product->description,
-            "price_tax_exc" =>  $this->formatPrice($price_tax_exc),
-            "price_tax_inc"   =>  $this->formatPrice($price_tax_inc),
-            "quantity"      =>  $product->quantity,
-            "reference"     =>  $product->reference,
-            "manufacturer_name" => $product->manufacturer_name,
-            "link_rewrite"  =>  $product->link_rewrite
-        ]);
-        return $this->proccessProducts($products,true);
+        if (isset($product->id)) {
+            $price_tax_exc = $product->getPriceStatic($id_product,false,null,2);
+            $price_tax_inc = $product->getPriceStatic($id_product,true,null,2);
+            $products = array([
+                "id_product"    =>  $product->id,
+                "name"          =>  $product->name,
+                "description"   =>  $product->description,
+                "price_tax_exc" =>  $this->formatPrice($price_tax_exc),
+                "price_tax_inc"   =>  $this->formatPrice($price_tax_inc),
+                "quantity"      =>  $product->quantity,
+                "reference"     =>  $product->reference,
+                "manufacturer_name" => $product->manufacturer_name,
+                "link_rewrite"  =>  $product->link_rewrite
+            ]);
+            $result = $this->proccessProducts($products,true);
+            return $result;
+        } else {
+            echo $response->json_response($result,404);
+            exit;
+        }
     }
 
     public function getProductsByCategories($category_id,$response) {
@@ -130,7 +138,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
             if ($page && $qty_by_page) {
                 $products = $category->getProducts(1,$page,$qty_by_page,"id_product","ASC",false,true,false,1,true);
             } else {
-                echo $response->json_response("Formato inválido del parámetro page.",400);
+                echo $response->json_response(["message" => "Formato inválido del parámetro page."],400);
                 exit;
             }    
         }
