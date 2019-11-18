@@ -63,7 +63,6 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                     $status_code = 400;
                 }
             }
-            $products = [];
 
             if ($products){
                 echo $response->json_response($products,$status_code);
