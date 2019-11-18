@@ -48,22 +48,24 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             $this->status_code = 404;
             $this->content = ["message" => "Carrito no encontrado."];
         } else {
-            $this->content['shipping_address'] = null;
-            $this->content['billing_address'] = null;
+            
             $id_shipping = Tools::getValue('id_shipping_address', '');
             $id_billing = Tools::getValue('id_billing_address', '');
 
             if (!$id_shipping){
                 $this->status_code = 400;
-                $this->content = ["message" => "Selecciona dirección de entrega"];
-                return;
+                $this->content["message"] = "Selecciona dirección de entrega";
+                //return;
             }
 
             if (!$id_billing){
                 $this->status_code = 400;
-                $this->content = ["message" => "Selecciona dirección de facturación"];
-                return;
+                $this->content["message"] = "Selecciona dirección de facturación";
+                //return;
             }
+
+            $this->content['shipping_address'] = null;
+            $this->content['billing_address'] = null;
 
 
             if ($id_shipping){
@@ -127,10 +129,10 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     $this->getKbCarrierList($id_shipping);
                     $cart_data = $this->fetchList();
                     /*Set currency code and cart total */
-                    $this->content['total_cost'] = (float)Tools::ps_round(
+                    $this->content['total_cost'] = $this->formatPrice((float)Tools::ps_round(
                         (float)$this->context->cart->getOrderTotal(true, Cart::BOTH),
                         2
-                    );
+                    ));
                     //$this->content['currency_code'] = $this->context->currency->iso_code;
                     //$this->content['currency_symbol'] = $this->context->currency->sign;
                     $cart_summary = $cart_data['summary'];
@@ -217,12 +219,14 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                             'name' => 'Total envío',
                             'value' => $this->formatPrice($cart_summary['total_shipping'])
                         );
+                        $this->content["shipping_price"] = $this->formatPrice($cart_summary['total_shipping']);
                     } else {
                         if (!$cart_summary['is_virtual_cart']) {
                             $cart_total_details[] = array(
                                 'name' => 'Total envío',
-                                'value' => 'Envío gratis'
+                                'value' => 'Por calcular'
                             );
+                            $this->content["shipping_price"] = "Por calcular";
                         }
                     }
 
@@ -260,7 +264,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                                 $currency
                             )];
                     } else {
-                        $this->content['message'] = "";
+                        //$this->content['message'] = "";
                         $this->content['totals'] = $cart_total_details;
                     }
 
@@ -381,7 +385,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         if ($is_virtual_cart) {
             $this->content['shipping_available'] = "1";
             $this->content['shipping_message'] = 'No se requiere método de envío';
-            $this->content['shipping_methods'] = array();
+            //$this->content['shipping_methods'] = array();
         } else {
             $index = 0;
             foreach ($delivery_option_list as $id_address => $option_list) {
@@ -439,13 +443,13 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             if (empty($carrier_array)) {
                 $this->content['shipping_available'] = "0";
                 $this->content['shipping_message'] = 'No hay método de entrega disponible';
-                $this->content['shipping_methods'] = array();
+                //$this->content['shipping_methods'] = array();
             } else {
                 $this->content['shipping_available'] = "1";
                 $this->content['shipping_message'] = "";
                 //$this->content['checkout_page']['shipping_methods'] = $carrier_array;
                 //start: added by aayushi on 1 Nov 2018 to not to allow transport methods which are disabled in module
-                $this->content['shipping_methods'] = $updated_carrier_array;
+                //$this->content['shipping_methods'] = $updated_carrier_array;
                 //end: added by aayushi on 1 Nov 2018 to not to allow transport methods which are disabled in module
             }
         }
