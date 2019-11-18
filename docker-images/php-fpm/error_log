@@ -98,3 +98,11 @@
 [18-Nov-2019 16:53:21 America/Guayaquil] PHP Notice:  Undefined index: description in /html/modules/webservice_app/controllers/front/CheckOut.php on line 155
 [18-Nov-2019 16:54:50 America/Guayaquil] PHP Notice:  Undefined index: customized_data in /html/modules/webservice_app/controllers/front/CheckOut.php on line 139
 [18-Nov-2019 16:54:50 America/Guayaquil] PHP Notice:  Undefined index: description in /html/modules/webservice_app/controllers/front/CheckOut.php on line 155
+[18-Nov-2019 17:49:37 America/Guayaquil] PHP Notice:  Undefined index: description in /html/modules/webservice_app/controllers/front/GetCart.php on line 148
+[18-Nov-2019 17:49:38 America/Guayaquil] PHP Notice:  Array to string conversion in /html/modules/webservice_app/controllers/front/GetCart.php on line 85
+[18-Nov-2019 17:49:38 America/Guayaquil] PHP Notice:  Array to string conversion in /html/modules/webservice_app/controllers/front/GetCart.php on line 85
+[18-Nov-2019 17:49:38 America/Guayaquil] PHP Notice:  Undefined index: cart in /html/modules/webservice_app/controllers/front/GetCart.php on line 86
+[18-Nov-2019 17:57:34 America/Guayaquil] PHP Notice:  Undefined index: description in /html/modules/webservice_app/controllers/front/GetCart.php on line 148
+[18-Nov-2019 17:57:35 America/Guayaquil] PHP Notice:  Array to string conversion in /html/modules/webservice_app/controllers/front/GetCart.php on line 85
+[18-Nov-2019 17:57:35 America/Guayaquil] PHP Notice:  Array to string conversion in /html/modules/webservice_app/controllers/front/GetCart.php on line 85
+[18-Nov-2019 17:57:35 America/Guayaquil] PHP Notice:  Undefined index: cart in /html/modules/webservice_app/controllers/front/GetCart.php on line 86
