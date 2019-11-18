@@ -548,8 +548,10 @@ class FrontControllerCore extends Controller
 
             $id_shipping = Tools::getValue('id_shipping_address', '');
             if ($id_shipping) {
-                $this->context->cart->id_address_delivery = $id_shipping;
-
+                $address = new Address($id_shipping);
+                if (validate::isLoadedObject($address)) {
+                    $this->context->cart->id_address_delivery = $id_shipping;
+                }
             }
 
 

@@ -8,7 +8,7 @@ require_once _PS_MODULE_DIR_ . 'tarjetas_payphone/models/PrepareCreateRequestMod
 require_once _PS_MODULE_DIR_ . 'tarjetas_payphone/models/PrepareCreateRequestTokenModel.php';
 require_once _PS_MODULE_DIR_ . 'tarjetas_payphone/tarjetas_payphone.php';
 require_once _PS_MODULE_DIR_ . 'payphone/controllers/front/validation.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontController {
 
@@ -74,6 +74,11 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 }
             }else{
                 $datos_card_token = $this->getDataCard($id_card);
+                if (!$datos_card_token){
+                    $this->status_code = 404;
+                    $this->content = ["message" => "No se pudo obtener datos de la tarjeta seleccionada"];
+                    return;
+                }
             }
 
             if (Module::isEnabled("tarjetas_payphone") == false) {
@@ -167,11 +172,11 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 return;
             }
             
-            $respValido = $moduleInstance->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $moduleInstance->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key, NULL, true);
+            $respValido = $moduleInstance->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $moduleInstance->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key, null, true);
 
             if ($respValido !== true){
-                $this->process_session_data();
                 $this->content["message"] = $respValido;
+                $this->process_session_data();
                 return;
             }
 
@@ -267,11 +272,13 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
                 $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
                 $this->content = ["message" => "Ocurrió un inconveniente al procesar la Transacción."];
                 $this->process_session_data();
+                return;
             }
         } catch (Exception $e) {
             PrestaShopLogger::addLog("PayPhone check payment error", 3);
             $this->content = ["message" => "Ocurrió un inconveniente al procesar la Transacción."];
-        
+            $this->process_session_data();
+            return;
         }
     }
 

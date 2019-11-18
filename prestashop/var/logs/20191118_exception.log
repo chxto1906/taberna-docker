@@ -1,0 +1,6 @@
+*ERROR* 	v1.7.5.0	2019/11/18 - 09:11:59: Invalid address #788 at line 492 in file classes/Address.php
+*ERROR* 	v1.7.5.0	2019/11/18 - 09:13:58: Invalid address #788 at line 492 in file classes/Address.php
+*ERROR* 	v1.7.5.0	2019/11/18 - 09:14:59: Invalid address #788 at line 492 in file classes/Address.php
+*ERROR* 	v1.7.5.0	2019/11/18 - 09:17:29: Invalid address #788 at line 492 in file classes/Address.php
+*ERROR* 	v1.7.5.0	2019/11/18 - 09:21:08: Invalid address #788 at line 492 in file classes/Address.php
+*ERROR* 	v1.7.5.0	2019/11/18 - 20:22:15: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused at line 127 in file classes/db/DbPDO.php

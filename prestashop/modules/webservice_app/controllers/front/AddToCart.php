@@ -3,7 +3,7 @@
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
 require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController {
 
@@ -22,6 +22,11 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         if (!$operator) {
             $operator = "up";
         }
+
+        if ($operator != "up" && $operator != "down") {
+            $operator = "up";
+        }
+
         
         $log->add("ID_PRODUCT: ".$id_product);
         $log->add("CANTIDAD: ".$qty);
@@ -61,7 +66,8 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                     'AppAddToCart'
                 );
                 $this->writeLog('Product with the provided data is not found.');*/
-                $this->content = ["message" => "Información de producto no encontrado"];
+                $this->status_code = 404;
+                $this->content = ["message" => "Producto no encontrado"];
             } else {
 
                 /*$session_obj = $this->isSession();
@@ -187,11 +193,11 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
             $this->status_code = 400;
             $this->content = ["message" => "Error al agregar producto en el carrito. Debes agregar la mínima cantidad: $minimal_quantity"];
         } else {
-            $qty_original = Cart::getNbProducts($this->context->cart->id);
-            if (($qty_original == 1) && ($operator == "down")) {
-                $this->status_code = 401;
+            /*$qty_original = Cart::getNbProducts($this->context->cart->id);
+            if (($qty_original <= 1) && ($operator == "down")) {
+                $this->status_code = 400;
                 $this->content = ["message" => "No se puede disminuir a cantidad menor que 1"];
-            } else {
+            } else {*/
 
                 $log->add("Antes de updateQty -- Context CART_ID: ".$this->context->cart->id);
                 $log->add("Antes de updateQty -- ID_PRODUCT: ".$id_product);
@@ -201,11 +207,11 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                 $update_status = $this->context->cart->updateQty($qty, $id_product, $id_product_attribute, false, $operator);
                 if (!$update_status) {
                     $this->status_code = 400;
-                    $this->content = [ "message" => "Error al agregar producto al carrito."];
+                    $this->content = [ "message" => "No se pudo agregar esa cantidad de productos en el carrito." ];
                 } else {
                     $this->status_code = 200;
                 }
-            }
+            //}
         }
     }
 

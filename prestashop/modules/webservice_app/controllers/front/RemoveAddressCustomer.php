@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppRemoveAddressCustomerModuleFrontController extends ModuleFrontController {
 
@@ -15,6 +15,7 @@ class Webservice_AppRemoveAddressCustomerModuleFrontController extends ModuleFro
         $response = new Response();
 
         if (!$this->context->customer->logged){
+            $this->status_code = 401;
             $this->content = ["message" => "Usuario no logueado"];
         } else {
             $id_address = Tools::getValue('id_address', null);
@@ -33,30 +34,35 @@ class Webservice_AppRemoveAddressCustomerModuleFrontController extends ModuleFro
 
 
     public function removeAddress($id_address){
-        $address = new Address((int) $id_address);   
-        if ($address->id_customer == $this->context->customer->id) {
-            $id = $address->id;
-            $ok = $address->delete();
+        $address = new Address((int) $id_address);
+        if (isset($address->id)){
+            if ($address->id_customer == $this->context->customer->id) {
+                $id = $address->id;
+                $ok = $address->delete();
 
-            if ($ok) {
-                if ($this->context->cart->id_address_invoice == $id) {
-                    unset($this->context->cart->id_address_invoice);
-                }
-                if ($this->context->cart->id_address_delivery == $id) {
-                    unset($this->context->cart->id_address_delivery);
-                    $this->context->cart->updateAddressId(
-                        $id,
-                        Address::getFirstCustomerAddressId($this->context->customer->id)
-                    );
-                }
-                $this->status_code = 200;
-                $this->content = ["message" => "Dirección eliminada correctamente"];
+                if ($ok) {
+                    if ($this->context->cart->id_address_invoice == $id) {
+                        unset($this->context->cart->id_address_invoice);
+                    }
+                    if ($this->context->cart->id_address_delivery == $id) {
+                        unset($this->context->cart->id_address_delivery);
+                        $this->context->cart->updateAddressId(
+                            $id,
+                            Address::getFirstCustomerAddressId($this->context->customer->id)
+                        );
+                    }
+                    $this->status_code = 200;
+                    $this->content = ["message" => "Dirección eliminada correctamente"];
+                } else {
+                    $this->content = ["message" => "No se pudo eliminar dirección"]; 
+                }   
             } else {
-                $this->content = ["message" => "No se pudo eliminar dirección"]; 
-            }   
-        } else {
-            $this->status_code = 401;
-            $this->content = ["message" => "Dirección no pertenece al cliente en sesión. Imposible eliminarla."];
+                $this->status_code = 401;
+                $this->content = ["message" => "Dirección no pertenece al cliente en sesión. Imposible eliminarla."];
+            }
+        }else{
+            $this->status_code = 404;
+            $this->content = ["message" => "Dirección no encontrada"];
         }
 
     }

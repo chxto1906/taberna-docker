@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppRegisterModuleFrontController extends ModuleFrontController {
 
@@ -125,14 +125,14 @@ class Webservice_AppRegisterModuleFrontController extends ModuleFrontController 
                 /* condition added by rishabh on 18th sep 2018
                     to fix gender issue in ios app
                     */
-                if ($user_data->gender != '') {
+                /*if ($user_data->gender != '') {
                     $gender_qry = '(select id_gender from ' . _DB_PREFIX_ . 'gender '
                             . 'where type = ' . pSQL($user_data->gender) . ')';
                     $gender = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($gender_qry);
                     if (empty($gender)) {
                         $user_data->gender = 0;
                     }
-                }
+                }*/
                 //changes over
                 $sql = 'INSERT INTO ' . _DB_PREFIX_ . 'customer SET 
                     id_shop_group = ' . (int) $this->context->shop->id_shop_group . ', 

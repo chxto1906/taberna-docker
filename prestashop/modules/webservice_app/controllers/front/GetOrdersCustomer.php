@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppGetOrdersCustomerModuleFrontController extends ModuleFrontController {
 
@@ -15,6 +15,7 @@ class Webservice_AppGetOrdersCustomerModuleFrontController extends ModuleFrontCo
         $response = new Response();
 
         if (!$this->context->customer->logged){
+            $this->status_code = 401;
             $this->content = ["message" => "Usuario no logueado"];
         } else {
         	$month_ago = Tools::getValue("month_ago",1);

@@ -2,6 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
+header('Content-Type: application/json');
         
 class Webservice_AppCategoriesModuleFrontController extends ModuleFrontController {
 
@@ -17,7 +18,7 @@ class Webservice_AppCategoriesModuleFrontController extends ModuleFrontControlle
             $home = Tools::getValue("home",0);
             $categories = array();
             if ($home == 1){
-                $whisky = array('id_category' => "44", 
+                $whisky = array('id_category' => "42", 
                                     'name' => "Whisky",
                                     "image_url" => Context::getContext()->shop->getBaseURL(true)."img/c/home_app/whisky.jpg"
                                     );

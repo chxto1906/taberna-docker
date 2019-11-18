@@ -3,7 +3,7 @@
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
 include_once _PS_ROOT_DIR_."/classes/form/ValidateCedulaEcuador.php";
-
+header('Content-Type: application/json');
         
 class Webservice_AppAddAddressCustomerModuleFrontController extends ModuleFrontController {
 
@@ -25,6 +25,7 @@ class Webservice_AppAddAddressCustomerModuleFrontController extends ModuleFrontC
         $isValidRequiredParams = $this->isValidRequiredParams();
 
         if (!$this->context->customer->logged) {
+            $this->status_code = 401;
             $this->content = "Usuario no logueado";
         } else {
             if ($isValidRequiredParams) {

@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController {
 
@@ -45,10 +45,32 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
 
     public function getCheckOut() {
         if (!Validate::isLoadedObject($this->context->cart)) {
-            $this->content = ["message" => "No fue posible cargar carrito."];
+            $this->status_code = 404;
+            $this->content = ["message" => "Carrito no encontrado."];
         } else {
+            $this->content['shipping_address'] = null;
+            $this->content['billing_address'] = null;
             $id_shipping = Tools::getValue('id_shipping_address', '');
-            if ($id_shipping == '') {
+            $id_billing = Tools::getValue('id_billing_address', '');
+
+            if (!$id_shipping){
+                $this->status_code = 400;
+                $this->content = ["message" => "Selecciona dirección de entrega"];
+                return;
+            }
+
+            if (!$id_billing){
+                $this->status_code = 400;
+                $this->content = ["message" => "Selecciona dirección de facturación"];
+                return;
+            }
+
+
+            if ($id_shipping){
+                if (!$this->getShippingAddress($id_shipping))
+                    return;
+            }
+            /*if ($id_shipping == '') {
                 if ($this->context->cart->id_address_delivery > 0) {
                     $id_shipping = $this->context->cart->id_address_delivery;
                 } else {
@@ -56,9 +78,12 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         (int) $this->context->cookie->id_customer
                     );
                 }
-            }
-            $id_billing = Tools::getValue('id_billing_address', '');
-            if ($id_billing == '') {
+            }*/
+            
+            if ($id_billing)
+                if (!$this->getBillingAddress($id_billing))
+                    return;
+            /*if ($id_billing == '') {
                 if ($this->context->cart->id_address_invoice > 0) {
                     $id_billing = $this->context->cart->id_address_invoice;
                 } else {
@@ -66,10 +91,11 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         (int) $this->context->cookie->id_customer
                     );
                 }
-            }
+            }*/
             
-            if ($this->getShippingAddress($id_shipping)) {
-                if ($this->getBillingAddress($id_billing)) {
+            //if ($this->getShippingAddress($id_shipping)) {
+            //    if ($this->getBillingAddress($id_billing)) {
+
                     $this->context->cart->id_currency = $this->context->currency->id;
                     $this->context->cart->id_carrier = 0;
                     if (Tools::getIsset('shipping_method')) {
@@ -98,7 +124,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     $this->context->cookie->write();
                     //$this->content['checkout_page']['per_products_shipping'] = "0";
                     //$this->content['checkout_page']['per_products_shipping_methods'] = array();
-                    $this->getKbCarrierList();
+                    $this->getKbCarrierList($id_shipping);
                     $cart_data = $this->fetchList();
                     /*Set currency code and cart total */
                     $this->content['total_cost'] = (float)Tools::ps_round(
@@ -228,18 +254,19 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     );
 
                     if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimal_purchase) {
-                        $this->content['minimum_purchase_message'] = 
-                        'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
+                        $this->status_code = 400;
+                        $this->content = ["message" => 'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
                                 $this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS),
                                 $currency
-                            );
+                            )];
                     } else {
-                        $this->content['minimum_purchase_message'] = "";
+                        $this->content['message'] = "";
+                        $this->content['totals'] = $cart_total_details;
                     }
 
-                    $this->content['totals'] = $cart_total_details;
-                }
-            }
+                    
+                //}
+            //}
         }
     }
 
@@ -338,7 +365,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
      * Get list of available carriers on store
      *
      */
-    public function getKbCarrierList()
+    public function getKbCarrierList($id_shipping)
     {
         $delivery_option_list = $this->context->cart->getDeliveryOptionList();
         $delivery_option = $this->context->cart->getDeliveryOption(null, false, false);
@@ -360,7 +387,10 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             foreach ($delivery_option_list as $id_address => $option_list) {
                 foreach ($option_list as $key => $option) {
                     if (isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key) {
-                        $this->content['default_shipping'] = rtrim($key, ",");
+                        if ($id_shipping)
+                            $this->content['default_shipping'] = rtrim($key, ",");
+                        else
+                            $this->content['default_shipping'] = null;
                     }
                     if ($option['unique_carrier']) {
                         foreach ($option['carrier_list'] as $carrier) {
@@ -434,13 +464,8 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
     {
         $address = new Address($id_billing);
         if (!validate::isLoadedObject($address)) {
-            $this->content['status'] = 'failure';
-            $this->content['message'] = parent::getTranslatedTextByFileAndISO(
-                Tools::getValue('iso_code', false),
-                $this->l('Unable to get Billing address details'),
-                'AppCheckout'
-            );
-            $this->writeLog('Address object is not valid');
+            $this->status_code = 400;
+            $this->content = ["message" => "Dirección de facturación no encontrada"];
             return false;
         } else {
             $this->context->cart->id_address_invoice = (int) $id_billing;
@@ -449,13 +474,8 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             CartRule::autoAddToCart($this->context);
 
             if (!$this->context->cart->update()) {
-                $this->content['status'] = 'failure';
-                $this->content['message'] = parent::getTranslatedTextByFileAndISO(
-                    Tools::getValue('iso_code', false),
-                    $this->l('An error occurred while updating your cart.'),
-                    'AppCheckout'
-                );
-                $this->writeLog('An error occurred while updating your cart.');
+                $this->status_code = 400;
+                $this->content = ["message" => "Ocurrió un problema al procesar carrito"];
                 return false;
             }
 
@@ -498,7 +518,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         $address = new Address($id_shipping);
         if (!validate::isLoadedObject($address)) {
             $this->status_code = 400;
-            $this->content['message'] = 'No se pueden obtener detalles de la dirección de envío';
+            $this->content = ["message" => "Dirección de entrega no encontrada"];
             return false;
         } else {
             $this->context->cart->id_address_delivery = (int) $id_shipping;
@@ -508,7 +528,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
 
             if (!$this->context->cart->update()) {
                 $this->status_code = 400;
-                $this->content['message'] = 'Se produjo un error al actualizar su carrito.';
+                $this->content = ["message" => "Ocurrió un problema al procesar carrito"];
                 return false;
             }
 

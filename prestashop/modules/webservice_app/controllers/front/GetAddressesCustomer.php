@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFrontController {
 
@@ -63,8 +63,9 @@ class Webservice_AppGetAddressesCustomerModuleFrontController extends ModuleFron
                 $items = $this->proccessAddress($address);
                 unset($address);
             }else{
-                http_response_code(204);
-                exit;
+                $this->status_code = 404;
+                $this->content = ["message" => "Dirección no encontrada"];
+                return;
             }
             
         }

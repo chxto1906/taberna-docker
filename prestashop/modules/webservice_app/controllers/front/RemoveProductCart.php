@@ -2,7 +2,7 @@
 
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontController {
 
@@ -25,7 +25,8 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
         }
 
         if (!(int) $cart_id) {
-            $this->content = ["message" => "Carrito no encontrado"];
+            $this->status_code = 400;
+            $this->content = ["message" => "Es obligatorio el identificador del carrito ó estar logueado."];
         } else {
             $this->context->cart = new Cart(
                 (int) $cart_id,
@@ -56,7 +57,9 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
     public function getCartData()
     {
         if (!Validate::isLoadedObject($this->context->cart)) {
-            $this->content = ["message" => "No se pudo cargar el carrito."];
+            $this->status_code = 404;
+            $this->content = ["message" => "No se pudo encontrar carrito."];
+            return;
         } else {
             $this->context->cart->autosetProductAddress();
             $this->context->cart->update();
@@ -75,130 +78,132 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
             $this->context->cart->secure_key = $this->context->customer->secure_key;
             $this->context->cart->update();
             CartRule::autoAddToCart();
-            $this->processDeleteProductInCart();
-            $this->context->cart->update();
-            if ($this->context->cart->isVirtualCart()) {
-                $this->context->cart->gift = 0;
+            $elimina = $this->processDeleteProductInCart();
+            if ($elimina){
                 $this->context->cart->update();
-            }
-            /********/
-            $cart_data = $this->fetchList();
-            $cart_summary = $cart_data['summary'];
-            $customized_data = $cart_data['customized_data'];
-            $cart_products = array();
-            $index = 0;
-            foreach ($cart_summary['products'] as $product) {
-                $quantity_displayed = 0;
-                $extra_product_line = false;
-                $customization = false;
-                $product_obj = new Product(
-                    (int) $product['id_product'],
-                    true,
-                    $this->context->language->id,
-                    $this->context->shop->id
-                );
-                $cart_products[$index] = array(
-                    'product_id' => $product_obj->id,
-                    'name' => $product['name'],
-                    'description' => $product['description'],
-                    'stock' => StockAvailable::getQuantityAvailableByProduct(
-                            $product_obj->id,
-                            $product['id_product_attribute']
-                        )
-                );
-                $cart_products[$index]['image_small'] = $this->context->link->getImageLink(
-                    $product['link_rewrite'],
-                    $product['id_image'],
-                    $this->getImageType('small')
-                );
-                $cart_products[$index]['image_home'] = $this->context->link->getImageLink(
-                    $product['link_rewrite'],
-                    $product['id_image'],
-                    $this->getImageType('home')
-                );
-                $cart_products[$index]['image_large'] = $this->context->link->getImageLink(
-                    $product['link_rewrite'],
-                    $product['id_image'],
-                    $this->getImageType('large')
-                );
-                /* Changes over */
-                $p_id = $product['id_product'];
-                $p_aid = $product['id_product_attribute'];
-                $da_id = $product['id_address_delivery'];
-                $cart_products[$index]['price_tax_inc'] = $this->formatPrice($product['price_with_reduction']);
-                $cart_products[$index]['price_tax_exc'] = $this->formatPrice($product['price_with_reduction_without_tax']);                
-                $cart_products[$index]['quantity'] = $product['cart_quantity'];
-                $cart_products[$index]['reference'] = $product['reference'];
-                $cart_products[$index]['manufacturer_name'] = $product["manufacturer_name"];
-                $index++;
-            }
+                if ($this->context->cart->isVirtualCart()) {
+                    $this->context->cart->gift = 0;
+                    $this->context->cart->update();
+                }
+                /********/
+                $cart_data = $this->fetchList();
+                $cart_summary = $cart_data['summary'];
+                $customized_data = $cart_data['customized_data'];
+                $cart_products = array();
+                $index = 0;
+                foreach ($cart_summary['products'] as $product) {
+                    $quantity_displayed = 0;
+                    $extra_product_line = false;
+                    $customization = false;
+                    $product_obj = new Product(
+                        (int) $product['id_product'],
+                        true,
+                        $this->context->language->id,
+                        $this->context->shop->id
+                    );
+                    $cart_products[$index] = array(
+                        'product_id' => $product_obj->id,
+                        'name' => $product['name'],
+                        'description' => $product['description'],
+                        'stock' => StockAvailable::getQuantityAvailableByProduct(
+                                $product_obj->id,
+                                $product['id_product_attribute']
+                            )
+                    );
+                    $cart_products[$index]['image_small'] = $this->context->link->getImageLink(
+                        $product['link_rewrite'],
+                        $product['id_image'],
+                        $this->getImageType('small')
+                    );
+                    $cart_products[$index]['image_home'] = $this->context->link->getImageLink(
+                        $product['link_rewrite'],
+                        $product['id_image'],
+                        $this->getImageType('home')
+                    );
+                    $cart_products[$index]['image_large'] = $this->context->link->getImageLink(
+                        $product['link_rewrite'],
+                        $product['id_image'],
+                        $this->getImageType('large')
+                    );
+                    /* Changes over */
+                    $p_id = $product['id_product'];
+                    $p_aid = $product['id_product_attribute'];
+                    $da_id = $product['id_address_delivery'];
+                    $cart_products[$index]['price_tax_inc'] = $this->formatPrice($product['price_with_reduction']);
+                    $cart_products[$index]['price_tax_exc'] = $this->formatPrice($product['price_with_reduction_without_tax']);                
+                    $cart_products[$index]['quantity'] = $product['cart_quantity'];
+                    $cart_products[$index]['reference'] = $product['reference'];
+                    $cart_products[$index]['manufacturer_name'] = $product["manufacturer_name"];
+                    $index++;
+                }
 
-            $this->content['products'] = $cart_products;
+                $this->content['products'] = $cart_products;
 
-            $cart_total_details = array();
-            $cart_total_details[] = array(
-                'name' => 'Total productos (impuestos excl.)',
-                'value' => $this->formatPrice($cart_summary['total_products'])
-            );
-            if ($cart_summary['total_discounts'] > 0) {
+                $cart_total_details = array();
                 $cart_total_details[] = array(
-                    'name' => 'Total descuentos',
-                    'value' => "-" .$this->formatPrice($cart_summary['total_discounts'])
+                    'name' => 'Total productos (impuestos excl.)',
+                    'value' => $this->formatPrice($cart_summary['total_products'])
                 );
-            }
-            if ($cart_summary['total_wrapping'] > 0 && $this->context->cart->gift) {
-                $cart_total_details[] = array(
-                    'name' => 'Total papel de regalo',
-                    'value' => $this->formatPrice($cart_summary['total_wrapping'])
-                );
-            }
-            if ($cart_summary['total_shipping'] > 0) {
-                $cart_total_details[] = array(
-                    'name' => 'Total envío',
-                    'value' => $this->formatPrice($cart_summary['total_shipping'])
-                );
-            } else {
-                if (!$cart_summary['is_virtual_cart']) {
+                if ($cart_summary['total_discounts'] > 0) {
                     $cart_total_details[] = array(
-                        'name' => 'Total envío',
-                        'value' => 'Envío gratis'
+                        'name' => 'Total descuentos',
+                        'value' => "-" .$this->formatPrice($cart_summary['total_discounts'])
                     );
                 }
-            }
+                if ($cart_summary['total_wrapping'] > 0 && $this->context->cart->gift) {
+                    $cart_total_details[] = array(
+                        'name' => 'Total papel de regalo',
+                        'value' => $this->formatPrice($cart_summary['total_wrapping'])
+                    );
+                }
+                if ($cart_summary['total_shipping'] > 0) {
+                    $cart_total_details[] = array(
+                        'name' => 'Total envío',
+                        'value' => $this->formatPrice($cart_summary['total_shipping'])
+                    );
+                } else {
+                    if (!$cart_summary['is_virtual_cart']) {
+                        $cart_total_details[] = array(
+                            'name' => 'Total envío',
+                            'value' => 'Envío gratis'
+                        );
+                    }
+                }
 
-            $cart_total_details[] = array(
-                'name' => 'Tiempo entrega',
-                'value' => $this->context->cart->getOrderDeliveryTime()." mins. (máximo)"
-            );
-
-            if ($cart_summary['total_tax'] > 0) {
                 $cart_total_details[] = array(
-                    'name' => 'Total impuestos',
-                    'value' => $this->formatPrice($cart_summary['total_tax'])
+                    'name' => 'Tiempo entrega',
+                    'value' => $this->context->cart->getOrderDeliveryTime()." mins. (máximo)"
                 );
-            }
-            $cart_total_details[] = array(
-                'name' => 'Precio Total',
-                'value' => $this->formatPrice($cart_summary['total_price'])
-            );
 
-            $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
-            $currency = Currency::getCurrency((int) $this->context->cart->id_currency);
-            $minimal_purchase = Tools::convertPrice((float) Configuration::get('PS_PURCHASE_MINIMUM'), $currency);
-            if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimal_purchase) {
-                $this->content['minimum_purchase_message'] = 
-                        'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
-                                $this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS),
-                                $currency
-                            );
-            } else {
-                $this->content['minimum_purchase_message'] = null;
-            }
+                if ($cart_summary['total_tax'] > 0) {
+                    $cart_total_details[] = array(
+                        'name' => 'Total impuestos',
+                        'value' => $this->formatPrice($cart_summary['total_tax'])
+                    );
+                }
+                $cart_total_details[] = array(
+                    'name' => 'Precio Total',
+                    'value' => $this->formatPrice($cart_summary['total_price'])
+                );
 
-            $this->content['totals'] = $cart_total_details;
-            /* Get available cart rules and unset the cart rules already in the cart */
-            
-            $this->content['cart_id'] = $this->context->cart->id;
+                $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
+                $currency = Currency::getCurrency((int) $this->context->cart->id_currency);
+                $minimal_purchase = Tools::convertPrice((float) Configuration::get('PS_PURCHASE_MINIMUM'), $currency);
+                if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimal_purchase) {
+                    $this->content['minimum_purchase_message'] = 
+                            'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
+                                    $this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS),
+                                    $currency
+                                );
+                } else {
+                    $this->content['minimum_purchase_message'] = null;
+                }
+
+                $this->content['totals'] = $cart_total_details;
+                /* Get available cart rules and unset the cart rules already in the cart */
+                
+                $this->content['cart_id'] = $this->context->cart->id;
+            }
         }
     }
 
@@ -211,14 +216,18 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
         $id_product = Tools::getValue('id_product', '');
         
         if (empty($id_product)) {
-            $this->content = ["message" => "Producto no encontrado."];
+            $this->status_code = 400;
+            $this->content = ["message" => "Es obligatorio el identificador del producto a eliminar."];
+            return false;
         } else {
             $id_address_delivery = $this->context->cart->id_address_delivery;
             $id_customization = null;
             $id_product_attribute = null;
             $product = new Product((int) $id_product);
             if (!Validate::isLoadedObject($product)) {
-                $this->content = ["message" => "No se ha encontrado información del producto."];
+                $this->status_code = 404;
+                $this->content = ["message" => "No se ha encontrado producto."];
+                return false;
             } else {
                 $customization_product = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
                     'SELECT * FROM `' . _DB_PREFIX_ . 'customization`
@@ -242,7 +251,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
 
                     if ($total_quantity < $minimal_quantity) {
                         $this->content = ["message" => "Cantidad mínima requerida en caso de personalización del producto"];
-                        return;
+                        return false;
                     }
                 }
 
@@ -267,12 +276,15 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                         $this->context->cart->gift_message = '';
                         $this->context->cart->update();
                     }
+                    $this->content["message"] = "Producto eliminado correctamente.";
                     $this->status_code = 200;
+                    return true;
                     //$this->content = "Producto eliminado correctamente.";
                 } else {
                     $this->status_code = 400;
                     $this->content = ["message" => "No se pudo eliminar producto"];
                     //$this->content = 'Puede existir un producto en el carrito con un atributo similar';
+                    return false;
                 }
                 CartRule::autoRemoveFromCart();
                 CartRule::autoAddToCart();

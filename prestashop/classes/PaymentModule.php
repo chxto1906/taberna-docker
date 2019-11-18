@@ -240,19 +240,31 @@ abstract class PaymentModuleCore extends Module
         $order_status = new OrderState((int) $id_order_state, (int) $this->context->language->id);
         if (!Validate::isLoadedObject($order_status)) {
             PrestaShopLogger::addLog('PaymentModule::validateOrder - Order Status cannot be loaded', 3, null, 'Cart', (int) $id_cart, true);
-            throw new PrestaShopException('Can\'t load Order status');
+            if ($jsonResponse){
+                return "No se pudo cargar el estado de la orden";
+            }else{
+                throw new PrestaShopException('Can\'t load Order status');
+            }
         }
 
         if (!$this->active) {
             PrestaShopLogger::addLog('PaymentModule::validateOrder - Module is not active', 3, null, 'Cart', (int) $id_cart, true);
-            die(Tools::displayError());
+            if ($jsonResponse){
+                return "Módulo de pago no activo";
+            }else{
+                die(Tools::displayError());
+            }
         }
 
         // Does order already exists ?
         if (Validate::isLoadedObject($this->context->cart) && $this->context->cart->OrderExists() == false) {
             if ($secure_key !== false && $secure_key != $this->context->cart->secure_key) {
                 PrestaShopLogger::addLog('PaymentModule::validateOrder - Secure key does not match', 3, null, 'Cart', (int) $id_cart, true);
-                die(Tools::displayError());
+                if ($jsonResponse){
+                    return "Ocurrió un problema con el método de pago";
+                }else{
+                    die(Tools::displayError());
+                }
             }
 
             // For each package, generate an order
@@ -318,7 +330,11 @@ abstract class PaymentModuleCore extends Module
                         $address = new Address((int) $id_address);
                         $this->context->country = new Country((int) $address->id_country, (int) $this->context->cart->id_lang);
                         if (!$this->context->country->active) {
-                            throw new PrestaShopException('The delivery address country is not active.');
+                            if ($jsonResponse){
+                                return "El país de la dirección de entrega no está activa";
+                            }else{
+                                throw new PrestaShopException('The delivery address country is not active.');
+                            }
                         }
                     }
 
@@ -392,7 +408,13 @@ abstract class PaymentModuleCore extends Module
 
                     if (!$result) {
                         PrestaShopLogger::addLog('PaymentModule::validateOrder - Order cannot be created', 3, null, 'Cart', (int) $id_cart, true);
-                        throw new PrestaShopException('Can\'t save Order');
+
+
+                        if ($jsonResponse){
+                            return "No se pudo guardar orden";
+                        }else{
+                            throw new PrestaShopException('Can\'t save Order');
+                        }
                     }
 
                     // Amount paid by customer is not the right one -> Status = payment error
@@ -438,7 +460,10 @@ abstract class PaymentModuleCore extends Module
 
             if (!$this->context->country->active) {
                 PrestaShopLogger::addLog('PaymentModule::validateOrder - Country is not active', 3, null, 'Cart', (int) $id_cart, true);
-                throw new PrestaShopException('The order address country is not active.');
+                if ($jsonResponse)
+                    return "El país de la dirección de la orden no está activo";
+                else
+                    throw new PrestaShopException('The order address country is not active.');
             }
 
             if (self::DEBUG_MODE) {
@@ -458,7 +483,10 @@ abstract class PaymentModuleCore extends Module
 
                 if (!$order->addOrderPayment($amount_paid, null, $transaction_id)) {
                     PrestaShopLogger::addLog('PaymentModule::validateOrder - Cannot save Order Payment', 3, null, 'Cart', (int) $id_cart, true);
-                    throw new PrestaShopException('Can\'t save Order Payment');
+                    if ($jsonResponse)
+                        return "Error. No se pudo guardar orden.";
+                    else
+                        throw new PrestaShopException('Can\'t save Order Payment');
                 }
             }
 
@@ -890,7 +918,10 @@ abstract class PaymentModuleCore extends Module
                 } else {
                     $error = $this->trans('Order creation failed', array(), 'Admin.Payment.Notification');
                     PrestaShopLogger::addLog($error, 4, '0000002', 'Cart', intval($order->id_cart));
-                    die($error);
+                    if ($jsonResponse)
+                        return $error;
+                    else
+                        die($error);
                 }
             } // End foreach $order_detail_list
 

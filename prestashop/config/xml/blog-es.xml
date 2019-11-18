@@ -6,6 +6,32 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo gestionar las reclamaciones de clientes? 3 Consejos infalibles</title>
+    <link>https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</link>
+    <description>Saber cómo gestionar una reclamación por parte de tus clientes actuales no es, honestamente, un asunto fácil de llevar a cabo.</description>
+     <pubDate>Mon, 18 Nov 2019 08:03:09 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</guid>
+  </item>
+  <item>
+    <title>Del eCommerce al mCommerce: ¿cómo vender más en el móvil? (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-del-ecommerce-a-mcommerce</link>
+    <description>Del eCommerce al mCommerce: ¿cómo vender más en móvil?
+21 de noviembre a las 16 horas (de España)
+</description>
+     <pubDate>Thu, 14 Nov 2019 13:10:16 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-del-ecommerce-a-mcommerce</guid>
+  </item>
+  <item>
+    <title>¿Qué es el scroll infinito y cómo afecta a la web de mi tienda online?</title>
+    <link>https://www.prestashop.com/es/blog/scroll-infinito</link>
+    <description>¿Aún no sabes qué es el scroll infinito y cómo afecta a tu sitio web?</description>
+     <pubDate>Mon, 11 Nov 2019 07:11:42 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/scroll-infinito</guid>
+  </item>
+  <item>
     <title>El fraude publicitario: ¿cómo me perjudica y puedo reconocerlo en un eCommerce?</title>
     <link>https://www.prestashop.com/es/blog/fraude-publicitario</link>
     <description>¿Has realizado alguna vez alguna campaña publicitaria y te has visto envuelto en algún tipo de fraude?</description>
@@ -64,30 +90,6 @@
      <pubDate>Tue, 29 Oct 2019 11:36:14 +0100</pubDate>
  <dc:creator>Sergio Escriba</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/una-boda-magica</guid>
-  </item>
-  <item>
-    <title>¿Cómo funciona el Crowdlending y cómo aplicarlo en mi eCommerce?</title>
-    <link>https://www.prestashop.com/es/blog/que-es-crowdlending</link>
-    <description>¿Conoces el concepto de Crowdlending y cómo aplicarlo en tu propio eCommerce?</description>
-     <pubDate>Mon, 28 Oct 2019 11:13:52 +0100</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-crowdlending</guid>
-  </item>
-  <item>
-    <title>¿Qué es el Marketing Omnicanal y cómo puede ayudarte en tu negocio?</title>
-    <link>https://www.prestashop.com/es/blog/como-puede-ayudar-el-marketing-omnicanal-tu-pequeno-negocio</link>
-    <description>¿Sabes cómo puedes usar el Marketing Omnicanal para potenciar las conversiones en tu eCommerce?</description>
-     <pubDate>Fri, 25 Oct 2019 09:30:06 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-puede-ayudar-el-marketing-omnicanal-tu-pequeno-negocio</guid>
-  </item>
-  <item>
-    <title>Análisis y Optimización de la arquitectura Web de mi eCommerce (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/arquitectura-web-webinar</link>
-    <description>Estructurar correctamente la información que queramos mostrar a nuestros usuarios y clientes dentro de nuestra página web es vital para ayudarles a encontrarla mejor.</description>
-     <pubDate>Thu, 24 Oct 2019 10:46:03 +0200</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/arquitectura-web-webinar</guid>
   </item>
   </channel>
 </rss>

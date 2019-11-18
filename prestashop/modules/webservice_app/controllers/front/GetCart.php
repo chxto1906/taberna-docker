@@ -3,7 +3,7 @@
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
 require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
 
@@ -48,8 +48,8 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
         
 
         if (!(int) $cart_id) {
-            $this->status_code = 404;
-            $this->content = ["message" => "Carrito no encontrado"];
+            $this->status_code = 400;
+            $this->content = ["message" => "Es obligatorio el identificador del carrito ó estar logueado."];
         } else {
             if (Tools::getIsset('order_id')) {
                 $oldCart = new Cart((int) $cart_id);

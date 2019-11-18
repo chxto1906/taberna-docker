@@ -6,7 +6,7 @@ require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 require_once _PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/ValidacionProductosBeforeFacturaSAP.php';
 require_once _PS_MODULE_DIR_ . 'ps_cashondelivery/ps_cashondelivery.php';
 require_once _PS_MODULE_DIR_ . 'ps_cashondelivery/controllers/front/validation.php';
-
+header('Content-Type: application/json');
         
 class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFrontController {
 
@@ -77,11 +77,20 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
             $this->content = ["message" => $resValidateArticulos];
             return;
         }
-        $respValido = $moduleCash->validateOrder((int)$this->context->cart->id, Configuration::get('PS_OS_PREPARATION'), $total, $moduleCash->displayName, null, array(), null, false, $customer->secure_key);
 
-        if ($respValido !== true){
+        try{
+
+            $respValido = $moduleCash->validateOrder((int)$this->context->cart->id, Configuration::get('PS_OS_PREPARATION'), $total, $moduleCash->displayName, null, array(), null, false, $customer->secure_key,null,true);
+
+            if ($respValido !== true){
+                $this->content["message"] = $respValido;
+                $this->process_session_data();
+                return;
+            }
+        }catch (Exception $e) {
+            $this->content["message"] = "Ocurrió un problema al procesar el pago";
             $this->process_session_data();
-            $this->content["message"] = $respValido;
+            echo $response->json_response($this->content,400);
             return;
         }
 

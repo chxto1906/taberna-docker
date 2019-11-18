@@ -4,7 +4,8 @@ require_once _PS_MODULE_DIR_ . 'rvproductstab/rvproductstab.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/sql/Consultas.php';
 require_once _PS_MODULE_DIR_ . 'webservice_app/response/Response.php';
 require_once _PS_MODULE_DIR_ . 'rvcategorysearch/rvcategorysearch.php';
-        
+header('Content-Type: application/json');
+
 class Webservice_AppProductsModuleFrontController extends ModuleFrontController {
 
     public $log = null;
@@ -62,7 +63,14 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                     $status_code = 400;
                 }
             }
-            echo $response->json_response($products,$status_code);
+            $products = [];
+
+            if ($products){
+                echo $response->json_response($products,$status_code);
+            }else{
+                http_response_code(204);
+                exit;
+            }
 
             exit;
         } catch (Exception $e) {
@@ -132,19 +140,25 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
         $products = [];
         $category = new Category((int)$category_id);
 
-        if ($total) {
-            $products = $category->getProducts(1,0,0,"id_product","ASC",true,true,false,1,true);
-        } else {
-            if ($page && $qty_by_page) {
-                $products = $category->getProducts(1,$page,$qty_by_page,"id_product","ASC",false,true,false,1,true);
+        if (isset($category->id)){
+            if ($total) {
+                $products = $category->getProducts(1,0,0,"id_product","ASC",true,true,false,1,true);
             } else {
-                echo $response->json_response(["message" => "Formato inválido del parámetro page."],400);
-                exit;
-            }    
-        }
+                if ($page && $qty_by_page) {
+                    $products = $category->getProducts(1,$page,$qty_by_page,"id_product","ASC",false,true,false,1,true);
+                } else {
+                    echo $response->json_response(["message" => "Formato inválido del parámetro page."],400);
+                    exit;
+                }    
+            }
 
-        if (is_array($products))
-            $products = $this->proccessProducts($products);
+            if (is_array($products))
+                $products = $this->proccessProducts($products);
+        }else{
+            $products = ["message" => "Categoría no encontrada para listar productos."];
+            echo $response->json_response($products,404);
+            exit;  
+        }
 
         return $products;
     }
