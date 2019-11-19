@@ -785,7 +785,9 @@ abstract class ControllerCore
             $context_session_decrypt = $this->openCypher('decrypt',$context_session_encrypt);
             $context_session_decrypt_obj = json_decode($context_session_decrypt);
             if ((isset($context_session_decrypt_obj->cart_id)) && (isset($context_session_decrypt_obj->customer_id)) ) {
-                $result = $context_session_decrypt_obj;
+                $cart = new Cart((int) $context_session_decrypt_obj->cart_id); 
+                if ($cart->valid_session)
+                    $result = $context_session_decrypt_obj;
             }
         }
 

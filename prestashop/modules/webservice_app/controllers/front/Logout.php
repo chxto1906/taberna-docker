@@ -11,15 +11,26 @@ class Webservice_AppLogoutModuleFrontController extends ModuleFrontController {
 
     public function initContent() {
     	parent::initContent();
+        $operation = false;
         $response = new Response();
         $status_code = 400;
         $resultDecode = ["message" => "No se pudo cerrar sesión"];
         
-        if (Context::getContext()->customer->logged == true)
+        if (Context::getContext()->customer->logged == true){
             $customer = new Customer((int) Context::getContext()->customer->id);
             $customer->logout();
-            $status_code = 200;
-            $resultDecode = ["message" => "OK"];
+            $cart = new Cart((int) Context::getContext()->cart->id);
+            $count_products = Cart::getNbProducts($cart->id);
+            if ($count_products == 0) {
+                $operation = $cart->delete();
+            }else{
+                $cart->valid_session = false;
+                $operation = $cart->save();
+            }
+            if ($operation){
+                $status_code = 200;
+                $resultDecode = ["message" => "Sesión cerrada correctamente"];
+            }
         }
 
         //echo $this->context;

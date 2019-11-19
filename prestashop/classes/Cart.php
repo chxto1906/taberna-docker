@@ -90,6 +90,8 @@ class CartCore extends ObjectModel
 
     public $delivery_option;
 
+    public $valid_session = false;
+
     /** @var bool Allow to seperate order in multiple package in order to recieve as soon as possible the available products */
     public $allow_seperated_package = false;
 
@@ -133,6 +135,7 @@ class CartCore extends ObjectModel
             'gift_message' => array('type' => self::TYPE_STRING, 'validate' => 'isMessage'),
             'mobile_theme' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
             'delivery_option' => array('type' => self::TYPE_STRING),
+            'valid_session' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
             'secure_key' => array('type' => self::TYPE_STRING, 'size' => 32),
             'allow_seperated_package' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
             'date_add' => array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
