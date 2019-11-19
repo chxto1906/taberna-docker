@@ -351,6 +351,8 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         $context_session_str = json_encode((object)$context_session);
         $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);
 
+        $this->context->cart->valid_session = true;
+        $this->context->cart->save();
 
         $this->content["new_session_data"] = $context_session_encrypt;
 

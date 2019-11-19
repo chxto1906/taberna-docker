@@ -189,6 +189,9 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
         $context_session_encrypt = $this->openCypher('encrypt',$context_session_str);
 
 
+        $this->context->cart->valid_session = true;
+        $this->context->cart->save();
+
         $this->content["new_session_data"] = $context_session_encrypt;
 
         

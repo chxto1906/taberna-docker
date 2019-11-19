@@ -143,6 +143,8 @@ class Webservice_AppChangeShopModuleFrontController extends ModuleFrontControlle
             "cart_id"       => $customer->cart_id,
             #"customer_id"   => $customer->id
         ];
+        $this->context->cart->valid_session = true;
+        $this->context->cart->save();
         
         return (object) $dataResult;
     }
