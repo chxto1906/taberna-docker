@@ -137,6 +137,11 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                     $index++;
                 }
 
+                $this->content['total_cost'] = $this->formatPrice((float)Tools::ps_round(
+                        (float)$this->context->cart->getOrderTotal(true, Cart::BOTH),
+                        2
+                    ));
+
                 $this->content['products'] = $cart_products;
 
                 $cart_total_details = array();
@@ -161,12 +166,14 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                         'name' => 'Total envío',
                         'value' => $this->formatPrice($cart_summary['total_shipping'])
                     );
+                    $this->content["shipping_price"] = $this->formatPrice($cart_summary['total_shipping']);
                 } else {
                     if (!$cart_summary['is_virtual_cart']) {
                         $cart_total_details[] = array(
                             'name' => 'Total envío',
-                            'value' => 'Envío gratis'
+                            'value' => 'Por calcular'
                         );
+                        $this->content["shipping_price"] = "Por calcular";
                     }
                 }
 
