@@ -24,6 +24,13 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
 
         include_once(_PS_MODULE_DIR_ . 'sincronizacionwebservices/include/config.php');
 
+        $shop = Context::getContext()->shop;
+        $address1 = isset($shop->address->address1)?$shop->address->address1:DIRECCION_MATRIZ;
+        var_dump($address1);
+
+        /*$shop = $this->context->shop;
+        var_dump($shop->address->address1);*/
+        exit;
 
         echo "Empieza FacturaSAP " . date('m/d/Y G:i:s a', time()) . "<br>";
         echo "<hr>";

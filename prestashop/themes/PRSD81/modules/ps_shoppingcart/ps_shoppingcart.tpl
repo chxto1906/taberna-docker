@@ -85,7 +85,12 @@
               </div>
               <div class="price shipping">
                 <span class="label">{$cart.subtotals.shipping.label}</span>
-                <span class="value">{$cart.subtotals.shipping.value}</span>
+                {if $cart.subtotals.shipping.value == "Gratis"}
+                  <span class="value" style="color: #ed2123;">Por calcular</span>
+                {else}
+                  <span class="value">{$cart.subtotals.shipping.value}</span>
+                {/if}
+                
               </div>
               {if isset($delivery_time)}
                 <div class="price delivery-time">

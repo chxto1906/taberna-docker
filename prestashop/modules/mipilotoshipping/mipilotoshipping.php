@@ -229,6 +229,7 @@ class Mipilotoshipping extends CarrierModule
                 $bodyCotizar = $this->generateBodyCotizar($address);
                 $curlmipiloto = new CurlMiPiloto();
                 $resultCotizar = $curlmipiloto->cotizar($bodyCotizar);
+                
                 if ($resultCotizar["status"] == 1) {
                     if (!empty($resultCotizar["result"])) {
                         $result = $resultCotizar["result"];
@@ -238,25 +239,24 @@ class Mipilotoshipping extends CarrierModule
                         else
                             $shipping_cost = $result->tarifa[0]->valor;*/
 
-                        $shipping_cost = $result->tarifa[0]->valor;
-                        if (!isset($shipping_cost))
-                            $shipping_cost = $shipping_cost; 
+                        if (isset($result->tarifa[0]->valor))
+                            $shipping_cost = $result->tarifa[0]->valor;
 
                         /*$valor = $result->tarifa[0]->valor;
                         $valorNoche1 = $result->tarifa[0]->valorNoche1;
                         $valorNoche2 = $result->tarifa[0]->valorNoche2;*/
                         //$tiempo = $result->tiempo_llegada;
                         //return $valor;
-                    } else {
+                    }/* else {
                         $shipping_cost = $shipping_cost;
                         $this->context->cart->delete();
                         $this->context->cookie->id_cart = 0;
-                    }
-                } else {
+                    }*/
+                }/* else {
                     $shipping_cost = $shipping_cost;
                     $this->context->cart->delete();
                     $this->context->cookie->id_cart = 0;
-                }
+                }*/
             }
 
 

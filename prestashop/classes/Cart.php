@@ -3294,9 +3294,9 @@ class CartCore extends ObjectModel
             $module->id_carrier = $carrier->id;
         }
 
-        if (method_exists($module, 'getOrderDeliveryTime')) {
+        /*if (method_exists($module, 'getOrderDeliveryTime')) {
             $delivery_time = $module->getOrderDeliveryTime($delivery_time);
-        }
+        }*/
 
         return $delivery_time;
     }
@@ -3651,7 +3651,7 @@ class CartCore extends ObjectModel
         if (method_exists($module, 'getPackageShippingCost')) {
             $shipping_cost = $module->getPackageShippingCost($this, $shipping_cost, $products);
         } else {
-            $shipping_cost = $module->getOrderShippingCost($this, $shipping_cost);
+            $shipping_cost = $module->getOrderShippingCost($this, false);
         }
 
         return $shipping_cost;

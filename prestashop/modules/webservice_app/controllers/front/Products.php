@@ -18,7 +18,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
     	parent::initContent();
         try {
             $response = new Response();
-            $status_code = 200;
+            $status_code = 400;
             $products = [];
             //$this->limit = Tools::getValue('limit')?Tools::getValue('limit'):$this->limit;
             $id_product = Tools::getValue("id_product");

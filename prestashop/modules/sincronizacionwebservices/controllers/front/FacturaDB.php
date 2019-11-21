@@ -169,9 +169,9 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
     }
 
     public function generateDataCabeceraFacturacion($order,$cart,$address,$secuencial,$write){
-        //$shop = Context::getContext()->shop;
-        $shop = $this->context->shop;
-        $address1 = $shop->address->address1;
+        $shop = Context::getContext()->shop;
+        //$shop = $this->context->shop;
+        $address1 = isset($shop->address->address1)?$shop->address->address1:DIRECCION_MATRIZ;
         if ($address->type_dni == "Cédula")
             $type_dni = "05";
         elseif ($address->type_dni == "Ruc") {

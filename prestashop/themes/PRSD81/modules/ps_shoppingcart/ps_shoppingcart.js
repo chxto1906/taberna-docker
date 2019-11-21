@@ -17,6 +17,10 @@
  */
 
 $(document).ready(function () {
+
+
+  
+
   prestashop.blockcart = prestashop.blockcart || {};
 
   var showModal = prestashop.blockcart.showModal || function (modal) {
@@ -30,6 +34,7 @@ $(document).ready(function () {
   };
 
   $(document).ready(function () {
+    
     prestashop.on(
       'updateCart',
       function (event) {
@@ -47,12 +52,15 @@ $(document).ready(function () {
         $.post(refreshURL, requestData).then(function (resp) {
           $('.blockcart').replaceWith(resp.preview);
           if (resp.modal) {
+            
             showModal(resp.modal);
           }
         }).fail(function (resp) {
+          
           prestashop.emit('handleError', {eventType: 'updateShoppingCart', resp: resp});
         });
       }
     );
+
   });
 });

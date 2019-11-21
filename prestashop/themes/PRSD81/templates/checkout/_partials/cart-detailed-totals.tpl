@@ -36,9 +36,17 @@
               {$subtotal.label}
             {/if}
           </span>
-          <span class="value">{$subtotal.value}</span>
+          
           {if $subtotal.type === 'shipping'}
+            {if $subtotal.value == "Gratis"}
+              
+              <div><small class="value"><span style="color: #ed2123;">Por calcular</span></small></div>
+            {else}
+              <span class="value">{$subtotal.value}</span>
               <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
+            {/if}
+          {else}
+            <span class="value">{$subtotal.value}</span>
           {/if}
         </div>
       {/if}

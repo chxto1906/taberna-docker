@@ -57,7 +57,7 @@
         function login() {
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'https://tabernatest.tk/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Shops',
+                url: 'http://localhost/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Products&by=search&query=Jack Daniels',
                 type: "GET",
                 success: function (data,r,xhr) {
                     console.log("RESPONSE LIST TIENDAS");

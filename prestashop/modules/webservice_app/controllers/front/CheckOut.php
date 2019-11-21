@@ -9,7 +9,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
     public $log = null;
     public $limit = "0";
     private $product = null;
-    private $status_code = 401;
+    private $status_code = null;
     private $img_1 = 'large';
     private $img_2 = 'medium';
     private $img_3 = '_default';
@@ -28,6 +28,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         exit;*/
         //die($this->context->cart->id_address_delivery);
         if (!$this->context->customer->logged){
+            $this->status_code = 401;
             $this->content = ["message" => "Usuario no logueado"];
         } else {
             $this->getCheckOut();
@@ -52,7 +53,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
             $id_shipping = Tools::getValue('id_shipping_address', '');
             $id_billing = Tools::getValue('id_billing_address', '');
 
-            if (!$id_shipping){
+            /*if (!$id_shipping){
                 $this->status_code = 400;
                 $this->content["message"] = "Selecciona dirección de entrega";
                 //return;
@@ -62,17 +63,17 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                 $this->status_code = 400;
                 $this->content["message"] = "Selecciona dirección de facturación";
                 //return;
-            }
+            }*/
 
             $this->content['shipping_address'] = null;
             $this->content['billing_address'] = null;
 
 
-            if ($id_shipping){
+            /*if ($id_shipping){
                 if (!$this->getShippingAddress($id_shipping))
                     return;
-            }
-            /*if ($id_shipping == '') {
+            }*/
+            if ($id_shipping == '') {
                 if ($this->context->cart->id_address_delivery > 0) {
                     $id_shipping = $this->context->cart->id_address_delivery;
                 } else {
@@ -80,12 +81,12 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         (int) $this->context->cookie->id_customer
                     );
                 }
-            }*/
+            }
             
-            if ($id_billing)
+            /*if ($id_billing)
                 if (!$this->getBillingAddress($id_billing))
-                    return;
-            /*if ($id_billing == '') {
+                    return;*/
+            if ($id_billing == '') {
                 if ($this->context->cart->id_address_invoice > 0) {
                     $id_billing = $this->context->cart->id_address_invoice;
                 } else {
@@ -93,10 +94,10 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         (int) $this->context->cookie->id_customer
                     );
                 }
-            }*/
+            }
             
-            //if ($this->getShippingAddress($id_shipping)) {
-            //    if ($this->getBillingAddress($id_billing)) {
+            if ($this->getShippingAddress($id_shipping)) {
+                if ($this->getBillingAddress($id_billing)) {
 
                     $this->context->cart->id_currency = $this->context->currency->id;
                     $this->context->cart->id_carrier = 0;
@@ -186,7 +187,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     }
                     
 
-                    $this->status_code = 200;
+                    
                     /*$this->content['status'] = "success";
                     $this->content['message'] = parent::getTranslatedTextByFileAndISO(
                         Tools::getValue('iso_code', false),
@@ -259,18 +260,19 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
 
                     if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimal_purchase) {
                         $this->status_code = 400;
-                        $this->content = ["message" => 'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
+                        $this->content["message"] = 'Se requiere una compra mínima de '.Tools::displayPrice($minimal_purchase, $currency).' para validar su pedido, el total actual es: '.Tools::displayPrice(
                                 $this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS),
                                 $currency
-                            )];
+                            );
                     } else {
                         //$this->content['message'] = "";
                         $this->content['totals'] = $cart_total_details;
+                        $this->status_code = $this->status_code == null ? 200 : $this->status_code;
                     }
 
                     
-                //}
-            //}
+                }
+            }
         }
     }
 
@@ -469,8 +471,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         $address = new Address($id_billing);
         if (!validate::isLoadedObject($address)) {
             $this->status_code = 400;
-            $this->content = ["message" => "Dirección de facturación no encontrada"];
-            return false;
+            $this->content["message"] = "Dirección de facturación no encontrada";
         } else {
             $this->context->cart->id_address_invoice = (int) $id_billing;
             $this->context->cart->autosetProductAddress();
@@ -479,8 +480,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
 
             if (!$this->context->cart->update()) {
                 $this->status_code = 400;
-                $this->content = ["message" => "Ocurrió un problema al procesar carrito"];
-                return false;
+                $this->content["message"] = "Ocurrió un problema al procesar carrito";
             }
 
             $billing_address = array();
@@ -522,8 +522,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
         $address = new Address($id_shipping);
         if (!validate::isLoadedObject($address)) {
             $this->status_code = 400;
-            $this->content = ["message" => "Dirección de entrega no encontrada"];
-            return false;
+            $this->content["message"] = "Dirección de entrega no encontrada";
         } else {
             $this->context->cart->id_address_delivery = (int) $id_shipping;
             $this->context->cart->autosetProductAddress();
@@ -532,8 +531,7 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
 
             if (!$this->context->cart->update()) {
                 $this->status_code = 400;
-                $this->content = ["message" => "Ocurrió un problema al procesar carrito"];
-                return false;
+                $this->content["message"] = "Ocurrió un problema al procesar carrito";
             }
 
             if (!$this->context->cart->isMultiAddressDelivery()) {
@@ -562,15 +560,13 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                     $this->status_code = 400;
                     $this->content['message'] = 
                     'No hay transportistas que envíen a algunas direcciones que seleccionó.';
-                    return false;
                 } elseif ($this->context->cart->isMultiAddressDelivery() && !$flag_error_message) {
                     $this->status_code = 400;
                     $this->content['message'] = 'No hay transportistas que entreguen a una dirección que seleccionó.';
-                    return false;
+                    
                 } elseif (!$flag_error_message) {
                     $this->status_code = 400;
                     $this->content['message'] = 'No hay transportistas que entreguen a la dirección que seleccionó.';
-                    return false;
                 }
             }
             $shipping_address = array();

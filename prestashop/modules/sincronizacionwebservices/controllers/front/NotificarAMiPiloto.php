@@ -145,7 +145,30 @@ class sincronizacionwebservicesNotificarAMiPilotoModuleFrontController extends M
         return $orderDB;
     }
 
+    private function getQuantityProductsCart($order) {
+        $quantity_total = 0;
+        $products = $order->getProducts();
+        foreach ($products as $product) {
+            $quantity_total += (int)$product["product_quantity"];
+        }
+        return $quantity_total;
+    }
 
+    private function getTipoVehiculo($quantity) {
+        $tipo = 1;
+        if ($quantity > LIMITE_CANTIDAD_PRODUCTOS_TIPO_VEHICULO) {
+            $tipo = 2;
+        }
+        return $tipo;
+    }
+
+    private function getTipoProducto($quantity) {
+        $tipo = 2;
+        if ($quantity > LIMITE_CANTIDAD_PRODUCTOS_TIPO_VEHICULO) {
+            $tipo = 3;
+        }
+        return $tipo;
+    }
     
 
 

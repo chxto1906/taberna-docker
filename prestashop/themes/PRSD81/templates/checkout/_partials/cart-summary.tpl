@@ -55,14 +55,25 @@
       {foreach from=$cart.subtotals item="subtotal"}
         {if $subtotal && $subtotal.type !== 'tax'}
           <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
-            <span class="label">{$subtotal.label}</span>
-            <span class="value">
-              {if $subtotal.value == "* Pagar transporte en la entrega"}
-                <span style="color: #ed2123;">{$subtotal.value}</span>
-              {else}
-                {$subtotal.value}
-              {/if}
-            </span>
+            {if $subtotal.type === 'shipping'}
+              <span class="label">{$subtotal.label}</span>
+              <span class="value">
+                {if $subtotal.value == "Gratis"}
+                  <span style="color: #ed2123;">Por calcular</span>
+                {else}
+                  {$subtotal.value}
+                {/if}
+              </span>
+            {else}
+              <span class="label">{$subtotal.label}</span>
+              <span class="value">
+                {if $subtotal.value == "* Pagar transporte en la entrega"}
+                  <span style="color: #ed2123;">{$subtotal.value}</span>
+                {else}
+                  {$subtotal.value}
+                {/if}
+              </span>
+            {/if}
           </div>
         {/if}
       {/foreach}

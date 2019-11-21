@@ -616,7 +616,7 @@ class CustomerCore extends ObjectModel
 
             //var_dump($addr["id"]);
             /******** MODIFICADO POR HENRY *********/
-            $latitude = $addr["latitude"];
+            /*$latitude = $addr["latitude"];
             $longitude = $addr["longitude"];
             $infoCiudad = $this->getCiudad($addr["latitude"],$addr["longitude"]);
             if ($infoCiudad["status"] == 1){
@@ -624,13 +624,13 @@ class CustomerCore extends ObjectModel
                 $ciudad = trim(strtolower($result->results[0]->components->city));
                 $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id)["city"];
                 //echo "ciudad: ".$ciudad." - ciudad_shop: ".$ciudad_shop;
-                if ($ciudad == $ciudad_shop){
+                if ($ciudad == $ciudad_shop){*/
                     $addresses[$addr['id']] = $addr;
                     Context::getContext()->cart->id_address_delivery = $addr['id'];
                     Context::getContext()->cart->id_address_invoice = $addr['id']; 
-                }
+                /*}
 
-            }
+            }*/
 
             
         }
