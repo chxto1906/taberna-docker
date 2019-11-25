@@ -36,8 +36,19 @@
     
     ciudades_permitidas.push(ciudad);
     
+    $(".form-control[name='id_country']").attr("readonly","readonly");
+    $(".form-control[name='city']").attr("readonly","readonly");
+    $(".form-control[name='address1']").attr("readonly","readonly");
+
     $(".form-control[name='latitude']").attr("readonly","readonly");
     $(".form-control[name='longitude']").attr("readonly","readonly");
+
+    $(".form-control[name='latitude']").attr('type','hidden');
+    $(".form-control[name='longitude']").attr('type','hidden');
+
+    $(".form-group > label:contains('Latitud')").parent().hide();
+    $(".form-group > label:contains('Longitud')").parent().hide();
+
     let $lat = $(".form-control[name='latitude']");
     let $lng = $(".form-control[name='longitude']");
     let latitude = $lat.val();
@@ -87,11 +98,12 @@
           Marcador.on('dragend', function(event){
             var Marcador = event.target;
             var position = Marcador.getLatLng();
-            Marcador.setLatLng(position,{id:uni,draggable:'true'}).update();
+            Marcador.setLatLng(position,{id:uni}).update();
           });
           Marcador.addTo(mymap).openPopup();
 
           updatePosition(e.latlng);
+          updateResult(result);
         } else {
           alert("Estás intentando seleccionar una área no permitida para la tienda actual.");
         }
@@ -107,6 +119,14 @@
     return ciudades_permitidas.includes(city);
   }
 
+  function updateResult(result) {
+    let address = result.address.LongLabel ? result.address.LongLabel : result.Address;
+    let city = result.address.City;
+    let address1Input = $(".form-control[name='address1']");
+    let cityInput = $(".form-control[name='city']");
+    address1Input.val(address);
+    cityInput.val(city);
+  }
 
   function updatePosition(latLng){
     let lat = $(".form-control[name='latitude']");

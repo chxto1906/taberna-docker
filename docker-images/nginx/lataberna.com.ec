@@ -49,11 +49,8 @@ server {
             access_log off;
           }
 
-          add_header Access-Control-Allow-Origin *;
+          add_header Access-Control-Allow-Origin * always;
           add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-          add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
-          add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
-          add_header Access-Control-Max-Age 1728000;
 
           ## Adding Caching
 

@@ -6978,7 +6978,7 @@ Gracias por su paciencia.',
   array (
     'Alias' => 'Alias',
     'Address' => 'Dirección',
-    'Address Complement' => 'Dirección Complementaria',
+    'Address Complement' => 'Referencia',
     'Zip/Postal Code' => 'Código postal/Zip',
     'City' => 'Ciudad',
     'Country' => 'País',

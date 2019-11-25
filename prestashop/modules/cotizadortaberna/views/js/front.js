@@ -56,16 +56,15 @@
 
         function login() {
             $.ajax({
-                //data: {email: email_destino, base: img},
-                url: 'http://localhost/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Products&by=search&query=Jack Daniels',
+                url: 'https://tabernatest.tk/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Products&id_product=3048',
                 type: "GET",
+                
                 success: function (data,r,xhr) {
-                    console.log("RESPONSE LIST TIENDAS");
+                    console.log("RESPONSE");
                     console.dir(data);
-                    
                 },
                 error: function (error) {
-                    console.log("ERROR");
+                    console.log("ERROR RESPONSE");
                     console.dir(error);
                 }
             });
@@ -76,23 +75,21 @@
 
             $.ajax({
                 //data: {email: email_destino, base: img},
-                url: 'http://tabernatest.tk/cuenca/zona-rosa/index.php?fc=module&module=webservice_app&controller=AddToCart&id_product=3840&qty=2&cart_id='+cart_id,
+                url: 'https://tabernatest.tk/cuenca/gran-colombia/index.php?fc=module&module=webservice_app&controller=Products',
                 type: "GET",
-                dataType: "json",
-                beforeSend: function(request) {
-                    request.setRequestHeader("Authorization", authorizationToken);
-                },
                 success: function (data,r,xhr) {
-                    console.log('RESPONSE ADD TO CART')
+                    console.log('RESPONSE')
                     console.dir(data);
                     //getCart(cart_id);
-                    console.dir(r);
-                    console.dir(xhr);
-                    console.dir(document.cookie);
+                    
                 },
                 error: function (error) {
                     console.log("ERROR");
                     console.dir(error);
+                },
+                done: function (data) {
+                    console.log("DATA");
+                    console.dir(data);
                 }
             });
         }

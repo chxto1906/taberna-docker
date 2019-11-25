@@ -14,6 +14,13 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
     public $by = null;
     public $type = null;
 
+    public function __construct($response = array()) {
+        parent::__construct($response);
+        $this->display_header = false;
+        $this->display_header_javascript = false;
+        $this->display_footer = false;
+    }
+
     public function initContent() {
     	parent::initContent();
         try {
