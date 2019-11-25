@@ -35,13 +35,13 @@
                         <img class="img-responsive" src="../../modules/cotizadortaberna/images/cotizador.png">
                     </div> *}
                     <br>
-                    {*
+                    
                     <button id="btn_iniciar_sesion">OK</button>
                     <button id="btn_add_to_cart">Error</button>
                     <input id="txt_cart_id" type="text" placeholder="cart_id" name="txt_cart_id">
                     <button id="btn_get_cart">Get Cart</button>
                     <button id="btn_cerrar_sesion">Cerrar Sesión</button>
-                    *}
+                    
                     
 
                     <h1 id="title-modulo1" class="title-modulo">COTIZACIÓN:</h1>
