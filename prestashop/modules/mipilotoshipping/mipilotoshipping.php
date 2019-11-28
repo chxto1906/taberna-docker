@@ -25,6 +25,7 @@
 */
 
 require_once _PS_MODULE_DIR_ . 'mipilotoshipping/curl/curl_mipiloto.php';
+require_once _PS_ROOT_DIR_ . '/config/taberna_config_facturacion.php';
 
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -217,59 +218,194 @@ class Mipilotoshipping extends CarrierModule
         }
     }
 
+    private function getTipoVehiculo($quantity) {
+        $tipo = 1;
+        if ($quantity > LIMITE_CANTIDAD_PRODUCTOS_TIPO_VEHICULO) {
+            $tipo = 2;
+        }
+        return $tipo;
+    }
+
+
+    private function findTarifa($data, $tipo_vehiculo) {
+        $item = null;
+        foreach($data as $struct) {
+            if ($tipo_vehiculo == $struct->tipoVehiculoId) {
+                $item = $struct;
+                break;
+            }
+        }
+        return $item;
+    }
+
+    private function getCityDeliveryByCoordenates($addr) {
+        $result = false;
+        $infoCiudad = $this->getCiudad($addr->latitude,$addr->longitude);
+        if ($infoCiudad["status"] == 1){
+            $result = json_decode($infoCiudad["result"]);
+            $ciudad = trim(strtolower($result->results[0]->components->city));
+            $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id)["city"];
+            if ($ciudad == $ciudad_shop){
+                $result = true;
+            }
+        }
+        return $result;
+    }
+
+    private function get_city_by_id(){
+        $id = Context::getContext()->shop->id;
+        switch ((int)$id) {
+            case 3: return "cuenca";
+            case 4: return "cuenca";
+            case 5: return "cuenca";
+            case 17: return "cuenca";
+            case 18: return "cuenca";
+            case 9: return "guayaquil";
+            case 10: return "guayaquil";
+            case 11: return "guayaquil";
+            case 12: return "quito";
+            case 6: return "quito";
+            case 7: return "quito";
+            case 19: return "quito";
+            case 20: return "quito";
+            case 21: return "quito";
+            case 23: return "quito";
+            case 1: return "manta";
+            case 24: return "manta";
+            case 14: return "loja";
+            case 15: return "machala";
+            case 16: return "ambato";
+            case 22: return "santo domingo";
+            case 25: return "general villamil";
+            default: return null; 
+        }
+    }
+
+
+    public function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+      if (($lat1 == $lat2) && ($lon1 == $lon2)) {
+        return 0;
+      }
+      else {
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        $unit = strtoupper($unit);
+
+        if ($unit == "K") {
+          return ($miles * 1.609344);
+        } else if ($unit == "N") {
+          return ($miles * 0.8684);
+        } else {
+          return $miles;
+        }
+      }
+    }
+
+
+    /******** AGREGADO POR HENRY *********/
+    public function getCiudad($lat,$lng) {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://api.opencagedata.com/geocode/v1/json?q=".$lat."+".$lng."&key=d787ef2345f841429efd7f5f6249d4e7",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => false,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          return array("status" => 0, "result" => "cURL Error #:" . $err);
+        } else {
+          return array("status" => 1, "result" => $response);
+        }
+    }
+
+
     public function getOrderShippingCost($params, $shipping_cost)
     {
         if (Context::getContext()->customer->logged == true)
         {
             $cart = Context::getContext()->cart;
+            $qty = Cart::getNbProducts($cart->id);
+            $tipo_vehiculo = $this->getTipoVehiculo($qty);
             if ($cart->id_address_delivery) {
                 $id_address_delivery = $cart->id_address_delivery;
-
                 $address = new Address($id_address_delivery);
-                $bodyCotizar = $this->generateBodyCotizar($address);
-                $curlmipiloto = new CurlMiPiloto();
-                $resultCotizar = $curlmipiloto->cotizar($bodyCotizar);
-                
-                if ($resultCotizar["status"] == 1) {
-                    if (!empty($resultCotizar["result"])) {
-                        $result = $resultCotizar["result"];
-                        $result = json_decode($result);
-                        /*if ($this->isNight())
-                            $shipping_cost = $result->tarifa[0]->valorNoche1;  
-                        else
-                            $shipping_cost = $result->tarifa[0]->valor;*/
-
-                        if (isset($result->tarifa[0]->valor))
-                            $shipping_cost = $result->tarifa[0]->valor;
-
-                        /*$valor = $result->tarifa[0]->valor;
-                        $valorNoche1 = $result->tarifa[0]->valorNoche1;
-                        $valorNoche2 = $result->tarifa[0]->valorNoche2;*/
-                        //$tiempo = $result->tiempo_llegada;
-                        //return $valor;
-                    }/* else {
-                        $shipping_cost = $shipping_cost;
-                        $this->context->cart->delete();
-                        $this->context->cookie->id_cart = 0;
-                    }*/
-                }/* else {
-                    $shipping_cost = $shipping_cost;
-                    $this->context->cart->delete();
-                    $this->context->cookie->id_cart = 0;
-                }*/
+                // Guardar el valor que se debería cobrar en el cart
+                $validate = $this->getCityDeliveryByCoordenates($address);
+                if ($validate){
+                    $curlmipiloto = new CurlMiPiloto();
+                    $bodyCotizar = $this->generateBodyCotizar($address);
+                    $resultCotizar = $curlmipiloto->cotizar($bodyCotizar);
+                    if ($resultCotizar["status"] == 1) {
+                        if (!empty($resultCotizar["result"])) {
+                            $result = $resultCotizar["result"];
+                            $result = json_decode($result);
+                            if (isset($result->tarifa)) {
+                                
+                                $tarifa = $this->findTarifa($result->tarifa, $tipo_vehiculo);
+                                if (isset($tarifa->valor)) {
+                                    $shipping_cost = $tarifa->valor;
+                                }else{
+                                    $tarifa = $this->findTarifa($result->tarifa, 1);
+                                    if (isset($tarifa->valor)) {
+                                        $shipping_cost = $tarifa->valor;
+                                    }
+                                }
+                                $isPromo = $this->isPromo($bodyCotizar,$cart);
+                                if ($isPromo) {
+                                    $this->saveBitacoraValor($shipping_cost,$cart);
+                                    $shipping_cost = 0;
+                                }else{
+                                    $this->saveBitacoraValor(0,$cart);
+                                }
+                            }
+                        }
+                    }
+                } 
             }
-
-
-            /* else {
-                $shipping_cost = "Error";
-                $this->context->cart->delete();
-                $this->context->cookie->id_cart = 0;
-            }*/
-            //return null;
-            //$shipping_cost = null;
         }
-
         return $shipping_cost;
+    }
+
+    private function saveBitacoraValor($valor,$cart) {
+        $cart->shipping_promo_tax_exc = $valor;
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        $IVA_VALUE = $config["IVA_VALUE"];
+        $cart->shipping_promo_tax_inc = (($valor*$IVA_VALUE)/100)+$valor;
+        $guardado = $cart->save();
+    }
+
+
+    private function isPromo($bodyCotizar,$cart) {
+        $result = false;
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        if ($config["PROMO_TRANSPORTE_GRATIS"] == true) {
+            $PROMO_TRANSPORTE_KM_MIN = $config["PROMO_TRANSPORTE_KM_MIN"];
+            $PROMO_TRANSPORTE_CONSUMO_MINIMO = $config["PROMO_TRANSPORTE_CONSUMO_MINIMO"];
+            $total = $cart->getOrderTotal(true, Cart::ONLY_PRODUCTS);
+            $latitud = $bodyCotizar["latitud"];
+            $longitud = $bodyCotizar["longitud"];
+            $latitudLlegada = $bodyCotizar["latitudLlegada"];
+            $longitudLlegada = $bodyCotizar["longitudLlegada"];
+            $distance = $this->distance($latitud,$longitud,$latitudLlegada,$longitudLlegada,"K");
+            if (($distance <= $PROMO_TRANSPORTE_KM_MIN) && ($total >= $PROMO_TRANSPORTE_CONSUMO_MINIMO))
+                $result = true;
+        }
+        return $result;
     }
 
     public function getOrderDeliveryTime($delivery_time)

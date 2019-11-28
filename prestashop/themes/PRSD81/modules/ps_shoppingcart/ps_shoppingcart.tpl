@@ -85,11 +85,11 @@
               </div>
               <div class="price shipping">
                 <span class="label">{$cart.subtotals.shipping.label}</span>
-                {if $cart.subtotals.shipping.value == "Gratis"}
+                {*{if $cart.subtotals.shipping.value == "Gratis"}
                   <span class="value" style="color: #ed2123;">Por calcular</span>
-                {else}
+                {else}*}
                   <span class="value">{$cart.subtotals.shipping.value}</span>
-                {/if}
+                {*{/if}*}
                 
               </div>
               {if isset($delivery_time)}
@@ -98,6 +98,10 @@
                   <span class="value">{$delivery_time} mins. (máximo)</span>
                 </div>
               {/if}
+              {* HEEENRY *}
+              <mark style="color: #ed2123;padding: 0px;" title="La entrega será gratuita siempre que sean 5km al rededor del local seleccionado">
+              <div style="width: 10px;height: 10px;border-radius: 50%;background: red;float: left;margin: 3px;"></div>
+              GRATIS transporte a compras mayores a $25.00</mark>
               <div class="price tax">
                 <span class="label">{$cart.subtotals.tax.label}</span>
                 <span class="value">{$cart.subtotals.tax.value}</span>

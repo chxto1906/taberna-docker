@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/es/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/es/blog/feed.xml</link>
+    <description></description>
+    <language>es</language>
+     <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países? (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-internacionalizacion-ecommerce</link>
+    <description>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países?
+12 de diciembre a las 16 horas (de España)
+</description>
+     <pubDate>Wed, 27 Nov 2019 15:40:22 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-internacionalizacion-ecommerce</guid>
+  </item>
+  <item>
+    <title>¿Cómo gestionar el enlazado interno para mejorar el SEO de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/enlazado-interno-seo</link>
+    <description>¿Cómo gestionas el enlazado interno de la web de tu tienda online?</description>
+     <pubDate>Tue, 26 Nov 2019 06:41:21 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/enlazado-interno-seo</guid>
+  </item>
+  <item>
+    <title>Lifetime Value (LTV) ¿qué es y por qué es clave en el sector eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/lifetime-value</link>
+    <description>¿Conoces las ventajas del lifetime value dentro del tiempo en que un usuario es cliente de nuestro negocio?</description>
+     <pubDate>Fri, 22 Nov 2019 10:07:38 +0100</pubDate>
+ <dc:creator>Guillermo Morera Balaguer</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/lifetime-value</guid>
+  </item>
+  <item>
+    <title>Del eCommerce al mCommerce: ¿cómo vender más en el móvil? (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-del-ecommerce-a-mcommerce</link>
+    <description>Del eCommerce al mCommerce: ¿cómo vender más en móvil?
+21 de noviembre a las 16 horas (de España)
+</description>
+     <pubDate>Thu, 21 Nov 2019 13:10:16 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-del-ecommerce-a-mcommerce</guid>
+  </item>
+  <item>
+    <title>¿Cómo hacer una campaña de Facebook e Instagram Ads para vender más en tu tienda? (Webinar)</title>
+    <link>https://www.prestashop.com/es/blog/webinar-como-hacer-campanas-facebook-ads</link>
+    <description>¿Cómo hacer una campaña de Facebook Ads e Instagram Ads para vender más en tu tienda?
+28 de noviembre a las 16 horas (de España)
+</description>
+     <pubDate>Thu, 21 Nov 2019 11:46:58 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-como-hacer-campanas-facebook-ads</guid>
+  </item>
+  <item>
+    <title>¿Qué es el “http error 500” y cómo solucionarlo en mi tienda PrestaShop?</title>
+    <link>https://www.prestashop.com/es/blog/error-500</link>
+    <description>¿Te han notificado alguna vez los usuarios que, navegando por tu web, la pantalla de pronto se les quedaba en blanco, apareciéndoles una anomalía llamada &quot;http error 500&quot;?</description>
+     <pubDate>Wed, 20 Nov 2019 07:43:19 +0100</pubDate>
+ <dc:creator>Eva Lacalle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/error-500</guid>
+  </item>
+  <item>
+    <title>¿Cómo gestionar las reclamaciones de clientes? 3 Consejos infalibles</title>
+    <link>https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</link>
+    <description>Saber cómo gestionar una reclamación por parte de tus clientes actuales no es, honestamente, un asunto fácil de llevar a cabo.</description>
+     <pubDate>Mon, 18 Nov 2019 08:03:09 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</guid>
+  </item>
+  <item>
+    <title>Keyword Research ¿qué es y cómo hacer un estudio completo para tu Web?</title>
+    <link>https://www.prestashop.com/es/blog/keyword-research</link>
+    <description>¿Sabes qué es un Keyword Research y cómo hacerlo para potenciar tu estrategia de contenidos?</description>
+     <pubDate>Thu, 14 Nov 2019 12:02:36 +0100</pubDate>
+ <dc:creator>Ricardo Muñoz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/keyword-research</guid>
+  </item>
+  <item>
+    <title>¿Qué es el scroll infinito y cómo afecta a la web de mi tienda online?</title>
+    <link>https://www.prestashop.com/es/blog/scroll-infinito</link>
+    <description>¿Aún no sabes qué es el scroll infinito y cómo afecta a tu sitio web?</description>
+     <pubDate>Mon, 11 Nov 2019 07:11:42 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/scroll-infinito</guid>
+  </item>
+  <item>
+    <title>El fraude publicitario: ¿cómo me perjudica y puedo reconocerlo en un eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/fraude-publicitario</link>
+    <description>¿Has realizado alguna vez alguna campaña publicitaria y te has visto envuelto en algún tipo de fraude?</description>
+     <pubDate>Mon, 11 Nov 2019 06:41:57 +0100</pubDate>
+ <dc:creator>Jackie Long ES</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/fraude-publicitario</guid>
+  </item>
+  </channel>
+</rss>

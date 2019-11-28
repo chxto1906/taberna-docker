@@ -37,17 +37,19 @@
             {/if}
           </span>
           
-          {if $subtotal.type === 'shipping'}
+          {*{if $subtotal.type === 'shipping'}
+            
             {if $subtotal.value == "Gratis"}
               
               <div><small class="value"><span style="color: #ed2123;">Por calcular</span></small></div>
-            {else}
+            {else} *}
               <span class="value">{$subtotal.value}</span>
               <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
-            {/if}
+            {*{/if}
           {else}
             <span class="value">{$subtotal.value}</span>
-          {/if}
+          {/if}*}
+
         </div>
       {/if}
     {/foreach}
@@ -59,6 +61,11 @@
           <span class="value">{$delivery_time} mins. (máximo)</span>
         </div>
       {/if}
+
+      {* HEEENRY *}
+      <mark style="color: #ed2123;padding: 0px;" title="La entrega será gratuita siempre que sean 5km al rededor del local seleccionado">
+      <div style="width: 10px;height: 10px;border-radius: 50%;background: red;float: left;margin: 3px;"></div>
+      GRATIS transporte a compras mayores a $25.00</mark>
   </div>
 
   {block name='cart_voucher'}

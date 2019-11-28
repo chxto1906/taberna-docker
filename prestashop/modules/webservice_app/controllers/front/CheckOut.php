@@ -225,9 +225,9 @@ class Webservice_AppCheckOutModuleFrontController extends ModuleFrontController 
                         if (!$cart_summary['is_virtual_cart']) {
                             $cart_total_details[] = array(
                                 'name' => 'Total envío',
-                                'value' => 'Por calcular'
+                                'value' => 'Pendiente'
                             );
-                            $this->content["shipping_price"] = "Por calcular";
+                            $this->content["shipping_price"] = "Pendiente";
                         }
                     }
 

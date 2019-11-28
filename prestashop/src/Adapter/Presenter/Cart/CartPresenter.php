@@ -372,7 +372,7 @@ class CartPresenter implements PresenterInterface
         if ($cart->id_carrier == "15"){
             $valor = "* Pagar transporte en la entrega";
         }else{
-            $valor = $shippingCost != 0
+            $valor = $shippingCost !== (float)0
                 ? $this->priceFormatter->format($shippingCost)
                 : $this->translator->trans('Free', array(), 'Shop.Theme.Checkout');
         }

@@ -92,6 +92,10 @@ class CartCore extends ObjectModel
 
     public $valid_session = false;
 
+    public $shipping_promo_tax_exc = 0;
+
+    public $shipping_promo_tax_inc = 0;
+
     /** @var bool Allow to seperate order in multiple package in order to recieve as soon as possible the available products */
     public $allow_seperated_package = false;
 
@@ -136,6 +140,8 @@ class CartCore extends ObjectModel
             'mobile_theme' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
             'delivery_option' => array('type' => self::TYPE_STRING),
             'valid_session' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
+            'shipping_promo_tax_exc' => array('type' => self::TYPE_FLOAT, 'required' => true),
+            'shipping_promo_tax_inc' => array('type' => self::TYPE_FLOAT, 'required' => true),
             'secure_key' => array('type' => self::TYPE_STRING, 'size' => 32),
             'allow_seperated_package' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),
             'date_add' => array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
@@ -3220,8 +3226,8 @@ class CartCore extends ObjectModel
         }
 
         $_total_shipping = array(
-            'with_tax' => 0,
-            'without_tax' => 0,
+            'with_tax' => "Pendiente",
+            'without_tax' => "Pendiente",
         );
         $delivery_option_list = $this->getDeliveryOptionList($default_country);
         foreach ($delivery_option as $id_address => $key) {

@@ -133,10 +133,10 @@
     <div data-html2canvas-ignore class="container-fluid estas-comprando">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 6px;">
           <span class="hidden-md-down">
-            COMPRANDO EN LA TIENDA: &nbsp;
+            COMPRANDO EN <b>{$city}</b>, EN LA TIENDA: &nbsp;
           </span>
           <!--<img width="14px" class="img-responsive" src="/img/pin.png"> -->
-          <span style="font-weight: bold;">
+          {*<span style="font-weight: bold;">
             {$shop.name}&nbsp;&nbsp;&nbsp;
             <span data-html2canvas-ignore style="position: relative;">
               {if $isOpen == true}
@@ -147,10 +147,10 @@
               <div class='pulse'></div>
             </span>
           </span>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}
           <span data-html2canvas-ignore class="dropdown dropleft">
             <button class="btn btn-cambiar-tienda btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #f2f2f2 !important;">
-              Cambiar de tienda
+              {$shop.name}
             </button>
             <div class="dropdown-menu" style="font-size: 0.8em !important;" id="change-tiendas" aria-labelledby="dropdownMenuButton">
               {foreach from=$shops key=k item=shop}
@@ -158,7 +158,7 @@
                   <a class="dropdown-item d-item item-change-tienda" title="http://{$shop.domain}/{$shop.virtual_uri}" href="#">{$shop.name}</a>
                 {else}
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" style="background: #5f5f5f;color: #fff;" >{$shop.city|upper}</a>
+                  <a class="dropdown-item" style="background: #484848;color: #fff;" >{$shop.city|upper}</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item d-item item-change-tienda" title="http://{$shop.domain}/{$shop.virtual_uri}" href="#">{$shop.name}</a>
                 {/if} 

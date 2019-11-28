@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if isset($cms_payment_logo) && $cms_payment_logo}
-	<div id="payment_logo_block_left" class="payment_logo_block col-lg-4 col-md-12">
+	<div id="payment_logo_block_left" class="payment_logo_block col-lg-12 col-md-12">
 	{*
 	<span>Payment</span>
 		

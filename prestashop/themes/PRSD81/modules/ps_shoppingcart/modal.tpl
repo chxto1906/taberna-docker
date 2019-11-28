@@ -58,11 +58,11 @@
               {/if}
               <p><strong>{l s='Total products:' d='Shop.Theme.Checkout'}</strong>&nbsp;{$cart.subtotals.products.value}</p>
               <p><strong>{l s='Total shipping:' d='Shop.Theme.Checkout'}</strong>&nbsp;
-                {if {$cart.subtotals.shipping.value} == "Gratis"}
+                {*{if {$cart.subtotals.shipping.value} == "Gratis"}
                   <span style="color: #ed2123;">Por calcular</span>
-                {else}
+                {else}*}
                   {$cart.subtotals.shipping.value}
-                {/if}
+                {*{/if}*}
                {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</p>
 
               {if isset($delivery_time)}
@@ -73,6 +73,13 @@
               <p><strong>{$cart.subtotals.tax.label}</strong>&nbsp;{$cart.subtotals.tax.value}</p>
               {/if}
               <p><strong>{l s='Total:' d='Shop.Theme.Checkout'}</strong>&nbsp;{$cart.totals.total.value} {$cart.labels.tax_short}</p>
+
+              {* HEEENRY *}
+              <mark style="color: #ed2123;padding: 0px;" title="La entrega será gratuita siempre que sean 5km al rededor del local seleccionado">
+              <div style="width: 10px;height: 10px;border-radius: 50%;background: red;float: left;margin: 3px;"></div>
+              GRATIS transporte a compras mayores a $25.00</mark>
+              <br>
+
               <div class="cart-content-btn">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{l s='Continue shopping' d='Shop.Theme.Actions'}</button>
                 <a href="{$cart_url}" class="btn btn-primary">{l s='Proceed to checkout' d='Shop.Theme.Actions'}</a>

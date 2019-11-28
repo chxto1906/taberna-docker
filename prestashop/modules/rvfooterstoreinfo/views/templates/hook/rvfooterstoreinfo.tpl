@@ -30,7 +30,7 @@
 	<div class="block_content toggle-footer">
 		<div class="storeinfo_img">
 			<a href="{$urls.base_url}" title="{$shop.name}">
-				<img src="{$rvfooterstoreinfo_img}" alt="{$shop.name}" />
+				<img src="{$rvfooterstoreinfo_img}" alt="{$shop.name}" style="width: 65%;" />
 			</a>
 		</div>
 		

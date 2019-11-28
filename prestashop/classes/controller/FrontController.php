@@ -683,8 +683,26 @@ class FrontControllerCore extends Controller
     {
     }
 
+
+    public function getStoreCurrent(){
+        $id_shop_current = (int)Context::getContext()->shop->id;
+        return  Db::getInstance()->executeS('
+         SELECT *
+         FROM `'._DB_PREFIX_.'store_shop` as stsh
+         LEFT JOIN `'._DB_PREFIX_.'store` as st
+         ON st.`id_store` = stsh.`id_store`
+         LEFT JOIN `'._DB_PREFIX_.'store_lang` as stl
+         ON st.`id_store` = stl.`id_store`
+         WHERE stl.id_lang = 1 AND st.`active` = 1 AND stsh.`id_shop` ='.$id_shop_current);
+    }
+
+
     protected function assignGeneralPurposeVariables()
     {
+
+        $store = $this->getStoreCurrent();
+        $city = isset($store[0]["city"])?$store[0]["city"]:"";
+
         $id_shop = (int)Context::getContext()->shop->id;
         $templateVars = array(
             'cart' => $this->cart_presenter->present($this->context->cart),
@@ -694,6 +712,7 @@ class FrontControllerCore extends Controller
             'page' => $this->getTemplateVarPage(),
             'shop' => $this->getTemplateVarShop(),
             'shop_current' => $id_shop,
+            'city' => trim(strtoupper($city)),
             'shops' => $this->getShopsStores(),
             'isOpen' => $this->isOpen(),
             'urls' => $this->getTemplateVarUrls(),

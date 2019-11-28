@@ -3,7 +3,7 @@
     <div class="modal-content modal-content-tienda">
       <div class="modal-header modal-header-tienda">
         <img class="img-pin-pop-up" src="{$module_dir}views/img/pin_map.png">
-        <img class="img-responsive img-fluid" src="{$img_logo}">
+        <img class="img-responsive img-fluid" style="width: 20em;" src="{$img_logo}">
         {*<h5 class="modal-title modal-title-tienda">{l s='La Taberna más cercana para ti:' d='redirectToShopByLocation'}</h5>*}
 
       </div>
