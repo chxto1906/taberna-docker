@@ -46,7 +46,6 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         $cod_almacen = $gestionarController->get_code_by_id($id_shop);
         $id_product = $gestionarController->search_product_by_reference($reference);
         $stock = 0;
-        $active = 0;
         if ($cod_almacen && $id_product) {
             $articulo = $this->searchArrayStock($reference,$cod_almacen,$productsStocks);
             $productPrice = $this->searchArray($reference,$productsPrices);
@@ -59,7 +58,8 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
                 $precio = $productPrice->Precio;
                 $added = $gestionarController->create_update_product($id_product,$reference,$marca,$precio);
                 if ($added) {
-                    $active = $stock <= 0 ? 0 : 1;
+                    if ($active==1)
+                        $active = $stock <= 0 ? 0 : 1;
                     $message = "<br> Guardado producto reference: $reference correctamente <br>";
                     echo $message;
                 } else {
@@ -68,6 +68,8 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
                     echo $message;
                 }
             }
+        }else{
+            $active = 0;
         }
         StockAvailable::setQuantity($id_product, 0, (int) $stock, $id_shop);
         $activateProducts = $this->activateProducts($id_product, $active, $id_shop);
