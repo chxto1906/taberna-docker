@@ -6,6 +6,14 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo convertir tus opiniones negativas en una fortaleza para tu reputación?</title>
+    <link>https://www.prestashop.com/es/blog/opiniones-negativas</link>
+    <description>Cada vez es más recurrente ver opiniones de los clientes en las tiendas online, que se han convertido en una fuente tranquilizadora y fiable de información para los consumidores, q</description>
+     <pubDate>Thu, 28 Nov 2019 13:23:32 +0100</pubDate>
+ <dc:creator>Ingrid Astier ES</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/opiniones-negativas</guid>
+  </item>
+  <item>
     <title>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países? (Webinar)</title>
     <link>https://www.prestashop.com/es/blog/webinar-internacionalizacion-ecommerce</link>
     <description>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países?
@@ -82,14 +90,6 @@
      <pubDate>Mon, 11 Nov 2019 07:11:42 +0100</pubDate>
  <dc:creator>Ismael Ruiz</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/scroll-infinito</guid>
-  </item>
-  <item>
-    <title>El fraude publicitario: ¿cómo me perjudica y puedo reconocerlo en un eCommerce?</title>
-    <link>https://www.prestashop.com/es/blog/fraude-publicitario</link>
-    <description>¿Has realizado alguna vez alguna campaña publicitaria y te has visto envuelto en algún tipo de fraude?</description>
-     <pubDate>Mon, 11 Nov 2019 06:41:57 +0100</pubDate>
- <dc:creator>Jackie Long ES</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/fraude-publicitario</guid>
   </item>
   </channel>
 </rss>

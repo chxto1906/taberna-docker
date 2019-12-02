@@ -123,7 +123,7 @@ class sincronizacionwebservicesUpdateStockProductosNewModuleFrontController exte
             FROM `ps_product_shop` ps
             INNER JOIN `ps_product` p on ps.id_product = p.id_product
             WHERE ps.`id_shop`='.$id_shop.' AND substr(p.reference,1,1) <> "5"
-            AND substr(p.reference,1,1) <> "4" AND ps.active = 1 
+            AND substr(p.reference,1,1) <> "4"  
             LIMIT '.$desde.','.$hasta);    
         
         return $products;

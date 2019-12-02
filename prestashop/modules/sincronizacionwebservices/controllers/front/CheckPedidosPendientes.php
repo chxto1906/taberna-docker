@@ -1,7 +1,7 @@
 <?php
 
 require_once _PS_MODULE_DIR_ . 'mipilotoshipping/mipilotoshipping.php';
-
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
 class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController extends ModuleFrontController {
 
 
@@ -10,9 +10,13 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
     	parent::initContent();
         $respuesta = array('status'=>false);
         $id_shop = Tools::getValue('id_shop');
+	$log = new LoggerTools();
+        $log->add("Llegó a CheckPedidosPendientes");
         if (isset($id_shop)){
+		$log->add("Llegó a CheckPedidosPendientes y tiene ID_SHOP: ".$id_shop);
             $pedidos = $this->getPedidos($id_shop);
             if (!empty($pedidos)){
+		//$log->add("Llegó a CheckPedidosPendientes y Obtuvo Pedidos: ".count($pedidos));
                 $data = $this->recorrerPedidos($pedidos);
                 $respuesta = array('status'=>true,'result' => $data);
             }
