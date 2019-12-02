@@ -22,30 +22,16 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         $total = count($getSheet);
         $i = 0;
         $id_shop = Tools::getValue('id_shop');
-        $parte = (int) Tools::getValue('parte');
-        $cantidadDividir = count($getSheet)/4;
-        $getSheet = array_chunk($getSheet, $cantidadDividir);
-        $getSheet = $getSheet[$parte-1];
-
-
         $productsPrices = $gestionarController->_get_ws_products_catalogo();
         $productsPrices = !empty($productsPrices->ARTICULOS) ? $productsPrices->ARTICULOS : [];
 
         $productsStocks = $gestionarController->_get_ws_products();
         $productsStocks = !empty($productsStocks->STOCK) ? $productsStocks->STOCK : [];
-        /*if ($parte == 1)
-            $updateActiveResult = $gestionarController->desactivate_all_products_for_shop($id_shop);*/
         foreach ($getSheet as $value) {
-            //if ($i > 2) {
-                
-                    $reference = $value["0"];
-                    $activar = trim(strtolower($value["2"]));
-                    $active = $activar == "x" ? 1 : 0;
-                    //if ($active == 1)
-                        $this->proccess($id_shop,$reference,$active,$productsPrices,$productsStocks);
-                    //echo "<br> REFERENCE: $reference, ACTIVAR: $active <br>";
-            //}
-            //$i++;
+            $reference = $value["0"];
+            $activar = trim(strtolower($value["2"]));
+            $active = $activar == "x" ? 1 : 0;
+            $this->proccess($id_shop,$reference,$active,$productsPrices,$productsStocks);
         }
 
         exit;
