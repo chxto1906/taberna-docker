@@ -25,9 +25,10 @@ class sincronizacionwebservicesProductosActivarModuleFrontController extends Mod
 
         foreach ($getSheet as $value) {
             $reference = $value["3"];
+            $stock = $value["7"];
             $active = 1;
             if ($active == 1)
-                $this->proccess($id_shop,$reference,$active);
+                $this->proccess($id_shop,$reference,$active,$stock);
         }
 
         exit;
@@ -36,13 +37,15 @@ class sincronizacionwebservicesProductosActivarModuleFrontController extends Mod
 
 
 
-    public function proccess($id_shop,$reference,$active) {
+    public function proccess($id_shop,$reference,$active,$stock) {
         $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
         $cod_almacen = $gestionarController->get_code_by_id($id_shop);
         $id_product = $gestionarController->search_product_by_reference($reference);
         if ($cod_almacen && $id_product) {
-            if ($active == 1)
+            if ($active == 1){
                 $activateProducts = $this->activateProducts($id_product, $active, $id_shop);
+                StockAvailable::setQuantity($id_product, 0, (int) $stock, $id_shop);
+            }
         }
     }
 
