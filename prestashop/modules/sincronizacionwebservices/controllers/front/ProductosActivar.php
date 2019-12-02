@@ -37,6 +37,7 @@ class sincronizacionwebservicesProductosActivarModuleFrontController extends Mod
 
 
     public function proccess($id_shop,$reference,$active) {
+        $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
         $cod_almacen = $gestionarController->get_code_by_id($id_shop);
         $id_product = $gestionarController->search_product_by_reference($reference);
         if ($cod_almacen && $id_product) {
