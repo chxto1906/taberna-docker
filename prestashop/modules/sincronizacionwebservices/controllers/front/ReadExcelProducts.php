@@ -67,9 +67,13 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
                     $message = "<br>No pudo ser actualizado el producto reference $reference con el precio: $precio <br>";
                     echo $message;
                 }
+            }else{
+                $message = "<br>Active en 0 en producto $reference NO encontrado en SAP<br>";
+                echo $message;
+                $active = 0;
             }
         }else{
-            $message = "<br>Active en 0 en producto $reference NO encontrado en SAP<br>";
+            $message = "<br>Active en 0 en producto $reference NO encontrado almacen o producto<br>";
             echo $message;
             $active = 0;
         }
