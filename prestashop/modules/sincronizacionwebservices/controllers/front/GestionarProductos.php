@@ -321,7 +321,7 @@
                 //$product->id_tax_rules_group = 1;
                 $product->id_manufacturer = $id_manufacturer;
                 //$product->active = false;
-                //$product->available_for_order = 1;
+                $product->available_for_order = 1;
                 $product->show_price = 1;
                 //$product->id_category_default = $id_category;
                 //$product->category = $id_category;
