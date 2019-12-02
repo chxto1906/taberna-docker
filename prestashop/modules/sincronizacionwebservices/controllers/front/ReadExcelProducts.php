@@ -69,8 +69,14 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
                 }
             }
         }else{
+            $message = "<br>Active en 0 en producto $reference NO encontrado en SAP<br>";
+            echo $message;
             $active = 0;
         }
+
+        $message = "<br>ACTIVE al final es: $active <br>";
+                    echo $message;
+
         StockAvailable::setQuantity($id_product, 0, (int) $stock, $id_shop);
         $activateProducts = $this->activateProducts($id_product, $active, $id_shop);
     }
