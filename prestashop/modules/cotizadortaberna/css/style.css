@@ -201,7 +201,7 @@ color:#ed1c24;}
 }
 .nuevo-co:hover{
     background-image: none !important;
-    background-color: #CC0000 !important;
+    background-color: #EABF6B !important;
     opacity: 0.7;
 }
 #contenedor_de_licores_seleccionados{
@@ -384,7 +384,7 @@ color:#ed1c24;}
     }
     .li_clases:hover {
         
-        border-bottom: 7px solid red;
+        border-bottom: 7px solid #EABF6B;
     }
     #contenedor_de_licores_seleccionados table td {
         width:150px;
@@ -439,13 +439,13 @@ color:#ed1c24;}
         height: 50px;
         margin: auto;
         width: 200px;
-        background-color: #ed2123;
-        color: #ffffff;
+        background-color: #EABF6B;
+        color: #000000;
         font-weight: bold;
     }
     .nuevo-co:hover {
         background-image:none !important;
-        background-color:#CC0000 !important;
+        background-color:#EABF6B !important;
         opacity:0.7
     }
     #contenedor_de_licores_seleccionados {
@@ -640,12 +640,13 @@ color:#ed1c24;}
 
     .title-modulo{
         text-align: center;
-        color: #ea3a3c;
+        color: #EABF6B;
     }
     .step-cotizador{
         font-size: 20px;
         text-align: center;
-        background-color: #ea3a3c !important;
+        background-color: #EABF6B !important;
+        color: #000000 !important;
     }
 
     .badge {
@@ -677,5 +678,6 @@ color:#ed1c24;}
     }
 
     .btn-cotizacion {
-        background-color: #ed2123 !important;
+        background-color: #EABF6B !important;
+        color: #000000;
     }

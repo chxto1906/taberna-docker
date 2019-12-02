@@ -2103,13 +2103,13 @@ fieldset[disabled] a.btn {
     border-color: #FF9A52; }
 
 .btn-danger {
-  color: #fff;
+  color: #000000;
   background-color: #ff4c4c;
-  border-color: #ff4c4c; }
+  /*border-color: #ff4c4c;*/ }
   .btn-danger:hover {
-    color: #fff;
+    color: #000000;
     background-color: #ff4c4c;
-    border-color: #ff4c4c; }
+    /*border-color: #ff4c4c;*/ }
   .btn-danger:focus, .btn-danger.focus {
     color: #fff;
     background-color: #ff4c4c;

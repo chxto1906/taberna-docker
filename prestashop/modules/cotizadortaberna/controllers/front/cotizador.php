@@ -10,12 +10,11 @@ class cotizadortabernacotizadorModuleFrontController extends ModuleFrontControll
  
         //global $smarty; 
         parent::initContent();
-
         
         if ($this->context->customer->isLogged())
 			$email = $this->context->customer->email;
 		else
-			$email = "none";
+			$email = null;
 		$this->context->smarty->assign(array(
 					'email' => $email
 				));

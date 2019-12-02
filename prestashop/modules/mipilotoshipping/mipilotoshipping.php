@@ -489,7 +489,7 @@ class Mipilotoshipping extends CarrierModule
             $id_address_delivery = $order->id_address_delivery;
             $address = new Address($id_address_delivery);
 
-            $resultGetCityStore = $this->getStoreCurrent();
+            $resultGetCityStore = $this->getStoreCurrent($order);
             $cityStoreCurrent = $this->array_cities[strtolower(trim($resultGetCityStore[0]["city"]))];
             $cityStoreCurrent = empty($resultGetCityStore) 
                     ? 1 : $this->array_cities[strtolower(trim($resultGetCityStore[0]["city"]))];
@@ -574,8 +574,11 @@ class Mipilotoshipping extends CarrierModule
     }
 
 
-    public function getStoreCurrent(){
-        $id_shop_current = (int)Context::getContext()->shop->id;
+    public function getStoreCurrent($order=null){
+        if (!$order)
+            $id_shop_current = (int)Context::getContext()->shop->id;
+        else
+            $id_shop_current = (int)$order->id_shop;
         return  Db::getInstance()->executeS('
          SELECT *
          FROM `'._DB_PREFIX_.'store_shop` as stsh

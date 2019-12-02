@@ -36,11 +36,11 @@
                     </div> *}
                     <br>
                     
-                    <button id="btn_iniciar_sesion">OK</button>
+                    {*<button id="btn_iniciar_sesion">OK</button>
                     <button id="btn_add_to_cart">Error</button>
                     <input id="txt_cart_id" type="text" placeholder="cart_id" name="txt_cart_id">
                     <button id="btn_get_cart">Get Cart</button>
-                    <button id="btn_cerrar_sesion">Cerrar Sesión</button>
+                    <button id="btn_cerrar_sesion">Cerrar Sesión</button>*}
                     
                     
 
@@ -373,7 +373,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <h4>Enviar email a:</h4>
-                                            <input type='email' required  placeholder='Email válido' id='email_destino_cotiza' value="{$email}" style='height: 30px; width: 200px;'>  
+                                            <input type='email' required  placeholder='Ingresa email' id='email_destino_cotiza' value="{$email}" style='height: 30px; width: 200px;'>  
                                         </div>
                                     </div>
                                     <div id='verificacion_envio_email' style='padding: 7px;height: 30px;'></div>
