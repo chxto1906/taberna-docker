@@ -22,16 +22,26 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         $total = count($getSheet);
         $i = 0;
         $id_shop = Tools::getValue('id_shop');
+        $desactive = Tools::getValue('desactive');
         $productsPrices = $gestionarController->_get_ws_products_catalogo();
         $productsPrices = !empty($productsPrices->ARTICULOS) ? $productsPrices->ARTICULOS : [];
 
         $productsStocks = $gestionarController->_get_ws_products();
         $productsStocks = !empty($productsStocks->STOCK) ? $productsStocks->STOCK : [];
-        foreach ($getSheet as $value) {
-            $reference = $value["0"];
-            $activar = trim(strtolower($value["2"]));
-            $active = $activar == "x" ? 1 : 0;
-            $this->proccess($id_shop,$reference,$active,$productsPrices,$productsStocks);
+
+        if ($productsPrices && $productsStocks) {
+
+            if ($desactive == "1")
+                $gestionarController->desactivate_all_products_for_shop($id_shop);
+
+            foreach ($getSheet as $value) {
+                $reference = $value["0"];
+                $activar = trim(strtolower($value["2"]));
+                $active = $activar == "x" ? 1 : 0;
+                $this->proccess($id_shop,$reference,$active,$productsPrices,$productsStocks);
+            }
+        } else {
+            echo "<br>SAP vacío<br>";
         }
 
         exit;
