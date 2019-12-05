@@ -502,7 +502,10 @@ class Mipilotoshipping extends CarrierModule
 
             $curlmipiloto = new CurlMiPiloto();
 
-            $shop = Context::getContext()->shop;
+            $id_shop_order = (int) $order->id_shop;
+            $shop = new Shop($id_shop_order);
+            if (!$shop)
+                $shop = Context::getContext()->shop;
             $customer = Context::getContext()->customer;
 
 
