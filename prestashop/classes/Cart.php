@@ -315,6 +315,7 @@ class CartCore extends ObjectModel
      */
     public function updateAddressId($id_address, $id_address_new)
     {
+
         $to_update = false;
         if (!isset($this->id_address_invoice) || $this->id_address_invoice == $id_address) {
             $to_update = true;
@@ -330,14 +331,15 @@ class CartCore extends ObjectModel
 
         $sql = 'UPDATE `' . _DB_PREFIX_ . 'cart_product`
         SET `id_address_delivery` = ' . (int) $id_address_new . '
-        WHERE  `id_cart` = ' . (int) $this->id . '
-            AND `id_address_delivery` = ' . (int) $id_address;
+        WHERE  `id_cart` = ' . (int) $this->id /*. '
+            AND `id_address_delivery` = ' . (int) $id_address  henry*/;
+
         Db::getInstance()->execute($sql);
 
         $sql = 'UPDATE `' . _DB_PREFIX_ . 'customization`
             SET `id_address_delivery` = ' . (int) $id_address_new . '
-            WHERE  `id_cart` = ' . (int) $this->id . '
-                AND `id_address_delivery` = ' . (int) $id_address;
+            WHERE  `id_cart` = ' . (int) $this->id /*. '
+                AND `id_address_delivery` = ' . (int) $id_address  henry*/;
         Db::getInstance()->execute($sql);
     }
 

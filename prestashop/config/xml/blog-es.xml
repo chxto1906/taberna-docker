@@ -6,6 +6,22 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Cómo evitar que los usuarios abandonen el carrito de la compra?</title>
+    <link>https://www.prestashop.com/es/blog/evitar-abandonos-carrito</link>
+    <description>Si tienes una tienda online habrás visto en más de una ocasión cómo algunos de tus clientes se interesan por uno de tus productos, pero durante el proceso de compra se arrepienten de continuar con </description>
+     <pubDate>Sun, 01 Dec 2019 19:55:56 +0100</pubDate>
+ <dc:creator>Daniel Urda</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/evitar-abandonos-carrito</guid>
+  </item>
+  <item>
+    <title>¿Qué es el Product Bundling en eCommerce y qué ventajas tiene?</title>
+    <link>https://www.prestashop.com/es/blog/product-bundling</link>
+    <description>¿Has comprado alguna vez en una tienda física u online y te has encontrado ofertas paquetizadas a un precio bastante competitivo?</description>
+     <pubDate>Fri, 29 Nov 2019 19:23:28 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/product-bundling</guid>
+  </item>
+  <item>
     <title>¿Cómo convertir tus opiniones negativas en una fortaleza para tu reputación?</title>
     <link>https://www.prestashop.com/es/blog/opiniones-negativas</link>
     <description>Cada vez es más recurrente ver opiniones de los clientes en las tiendas online, que se han convertido en una fuente tranquilizadora y fiable de información para los consumidores, q</description>
@@ -74,22 +90,6 @@
      <pubDate>Mon, 18 Nov 2019 08:03:09 +0100</pubDate>
  <dc:creator>Jose Facchin</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</guid>
-  </item>
-  <item>
-    <title>Keyword Research ¿qué es y cómo hacer un estudio completo para tu Web?</title>
-    <link>https://www.prestashop.com/es/blog/keyword-research</link>
-    <description>¿Sabes qué es un Keyword Research y cómo hacerlo para potenciar tu estrategia de contenidos?</description>
-     <pubDate>Thu, 14 Nov 2019 12:02:36 +0100</pubDate>
- <dc:creator>Ricardo Muñoz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/keyword-research</guid>
-  </item>
-  <item>
-    <title>¿Qué es el scroll infinito y cómo afecta a la web de mi tienda online?</title>
-    <link>https://www.prestashop.com/es/blog/scroll-infinito</link>
-    <description>¿Aún no sabes qué es el scroll infinito y cómo afecta a tu sitio web?</description>
-     <pubDate>Mon, 11 Nov 2019 07:11:42 +0100</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/scroll-infinito</guid>
   </item>
   </channel>
 </rss>

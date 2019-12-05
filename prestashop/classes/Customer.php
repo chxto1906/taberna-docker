@@ -608,31 +608,8 @@ class CustomerCore extends ObjectModel
         $sql = $this->getSimpleAddressSql(null, $idLang);
         $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
         $addresses = array();
-        Context::getContext()->cart->id_address_delivery = null;
-        Context::getContext()->cart->id_address_invoice = null;
-//        var_dump(Context::getContext()->cart);
-//        exit;
         foreach ($result as $addr) {
-
-            //var_dump($addr["id"]);
-            /******** MODIFICADO POR HENRY *********/
-            /*$latitude = $addr["latitude"];
-            $longitude = $addr["longitude"];
-            $infoCiudad = $this->getCiudad($addr["latitude"],$addr["longitude"]);
-            if ($infoCiudad["status"] == 1){
-                $result = json_decode($infoCiudad["result"]);
-                $ciudad = trim(strtolower($result->results[0]->components->city));
-                $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id)["city"];
-                //echo "ciudad: ".$ciudad." - ciudad_shop: ".$ciudad_shop;
-                if ($ciudad == $ciudad_shop){*/
-                    $addresses[$addr['id']] = $addr;
-                    Context::getContext()->cart->id_address_delivery = $addr['id'];
-                    Context::getContext()->cart->id_address_invoice = $addr['id']; 
-                /*}
-
-            }*/
-
-            
+            $addresses[$addr['id']] = $addr;
         }
 
         return $addresses;

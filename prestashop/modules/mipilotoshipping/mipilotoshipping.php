@@ -239,17 +239,17 @@ class Mipilotoshipping extends CarrierModule
     }
 
     private function getCityDeliveryByCoordenates($addr) {
-        $result = false;
+        $resulta = false;
         $infoCiudad = $this->getCiudad($addr->latitude,$addr->longitude);
         if ($infoCiudad["status"] == 1){
             $result = json_decode($infoCiudad["result"]);
             $ciudad = trim(strtolower($result->results[0]->components->city));
-            $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id)["city"];
+            $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id);
             if ($ciudad == $ciudad_shop){
-                $result = true;
+                $resulta = true;
             }
         }
-        return $result;
+        return $resulta;
     }
 
     private function get_city_by_id(){

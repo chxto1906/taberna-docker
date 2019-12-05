@@ -227,7 +227,7 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
             $this->content = ["message" => "Es obligatorio el identificador del producto a eliminar."];
             return false;
         } else {
-            $id_address_delivery = $this->context->cart->id_address_delivery;
+            $id_address_delivery = 0;
             $id_customization = null;
             $id_product_attribute = null;
             $product = new Product((int) $id_product);
