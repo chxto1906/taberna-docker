@@ -526,10 +526,7 @@ class Mipilotoshipping extends CarrierModule
                 "monto" => $total
             );
 
-            echo "Si se está llamando al API DE MiPiloto ";
-
-            echo "Se está enviando: <br>";
-            var_dump($body);
+            
 
             $resultHacerPedido = $curlmipiloto->hacerPedido($body,$efectivo);
 
