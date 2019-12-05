@@ -26,5 +26,5 @@
 * to avoid any conflicts with others containers.
 */
 jQuery(document).ready(function ($) {
-	console.log("fronttt");
+	//console.log("fronttt");
 });

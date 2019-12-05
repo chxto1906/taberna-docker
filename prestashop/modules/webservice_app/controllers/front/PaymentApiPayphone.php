@@ -225,7 +225,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
             $data->deferredType = $deferredType;
 
 
-            $log->add("data: ".$data->data);
+            //$log->add("data: ".$data->data);
             $log->add("email: ".$data->email);
             $log->add("phoneNumber: ".$data->phoneNumber);
             $log->add("documentId: ".$data->documentId);
