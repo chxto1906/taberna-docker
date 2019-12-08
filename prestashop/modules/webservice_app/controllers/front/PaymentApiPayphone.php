@@ -432,11 +432,13 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         //$resFacturacion = $this->processFacturacionDB($order,$cart,$write);
         $log->add("Asentar DB facturacion processFacturacionDB : ".$resFacturacion);
         if (!$resFacturacion) {
+            $log->add("resFacturacion BAD");
             $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
             $this->reversePayphone($data->transactionId);
             $this->content = ["message" => 'Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.'];
             $this->process_session_data();
         } else {
+            $log->add("resFacturacion OK");
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
             $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'), true);
             //$this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
@@ -444,6 +446,8 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
             if ($dataEnc && !$datos_card_token)
                 if ($add_card == "on")
                     $this->saveCard($data->cardToken);
+
+            $log->add("DEVUELVE 201 y message");
 
             $this->status_code = 201;
             $this->content = ["message" => "Se ha procesado el pago correctamente."];
