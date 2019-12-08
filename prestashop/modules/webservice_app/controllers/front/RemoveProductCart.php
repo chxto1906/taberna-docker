@@ -171,9 +171,9 @@ class Webservice_AppRemoveProductCartModuleFrontController extends ModuleFrontCo
                     if (!$cart_summary['is_virtual_cart']) {
                         $cart_total_details[] = array(
                             'name' => 'Total envío',
-                            'value' => 'Pendiente'
+                            'value' => $cart_summary['total_shipping']
                         );
-                        $this->content["shipping_price"] = "Pendiente";
+                        $this->content["shipping_price"] = $cart_summary['total_shipping'];
                     }
                 }
 
