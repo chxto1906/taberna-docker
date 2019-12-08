@@ -45,7 +45,12 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
 
             $this->process_payment();
         }
-        
+        $log = new LoggerTools();
+        $str = implode(",", $this->content);
+        $log->add("-----RESPONSE DATA DE PAYMENT------");
+        $log->add($str);
+        $log->add("STATUS CODE: ".$this->status_code);
+        $log->add("-----------------------------------");
         echo $response->json_response($this->content,$this->status_code);
     }
 
@@ -63,6 +68,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
 
             $log->add("WebService TOOLS dataEnc: ".$dataEnc);
             $log->add("WebService id_card: ".$id_card);
+            $log->add("WebService add_card: ".$add_card);
 
             $deferredType = Tools::getValue('deferred') ? Tools::getValue('deferred') : "00000000";
             $log->add("WebService TOOLS deferredType: ".$deferredType);
@@ -458,6 +464,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
 
 
     public function saveCard($cardToken) {
+        $log = new LoggerTools();
         $dueDate = null;
         $last_digits = Tools::getValue("lastDigits");
         $type_card = Tools::getValue("type_card");
@@ -466,6 +473,11 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         $expirationYear = Tools::getValue("expirationYear");
         if ($expirationMonth && $expirationYear)
             $dueDate = $expirationMonth."/".$expirationYear;
+
+        $log->add("last_digits: ".$last_digits);
+        $log->add("type_card: ".$type_card);
+        $log->add("holder_name: ".$holder_name);
+        $log->add("dueDate: ".$dueDate);
 
         $write = array();
         $write["cardToken"] = $cardToken;
