@@ -175,6 +175,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                 $cart_products[$index]['quantity'] = $product['cart_quantity'];
                 $cart_products[$index]['reference'] = $product['reference'];
                 $cart_products[$index]['manufacturer_name'] = $product["manufacturer_name"];
+                $cart_products[$index]['id_category'] = $product["id_category_default"];
                 $index++;
             }
             $this->content['total_cost'] = $this->formatPrice((float)Tools::ps_round(

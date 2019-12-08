@@ -127,7 +127,8 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 "quantity"      =>  $product->quantity,
                 "reference"     =>  $product->reference,
                 "manufacturer_name" => $product->manufacturer_name,
-                "link_rewrite"  =>  $product->link_rewrite
+                "link_rewrite"  =>  $product->link_rewrite,
+                "id_category_default"   => $product->id_category_default
             ]);
             $result = $this->proccessProducts($products,true);
             return $result;
@@ -198,7 +199,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 "reference"                 => null,
                 "image_small"               => null,
                 "image_home"                => null,
-                "image_large"               => null,
+                "image_large"               => null
             ];
             foreach ($products as $product) {
                 $dataResult["id_product"] = $product["id_product"]; 
@@ -220,6 +221,7 @@ class Webservice_AppProductsModuleFrontController extends ModuleFrontController 
                 $dataResult["image_small"] = $image_url_small;
                 $dataResult["image_home"] = $image_url_home;
                 $dataResult["image_large"] = $image_url_large;
+                $dataResult["id_category"] = $product["id_category_default"];
                 $productsResult[] = $dataResult;
             }
         }

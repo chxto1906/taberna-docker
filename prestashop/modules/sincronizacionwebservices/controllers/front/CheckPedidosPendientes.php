@@ -17,7 +17,7 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
             $pedidos = $this->getPedidos($id_shop);
             if (!empty($pedidos)){
 		//$log->add("Llegó a CheckPedidosPendientes y Obtuvo Pedidos: ".count($pedidos));
-                $data = $this->recorrerPedidos($pedidos);
+                $data = $this->recorrerPedidos($pedidos,$id_shop);
                 $respuesta = array('status'=>true,'result' => $data);
             }
         }
@@ -26,8 +26,9 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
     	$this->setTemplate('productos.tpl');
     }
 
-    private function recorrerPedidos($pedidos) {
+    private function recorrerPedidos($pedidos,$id_shop) {
         $mipiloto = new Mipilotoshipping();
+        $log = new LoggerTools();
         $dataResult = ["products"=>null,"num_guia"=>null,"motorizado"=>["nombre"=>null,"telefono"=>null],"id_order"=>null];
         $pedidosResult = array();
         foreach ($pedidos as $pedido) {
@@ -65,6 +66,9 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
             $dataResult["valorTotal"] = $pedido["importe_total"];
             $pedidosResult[] = $dataResult;
         }
+
+        $log->add("****Enviando NOTIFICACIÓN a tienda: ".$id_shop."****");
+
         return $pedidosResult;
     }
 
