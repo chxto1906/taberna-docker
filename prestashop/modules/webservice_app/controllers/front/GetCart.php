@@ -210,11 +210,15 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
                 $this->content["shipping_price"] = $this->formatPrice($cart_summary['total_shipping']);
             } else {
                 if (!$cart_summary['is_virtual_cart']) {
+                    if ($cart_summary['total_shipping'] == 0)
+                        $cost = "Gratis";
+                    else
+                        $cost = $this->formatPrice($cart_summary['total_shipping']);
                     $cart_total_details[] = array(
                         'name' => 'Total envío',
-                        'value' => $cart_summary['total_shipping']
+                        'value' => $cost
                     );
-                    $this->content["shipping_price"] = $cart_summary['total_shipping'];
+                    $this->content["shipping_price"] = $cost;
                 }
             }
 
