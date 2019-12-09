@@ -54,7 +54,6 @@
     crossorigin=""></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- descomentar henry
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145820826-1"></script>
 {literal}
 <script>
@@ -65,5 +64,4 @@
   gtag('config', 'UA-145820826-1');
 </script>
 {/literal}
--->
 
