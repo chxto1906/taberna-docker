@@ -142,9 +142,10 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                     /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
 
                     if ($this->status_code == 200) {
-                        $total_shipping = $this->context->cart->getTotalShippingCost();
+                        $total_shipping = $this->context->cart->getTotalShippingCost(null,true);
                         $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
-                        $this->content['total'] = $this->context->cart->getOrderTotal(true);
+                        $this->content['total'] = $this->formatPrice((float)Tools::ps_round(
+                        (float)$this->context->cart->getOrderTotal(true, Cart::BOTH),2));
                         $this->content['total_shipping'] = $total_shipping;
                         /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
                         $this->content['cart_id'] = (int)$this->context->cart->id;
@@ -156,7 +157,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
         //$this->content['install_module'] = '';
         //return $this->fetchJSONContent();
 
-
+    
 
         /**********************************/
 
@@ -170,6 +171,16 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
     	$this->setTemplate('productos.tpl');
     }
 
+
+    public function formatPrice($price, $curr = '')
+    {
+        return Tools::displayPrice(
+            $price,
+            $this->context->currency,
+            false,
+            $this->context
+        );
+    }
 
     /**
      * Add product into cart with provided quantity
