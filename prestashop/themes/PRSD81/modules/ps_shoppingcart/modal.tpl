@@ -74,11 +74,6 @@
               {/if}
               <p><strong>{l s='Total:' d='Shop.Theme.Checkout'}</strong>&nbsp;{$cart.totals.total.value} {$cart.labels.tax_short}</p>
 
-              {* HEEENRY *}
-              <mark style="color: #ed2123;padding: 0px;" title="La entrega será gratuita siempre que sean 5km al rededor del local seleccionado">
-              <div style="width: 10px;height: 10px;border-radius: 50%;background: red;float: left;margin: 3px;"></div>
-              GRATIS transporte a compras mayores a $25.00</mark>
-              <br>
 
               <div class="cart-content-btn">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{l s='Continue shopping' d='Shop.Theme.Actions'}</button>

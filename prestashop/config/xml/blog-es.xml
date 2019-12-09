@@ -6,6 +6,14 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Puntos de dolor o Pain Points ¿por qué resolver problemas de tus clientes aumenta tus ventas?</title>
+    <link>https://www.prestashop.com/es/blog/pain-points-puntos-de-dolor</link>
+    <description>¿Sabes cuáles son los puntos de dolor de tu cliente potencial?</description>
+     <pubDate>Mon, 02 Dec 2019 07:58:43 +0100</pubDate>
+ <dc:creator>Jose Facchin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/pain-points-puntos-de-dolor</guid>
+  </item>
+  <item>
     <title>¿Cómo evitar que los usuarios abandonen el carrito de la compra?</title>
     <link>https://www.prestashop.com/es/blog/evitar-abandonos-carrito</link>
     <description>Si tienes una tienda online habrás visto en más de una ocasión cómo algunos de tus clientes se interesan por uno de tus productos, pero durante el proceso de compra se arrepienten de continuar con </description>
@@ -82,14 +90,6 @@
      <pubDate>Wed, 20 Nov 2019 07:43:19 +0100</pubDate>
  <dc:creator>Eva Lacalle</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/error-500</guid>
-  </item>
-  <item>
-    <title>¿Cómo gestionar las reclamaciones de clientes? 3 Consejos infalibles</title>
-    <link>https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</link>
-    <description>Saber cómo gestionar una reclamación por parte de tus clientes actuales no es, honestamente, un asunto fácil de llevar a cabo.</description>
-     <pubDate>Mon, 18 Nov 2019 08:03:09 +0100</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/tres-reglas-de-oro-para-gestionar-las-reclamaciones-de-clientes</guid>
   </item>
   </channel>
 </rss>
