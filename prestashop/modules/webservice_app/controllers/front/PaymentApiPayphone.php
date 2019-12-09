@@ -51,6 +51,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         $log->add($str);
         $log->add("STATUS CODE: ".$this->status_code);
         $log->add("-----------------------------------");
+        file_put_contents('resultPayment.txt', print_r($this->content, true));
         echo $response->json_response($this->content,$this->status_code);
     }
 

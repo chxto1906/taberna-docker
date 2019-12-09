@@ -32,7 +32,7 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
         } else {
             $this->process_payment();
         }
-        
+        file_put_contents('resultPayment.txt', print_r($this->content, true));
         echo $response->json_response($this->content,$this->status_code);
     }
 
