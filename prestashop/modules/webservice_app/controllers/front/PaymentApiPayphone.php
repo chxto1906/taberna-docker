@@ -64,7 +64,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         $bien = false;
         try {
             $add_card = Tools::getIsset('add_card') ? Tools::getValue("add_card") : null;
-            if ($add_card == "on") {
+            if (Tools::getIsset("type_card")) {
                 $type_card = Tools::getValue("type_card");
                 if (!in_array($type_card, $this->tarjetas)) {
                         $this->status_code = 400;
