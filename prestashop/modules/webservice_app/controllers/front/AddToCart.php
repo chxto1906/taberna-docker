@@ -142,7 +142,10 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                     /*start:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
 
                     if ($this->status_code == 200) {
+                        $total_shipping = $this->context->cart->getTotalShippingCost();
                         $this->content['total_cart_items'] = Cart::getNbProducts($this->context->cart->id);
+                        $this->content['total'] = $this->context->cart->getOrderTotal(true);
+                        $this->content['total_shipping'] = $total_shipping;
                         /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
                         $this->content['cart_id'] = (int)$this->context->cart->id;
                     }

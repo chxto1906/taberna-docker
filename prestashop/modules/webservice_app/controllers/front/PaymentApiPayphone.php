@@ -20,6 +20,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
     protected $urlToken = null;
     protected $passCode = null;
     private $storeId = null;
+    private $tarjetas = ["MASTERCARD","VISA"];
 
     public function initContent() {
     	parent::initContent();
@@ -60,9 +61,18 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         $log = new LoggerTools();
         $cart = $this->context->cart;
         $datos_card_token = null;
-
+        $bien = false;
         try {
             $add_card = Tools::getIsset('add_card') ? Tools::getValue("add_card") : null;
+            if ($add_card == "on") {
+                $type_card = Tools::getValue("type_card");
+                if (!in_array($type_card, $this->tarjetas)) {
+                        $this->status_code = 400;
+                        $this->content = ["message" => "Por ahora solo aceptamos tarjetas MASTERCARD y VISA"];
+                        return;
+                }
+            }
+
             $id_card = Tools::getValue('id_card',null);
             $cardHolder = Tools::getValue('cardHolder',null);
             $dataEnc = strval(Tools::getValue('data'));
