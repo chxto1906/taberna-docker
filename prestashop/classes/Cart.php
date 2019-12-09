@@ -3228,8 +3228,8 @@ class CartCore extends ObjectModel
         }
 
         $_total_shipping = array(
-            'with_tax' => "Pendiente",
-            'without_tax' => "Pendiente",
+            'with_tax' => 0,
+            'without_tax' => 0,
         );
         $delivery_option_list = $this->getDeliveryOptionList($default_country);
         foreach ($delivery_option as $id_address => $key) {
@@ -3237,11 +3237,11 @@ class CartCore extends ObjectModel
                 continue;
             }
 
-            if (!$_total_shipping['with_tax'] == "Pendiente") {
+            //if (!$_total_shipping['with_tax'] == "Pendiente") {
 
                 $_total_shipping['with_tax'] += $delivery_option_list[$id_address][$key]['total_price_with_tax'];
                 $_total_shipping['without_tax'] += $delivery_option_list[$id_address][$key]['total_price_without_tax'];
-            }
+            //}
         }
         return ($use_tax) ? $_total_shipping['with_tax'] : $_total_shipping['without_tax'];
     }
