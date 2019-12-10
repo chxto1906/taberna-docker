@@ -27,17 +27,29 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
     }
 
     private function recorrerPedidos($pedidos,$id_shop) {
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        $id_carrier_pickup = $config["CARRIER_PICKUP_ID"];
         $mipiloto = new Mipilotoshipping();
         $log = new LoggerTools();
-        $dataResult = ["products"=>null,"num_guia"=>null,"motorizado"=>["nombre"=>null,"telefono"=>null],"id_order"=>null];
+        $infoPedido = null;
+        $dataResult = ["products"=>null,"num_guia"=>null,"motorizado"=>["nombre"=>null,"telefono"=>null],"id_order"=>null,"cliente"=>["nombre"=>null]];
         $pedidosResult = array();
         foreach ($pedidos as $pedido) {
+            
             $order = new Order($pedido["id_order"]);
             $products = $order->getProducts();
             $id_carrier = $order->id_carrier;
             $carrier = new Carrier($id_carrier);
             $num_guia = $pedido["num_guia"];
-            $infoPedido = $mipiloto->infoPedido($num_guia);
+
+            if ($pedido["id_carrier"] == $id_carrier_pickup){
+                $customer = new Customer($pedido["id_customer"]);
+                $dataResult["cliente"]["nombre"] = $customer->firstname." ".$customer->lastname;
+            } else {
+                $infoPedido = $mipiloto->infoPedido($num_guia);
+            }
+            
             $total = 0;
             $items = array();
             foreach ($products as $product) {
@@ -48,7 +60,7 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
             }
             $dataResult["motorizado"]["nombre"] = "NO";
             $dataResult["motorizado"]["telefono"] = "NO";
-            $dataResult["num_guia"] = $pedido["id_order"];
+            $dataResult["num_guia"] = $num_guia;
 
             $dataResult["products"] = $items;
             $dataResult["total"] = $total;

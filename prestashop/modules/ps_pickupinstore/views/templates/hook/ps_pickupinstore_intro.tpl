@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<section>
+<section style="background: beige;">
   <p>
     {l s='You pay for the merchandise upon pickup in our store' mod='ps_pickupinstore'} 
   </p>

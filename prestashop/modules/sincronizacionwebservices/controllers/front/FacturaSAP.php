@@ -210,13 +210,16 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
     private function addNumGuiaMiPilotoOrder($order,$num_guia) {
         $orderDB = Db::getInstance()->executeS("
         UPDATE ps_orders o
-        SET num_guia=".$num_guia." WHERE o.id_order =". $order->id);
+        SET num_guia='".$num_guia."' WHERE o.id_order =". $order->id);
 
         return $orderDB;
     }
 
 
     private function recaudoSap($resDoFacturaSAP,$factura,$payment,$efectivo) {
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+
         $dataRecaudoSAP = $this->generateDataRecaudoSAP($resDoFacturaSAP,$factura,$payment,$efectivo);
 
         $resDoRecaudoSAP = $this->doRecaudoSAP($dataRecaudoSAP);
@@ -231,7 +234,11 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                     $this->log->add("<br>Recaudo en el SAP generado exitosamente. Factura cabecera id: ".$factura["id"]."<br>");   
 
                     $order = new Order($factura["id_order"]);
-                    $guia_numero = $this->notificarAMiPiloto($order,$efectivo);
+                    //modificar cuando se agregue otro método de envío //HENRY
+                    if ($order->id_carrier == $config["CARRIER_MIPILOTO_ID"])
+                        $guia_numero = $this->notificarAMiPiloto($order,$efectivo);
+                    else
+                        $guia_numero = "no-guia";
                     if ($guia_numero) {
                         $agregadoGuiaOrder = $this->addNumGuiaMiPilotoOrder($order,$guia_numero);
                         if ($agregadoGuiaOrder) {

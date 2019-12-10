@@ -24,15 +24,26 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
+require_once _PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/ValidacionProductosBeforeFacturaSAP.php';
+require_once _PS_MODULE_DIR_ . 'payphone/controllers/front/validation.php';
+
 /**
  * @since 1.5.0
  */
-class Ps_PickupinstoreValidationModuleFrontController extends ModuleFrontController 
+
+require_once _PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/FacturaDB.php';
+require_once _PS_ROOT_DIR_ . '/logs/LoggerTools.php';
+
+class Ps_PickupinstoreValidationModuleFrontController extends ModuleFrontController
 {
     public $ssl = true;
+    public $log = null;
 
     public function postProcess()
     {
+        $this->log = new LoggerTools();
+
         if ($this->context->cart->id_customer == 0 || $this->context->cart->id_address_delivery == 0 || $this->context->cart->id_address_invoice == 0 || !$this->module->active) {
             Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
         }
@@ -52,9 +63,108 @@ class Ps_PickupinstoreValidationModuleFrontController extends ModuleFrontControl
         if (!Validate::isLoadedObject($customer)) {
             Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
         }
+
+        $resValidateHorario = $this->isOpen();
+        if (!$resValidateHorario){
+            return $this->showErrors(null,"Tienda se encuentra fuera de su horario de atención.");
+        }
+
         $customer = new Customer((int)$this->context->cart->id_customer);
         $total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
         $this->module->validateOrder((int)$this->context->cart->id, Configuration::get('PS_OS_PREPARATION'), $total, $this->module->displayName, null, array(), null, false, $customer->secure_key);
-        Tools::redirectLink(__PS_BASE_URI__.'order-confirmation.php?key='.$customer->secure_key.'&id_cart='.(int)$this->context->cart->id.'&id_module='.(int)$this->module->id.'&id_order='.(int)$this->module->currentOrder);
+        $cart = $this->context->cart;
+        $resValidateArticulos = $this->validateArticulosSAP($cart);
+        if ($resValidateArticulos){
+            return $this->showErrors(null,$resValidateArticulos);
+        }
+
+        /********************** ADD HENRY NUEVO *********************/           
+        // add for Henry Campoverde
+        //$guia_numero = $this->notificarAMiPiloto($order,$cart);
+        //$this->log->add("*** guia_numero: ".$guia_numero);
+
+        $id_order = Order::getOrderByCartId($cart->id);
+        $order = new Order($id_order);
+        if (!Validate::isLoadedObject($order)) {
+            Tools::redirect('index.php?controller=order&step=1');
+        }
+        
+        $facturaDB = new sincronizacionwebservicesFacturaDBModuleFrontController();
+        $write = array("transaction_id" => $id_order);
+        $resFacturacion = $facturaDB->processFacturacionDB($order,$cart,$write);
+
+        
+        $this->log->add("EFECTIVO Pagar y recoger En Tienda - processFacturacionDB : ".$resFacturacion);
+        if (!$resFacturacion) {
+            $this->changeOrderStatus($order, 6); //6 Order Cancelada
+            //$this->eliminarPedidoMiPiloto($guia_numero);
+            //$this->reversePayphone($data->transactionId);
+            return $this->showErrors(null,$this->payphone->l('Ocurrió un inconveniente al guardar datos de la orden. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+        } else {
+            //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
+            $this->changeOrderStatus($order, 2, true);
+            Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
+        }
+        
+    }
+
+    
+    function showErrors($order, $message) {
+
+        if ($order)
+            $this->changeOrderStatus($order, Configuration::get('PS_OS_CANCELED'));
+        $errors[] = $message;
+        $this->context->smarty->assign([
+            'errors' => $errors,
+        ]);
+        return $this->setTemplate('module:' . $this->module->name . '/views/templates/front/errors-messages17.tpl');
+    }
+
+
+    function changeOrderStatus($order, $state, $send_email_hook=false) {
+        ShopUrl::cacheMainDomainForShop((int) $order->id_shop);
+        $order_state = new OrderState($state);
+
+        if (!Validate::isLoadedObject($order_state)) {
+            $this->errors[] = Tools::displayError('The new order status is invalid.');
+        }
+        $current_order_state = $order->getCurrentOrderState();
+        $history = new OrderHistory();
+        $history->id_order = $order->id;
+        $use_existings_payment = false;
+        if (!$order->hasInvoice()) {
+            $use_existings_payment = true;
+        }
+        $history->changeIdOrderState((int) $order_state->id, $order, $use_existings_payment);
+        $history->addWithemail(true);
+
+        if ($send_email_hook) {
+            $order_status = new OrderState((int) $state, (int) $this->context->language->id);
+            // Hook validate order
+            Hook::exec('actionValidateOrder', array(
+                'cart' => $this->context->cart,
+                'order' => $order,
+                'customer' => $this->context->customer,
+                'currency' => $this->context->currency,
+                'orderStatus' => $order_status,
+            ));
+        }
+    }
+
+    function validateArticulosSAP($order) {
+        $ValidacionProductosBeforefacturaSAP = new sincronizacionwebservicesValidacionProductosBeforeFacturaSAPModuleFrontController();
+        return $ValidacionProductosBeforefacturaSAP->validate($order);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

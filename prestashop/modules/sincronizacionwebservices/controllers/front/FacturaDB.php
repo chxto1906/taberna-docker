@@ -110,13 +110,13 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
                     $cont++;
                 }
             }
-            if ($cont == $lenProducts){
+            if ($cont == $lenProducts) {
                 //if ($cart->id_carrier == "29") {
-                if ($cart->id_carrier == "15") {
+                /*if ($cart->id_carrier == "15") {
                     $data = $this->generateDataDetallePagoFacturacion($order,$secuencial);
                     if ($this->insertDataFactura($data, 'factura_detalle_pago'))
                         $result = true;
-                } else {
+                } else {*/
                     $data = $this->generateDataItemTransporte($order,$secuencial);
                     if ($this->insertDataFactura($data, 'factura_detalle'))
                     {
@@ -124,7 +124,7 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
                         if ($this->insertDataFactura($data, 'factura_detalle_pago'))
                             $result = true;
                     }
-                }
+                //}
             }
             
         }
