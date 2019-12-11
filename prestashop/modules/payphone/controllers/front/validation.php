@@ -88,7 +88,7 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
             if (!Validate::isLoadedObject($customer))
                 return;
             if ($result->statusCode == 3) {
-                $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'));
+                $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
             } elseif ($result->statusCode == 2) {
                 $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
             }

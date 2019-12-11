@@ -141,7 +141,7 @@ class PayphonePaymentModuleFrontController extends ModuleFrontController {
 
         try {
             $pb = new PayphoneButton();
-            $resValidateArticulos = $this->validateArticulosSAP($order);
+            $resValidateArticulos = $this->validateArticulosSAP($cart);
             $resValidateHorario = $this->isOpen();
             if ($resValidateArticulos){
                 return $this->showErrors($order,$resValidateArticulos);
