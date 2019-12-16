@@ -12,6 +12,18 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
     public function initContent() {
         parent::initContent();
 
+        /*$id_shop = "17";
+        $reference = "10086823";
+        $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
+        $facturaSAP = new sincronizacionwebservicesFacturaSAPModuleFrontController();
+        $cod_almacen = $gestionarController->get_code_by_id($id_shop);
+        $id_product = $gestionarController->search_product_by_reference($reference);
+        $product = new Product($id_product);
+        var_dump($product);
+
+
+        exit;*/
+
 
         $excelObject = PHPExcel_IOFactory::load(_PS_MODULE_DIR_."sincronizacionwebservices/controllers/front/lista_definitiva_articulos.xlsx");
         $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
@@ -56,7 +68,7 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         $cod_almacen = $gestionarController->get_code_by_id($id_shop);
         $id_product = $gestionarController->search_product_by_reference($reference);
         $stock = 0;
-        if ($cod_almacen && $id_product) {
+        if ($cod_almacen /*&& $id_product*/) {
             $articulo = $this->searchArrayStock($reference,$cod_almacen,$productsStocks);
             $productPrice = $this->searchArray($reference,$productsPrices);
             if ($articulo && $productPrice) {
@@ -66,7 +78,9 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
 		        echo "<br>### El active se puso en $active ###<br>";
                 $marca = $productPrice->Marca;
                 $precio = $productPrice->Precio;
-                $added = $gestionarController->create_update_product($id_product,$reference,$marca,$precio);
+                $categoria = $productPrice->Categoría;
+                $nombre = $productPrice->NombreProducto;
+                $added = $gestionarController->create_update_product($id_product,$reference,$marca,$precio,$categoria,$nombre);
                 if ($added) {
                     if ($active==1)
                         $active = $stock <= 0 ? 0 : 1;

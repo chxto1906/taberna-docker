@@ -268,21 +268,23 @@
         }
 
 
-        public function create_update_product($id_product,$reference,$marca,$precio){
+        public function create_update_product($id_product,$reference,$marca,$precio,$categoria,$nombre){
 
-            //$id_category = $this->get_associated_category_by_label($Categoria);
+            $id_category = $this->get_associated_category_by_label($categoria);
             $id_manufacturer = $this->get_or_create_manufactured($marca);
 
-            //echo "<br>ID_CATEGORY: $id_category<br>";
-            //echo "<br>ID_MANUFACTURER: $id_manufacturer<br>";
-
+            echo "<br>ID_CATEGORY: $id_category<br>";
+            echo "<br>ID_MANUFACTURER: $id_manufacturer<br>";
+            $date = date('Y-m-d h:i:s');
             //$shops = Shop::getShops(true, null, true);
             if (!$id_product){
-                /*$product = new Product();
+                $product = new Product();
                 $product->reference = $reference;
-                $product->name = array((int) Configuration::get('PS_LANG_DEFAULT') => $NombreProducto);
-                $product->price = $Precio;
+                $product->name = array((int) Configuration::get('PS_LANG_DEFAULT') => $nombre);
+                $product->price = $precio;
                 $product->ean13 = null;
+                $product->date_add = $date;
+                $product->date_upd = $date;
                 $product->id_tax_rules_group = 1;
                 $product->id_manufacturer = $id_manufacturer;
                 $product->id_supplier = 0;
@@ -299,12 +301,12 @@
                 $product->show_price = 1;
                 $product->on_sale = 0;
                 $product->online_only = 0;
-                $product->meta_title = $NombreProducto;
-                $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
-                $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
-                $product->description_short = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
+                $product->meta_title = $nombre;
+                $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
+                $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
+                $product->description_short = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
                 $product->link_rewrite = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($NombreProducto));
-                $product->tags = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($NombreProducto));
+                $product->tags = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($nombre));
 
                 $message = "<br>Listo para crear nuevo producto reference: $reference <br>";
                 echo $message;
@@ -317,6 +319,8 @@
                 $product = new Product($id_product);
                 $product->price = (float)$precio;
                 $product->id_tax_rules_group = 1;
+                $product->date_add = $date;
+                $product->date_upd = $date;
                 echo "<br>Actualizando producto id_producto: $id_product, reference: $reference, price: $precio<br>";
                 //$product->id_tax_rules_group = 1;
                 $product->id_manufacturer = $id_manufacturer;
@@ -345,10 +349,10 @@
                 if ($product->save()) {
                     echo "<b>Pasado el save()</b>";
                     //$product->associateTo($shops);
-                    //if (!$id_product){
-                      //  $this->update_date_add($product);
-                       // $product->addToCategories(array($id_category));
-                    //}
+                    if (!$id_product){
+                        $this->update_date_add($product);
+                        //$product->addToCategories(array($id_category));
+                    }
                     return true;
                 } else {
                     echo "<b>NO el save()</b>";
