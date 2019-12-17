@@ -56,8 +56,8 @@
 			
 			public function hookHeader($params)
 			{
-				$this->context->controller->registerJavascript('module-compare2', 'modules/'.$this->name.'/views/js/turn.min.js', ['position' => 'bottom', 'priority' => 154]);
-				$this->context->controller->registerJavascript('module-compare3', 'modules/'.$this->name.'/views/js/front.js', ['position' => 'bottom', 'priority' => 155]);
+				$this->context->controller->registerJavascript('module-compare5', 'modules/'.$this->name.'/views/js/turn.min.js', ['position' => 'bottom', 'priority' => 154]);
+				$this->context->controller->registerJavascript('module-compare6', 'modules/'.$this->name.'/views/js/front.js', ['position' => 'bottom', 'priority' => 155]);
 
 				$this->context->controller->addCSS(($this->_path).'css/style.css','all');
 				
