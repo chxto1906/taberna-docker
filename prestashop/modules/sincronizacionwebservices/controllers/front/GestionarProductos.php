@@ -328,10 +328,11 @@
                 $product->show_price = 1;
                 $product->id_category_default = $id_category;
                 //$product->category = $id_category;
-                //$product->on_sale = 0;
-                //$product->online_only = 0;
-                //$product->quantity = 1;
-                //$product->minimal_quantity = 1;
+                $product->on_sale = 0;
+                $product->online_only = 0;
+                $product->quantity = 1;
+                $product->minimal_quantity = 1; 
+                $product->wholesale_price = 0;
                 /*$product->meta_title = $NombreProducto;
                 $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
                 $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
@@ -345,9 +346,6 @@
             }
 
             try {
-                echo "<hr>";
-                var_dump($product);
-                echo "<hr>";
                 if ($product->save()) {
                     echo "<b>Pasado el save()</b>";
                     //$product->associateTo($shops);
