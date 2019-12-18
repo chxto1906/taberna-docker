@@ -305,7 +305,7 @@
                 $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
                 $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
                 $product->description_short = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
-                $product->link_rewrite = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($NombreProducto));
+                $product->link_rewrite = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($nombre));
                 $product->tags = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($nombre));
 
                 $message = "<br>Listo para crear nuevo producto reference: $reference <br>";
@@ -316,29 +316,33 @@
                 echo "<br>NO existe product con reference: $reference<br>";
 
             }else{
+                echo "<br>Actualizando producto id_producto: $id_product, reference: $reference, price: $precio<br>";
                 $product = new Product($id_product);
                 $product->price = (float)$precio;
+                $product->ean13 = null;
                 $product->id_tax_rules_group = 1;
                 $product->date_upd = $date;
-                echo "<br>Actualizando producto id_producto: $id_product, reference: $reference, price: $precio<br>";
-                //$product->id_tax_rules_group = 1;
                 $product->id_manufacturer = $id_manufacturer;
-                //$product->active = false;
+                $product->id_supplier = 0;
                 $product->available_for_order = 1;
                 $product->show_price = 1;
                 $product->id_category_default = $id_category;
-                //$product->category = $id_category;
+                $product->category = $id_category;
                 $product->on_sale = 0;
                 $product->online_only = 0;
                 $product->quantity = 1;
+                $product->additional_shipping_cost = 0;
                 $product->minimal_quantity = 1; 
                 $product->wholesale_price = 0;
-                /*$product->meta_title = $NombreProducto;
-                $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
-                $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
-                $product->description_short = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $NombreProducto);
-                $product->link_rewrite = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($NombreProducto));
-                $product->tags = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($NombreProducto));*/
+                $product->ecotax = 0;
+                $product->out_of_stock = 0;
+                $product->active = false;
+                $product->meta_title = $nombre;
+                $product->meta_keywords = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
+                $product->description = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
+                $product->description_short = array((int) (Configuration::get('PS_LANG_DEFAULT')) => $nombre);
+                $product->link_rewrite = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($nombre));
+                $product->tags = array((int) (Configuration::get('PS_LANG_DEFAULT')) => Tools::link_rewrite($nombre));
                 $message = "<br>Listo para actualizar producto reference: $reference<br>";
                 echo $message;
                 //echo "<br>******PRODUCT A ACTUALIZAR********<br>";
