@@ -326,7 +326,7 @@
                 //$product->active = false;
                 $product->available_for_order = 1;
                 $product->show_price = 1;
-                //$product->id_category_default = $id_category;
+                $product->id_category_default = $id_category;
                 //$product->category = $id_category;
                 //$product->on_sale = 0;
                 //$product->online_only = 0;
