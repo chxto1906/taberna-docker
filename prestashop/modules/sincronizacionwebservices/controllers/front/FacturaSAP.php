@@ -65,8 +65,11 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         }
     }
 
+
     private function recorrerFacturas($facturas) {
         $in = 0;
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
         foreach ($facturas as $factura) {
             $in++;
             var_dump($factura);
@@ -88,6 +91,30 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
             echo '<pre>' . var_export($dataFacturaSAP, true) . '</pre>';
             echo "<hr>";
             var_dump(json_encode($dataFacturaSAP));
+
+
+            ///////////////// MI PILOTO /////////////////
+                $order = new Order($factura["id_order"]);
+                if (!$order->num_guia) {
+                    //modificar cuando se agregue otro método de envío //HENRY
+                    if ($order->id_carrier == $config["CARRIER_MIPILOTO_ID"])
+                        $guia_numero = $this->notificarAMiPiloto($order,$efectivo);
+                    else
+                        $guia_numero = "no-guia";
+                    if ($guia_numero) {
+                        $agregadoGuiaOrder = $this->addNumGuiaMiPilotoOrder($order,$guia_numero);
+                        if ($agregadoGuiaOrder) {
+                            $this->log->add("Se ha agregado correctamente a la orden: ".$factura["id_order"]." el número de guía: ".$guia_numero);    
+                        }else{
+                            $this->log->add("NO se pudo agregar correctamente a la orden: ".$factura["id_order"]." el número de guía: ".$guia_numero);
+                        }
+                    } else {
+                        $this->log->add("No se pudo obtener el guia_numero desde Mi Piloto, por lo tanto NO se notificó pedido a Mi Piloto. Reportar inmediatamente error a Mi Piloto. ORDEN Número: ".$factura["id_order"]);
+                    }
+                }
+            ///////////////// MI PILOTO /////////////////
+
+
 
             $this->log->add("generateDataFacturaSAP: ".json_encode($dataFacturaSAP));
             echo "factura pedido: ".$factura["numero_pedido"];
@@ -233,7 +260,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                     echo "<br>Recaudo en el SAP generado exitosamente. Factura cabecera id: ".$factura["id"]."<br>"; 
                     $this->log->add("<br>Recaudo en el SAP generado exitosamente. Factura cabecera id: ".$factura["id"]."<br>");   
 
-                    $order = new Order($factura["id_order"]);
+                    /*$order = new Order($factura["id_order"]);
                     //modificar cuando se agregue otro método de envío //HENRY
                     if ($order->id_carrier == $config["CARRIER_MIPILOTO_ID"])
                         $guia_numero = $this->notificarAMiPiloto($order,$efectivo);
@@ -248,7 +275,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                         }
                     } else {
                         $this->log->add("No se pudo obtener el guia_numero desde Mi Piloto, por lo tanto NO se notificó pedido a Mi Piloto. Reportar inmediatamente error a Mi Piloto. ORDEN Número: ".$factura["id_order"]);
-                    }
+                    }*/
                 }else{
                     echo "<br>No se pudo guardar RecaudoSAP em DB<br>";
                     $this->log->add("<br>No se pudo guardar RecaudoSAP em DB<br>");
