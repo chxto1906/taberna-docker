@@ -1074,7 +1074,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         $facturas = Db::getInstance()->executeS('
         SELECT * 
         FROM factura_cabecera AS fc
-        WHERE (fc.numero_pedido is not null AND fc.documento_contable_recaudo is not null AND fc.transaction_id_pay is not null) ');
+        WHERE (fc.numero_pedido is not null AND fc.documento_contable_recaudo is not null AND fc.transaction_id_pay is not null AND (fecha_autorizacion BETWEEN CURDATE() - INTERVAL 2 DAY AND CURDATE() - INTERVAL 1 SECOND) ) ');
 
         return $facturas;
     }
