@@ -25,7 +25,7 @@ class sincronizacionwebservicesReadExcelProductsModuleFrontController extends Mo
         exit;*/
 
 
-        $excelObject = PHPExcel_IOFactory::load(_PS_MODULE_DIR_."sincronizacionwebservices/controllers/front/lista_definitiva_articulos.xlsx");
+        $excelObject = PHPExcel_IOFactory::load(_PS_MODULE_DIR_."sincronizacionwebservices/controllers/front/lista_definitiva_articulos.xls");
         $gestionarController = new sincronizacionwebservicesGestionarProductosModuleFrontController();
         $facturaSAP = new sincronizacionwebservicesFacturaSAPModuleFrontController();
         
