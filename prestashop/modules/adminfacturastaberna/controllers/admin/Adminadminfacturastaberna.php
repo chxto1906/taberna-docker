@@ -57,7 +57,8 @@ class AdminadminfacturastabernaController extends ModuleAdminController
         CONCAT('$ ',fc.importe_total) AS importe_total, 
 		REPLACE (fc.nombre_arch_pdf,'/home','".$base_url."facturas') as url_pdf,
 		CONCAT(fc.establecimiento,fc.punto_emision,fc.secuencial) as num_fact,
-		fc.numero_factura_sap as numero_factura_sap, fc.numero_documento_contable as numero_documento_contable
+		fc.numero_factura_sap as numero_factura_sap, fc.numero_documento_contable as numero_documento_contable,
+        o.payment as payment
 		FROM `factura_cabecera` fc
 		INNER JOIN ps_orders o
 		ON fc.id_order = o.id_order

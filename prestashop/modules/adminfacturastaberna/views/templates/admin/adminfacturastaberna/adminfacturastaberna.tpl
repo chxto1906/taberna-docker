@@ -42,6 +42,7 @@
 						    <th scope="col"># Documento Contable</th>
 						    <th scope="col">Fecha</th>
 						    <th scope="col">Valor</th>
+						    <th scope="col">Método de pago</th>
 						    <th scope="col">PDF</th>
 					    </tr>
 					  </thead>
@@ -54,6 +55,7 @@
 						     	<th>{$pedido.numero_documento_contable}</th>
 						      	<td>{$pedido.fecha_autorizacion}</td>
 						      	<td>{$pedido.importe_total}</td>
+						      	<td>{$pedido.payment}</td>
 						      	<td><a href="{$pedido.url_pdf}" target="_blank">Ver >></a></td>
 						    </tr>
 						{/foreach}

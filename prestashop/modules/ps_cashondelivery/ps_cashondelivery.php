@@ -95,6 +95,18 @@ class Ps_Cashondelivery extends PaymentModule
             return;
         }
 
+        // HENRY EDITADO //
+        $env = realpath("/var/.env");
+        $config = parse_ini_file($env, true);
+        $importePagado = $params['cart']->getOrderTotal();
+        if ($params['cart']->id_currency == 1 && $importePagado > $config["MAX_AMOUNT_CASH_ON_DELIVERY"]) {
+            return;
+        }
+
+        // ============= //
+
+
+
         $newOption = new PaymentOption();
         $newOption->setModuleName($this->name)
             ->setCallToActionText($this->trans('Pay by Cash on Delivery', array(), 'Modules.Cashondelivery.Shop'))
