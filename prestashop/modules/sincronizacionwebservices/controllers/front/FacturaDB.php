@@ -111,20 +111,27 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
                 }
             }
             if ($cont == $lenProducts) {
-                //if ($cart->id_carrier == "29") {
-                /*if ($cart->id_carrier == "15") {
+                // COMENTADO POR HENRY
+                /*$data = $this->generateDataItemTransporte($order,$secuencial);
+                if ($this->insertDataFactura($data, 'factura_detalle'))
+                {
                     $data = $this->generateDataDetallePagoFacturacion($order,$secuencial);
                     if ($this->insertDataFactura($data, 'factura_detalle_pago'))
                         $result = true;
-                } else {*/
+                }*/
+                if ($order->total_shipping_tax_excl > 0) {
                     $data = $this->generateDataItemTransporte($order,$secuencial);
                     if ($this->insertDataFactura($data, 'factura_detalle'))
-                    {
+                    {   
                         $data = $this->generateDataDetallePagoFacturacion($order,$secuencial);
                         if ($this->insertDataFactura($data, 'factura_detalle_pago'))
-                            $result = true;
+                            $result = true;     
                     }
-                //}
+                } else {
+                    $data = $this->generateDataDetallePagoFacturacion($order,$secuencial);
+                    if ($this->insertDataFactura($data, 'factura_detalle_pago'))
+                        $result = true;
+                }
             }
             
         }
