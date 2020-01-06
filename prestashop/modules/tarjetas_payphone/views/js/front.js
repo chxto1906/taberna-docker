@@ -63,9 +63,9 @@ $("#cancelar-new-pay").click(function(e) {
 
 $(".card_id").change(function(e) {
 	let value = e.target.value;
-	console.log(e.target.dataset.holder);
+	//console.log(e.target.dataset.holder);
 	let holder = encripta(e.target.dataset.holder,false);
-	console.log('encriptado cardHolder: '+holder);
+	//console.log('encriptado cardHolder: '+holder);
 
 	$("#id_card").val(value);
 	$("#cardHolder").val(holder);
@@ -169,7 +169,7 @@ function proccessDatosEncode() {
 	let codificado = encrypted.ciphertext.toString(CryptoJS.enc.Base64);*/
 
 	let codificado = encripta(datos,true);
-	console.dir(codificado);
+	//console.dir(codificado);
 	$("#data").val(codificado);
 }
 
