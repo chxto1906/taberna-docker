@@ -86,7 +86,18 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
 
 
     private function getPedidos($id_shop) {
-        //15 payment payphone
+        $pedidos = Db::getInstance()->executeS('
+        SELECT * 
+        FROM ps_orders as po
+        INNER JOIN factura_cabecera as fc
+        ON po.id_order = fc.id_order
+        WHERE po.id_shop = '.$id_shop.' AND
+        (po.current_state = 15 or po.current_state = 2)  AND po.print = "N" AND po.valid = 1') ;
+
+        return $pedidos;
+    }
+
+    /*private function getPedidos($id_shop) {
         $pedidos = Db::getInstance()->executeS('
         SELECT * 
         FROM ps_orders as po
@@ -97,7 +108,7 @@ class sincronizacionwebservicesCheckPedidosPendientesModuleFrontController exten
         fc.numero_pedido IS NOT NULL AND fc.documento_contable_recaudo IS NOT NULL') ;
 
         return $pedidos;
-    }
+    }*/
 
 
 
