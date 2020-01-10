@@ -56,7 +56,7 @@ class sincronizacionwebservicesDownloadPhotosProductsShopModuleFrontController e
                         $product['id_image']);
                 $s = explode("/", $url_image);
                 $path_to = $this->generate_path($s[5]);
-                $n = $zip->addFile(getcwd().'/img/p'.$path_to.$s[5].'.jpg',$s[5].'.jpg');
+                $n = $zip->addFile(getcwd().'/img/p'.$path_to.$s[5].'.jpg',$product['name'].'.jpg');
             }
             $zip->close();
 
