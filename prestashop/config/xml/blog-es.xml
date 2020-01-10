@@ -6,12 +6,28 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>¿Sabías que tu tienda puede ser vulnerable al malware? Consejos básicos</title>
+    <link>https://www.prestashop.com/es/blog/su-tienda-puede-ser-vulnerable</link>
+    <description>¿Sospechas que puedes estar recibiendo ataques o estar siendo atacado por malware indeseados en tu tienda?</description>
+     <pubDate>Fri, 10 Jan 2020 10:04:05 +0100</pubDate>
+ <dc:creator>PrestaShop Team</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/su-tienda-puede-ser-vulnerable</guid>
+  </item>
+  <item>
     <title>¿Cómo crear unas buenas descripciones de producto para tu eCommerce?</title>
     <link>https://www.prestashop.com/es/blog/8-consejos-para-realizar-buenas-descripciones-de-productos</link>
     <description>¿Eres de los que piensan que las descripciones de los productos de tu eCommerce no son tan importantes para obtener más ventas?</description>
      <pubDate>Thu, 02 Jan 2020 04:22:15 +0100</pubDate>
  <dc:creator>Mariela Quiroga</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/8-consejos-para-realizar-buenas-descripciones-de-productos</guid>
+  </item>
+  <item>
+    <title>¿Qué es un negocio redituable y cómo conseguir que nuestro eCommerce lo sea?</title>
+    <link>https://www.prestashop.com/es/blog/que-es-negocio-redituable</link>
+    <description>¿Sabes cómo conseguir que tu tienda online sea redituable? ¿Aún no sabes siquiera qué es?</description>
+     <pubDate>Mon, 30 Dec 2019 10:19:29 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-negocio-redituable</guid>
   </item>
   <item>
     <title>SEO Local para eCommerce ¡Deja que encuentren tu negocio! (Webinar)</title>
@@ -73,24 +89,6 @@
      <pubDate>Fri, 13 Dec 2019 06:25:32 +0100</pubDate>
  <dc:creator>Eva Lacalle</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-migrar-prestashop-un-nuevo-servidor</guid>
-  </item>
-  <item>
-    <title>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países? (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/webinar-internacionalizacion-ecommerce</link>
-    <description>La internacionalización de un eCommerce: ¿cómo empezar a vender en otros países?
-12 de diciembre a las 16 horas (de España)
-</description>
-     <pubDate>Thu, 12 Dec 2019 15:40:22 +0100</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/webinar-internacionalizacion-ecommerce</guid>
-  </item>
-  <item>
-    <title>El Checkout en el proceso de compra ¿qué es y cómo optimizarlo correctamente?</title>
-    <link>https://www.prestashop.com/es/blog/que-es-el-checkout</link>
-    <description>¿Tienes problemas para materializar las ventas en tu tienda y sospechas que el problema se encuentra en el proceso de checkout de tu web?</description>
-     <pubDate>Wed, 04 Dec 2019 07:49:24 +0100</pubDate>
- <dc:creator>Mariela Quiroga</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-el-checkout</guid>
   </item>
   </channel>
 </rss>
