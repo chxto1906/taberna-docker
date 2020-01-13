@@ -25,10 +25,11 @@ class sincronizacionwebservicesDownloadPhotosProductsShopModuleFrontController e
 
     public function getProducts() {
         $products = Db::getInstance()->executeS('
-        SELECT pl.name, pl.link_rewrite, pi.id_image 
+        SELECT pl.name, pl.link_rewrite, pi.id_image, p.reference
         FROM '._DB_PREFIX_.'product_shop as ps
         INNER JOIN '._DB_PREFIX_.'product_lang pl ON ps.id_product = pl.id_product
         INNER JOIN '._DB_PREFIX_.'image pi ON ps.id_product = pi.id_product
+        INNER JOIN '._DB_PREFIX_.'product p ON ps.id_product = p.id_product
         WHERE ps.active = 1 AND ps.id_shop=3 AND pl.id_shop=3 AND pi.cover=1');
 
         return $products;
@@ -56,7 +57,7 @@ class sincronizacionwebservicesDownloadPhotosProductsShopModuleFrontController e
                         $product['id_image']);
                 $s = explode("/", $url_image);
                 $path_to = $this->generate_path($s[5]);
-                $n = $zip->addFile(getcwd().'/img/p'.$path_to.$s[5].'.jpg',$product['name'].'.jpg');
+                $n = $zip->addFile(getcwd().'/img/p'.$path_to.$s[5].'.jpg',$product['reference'].'.jpg');
             }
             $zip->close();
 
