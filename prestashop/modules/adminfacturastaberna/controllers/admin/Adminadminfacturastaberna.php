@@ -58,10 +58,15 @@ class AdminadminfacturastabernaController extends ModuleAdminController
 		REPLACE (fc.nombre_arch_pdf,'/home','".$base_url."facturas') as url_pdf,
 		CONCAT(fc.establecimiento,fc.punto_emision,fc.secuencial) as num_fact,
 		fc.numero_factura_sap as numero_factura_sap, fc.numero_documento_contable as numero_documento_contable,
-        o.payment as payment
+        o.payment as payment,
+        c.shipping_promo_tax_exc as promo_tax_exc,
+        c.shipping_promo_tax_inc as promo_tax_inc,
+        o.num_guia as numero_guia_delivery
 		FROM `factura_cabecera` fc
 		INNER JOIN ps_orders o
 		ON fc.id_order = o.id_order
+        INNER JOIN ps_cart c
+        ON o.id_cart = c.id_cart
 		WHERE fc.estado = 'FINALIZADO' AND
 		fc.fecha_autorizacion >= DATE_ADD(DATE_SUB(NOW(), INTERVAL ".$months_ago." MONTH), INTERVAL 1 DAY) AND
 		fc.fecha_autorizacion <= DATE_SUB(NOW(), INTERVAL 0 MONTH) 
