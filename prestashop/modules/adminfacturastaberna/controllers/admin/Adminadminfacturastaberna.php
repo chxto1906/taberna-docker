@@ -61,6 +61,7 @@ class AdminadminfacturastabernaController extends ModuleAdminController
         o.payment as payment,
         c.shipping_promo_tax_exc as promo_tax_exc,
         c.shipping_promo_tax_inc as promo_tax_inc,
+        o.total_shipping as shipping,
         o.num_guia as numero_guia_delivery
 		FROM `factura_cabecera` fc
 		INNER JOIN ps_orders o
