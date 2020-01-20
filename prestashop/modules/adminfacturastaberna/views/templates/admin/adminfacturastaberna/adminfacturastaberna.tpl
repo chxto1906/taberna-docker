@@ -43,6 +43,9 @@
 						    <th scope="col">Fecha</th>
 						    <th scope="col">Valor</th>
 						    <th scope="col">Método de pago</th>
+						    <th scope="col">Promo Valor Tax Excluído</th>
+						    <th scope="col">Promo Valor Tax Incluído</th>
+						    <th scope="col">Numero Guía Delivery</th>
 						    <th scope="col">PDF</th>
 					    </tr>
 					  </thead>
@@ -56,6 +59,10 @@
 						      	<td>{$pedido.fecha_autorizacion}</td>
 						      	<td>{$pedido.importe_total}</td>
 						      	<td>{$pedido.payment}</td>
+
+						      	<td>{$pedido.promo_tax_exc}</td>
+						      	<td>{$pedido.promo_tax_inc}</td>
+						      	<td>{$pedido.numero_guia_delivery}</td>
 						      	<td><a href="{$pedido.url_pdf}" target="_blank">Ver >></a></td>
 						    </tr>
 						{/foreach}
