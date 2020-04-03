@@ -240,15 +240,16 @@ class Mipilotoshipping extends CarrierModule
 
     private function getCityDeliveryByCoordenates($addr) {
         $resulta = false;
-        $infoCiudad = $this->getCiudad($addr->latitude,$addr->longitude);
+        /*$infoCiudad = $this->getCiudad($addr->latitude,$addr->longitude);
         if ($infoCiudad["status"] == 1){
             $result = json_decode($infoCiudad["result"]);
-            $ciudad = trim(strtolower($result->results[0]->components->city));
+            $ciudad = trim(strtolower($result->results[0]->components->city));*/
+            $ciudad = trim(strtolower($addr->city));
             $ciudad_shop = $this->get_city_by_id(Context::getContext()->shop->id);
             if ($ciudad == $ciudad_shop){
                 $resulta = true;
             }
-        }
+        //}
         return $resulta;
     }
 
