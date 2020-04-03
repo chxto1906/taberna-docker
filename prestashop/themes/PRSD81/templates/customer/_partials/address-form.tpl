@@ -89,7 +89,8 @@
     mymap.on('click', function(e) {  
 
       geocodeService.reverse().latlng(e.latlng).run(function(error, result) {
-        let permitido = checkPermitidos(result.address.City);
+        //let permitido = checkPermitidos(result.address.City);
+        let permitido = true;
         if (permitido){
           if (Marcador)
             mymap.removeLayer(Marcador);
