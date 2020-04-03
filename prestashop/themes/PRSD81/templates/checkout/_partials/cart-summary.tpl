@@ -81,7 +81,7 @@
       {if isset($delivery_time)}
         <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
           <span class="label">Tiempo entrega</span>
-          <span class="value">{$delivery_time} mins. (máximo)</span>
+          <span class="value">{$delivery_time} horas. (máximo)</span>
         </div>
       {/if}
       

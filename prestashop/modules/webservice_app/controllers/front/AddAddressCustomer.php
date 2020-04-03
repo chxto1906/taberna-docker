@@ -64,7 +64,7 @@ class Webservice_AppAddAddressCustomerModuleFrontController extends ModuleFrontC
             'longitude' =>  Tools::getValue("longitude")
         ];
 
-        if ($body->type_dni && $body->dni && $body->firstname && $body->lastname && $body->email && $body->address1 && $body->address2 && $body->postcode && $body->city && $body->country && $body->phone && $body->latitude && $body->longitude)
+        if ($body->type_dni && $body->dni && $body->firstname && $body->lastname && $body->email && $body->address1 && $body->address2 && $body->city && $body->country && $body->phone && $body->latitude && $body->longitude)
         {
             $response = $body;
         }

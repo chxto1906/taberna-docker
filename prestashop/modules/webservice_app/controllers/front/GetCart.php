@@ -221,7 +221,7 @@ class Webservice_AppGetCartModuleFrontController extends ModuleFrontController {
 
             $cart_total_details[] = array(
                 'name' => 'Tiempo entrega',
-                'value' => $this->context->cart->getOrderDeliveryTime()." mins. (máximo)"
+                'value' => $this->context->cart->getOrderDeliveryTime()." horas. (máximo)"
             );
 
             if ($cart_summary['total_tax'] > 0) {

@@ -12,7 +12,7 @@
             {/block}
 
             {if isset($delivery_time)}
-              <p>Su pedido llegará a su origen en un tiempo estimado de: {$delivery_time} mins.</p>
+              <p>Su pedido llegará a su origen en un tiempo estimado de: {$delivery_time} horas. (máximo)</p>
             {/if}
             <p>
               {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $customer.email]}
@@ -68,7 +68,7 @@
                 </li>
               {/if}
               {if isset($delivery_time)}
-                <li>Tiempo entrega: {$delivery_time} mins. (máximo)</li>
+                <li>Tiempo entrega: {$delivery_time} horas. (máximo)</li>
               {/if}
               {if isset($cct)}
                 <li>Token: {$cct}</li>

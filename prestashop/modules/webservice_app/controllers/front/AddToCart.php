@@ -148,6 +148,7 @@ class Webservice_AppAddToCartModuleFrontController extends ModuleFrontController
                         $this->content['total_shipping'] = $total_shipping;
                         /*end:changes made by aayushi on 15th March 2019 to update cart count while adding product to the cart*/
                         $this->content['cart_id'] = (int)$this->context->cart->id;
+                        $this->content['total_cost'] = $this->formatPrice((float)Tools::ps_round((float)$this->context->cart->getOrderTotal(true, Cart::BOTH),2));
                     }
                 }
             }

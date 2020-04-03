@@ -66,7 +66,7 @@
                {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</p>
 
               {if isset($delivery_time)}
-                <p><strong>Tiempo entrega</strong>&nbsp;{$delivery_time} mins. (máximo)</p>
+                <p><strong>Tiempo entrega</strong>&nbsp;{$delivery_time} horas. (máximo)</p>
               {/if}
 
               {if $cart.subtotals.tax}

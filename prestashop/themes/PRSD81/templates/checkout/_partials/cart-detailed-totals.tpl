@@ -58,7 +58,7 @@
           <span class="label">
             Tiempo entrega
           </span>
-          <span class="value">{$delivery_time} mins. (máximo)</span>
+          <span class="value">{$delivery_time} horas. (máximo)</span>
         </div>
       {/if}
 

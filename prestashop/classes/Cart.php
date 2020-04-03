@@ -3296,7 +3296,7 @@ class CartCore extends ObjectModel
 
     public function getOrderDeliveryTime(){
         $module = Module::getInstanceByName("mipilotoshipping");
-        $delivery_time = 60;
+        $delivery_time = 48;
         if (!Validate::isLoadedObject($module)) {
             return false;
         }
