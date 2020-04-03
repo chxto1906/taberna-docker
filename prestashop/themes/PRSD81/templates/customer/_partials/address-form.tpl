@@ -126,7 +126,7 @@
     let address1Input = $(".form-control[name='address1']");
     let cityInput = $(".form-control[name='city']");
     address1Input.val(address);
-    cityInput.val(city);
+    //cityInput.val(city);
   }
 
   function updatePosition(latLng){
