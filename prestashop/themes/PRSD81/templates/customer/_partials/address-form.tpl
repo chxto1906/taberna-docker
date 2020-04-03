@@ -37,7 +37,7 @@
     ciudades_permitidas.push(ciudad);
     
     $(".form-control[name='id_country']").attr("readonly","readonly");
-    $(".form-control[name='city']").attr("readonly","readonly");
+    //$(".form-control[name='city']").attr("readonly","readonly");
     $(".form-control[name='address1']").attr("readonly","readonly");
 
     $(".form-control[name='latitude']").attr("readonly","readonly");

@@ -352,6 +352,7 @@ class Mipilotoshipping extends CarrierModule
                 $address = new Address($id_address_delivery);
                 // Guardar el valor que se debería cobrar en el cart
                 $validate = $this->getCityDeliveryByCoordenates($address);
+                $validate = true;
                 if ($validate){
                     $curlmipiloto = new CurlMiPiloto();
                     $bodyCotizar = $this->generateBodyCotizar($address);
