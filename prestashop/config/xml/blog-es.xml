@@ -6,89 +6,84 @@
     <language>es</language>
      <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
-    <title>¿Sabías que tu tienda puede ser vulnerable al malware? Consejos básicos</title>
-    <link>https://www.prestashop.com/es/blog/su-tienda-puede-ser-vulnerable</link>
-    <description>¿Sospechas que puedes estar recibiendo ataques o estar siendo atacado por malware indeseados en tu tienda?</description>
-     <pubDate>Fri, 10 Jan 2020 10:04:05 +0100</pubDate>
- <dc:creator>PrestaShop Team</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/su-tienda-puede-ser-vulnerable</guid>
+    <title>Confinamiento: nuestros consejos para teletrabajar correctamente</title>
+    <link>https://www.prestashop.com/es/blog/confinamiento-consejos-teletrabajo</link>
+    <description>Una de las consecuencias de la crisis sanitaria que estamos atravesando es la obligación por parte de muchos profesionales de trabajar desde casa.</description>
+     <pubDate>Mon, 30 Mar 2020 14:44:44 +0200</pubDate>
+ <dc:creator>Aurélien Bellanger</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/confinamiento-consejos-teletrabajo</guid>
   </item>
   <item>
-    <title>¿Cómo crear unas buenas descripciones de producto para tu eCommerce?</title>
-    <link>https://www.prestashop.com/es/blog/8-consejos-para-realizar-buenas-descripciones-de-productos</link>
-    <description>¿Eres de los que piensan que las descripciones de los productos de tu eCommerce no son tan importantes para obtener más ventas?</description>
-     <pubDate>Thu, 02 Jan 2020 04:22:15 +0100</pubDate>
- <dc:creator>Mariela Quiroga</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/8-consejos-para-realizar-buenas-descripciones-de-productos</guid>
-  </item>
-  <item>
-    <title>¿Qué es un negocio redituable y cómo conseguir que nuestro eCommerce lo sea?</title>
-    <link>https://www.prestashop.com/es/blog/que-es-negocio-redituable</link>
-    <description>¿Sabes cómo conseguir que tu tienda online sea redituable? ¿Aún no sabes siquiera qué es?</description>
-     <pubDate>Mon, 30 Dec 2019 10:19:29 +0100</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/que-es-negocio-redituable</guid>
-  </item>
-  <item>
-    <title>SEO Local para eCommerce ¡Deja que encuentren tu negocio! (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/seo-local-webinar</link>
-    <description>SEO Local para eCommerce ¡Deja que encuentren tu negocio!
-27 de diciembre a las 16 horas (de España)
-
-</description>
-     <pubDate>Fri, 27 Dec 2019 07:24:45 +0100</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/seo-local-webinar</guid>
-  </item>
-  <item>
-    <title>¿Cómo aprovechar las opiniones positivas de tus clientes para vender más?</title>
-    <link>https://www.prestashop.com/es/blog/5-consejos-para-maximizar-el-numero-de-opiniones-positivas-de-los-clientes-en-tu-web-de-e-commerce</link>
-    <description>Por defecto, toda tienda online es un tipo de negocio online muy competitivo, ya que rompe los límites de las fronteras territoriales clásicas, al poderse vender productos en el mercado internacion</description>
-     <pubDate>Thu, 26 Dec 2019 06:00:55 +0100</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/5-consejos-para-maximizar-el-numero-de-opiniones-positivas-de-los-clientes-en-tu-web-de-e-commerce</guid>
-  </item>
-  <item>
-    <title>¿Qué es un plan de inversión y cómo puede beneficiar a tu proyecto?</title>
-    <link>https://www.prestashop.com/es/blog/plan-de-inversion</link>
-    <description>¿Tienes un plan de inversión bien planificado para hacer que tu eCommerce sea sostenible a medio/largo plazo?</description>
-     <pubDate>Mon, 16 Dec 2019 15:39:20 +0100</pubDate>
- <dc:creator>Ismael Ruiz</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/plan-de-inversion</guid>
-  </item>
-  <item>
-    <title>¿Qué son los Webservices y cómo automatizar tareas en PrestaShop con servicios remotos? (Webinar)</title>
-    <link>https://www.prestashop.com/es/blog/webservices-automatizar-prestashop-webinar</link>
-    <description>¿Qué son los Webservices y cómo automatizar tareas en PrestaShop con servicios remotos?
-19 de diciembre a las 16 horas (de España)
-</description>
-     <pubDate>Mon, 16 Dec 2019 11:53:46 +0100</pubDate>
- <dc:creator>Jose Facchin</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/webservices-automatizar-prestashop-webinar</guid>
-  </item>
-  <item>
-    <title>10 Errores que todo responsable de eCommerce debería evitar cometer en su negocio</title>
-    <link>https://www.prestashop.com/es/blog/errores-ecommerce</link>
-    <description>¿Has cometido algún error en tu tienda online y piensas que eres el único emprendedor al que le ha ocurrido?</description>
-     <pubDate>Mon, 16 Dec 2019 10:30:15 +0100</pubDate>
+    <title>#RestartFromHome, la iniciativa para ayudarte a que te recuperes de la crisis por COVID-19</title>
+    <link>https://www.prestashop.com/es/blog/restart-from-home</link>
+    <description>Es un momento difícil para todos, con toda la crisis acaecida por el COVID-19, la cual está afectando negativamente a todos los profesionales del sector eCommerce.</description>
+     <pubDate>Fri, 27 Mar 2020 18:27:36 +0100</pubDate>
  <dc:creator>Flavia Sanchez ES</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/errores-ecommerce</guid>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/restart-from-home</guid>
   </item>
   <item>
-    <title>200€ de regalo en módulos gracias a &amp;quot;PrestaShop Checkout built with PayPal&amp;quot;</title>
-    <link>https://www.prestashop.com/es/blog/promocion-prestashop-checkout</link>
-    <description>¿Conoces &quot;PrestaShop Checkout&quot;?</description>
-     <pubDate>Fri, 13 Dec 2019 17:22:52 +0100</pubDate>
- <dc:creator>Bertrand Amaraggi</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/promocion-prestashop-checkout</guid>
+    <title>Crisis de salud del COVID-19: todo lo que los responsables de eCommerce necesitan saber</title>
+    <link>https://www.prestashop.com/es/blog/informacion-crisis-covid-19</link>
+    <description>Durante esta crisis sanitaria, circulan enormes cantidades de información y a veces es difícil orientarse. </description>
+     <pubDate>Fri, 27 Mar 2020 17:30:29 +0100</pubDate>
+ <dc:creator>Flavia Sanchez ES</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/informacion-crisis-covid-19</guid>
   </item>
   <item>
-    <title>¿Cómo migrar tu tienda PrestaShop a un nuevo servidor?</title>
-    <link>https://www.prestashop.com/es/blog/como-migrar-prestashop-un-nuevo-servidor</link>
-    <description>¿Estás pensando en migrar tu PrestaShop a un nuevo servidor que intuyes que te dará mejores prestaciones?</description>
-     <pubDate>Fri, 13 Dec 2019 06:25:32 +0100</pubDate>
- <dc:creator>Eva Lacalle</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-migrar-prestashop-un-nuevo-servidor</guid>
+    <title>Consejos prácticos sobre el COVID-19 para los responsables de tiendas online</title>
+    <link>https://www.prestashop.com/es/blog/consejos-covid-19</link>
+    <description>El COVID-19 nos está afecta negativamente a todos y, por tanto, los responsables de eCommerce no son menos...</description>
+     <pubDate>Fri, 20 Mar 2020 19:50:30 +0100</pubDate>
+ <dc:creator>Flavia Sanchez ES</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/consejos-covid-19</guid>
+  </item>
+  <item>
+    <title>7 Mejores plantillas para instalar en mi cervecería online en PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/plantillas-cerveceria-online</link>
+    <description>Cuando se trata de diseñar un negocio en Internet, existen dos alternativas: contratar a u experto o hacerlo de forma propia y esto se realizará mediante plantillas para webs.</description>
+     <pubDate>Fri, 20 Mar 2020 16:54:16 +0100</pubDate>
+ <dc:creator>Mariela Quiroga</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-cerveceria-online</guid>
+  </item>
+  <item>
+    <title>¿Por qué describir los sentimientos y beneficios que producen tus productos te ayudará a vender más?</title>
+    <link>https://www.prestashop.com/es/blog/sentimientos-productos-para-vender-mas</link>
+    <description>¿Estás teniendo en cuenta los sentimientos que producen tus productos a tus clientes?</description>
+     <pubDate>Fri, 20 Mar 2020 13:12:52 +0100</pubDate>
+ <dc:creator>Emilio de la Barreda Martin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/sentimientos-productos-para-vender-mas</guid>
+  </item>
+  <item>
+    <title>COVID-19: situación relativa a las entregas a domicilio y los transportistas</title>
+    <link>https://www.prestashop.com/es/situacion-entregas-transportistas-covid-19</link>
+    <description>actualizado el 27 de marzo</description>
+     <pubDate>Thu, 19 Mar 2020 17:16:33 +0100</pubDate>
+ <dc:creator>Flavia Sanchez ES</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/situacion-entregas-transportistas-covid-19</guid>
+  </item>
+  <item>
+    <title>¿Qué es la experiencia del cliente y cómo mejorarla en la web de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/experiencia-del-cliente</link>
+    <description>Si tienes una tienda online, tu objetivo es vender, pero, en realidad, debes ir un paso más allá y buscar la fidelización a través de la experiencia del cliente.</description>
+     <pubDate>Tue, 17 Mar 2020 19:44:15 +0100</pubDate>
+ <dc:creator>Juan Mahillo Álvarez</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/experiencia-del-cliente</guid>
+  </item>
+  <item>
+    <title>Guía de “WhatsApp Live Chat”: el módulo para chatear con tus clientes en tiempo real</title>
+    <link>https://www.prestashop.com/es/blog/whatsapp-live-chat</link>
+    <description>¿Quieres mantener un contacto fluido constantemente a través de tu plataforma online? ¡Con &quot;WhatsApp Live Chat&quot; podrás!</description>
+     <pubDate>Sat, 14 Mar 2020 13:20:44 +0100</pubDate>
+ <dc:creator>Antony Bautista</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/whatsapp-live-chat</guid>
+  </item>
+  <item>
+    <title>5 Mejores plantillas para usar en tu tienda de móviles en PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/mejores-plantillas-tienda-de-moviles</link>
+    <description>¿Tienes pensado montar una tienda de móviles con PrestaShop pero no sabes cómo empezar?</description>
+     <pubDate>Mon, 09 Mar 2020 06:59:57 +0100</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/mejores-plantillas-tienda-de-moviles</guid>
   </item>
   </channel>
 </rss>

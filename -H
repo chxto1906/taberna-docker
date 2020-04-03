@@ -1,0 +1,12 @@
+HTTP/2 200 
+server: nginx/1.16.0
+date: Thu, 26 Dec 2019 17:52:04 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-powered-by: PHP/7.2.10
+p3p: CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
+powered-by: PrestaShop
+set-cookie: PrestaShop-c0c54fb6dc0e1f14a615c13a7024fa44=def50200876483f261bb9e1de7a235eb555bf9847bc5708da2077eebdb196318f97370421c77f5449f2a3cd7332b4eb0990bb87f3ca6f3ac95bd96d520d92884e9a6916d89cd459acd87d3926c1eee43a9664bbaf5bbaa12afa762130c3faf250d4b9a945562061d0e6bb6127326f459062b117536414f10b09381668b0397abbb8eca1ee2d61875361c9f3e73a3b8762a725fdd5ebcd0cba5adf5e88ee34e; expires=Wed, 15-Jan-2020 17:45:33 GMT; Max-Age=1727610; path=/; domain=lataberna.com.ec; secure; HttpOnly
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+

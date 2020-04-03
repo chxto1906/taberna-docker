@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>2503202001019000751000120010990000000750000007510</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000075</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>25/03/2020</fechaEmision><dirEstablecimiento>La Taberna Showroom (Cuenca) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>fernanda cueva</razonSocialComprador><identificacionComprador>0101808756</identificacionComprador><direccionComprador>colinas de challuabamba</direccionComprador><totalSinImpuestos>17.63</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>17.63</baseImponible><valor>2.12</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>19.75</importeTotal><pagos><pago><formaPago>20</formaPago><total>19.75</total><plazo>0</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10063792</codigoPrincipal><descripcion>JOHNNIE WALKER RED LABEL 750ML</descripcion><cantidad>1.00</cantidad><precioUnitario>17.63</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>17.63</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>17.63</baseImponible><valor>2.12</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature143763">
+<ds:SignedInfo Id="Signature-SignedInfo624432">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID550858" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature143763-SignedProperties701334">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>eidwt8k107WqVDzFFS9AZ4T9Wcw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1783940">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>+IR5PG6j+yotEeF70YGVDfESyTY=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-245355" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>hEXVPow/QwaJQkmPsHzzJNfmUd0=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue549848">
+PHbM9bkFOalZJPLwN/3CKIFljvpW34HeptOn1QvoSkKHjtvRyMT+tJqccFZHd+tJiYMAYewF6ZiJ
+MyoVnGOLoLLhKxyl/A0880pU4GaybA4NU+JbhgpObb1QPCT1FxS0X19OF628Sqh8kJ3w6oV246fK
+dvXF7c51Ko7FaYEipRapDKSWMvADjKPeHqgWL4sC5j1JGR4Wx1RIPkP/mc1bYt1JRJePGTa/pQ85
+IkMQET6H4Lla+DzPoVYdPZ6GF9fAKiP/f1w3UYHz9DnPUuADr2qXG+MYQZ2qp4uftG560TLkG4dr
+oTNiosh0xnrC3XA0arHSmRV87bMUbfHOULzm1Q==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1783940">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ8DCCB9igAwIBAgIEWltOwDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MDMxMjIwNDgxM1oXDTIwMDMxMjIxMTgx
+M1owgbUxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE5MBEGA1UEBRMKMDAwMDA2ODMxMDAkBgNVBAMTHUNBUkxPUyBKT0FRVUlO
+IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzzMlOstY1fh3
+XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZbnNrBqhgBQFzm
+h2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIHHd6VDy3lAKUm
+VArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQGJv/P2eD2oXE
+gXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKmruxY/HeV/raF
+EJzob4pqWB1r6BoABHCE49gDQQIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
+XAYLKwYBBAGCqDsCAgEwTTBLBggrBgEFBQcCARY/aHR0cDovL3d3dy5lY2kuYmNlLmVjL3BvbGl0
+aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtanVyaWRpY2EucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
+L29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDAuBgorBgEEAYKoOwMKBCATHkFMTUFDRU5FUyBKVUFOIEVMSlVSSSBDSUEg
+TFREQTAdBgorBgEEAYKoOwMLBA8TDTAxOTAwMDc1MTAwMDEwGgYKKwYBBAGCqDsDAQQMEwowMTAx
+OTk5NTk3MB4GCisGAQQBgqg7AwIEEBMOQ0FSTE9TIEpPQVFVSU4wFwYKKwYBBAGCqDsDAwQJEwdB
+TFZBUkVaMBYGCisGAQQBgqg7AwQECBMGRUxKVVJJMBoGCisGAQQBgqg7AwUEDBMKU1VCR0VSRU5U
+RTAqBgorBgEEAYKoOwMHBBwTGkFWIEdJTCBSQU1JUkVaIERBVkFMT1MgNTMyMBkGCisGAQQBgqg7
+AwgECxMJMDcyODYyMTExMBYGCisGAQQBgqg7AwkECBMGQ3VlbmNhMBcGCisGAQQBgqg7AwwECRMH
+RUNVQURPUjAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wIAYDVR0RBBkwF4EVamNh
+c3RpbGxvQGVsanVyaWMuY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8v
+YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMNTMzLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
+REVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBE
+RSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1Is
+Yz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5l
+Yy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYD
+VQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJ
+RklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMc
+QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMNTMzMCsGA1UdEAQkMCKA
+DzIwMTgwMzEyMjA0ODEzWoEPMjAyMDAzMTIyMTE4MTNaMB8GA1UdIwQYMBaAFBj58PvmMhyZZjkq
+youyaX1JJ7/OMB0GA1UdDgQWBBSVe328dqEYBcpyfpGssHFYGWPZ7zAJBgNVHRMEAjAAMBkGCSqG
+SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQAFHWul8YLZMvJsCPtDSfZ0
+GQmgTJF9kHFo4skIBSj5CeatAc9RsdAeB61mEIGDe3ecS1v+uEt/PoaCRKcoIJOhcAxNBuFIzUzd
+Ree/B0HIZmV/JIlonhl6bV90sAHgno5+6en2KNUtUYSH6B3nbgEVMamzw8e0+MzNfNE1ucQa16p4
+IBDjG7CpklIeWdYWzAtQx2kf0BOvtL+l1l6h8pKB2AhllGlfh3VPGukZ6USqPsnQO52IBvYJvpJ2
+gU7oZGZC39CWngjy1dDTj6CuCL/CjH207SWZMcoziH62M+eZA9BsEJ4lJ0UyjBj1Q0dBRC+PA8hL
+PrwmsXOjY8GXuVwMt/BoPmrEvzkXFLisNcsv1U1zX7p1QFI+itOJth/HUDKmmGqzglkVGWtRuC6v
+He0rf72d1e1etQcb0/ykOhVFKkbBJIZgtDnBNLxnjvBjK5XFpqMQDPC2a6GqFr5fepSdTZ8WOVEw
+BZW52k8T7Ii7fwiLwrtHpyrPTxLc5zgfJLZRVQPhlKVWhtrUyJ9cZbJZhfEodqvA08C88i2W+Q+M
+9HdZRcz18p7LKZvjliFkMJrPHMKxM7wa5WkOjs6c100fkAhT1CzHdhiOFEsxzwVUmoXgrc7NV2AD
+ToLmFxPk7cDBOO7n/tWASPkpOFI/RUrzCnFCD4g1db2RMa4eBs9X9A==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+zzMlOstY1fh3XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZb
+nNrBqhgBQFzmh2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIH
+Hd6VDy3lAKUmVArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQ
+GJv/P2eD2oXEgXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKm
+ruxY/HeV/raFEJzob4pqWB1r6BoABHCE49gDQQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature143763-Object35224"><etsi:QualifyingProperties Target="#Signature143763"><etsi:SignedProperties Id="Signature143763-SignedProperties701334"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-03-25T23:12:59+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>/SpSIebFwcglxj5xozUbjzjWHuY=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1515933376</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-245355"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

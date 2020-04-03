@@ -1,0 +1,5 @@
+Array
+(
+    [message] => Se ha procesado el pago correctamente.
+    [new_session_data] => n2IxirC94VIpwb%2Ba2KRUg9bXupuSvuC1868xJIafw1aF2HTZiuCH8A0TCQsBdb11l1hA57kiv8R4draBNbledw%3D%3D
+)

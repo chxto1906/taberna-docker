@@ -364,9 +364,9 @@
             }
 
             try {
-                echo "<hr>";
+                /*echo "<hr>";
                 var_dump($product);
-                echo "<hr>";
+                echo "<hr>";*/
                 if ($product->save()) {
                     echo "<b>Pasado el save()</b>";
                     //$product->associateTo($shops);
