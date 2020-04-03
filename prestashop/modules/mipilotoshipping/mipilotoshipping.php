@@ -339,6 +339,13 @@ class Mipilotoshipping extends CarrierModule
             $cart = Context::getContext()->cart;
             $qty = Cart::getNbProducts($cart->id);
             $tipo_vehiculo = $this->getTipoVehiculo($qty);
+
+            if (!isset($cart->id_address_delivery) || $cart->id_address_delivery == 0) {
+                    $cart->id_address_delivery = (int) Address::getFirstCustomerAddressId($cart->id_customer);
+                    Context::getContext()->cart->id_address_delivery = (int) Address::getFirstCustomerAddressId($cart->id_customer);
+                }
+
+
             if ($cart->id_address_delivery) {
                 $id_address_delivery = $cart->id_address_delivery;
                 $address = new Address($id_address_delivery);
