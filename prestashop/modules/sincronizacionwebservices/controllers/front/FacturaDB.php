@@ -135,6 +135,23 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
             }
             
         }
+
+        if (!$result) {
+            $log = new LoggerTools();
+            if ($secuencial) {
+                $deleteCabecera = Db::getInstance()->delete('factura_cabecera', 'secuencial = '.$secuencial);
+                $log->add("Resutado DeleteCabecera: ".$deleteCabecera);
+
+                $deleteDetalle = Db::getInstance()->delete('factura_detalle', 'secuencial = '.$secuencial);
+                $log->add("Resutado DeleteDetalle: ".$deleteDetalle);
+
+                $deleteDetallePago = Db::getInstance()->delete('factura_detalle_pago', 'secuencial = '.$secuencial);
+                $log->add("Resutado DeleteDetallePago: ".$deleteDetallePago);
+            } else {
+                $log->add("No hay secuencial se evitó Hacer DELETE al intentar FacturaDB !!");
+            }
+        }
+
         return $result;
     }
 
@@ -209,7 +226,7 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
             'propina' => 0,
             'importe_total' => $order->total_paid,
             'moneda' => 'dolar',
-            'direccion' => $address->address1,
+            'direccion' => pSQL($address->address1),
             'telefono' => $address->phone,
             'email' => $address->email,
             'transaction_id_pay' => $write["transaction_id"],
@@ -241,7 +258,7 @@ class sincronizacionwebservicesFacturaDBModuleFrontController extends ModuleFron
             'punto_emision' => PUNTO_EMISION,
             'secuencial' => $secuencial,
             'codigo_principal' => $product["product_reference"],
-            'descripcion' => $product["product_name"],
+            'descripcion' => pSQL($product["product_name"]),
             'cantidad' => $product["product_quantity"],
             'precio' => $product["product_price"],
             'descuento' => 0,
