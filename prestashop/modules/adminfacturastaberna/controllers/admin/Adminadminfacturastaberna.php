@@ -71,7 +71,7 @@ class AdminadminfacturastabernaController extends ModuleAdminController
 		WHERE fc.estado = 'FINALIZADO' AND
 		fc.fecha_autorizacion >= DATE_ADD(DATE_SUB(NOW(), INTERVAL ".$months_ago." MONTH), INTERVAL 1 DAY) AND
 		fc.fecha_autorizacion <= DATE_SUB(NOW(), INTERVAL 0 MONTH) 
-		ORDER BY fc.fecha_autorizacion DESC";
+		ORDER BY fc.secuencial DESC";
 
         return Db::getInstance()->executeS($sql);
     }
