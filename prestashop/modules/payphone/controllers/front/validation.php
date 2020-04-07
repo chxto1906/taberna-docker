@@ -154,15 +154,16 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
                 //$resFacturacion = $this->processFacturacionDB($order,$cart,$write);
                 $this->log->add("processFacturacionDB : ".$resFacturacion);
                 if (!$resFacturacion) {
-                    $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
+                    //$this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
                     //$this->eliminarPedidoMiPiloto($guia_numero);
-                    $this->reversePayphone($data->transactionId);
-                    return $this->showErrors($this->payphone->l('Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+                    //$this->reversePayphone($data->transactionId);
+                    //return $this->showErrors($this->payphone->l('Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+                    $this->log->add("No se pudo guardar el process FacturacionDB. Rellenar MANUALMENTE henry");
                 } else {
                     //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-                    Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key);
+                    $this->log->add("Si se pudo guardar el process FacturacionDB");
                 }
-                
+            Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key);
 
             
         } catch (PayPhoneWebException $e) {

@@ -96,15 +96,18 @@ class Ps_CashondeliveryValidationModuleFrontController extends ModuleFrontContro
         
         $this->log->add("EFECTIVO contraentrega - processFacturacionDB : ".$resFacturacion);
         if (!$resFacturacion) {
-            $this->changeOrderStatus($order, 6); //6 Order Cancelada
+            //$this->changeOrderStatus($order, 6); //6 Order Cancelada
             //$this->eliminarPedidoMiPiloto($guia_numero);
             //$this->reversePayphone($data->transactionId);
-            return $this->showErrors(null,$this->payphone->l('Ocurrió un inconveniente al guardar datos de la orden. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+            //return $this->showErrors(null,$this->payphone->l('Ocurrió un inconveniente al guardar datos de la orden. Disculpa las molestias. Vuelve a intentarlo más tarde.', 'validation'));
+            $this->log->add("No se pudo guardar el process FacturacionDB. Rellenar MANUALMENTE henry");
         } else {
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, 2, true);
-            Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
+            $this->log->add("Si se pudo guardar el process FacturacionDB");
         }
+
+        $this->changeOrderStatus($order, 2, true);
+        Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
 
 
 

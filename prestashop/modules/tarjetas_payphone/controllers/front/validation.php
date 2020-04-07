@@ -294,21 +294,22 @@ class Tarjetas_payphoneValidationModuleFrontController extends ModuleFrontContro
         //$resFacturacion = $this->processFacturacionDB($order,$cart,$write);
         $log->add("Asentar DB facturacion processFacturacionDB : ".$resFacturacion);
         if (!$resFacturacion) {
-            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
+            //$this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
             //$this->eliminarPedidoMiPiloto($guia_numero);
-            $this->reversePayphone($data->transactionId);
-            return $this->showErrors(null,'Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.');
+            //$this->reversePayphone($data->transactionId);
+            //return $this->showErrors(null,'Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.');
+            $log->add("No se pudo guardar el process FacturacionDB. Rellenar MANUALMENTE henry");
         } else {
             //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
-            //$this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
-
-            if ($dataEnc && !$datos_card_token)
-                if ($add_card == "on")
-                    $this->saveCard($data->cardToken);
-
-            Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key . '&cct='.$data->cardToken);
+            $log->add("Si se pudo guardar el process FacturacionDB");
         }
+        $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
+
+        if ($dataEnc && !$datos_card_token)
+            if ($add_card == "on")
+                $this->saveCard($data->cardToken);
+
+        Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key . '&cct='.$data->cardToken);
 
     }
 
