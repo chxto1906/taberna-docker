@@ -36,6 +36,8 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         $this->log->add("Empieza FacturaSAP " . date('m/d/Y G:i:s a', time()) . "<br>");
 
         $auth_sri = Tools::getValue('auth_sri');
+        $desde = Tools::getValue('desde',"all");
+        $hasta = Tools::getValue('hasta',"all");
 
         if (!$auth_sri){
             $facturas = $this->getFacturas();
@@ -43,7 +45,7 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
                 $this->recorrerFacturas($facturas);
             }
         } else {
-            $facturas = $this->getFacturasCompletas();
+            $facturas = $this->getFacturasCompletas($desde,$hasta);
             if (!empty($facturas)){
                 $this->recorrerFacturasCompletas($facturas);
             }
@@ -1070,11 +1072,17 @@ class sincronizacionwebservicesFacturaSAPModuleFrontController extends ModuleFro
         return $facturas;
     }
 
-    private function getFacturasCompletas() {
+    private function getFacturasCompletas($desde,$hasta) {
+        $cadena = "(fc.id BETWEEN $desde and $hasta)";    
+        if ($desde == "all"){
+            $cadena = "(fecha_autorizacion BETWEEN CURDATE() - INTERVAL 2 DAY AND CURDATE() - INTERVAL 1 SECOND)";
+        }
+
+
         $facturas = Db::getInstance()->executeS('
         SELECT * 
         FROM factura_cabecera AS fc
-	WHERE (fc.numero_pedido is not null AND fc.documento_contable_recaudo is not null AND fc.transaction_id_pay is not null AND (fecha_autorizacion BETWEEN CURDATE() - INTERVAL 2 DAY AND CURDATE() - INTERVAL 1 SECOND) ) ');
+	    WHERE (fc.numero_pedido is not null AND fc.documento_contable_recaudo is not null AND fc.transaction_id_pay is not null AND '.$cadena.' ) ');
 
         return $facturas;
     }
