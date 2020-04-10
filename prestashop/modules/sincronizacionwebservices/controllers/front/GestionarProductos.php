@@ -372,8 +372,9 @@
                     //$product->associateTo($shops);
                     if (!$id_product){
                         $this->update_date_add($product);
-                        //$product->addToCategories(array($id_category));
+                        $product->addToCategories(array($id_category));
                     }
+                    $product->addToCategories(array($id_category));
                     return true;
                 } else {
                     echo "<b>NO el save()</b>";
