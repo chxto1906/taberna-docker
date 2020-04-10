@@ -449,27 +449,17 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
         //$resFacturacion = $this->processFacturacionDB($order,$cart,$write);
         $log->add("Asentar DB facturacion processFacturacionDB : ".$resFacturacion);
         if (!$resFacturacion) {
-            $log->add("resFacturacion BAD");
-            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
-            $this->reversePayphone($data->transactionId);
-            $this->content = ["message" => 'Ocurrió un inconveniente en el proceso de pago. Se ha cancelado tu pedido y se ha revertido tu pago. Disculpa las molestias. Vuelve a intentarlo más tarde.'];
-            $this->process_session_data();
+            $log->add("No se pudo guardar el process FacturacionDB. Rellenar MANUALMENTE henry");
         } else {
-            $log->add("resFacturacion OK");
-            //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'), true);
-            //$this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
-            //Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int) $cart->id . '&id_module=' . (int) $this->module->id . '&id_order=' . $order->id . '&hora_llegada='. $hora_llegada . '&key=' . $customer->secure_key);
-            if ($dataEnc && !$datos_card_token)
+            $log->add("Si se pudo guardar el process FacturacionDB");
+        }
+        $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'), true);
+        if ($dataEnc && !$datos_card_token)
                 if ($add_card == "on")
                     $this->saveCard($data->cardToken);
-
-            $log->add("DEVUELVE 201 y message");
-
-            $this->status_code = 201;
-            $this->content = ["message" => "Se ha procesado el pago correctamente."];
-            $this->process_session_data();
-        }
+        $this->status_code = 201;
+        $this->content = ["message" => "Se ha procesado el pago correctamente."];
+        $this->process_session_data();
 
     }
 

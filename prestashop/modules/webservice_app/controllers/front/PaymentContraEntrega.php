@@ -114,19 +114,15 @@ class Webservice_AppPaymentContraEntregaModuleFrontController extends ModuleFron
         
         $this->log->add("EFECTIVO contraentrega - processFacturacionDB : ".$resFacturacion);
         if (!$resFacturacion) {
-            $this->changeOrderStatus($order, 6); //6 Order Cancelada
-            //$this->eliminarPedidoMiPiloto($guia_numero);
-            //$this->reversePayphone($data->transactionId);
-            $this->content = ["message" => 'Ocurrió un inconveniente al guardar datos de la orden. Disculpa las molestias. Vuelve a intentarlo más tarde.'];
-            $this->process_session_data();
+            $log->add("No se pudo guardar el process FacturacionDB. Rellenar MANUALMENTE henry");
         } else {
-            //$this->addNumGuiaMiPilotoOrder($order,$guia_numero);
-            $this->changeOrderStatus($order, 2, true);
-            //Tools::redirect('index.php?controller=order-confirmation&id_cart='.$cart->id.'&id_module='.$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
-            $this->status_code = 201;
-            $this->content = ["message" => "Se ha procesado el pago correctamente."];
-            $this->process_session_data();
+            $log->add("Si se pudo guardar el process FacturacionDB");
         }
+
+        $this->changeOrderStatus($order, 2, true);
+        $this->status_code = 201;
+        $this->content = ["message" => "Se ha procesado el pago correctamente."];
+        $this->process_session_data();
 
     }
 
