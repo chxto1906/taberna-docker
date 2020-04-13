@@ -55,9 +55,12 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
      * Actualiza la orden según la respuesta y guarda datos de la respuesta en la BD
      */
     private function paymentResponse() {
+        $this->log = new LoggerTools();
+        $this->log->add("***paymentResponse Payphone Redirect*** ");
         $id = Tools::getValue('id');
         $clientTransactionId = Tools::getValue('clientTransactionId');
         $msg = Tools::getValue('msg');
+        $this->log->add("msg: ".$msg);
         if ($msg) {
             $cart = new Cart($this->context->cookie->payphone_cart_id);
             if (Validate::isLoadedObject($cart)) {
@@ -89,8 +92,10 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
                 return;
             if ($result->statusCode == 3) {
                 $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_APPROVED'),true);
+                $this->log->add("Result Status Code Payphone: 3 Aprovada");
             } elseif ($result->statusCode == 2) {
                 $this->changeOrderStatus($order, Configuration::get('PS_PAYPHONE_REJECTED'));
+                $this->log->add("Result Status Code Payphone: 2 Rechazada");
             }
             $data = $result;
             $write = array();
@@ -114,7 +119,7 @@ class PayPhoneValidationModuleFrontController extends ModuleFrontController {
                 $write['authorization_code'] = pSQL($data->authorizationCode);
             }
             Db::getInstance()->insert('payphone_transaction', $write);
-
+            $this->log->add("Insertando en payphone transaction");
 
 
             if ($data->statusCode != 3) {

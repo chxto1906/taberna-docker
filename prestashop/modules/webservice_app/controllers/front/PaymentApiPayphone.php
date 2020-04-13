@@ -231,7 +231,7 @@ class Webservice_AppPaymentApiPayphoneModuleFrontController extends ModuleFrontC
             }
 
             $data->email = $address->email;
-            $data->phoneNumber = $address->phone;
+            $data->phoneNumber = trim($address->phone);
             $data->documentId = $address->dni;
             $data->amount = "" . $valorAmount;
             $data->amountWithTax = "" . $valorAmountWithTax; 
