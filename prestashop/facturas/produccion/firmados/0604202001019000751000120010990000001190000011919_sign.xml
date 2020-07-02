@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>0604202001019000751000120010990000001190000011919</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000119</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>06/04/2020</fechaEmision><dirEstablecimiento>La Taberna Kennedy Norte (Guayaquil) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>Fernando Chávez </razonSocialComprador><identificacionComprador>0911113868</identificacionComprador><direccionComprador>Retorno 1, Guayaquil, ECU</direccionComprador><totalSinImpuestos>129.37</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>129.37</baseImponible><valor>15.54</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>144.91</importeTotal><pagos><pago><formaPago>20</formaPago><total>144.91</total><plazo>0</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10063883</codigoPrincipal><descripcion>TANQUERAY DRY GIN 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>19.96</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>19.96</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>19.96</baseImponible><valor>2.40</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063869</codigoPrincipal><descripcion>TOCORNAL CARMENERE 750 ML</descripcion><cantidad>3.00</cantidad><precioUnitario>5.81</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>17.43</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>17.43</baseImponible><valor>2.09</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063923</codigoPrincipal><descripcion>NAVARRO CORREAS LOS ARBOLES CHARDONNAY</descripcion><cantidad>3.00</cantidad><precioUnitario>8.48</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>25.44</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>25.44</baseImponible><valor>3.05</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10077226</codigoPrincipal><descripcion>CERVEZA 593 BOTELLA 330ML</descripcion><cantidad>12.00</cantidad><precioUnitario>1.34</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>16.08</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>16.08</baseImponible><valor>1.93</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063871</codigoPrincipal><descripcion>TOCORNAL MERLOT 750 ML</descripcion><cantidad>3.00</cantidad><precioUnitario>5.81</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>17.43</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>17.43</baseImponible><valor>2.09</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10064220</codigoPrincipal><descripcion>RON BARBA NEGRA ORO 70 CL</descripcion><cantidad>1.00</cantidad><precioUnitario>6.16</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>6.16</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>6.16</baseImponible><valor>0.74</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10070519</codigoPrincipal><descripcion>COCA COLA 1530ML PET(6)</descripcion><cantidad>1.00</cantidad><precioUnitario>1.56</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.56</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.56</baseImponible><valor>0.19</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10077939</codigoPrincipal><descripcion>FRUIT JUGO NATURAL FRESA LATA 350 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>0.89</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.89</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>0.89</baseImponible><valor>0.11</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10077937</codigoPrincipal><descripcion>FRUIT JUGO NATURAL NARANJA LATA 350 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>0.89</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>0.89</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>0.89</baseImponible><valor>0.11</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10064225</codigoPrincipal><descripcion>AGUA IMPERIAL 3000 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>1.34</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.34</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.34</baseImponible><valor>0.16</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10074342</codigoPrincipal><descripcion>IMPERIAL LIMONADA 1500ML</descripcion><cantidad>1.00</cantidad><precioUnitario>1.34</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.34</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.34</baseImponible><valor>0.16</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10064093</codigoPrincipal><descripcion>PUNCH GINGER ALE 2000 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>1.56</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.56</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.56</baseImponible><valor>0.19</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10074163</codigoPrincipal><descripcion>DE TODITO PICANTE 130 GR</descripcion><cantidad>1.00</cantidad><precioUnitario>1.38</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.38</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.38</baseImponible><valor>0.17</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10062026</codigoPrincipal><descripcion>MANI CRIS FAMILIAR 100GR</descripcion><cantidad>1.00</cantidad><precioUnitario>1.16</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.16</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.16</baseImponible><valor>0.14</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10066750</codigoPrincipal><descripcion>ALTO PALERMO MALBEC 750ML</descripcion><cantidad>2.00</cantidad><precioUnitario>5.80</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>11.60</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>11.60</baseImponible><valor>1.39</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>20000154</codigoPrincipal><descripcion>TRANSPORTE - SERV VARIOS TABERNAS</descripcion><cantidad>1.00</cantidad><precioUnitario>5.15</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>5.15</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>5.15</baseImponible><valor>0.62</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature799413">
+<ds:SignedInfo Id="Signature-SignedInfo216254">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID953943" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature799413-SignedProperties455250">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>02r3Mh+ZuzVO+XkLSNheotPmewA=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1363931">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>YtOb5bhowPTHdG/cvVEEpPe4D5w=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-849706" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>3lUq9PsCAp5CCXXjr6NLh5yIP2c=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue702357">
+yrk4Gn5AB5IpAoSQWM4VMH5c+bcPYomqftBdshjeL2iW2LK1FXwKcK/5N6lSj6v3gPUAtVjAM2Wi
+BX091/07epraWEnxP7tWF85KeIusx/GHL7KlclpJyq+Dwa40vpGN1JsLS4HG7DuKxCegrDBzXj88
+8OleSiJhCsvz1LDSmBn+zphSs9HGPdHIE+shOsSygIEjdvsmGVJJMUvtzZ5FyQnhVnP1N2O4bjDn
+16PYJgmzPhPtC9FeyiItJzI5QOGgxYPjpYKesYxJcTvFZuLFP7s4Ce0MPJ14uX4U09BlelUcNhB/
+sWqdivNqXKNAhczqVcdO2cXz5Szva77083f8Iw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1363931">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ8DCCB9igAwIBAgIEW2L5oDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIwMDMwOTE0NDc0M1oXDTIyMDMwOTE1MTc0
+M1owgbUxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE5MBEGA1UEBRMKMDAwMDA2ODMxMDAkBgNVBAMTHUNBUkxPUyBKT0FRVUlO
+IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3JllbXhHYNl0
+5Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z2rQ7e0QCN9Uf
+/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxmwdpTuhN/mm72
+3Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJxRqE+wxRbf/a+
+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbnqHXPbqODd3Nh
+1xcGYlbAehYSbO2OlRMlgkiwuwIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
+XAYLKwYBBAGCqDsCAgEwTTBLBggrBgEFBQcCARY/aHR0cDovL3d3dy5lY2kuYmNlLmVjL3BvbGl0
+aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtanVyaWRpY2EucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
+L29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDAuBgorBgEEAYKoOwMKBCATHkFMTUFDRU5FUyBKVUFOIEVMSlVSSSBDSUEg
+TFREQTAdBgorBgEEAYKoOwMLBA8TDTAxOTAwMDc1MTAwMDEwGgYKKwYBBAGCqDsDAQQMEwowMTAx
+OTk5NTk3MB4GCisGAQQBgqg7AwIEEBMOQ0FSTE9TIEpPQVFVSU4wFwYKKwYBBAGCqDsDAwQJEwdB
+TFZBUkVaMBYGCisGAQQBgqg7AwQECBMGRUxKVVJJMBoGCisGAQQBgqg7AwUEDBMKU1VCR0VSRU5U
+RTAqBgorBgEEAYKoOwMHBBwTGkFWIEdJTCBSQU1JUkVaIERBVkFMT1MgNTMyMBkGCisGAQQBgqg7
+AwgECxMJMDcyODYyMTExMBYGCisGAQQBgqg7AwkECBMGQ3VlbmNhMBcGCisGAQQBgqg7AwwECRMH
+RUNVQURPUjAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wIAYDVR0RBBkwF4EVamNh
+c3RpbGxvQGVsanVyaWMuY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8v
+YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMOTQxLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
+REVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBE
+RSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1Is
+Yz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5l
+Yy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYD
+VQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJ
+RklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMc
+QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMOTQxMCsGA1UdEAQkMCKA
+DzIwMjAwMzA5MTQ0NzQzWoEPMjAyMjAzMDkxNTE3NDNaMB8GA1UdIwQYMBaAFEii3yMfHfgsUXqM
+A81JMqUJwZSrMB0GA1UdDgQWBBRpQsc22bUg9nyrE1t6dJsFq/ZW5TAJBgNVHRMEAjAAMBkGCSqG
+SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQC55jV2Sp9Pix4xlRiZuVKP
+ACnJ99m7jXUQmY+eii7klsAvd0lCjInTUGZ7lKQk1zagwZa2/8V0y4QCRCBW6FssOgZqXv5P4DVj
+20vVO/dzcc+ZMObaH09WUEDJHkEevo+GlzI98d8eM7MDWq7dVxBsQjGZyxB9zlrCYiehEyWRStc2
+weEY19t2kwMbMJ3YeHUcMnJE/271YaTSAnvWjwTkMAFrCFjOppAiftF463tQV0QsXMgdRztjjPI/
+Ep/0PlV/DwGNtc9Xd5nyEugaBwqbhw8gZMVUDQz/915WpKInukvgmUQcA4KcZ18YdeWfFSfBKAfv
+PYfvTFBp+294dNfbxRuXr9vYGkb0Rbldh7kLluagm4CCe22t9olMyEXoJrg4E2rgYEmSJmk26Q/U
+wvgbNzM2B3xei4tG6LNIpxlI6LMcipATq9THInLQbI72Q1hMbkoRu7r3F+4iVsTEAt0afpMdmlhm
+PtO0vhG/6DxJqMAuKFGIbWysjC/y1lF0IwDKm3J9iZZk2qhTAHWzCgp5/dSe1m+c0FpjsXAS8m9B
+wLnek2Xxi6gPXDnD0VJLLiTqaixaWOnbQEckGPsHfAgy3zNAn7x3jvkA1dnDeK930gsS7JDaVNQw
+WtgJTNrPsC/Vi5heD8nix33uDl0UEYO8OJhj+EoIX433WKClqwxlbw==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+3JllbXhHYNl05Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z
+2rQ7e0QCN9Uf/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxm
+wdpTuhN/mm723Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJx
+RqE+wxRbf/a+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbn
+qHXPbqODd3Nh1xcGYlbAehYSbO2OlRMlgkiwuw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature799413-Object481732"><etsi:QualifyingProperties Target="#Signature799413"><etsi:SignedProperties Id="Signature799413-SignedProperties455250"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-04-06T20:41:54+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>vrP9gKQ3eSMc4sZAfwaydVlUr1g=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533213088</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-849706"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

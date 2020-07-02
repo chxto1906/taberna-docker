@@ -1,4 +1,3 @@
-{*
 <div class="confirmation-box">
     <h1 class="confirmation-title">{l s='The transaction #'  mod="payphone"}<b>{$transaction_id}</b>{l s=' with PayPhone has been '  mod="payphone"}
         {if $status eq 'Approved'}<b>{l s='approved'  mod="payphone"}</b>{/if}{if $status eq 'Canceled'}<b>{l s='canceled'  mod="payphone"}</b>{/if}
@@ -25,4 +24,3 @@
 	{/if}    
     </div>
 </div>
-*}

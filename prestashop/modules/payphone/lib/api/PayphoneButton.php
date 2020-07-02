@@ -11,7 +11,6 @@ require_once _PS_MODULE_DIR_ . 'payphone/lib/models/request/PrepareSaleRequestMo
 require_once _PS_MODULE_DIR_ . 'payphone/lib/models/response/PrepareSaleModel.php';
 require_once _PS_MODULE_DIR_ . 'payphone/lib/models/response/SaleGetResponseModel.php';
 
-
 class PayphoneButton {
 
     /**
@@ -41,6 +40,7 @@ class PayphoneButton {
      */
     public function Confirm($id) {
         try {
+
             $uri = 'api/button/Confirm';
             $model = new ConfirmSaleRequestModel();
             $model->id = $id;
@@ -50,27 +50,7 @@ class PayphoneButton {
         } catch (PayPhoneWebException $exc) {
             throw $exc;
         } catch (Exception $exc) {
-            throw $this->ThrowException();
-        }
-    }
-
-    /**
-     * @author Henry Campoverde
-     * @param int $id
-     * @return \Boolean
-     * @throws \PayPhoneWebException
-     */
-    public function Reverse($id) {
-        try {
-            $uri = 'api/Reverse';
-            $model = new ConfirmSaleRequestModel();
-            $model->id = $id;
-            $json = json_encode($model);
-            $response = $this->post_call($uri, $json);
-            return $response;
-        } catch (PayPhoneWebException $exc) {
-            throw $exc;
-        } catch (Exception $exc) {
+            var_dump($exc);
             throw $this->ThrowException();
         }
     }

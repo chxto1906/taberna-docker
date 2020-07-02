@@ -1,5 +1,5 @@
 Array
 (
-    [message] => Se ha procesado el pago correctamente.
-    [new_session_data] => n2IxirC94VIpwb%2Ba2KRUg9bXupuSvuC1868xJIafw1aF2HTZiuCH8A0TCQsBdb11l1hA57kiv8R4draBNbledw%3D%3D
+    [message] => El carrito no se puede cargar o ya se ha realizado un pedido usando este carrito
+    [new_session_data] => S0d%2FOmmdZdfViS16%2BuMaUy0PiS7PkvVm24eYOKC%2Fl9myPHvC7Mh2YUsUYF8ks0wvwkOxeo6WI7huf54hJAAdJQ%3D%3D
 )

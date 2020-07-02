@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>0104202001019000751000120010990000000760000007614</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000076</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>01/04/2020</fechaEmision><dirEstablecimiento>La Taberna Kennedy Norte (Guayaquil) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>isidro arosemena</razonSocialComprador><identificacionComprador>0902392687</identificacionComprador><direccionComprador>Calle B, Guayaquil, ECU</direccionComprador><totalSinImpuestos>80.44</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>80.44</baseImponible><valor>9.65</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>90.09</importeTotal><pagos><pago><formaPago>20</formaPago><total>90.09</total><plazo>0</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10062074</codigoPrincipal><descripcion>GRAND OLD PARR 12 AÑOS 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>38.84</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>38.84</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>38.84</baseImponible><valor>4.66</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063638</codigoPrincipal><descripcion>B&amp;G PARTAGER TINTO 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>7.14</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>7.14</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>7.14</baseImponible><valor>0.86</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10066746</codigoPrincipal><descripcion>ALTO PALERMO CABERNET SAUVIGNON 750ML</descripcion><cantidad>2.00</cantidad><precioUnitario>5.80</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>11.60</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>11.60</baseImponible><valor>1.39</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063775</codigoPrincipal><descripcion>BICICLETA SAUVIGNON BLANC 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>8.35</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>8.35</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>8.35</baseImponible><valor>1.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10070570</codigoPrincipal><descripcion>SPRITE 500ML</descripcion><cantidad>4.00</cantidad><precioUnitario>0.50</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>2.00</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>2.00</baseImponible><valor>0.24</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10070519</codigoPrincipal><descripcion>COCA COLA 1530ML PET(6)</descripcion><cantidad>1.00</cantidad><precioUnitario>1.56</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.56</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.56</baseImponible><valor>0.19</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063780</codigoPrincipal><descripcion>BICICLETA MERLOT 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>8.35</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>8.35</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>8.35</baseImponible><valor>1.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>20000154</codigoPrincipal><descripcion>TRANSPORTE - SERV VARIOS TABERNAS</descripcion><cantidad>1.00</cantidad><precioUnitario>2.60</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>2.60</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>2.60</baseImponible><valor>0.31</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature548659">
-<ds:SignedInfo Id="Signature-SignedInfo1027413">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>0104202001019000751000120010990000000760000007614</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000076</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>01/04/2020</fechaEmision><dirEstablecimiento>La Taberna Kennedy Norte (Guayaquil) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>isidro arosemena</razonSocialComprador><identificacionComprador>0902392687</identificacionComprador><direccionComprador>Calle B, Guayaquil, ECU</direccionComprador><totalSinImpuestos>80.44</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>80.44</baseImponible><valor>9.65</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>90.09</importeTotal><pagos><pago><formaPago>20</formaPago><total>90.09</total><plazo>0</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10062074</codigoPrincipal><descripcion>GRAND OLD PARR 12 AÑOS 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>38.84</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>38.84</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>38.84</baseImponible><valor>4.66</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063638</codigoPrincipal><descripcion>B&amp;G PARTAGER TINTO 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>7.14</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>7.14</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>7.14</baseImponible><valor>0.86</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10066746</codigoPrincipal><descripcion>ALTO PALERMO CABERNET SAUVIGNON 750ML</descripcion><cantidad>2.00</cantidad><precioUnitario>5.80</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>11.60</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>11.60</baseImponible><valor>1.39</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063775</codigoPrincipal><descripcion>BICICLETA SAUVIGNON BLANC 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>8.35</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>8.35</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>8.35</baseImponible><valor>1.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10070570</codigoPrincipal><descripcion>SPRITE 500ML</descripcion><cantidad>4.00</cantidad><precioUnitario>0.50</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>2.00</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>2.00</baseImponible><valor>0.24</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10070519</codigoPrincipal><descripcion>COCA COLA 1530ML PET(6)</descripcion><cantidad>1.00</cantidad><precioUnitario>1.56</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>1.56</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>1.56</baseImponible><valor>0.19</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10063780</codigoPrincipal><descripcion>BICICLETA MERLOT 750 ML</descripcion><cantidad>1.00</cantidad><precioUnitario>8.35</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>8.35</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>8.35</baseImponible><valor>1.00</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>20000154</codigoPrincipal><descripcion>TRANSPORTE - SERV VARIOS TABERNAS</descripcion><cantidad>1.00</cantidad><precioUnitario>2.60</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>2.60</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>2.60</baseImponible><valor>0.31</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature281881">
+<ds:SignedInfo Id="Signature-SignedInfo311511">
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
 <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
-<ds:Reference Id="SignedPropertiesID994183" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature548659-SignedProperties275889">
+<ds:Reference Id="SignedPropertiesID571742" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature281881-SignedProperties693650">
 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-<ds:DigestValue>Su3IybeI+FhZt1eCTszgyoFWx+o=</ds:DigestValue>
+<ds:DigestValue>fXZN3aKT5R9VwufdAGDcs0LhmhU=</ds:DigestValue>
 </ds:Reference>
-<ds:Reference URI="#Certificate1547041">
+<ds:Reference URI="#Certificate1857454">
 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-<ds:DigestValue>wqhmWVw2UCvzHochzkh8xDIP5wY=</ds:DigestValue>
+<ds:DigestValue>CSYt3sz82SC9vta66KXqAcWAqko=</ds:DigestValue>
 </ds:Reference>
-<ds:Reference Id="Reference-ID-478366" URI="#comprobante">
+<ds:Reference Id="Reference-ID-313055" URI="#comprobante">
 <ds:Transforms>
 <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
 </ds:Transforms>
@@ -18,29 +18,29 @@
 <ds:DigestValue>50g1wVD/q/PKsJ9U8y4lTGXjs+U=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
-<ds:SignatureValue Id="SignatureValue818195">
-hwjfM9Zh1g8z03joB9+QpCqN6MXoHtLM7QyzAwAMIY0V2kWDEzsosjiRBZGSOp3o5vsFzLpb90d0
-gW02iydJG7C7obYczLwc//A5b/hA9Igu3UVlTU+RdBjkVF8x1uD3Nku1jLg0hiHWkzlSCf9Bau9z
-tNPEd0UKVS2KWpHObqRWfCH4EjOxxp1iCtdLYHaizX7PWNTDvdl8g5D+308avpiJc8dN5+1BZFSV
-nXTFz5K+E9CIQaaqaqOZuZIPOt2pUyhl9IQXm8FVzbtOF7wPvww8SKI0oYxWI8CDcdtV7mJapH37
-yfqMu9BXyPuE1TdsaLZkUnFlHku73Id3yMAH1w==
+<ds:SignatureValue Id="SignatureValue487634">
+WMBnOkpBE0mBzruyu7YIM1XZmyIhdaWW1EzxnSmw/4u7oJPTW5K5ccq2+HTUme7UsCeQSskTy6gQ
+qJ0NOIfLqmhO2iFzO09rjBDQelG0wcw5sDZQC7Qq7D/mNMHThGrSeTDywAf4IT5bs00nm86vaC1Y
+oXb0KfK9MF2mH7AeBQxooJzlCh6bviZ8E8c9hG9N2iDhMhc/s9uLXQBvtUC9E7qdsO2VYt59GKDQ
+YUWXMW8Y+XL41yw4yYO8taOZbOVs8dtxxd60+4iQQY03oSttqYSJX1jAt7hMAVc8xVGm5zpWub0R
+DCx3qPZqAoordVU4r1nkzXJ3f4tFVoNaegxzbg==
 </ds:SignatureValue>
-<ds:KeyInfo Id="Certificate1547041">
+<ds:KeyInfo Id="Certificate1857454">
 <ds:X509Data>
 <ds:X509Certificate>
-MIIJ8DCCB9igAwIBAgIEWltOwDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+MIIJ8DCCB9igAwIBAgIEW2L5oDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
 BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
 SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
-QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MDMxMjIwNDgxM1oXDTIwMDMxMjIxMTgx
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIwMDMwOTE0NDc0M1oXDTIyMDMwOTE1MTc0
 M1owgbUxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
 NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
 DAYDVQQHEwVRVUlUTzE5MBEGA1UEBRMKMDAwMDA2ODMxMDAkBgNVBAMTHUNBUkxPUyBKT0FRVUlO
-IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzzMlOstY1fh3
-XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZbnNrBqhgBQFzm
-h2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIHHd6VDy3lAKUm
-VArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQGJv/P2eD2oXE
-gXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKmruxY/HeV/raF
-EJzob4pqWB1r6BoABHCE49gDQQIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
+IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3JllbXhHYNl0
+5Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z2rQ7e0QCN9Uf
+/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxmwdpTuhN/mm72
+3Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJxRqE+wxRbf/a+
+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbnqHXPbqODd3Nh
+1xcGYlbAehYSbO2OlRMlgkiwuwIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
 XAYLKwYBBAGCqDsCAgEwTTBLBggrBgEFBQcCARY/aHR0cDovL3d3dy5lY2kuYmNlLmVjL3BvbGl0
 aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtanVyaWRpY2EucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
 BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
@@ -53,39 +53,39 @@ RTAqBgorBgEEAYKoOwMHBBwTGkFWIEdJTCBSQU1JUkVaIERBVkFMT1MgNTMyMBkGCisGAQQBgqg7
 AwgECxMJMDcyODYyMTExMBYGCisGAQQBgqg7AwkECBMGQ3VlbmNhMBcGCisGAQQBgqg7AwwECRMH
 RUNVQURPUjAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wIAYDVR0RBBkwF4EVamNh
 c3RpbGxvQGVsanVyaWMuY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8v
-YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMNTMzLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
+YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMOTQxLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
 REVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBE
 RSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1Is
 Yz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5l
 Yy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYD
 VQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJ
 RklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMc
-QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMNTMzMCsGA1UdEAQkMCKA
-DzIwMTgwMzEyMjA0ODEzWoEPMjAyMDAzMTIyMTE4MTNaMB8GA1UdIwQYMBaAFBj58PvmMhyZZjkq
-youyaX1JJ7/OMB0GA1UdDgQWBBSVe328dqEYBcpyfpGssHFYGWPZ7zAJBgNVHRMEAjAAMBkGCSqG
-SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQAFHWul8YLZMvJsCPtDSfZ0
-GQmgTJF9kHFo4skIBSj5CeatAc9RsdAeB61mEIGDe3ecS1v+uEt/PoaCRKcoIJOhcAxNBuFIzUzd
-Ree/B0HIZmV/JIlonhl6bV90sAHgno5+6en2KNUtUYSH6B3nbgEVMamzw8e0+MzNfNE1ucQa16p4
-IBDjG7CpklIeWdYWzAtQx2kf0BOvtL+l1l6h8pKB2AhllGlfh3VPGukZ6USqPsnQO52IBvYJvpJ2
-gU7oZGZC39CWngjy1dDTj6CuCL/CjH207SWZMcoziH62M+eZA9BsEJ4lJ0UyjBj1Q0dBRC+PA8hL
-PrwmsXOjY8GXuVwMt/BoPmrEvzkXFLisNcsv1U1zX7p1QFI+itOJth/HUDKmmGqzglkVGWtRuC6v
-He0rf72d1e1etQcb0/ykOhVFKkbBJIZgtDnBNLxnjvBjK5XFpqMQDPC2a6GqFr5fepSdTZ8WOVEw
-BZW52k8T7Ii7fwiLwrtHpyrPTxLc5zgfJLZRVQPhlKVWhtrUyJ9cZbJZhfEodqvA08C88i2W+Q+M
-9HdZRcz18p7LKZvjliFkMJrPHMKxM7wa5WkOjs6c100fkAhT1CzHdhiOFEsxzwVUmoXgrc7NV2AD
-ToLmFxPk7cDBOO7n/tWASPkpOFI/RUrzCnFCD4g1db2RMa4eBs9X9A==
+QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMOTQxMCsGA1UdEAQkMCKA
+DzIwMjAwMzA5MTQ0NzQzWoEPMjAyMjAzMDkxNTE3NDNaMB8GA1UdIwQYMBaAFEii3yMfHfgsUXqM
+A81JMqUJwZSrMB0GA1UdDgQWBBRpQsc22bUg9nyrE1t6dJsFq/ZW5TAJBgNVHRMEAjAAMBkGCSqG
+SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQC55jV2Sp9Pix4xlRiZuVKP
+ACnJ99m7jXUQmY+eii7klsAvd0lCjInTUGZ7lKQk1zagwZa2/8V0y4QCRCBW6FssOgZqXv5P4DVj
+20vVO/dzcc+ZMObaH09WUEDJHkEevo+GlzI98d8eM7MDWq7dVxBsQjGZyxB9zlrCYiehEyWRStc2
+weEY19t2kwMbMJ3YeHUcMnJE/271YaTSAnvWjwTkMAFrCFjOppAiftF463tQV0QsXMgdRztjjPI/
+Ep/0PlV/DwGNtc9Xd5nyEugaBwqbhw8gZMVUDQz/915WpKInukvgmUQcA4KcZ18YdeWfFSfBKAfv
+PYfvTFBp+294dNfbxRuXr9vYGkb0Rbldh7kLluagm4CCe22t9olMyEXoJrg4E2rgYEmSJmk26Q/U
+wvgbNzM2B3xei4tG6LNIpxlI6LMcipATq9THInLQbI72Q1hMbkoRu7r3F+4iVsTEAt0afpMdmlhm
+PtO0vhG/6DxJqMAuKFGIbWysjC/y1lF0IwDKm3J9iZZk2qhTAHWzCgp5/dSe1m+c0FpjsXAS8m9B
+wLnek2Xxi6gPXDnD0VJLLiTqaixaWOnbQEckGPsHfAgy3zNAn7x3jvkA1dnDeK930gsS7JDaVNQw
+WtgJTNrPsC/Vi5heD8nix33uDl0UEYO8OJhj+EoIX433WKClqwxlbw==
 </ds:X509Certificate>
 </ds:X509Data>
 <ds:KeyValue>
 <ds:RSAKeyValue>
 <ds:Modulus>
-zzMlOstY1fh3XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZb
-nNrBqhgBQFzmh2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIH
-Hd6VDy3lAKUmVArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQ
-GJv/P2eD2oXEgXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKm
-ruxY/HeV/raFEJzob4pqWB1r6BoABHCE49gDQQ==
+3JllbXhHYNl05Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z
+2rQ7e0QCN9Uf/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxm
+wdpTuhN/mm723Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJx
+RqE+wxRbf/a+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbn
+qHXPbqODd3Nh1xcGYlbAehYSbO2OlRMlgkiwuw==
 </ds:Modulus>
 <ds:Exponent>AQAB</ds:Exponent>
 </ds:RSAKeyValue>
 </ds:KeyValue>
 </ds:KeyInfo>
-<ds:Object Id="Signature548659-Object67346"><etsi:QualifyingProperties Target="#Signature548659"><etsi:SignedProperties Id="Signature548659-SignedProperties275889"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-04-01T15:15:36+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>/SpSIebFwcglxj5xozUbjzjWHuY=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1515933376</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-478366"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>
+<ds:Object Id="Signature281881-Object417581"><etsi:QualifyingProperties Target="#Signature281881"><etsi:SignedProperties Id="Signature281881-SignedProperties693650"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-04-03T21:09:14+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>vrP9gKQ3eSMc4sZAfwaydVlUr1g=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533213088</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-313055"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

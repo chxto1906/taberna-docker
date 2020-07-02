@@ -3,8 +3,6 @@
 require_once _PS_MODULE_DIR_ . 'payphone/lib/common/Constants.php';
 require_once _PS_MODULE_DIR_ . 'payphone/lib/api/PayphoneButton.php';
 require_once _PS_MODULE_DIR_ . 'payphone/PaymentType.php';
-require_once _PS_MODULE_DIR_ . 'sincronizacionwebservices/controllers/front/ValidacionProductosBeforeFacturaSAP.php';
-//require_once _PS_ROOT_DIR_ . '/classes/controller/FrontController.php';
 
 /**
  * Controlador que genera el formulario con los datos de pago para envíar a Payphone.
@@ -98,7 +96,6 @@ class PayphonePaymentModuleFrontController extends ModuleFrontController {
 
             if ($cart_id == false) {
                 $this->module->validateOrder((int) $cart->id, Configuration::get('PS_PAYPHONE_PENDING'), $total, $this->module->displayName, NULL, array(), (int) $currency->id, false, $customer->secure_key);
-
                 $id_order = $this->module->currentOrder;
                 $order = new Order($id_order);
                 if (!Validate::isLoadedObject($order))
@@ -114,17 +111,11 @@ class PayphonePaymentModuleFrontController extends ModuleFrontController {
             $lang = new Language((int) Configuration::get('PS_LANG_DEFAULT'));
             $link = $this->context->link->getModuleLink('payphone', 'validation', array(), Configuration::get('PS_SSL_ENABLED'));
 
-            $valorTax = round($tax,2) * 100;
-            $valorAmount = round($amount,2) * 100;
-            $valorAmountWithTax = round($amount_with_tax,2) * 100;
-            $valorAmountWithOutTax = round($amount_without_tax,2) * 100;
-
-            
             $data = new PrepareSaleRequestModel();
-            $data->amount = "".$valorAmount; //$amount * 100;
-            $data->amountWithTax = "".$valorAmountWithTax; //$amount_with_tax * 100;
-            $data->tax = "".$valorTax;
-            $data->amountWithoutTax = "".$valorAmountWithOutTax; //$amount_without_tax * 100;
+            $data->amount = $amount * 100;
+            $data->amountWithTax = $amount_with_tax * 100;
+            $data->tax = $tax * 100;
+            $data->amountWithoutTax = $amount_without_tax * 100;
             $data->clientTransactionId = $order->reference;
             $data->responseUrl = $link;
             $data->lang = $lang->iso_code;
@@ -141,27 +132,7 @@ class PayphonePaymentModuleFrontController extends ModuleFrontController {
 
         try {
             $pb = new PayphoneButton();
-            $resValidateArticulos = $this->validateArticulosSAP($cart);
-            $resValidateHorario = $this->isOpen();
-            if ($resValidateArticulos){
-                return $this->showErrors($order,$resValidateArticulos);
-            }
-
-            if (!$resValidateHorario){
-                return $this->showErrors($order,"Tienda se encuentra fuera de su horario de atención.");
-            }
-
-            /*echo "<br>DATA antes de enviar al API PayPhone<br>";
-            var_dump($response);
-            echo "<br>-----------------------<br>";
-            exit;*/
-
             $response = $pb->Prepare($data);
-
-            /*echo "<br>RESPONSE API PayPhone<br>";
-            var_dump($response);
-            echo "<br>-----------------------<br>";
-            exit;*/
             $type = Tools::getValue('payment_type');
             if (gettype($type) == "boolean" && !$type)
                 $type = 0;
@@ -174,34 +145,6 @@ class PayphonePaymentModuleFrontController extends ModuleFrontController {
             return $this->showErrors($order, $e->ErrorList[0]->message);
         }
     }
-
-
-    function validateArticulosSAP($order) {
-        $ValidacionProductosBeforefacturaSAP = new sincronizacionwebservicesValidacionProductosBeforeFacturaSAPModuleFrontController();
-        return $ValidacionProductosBeforefacturaSAP->validate($order);
-    }
-
-    /*function validateHorario() {
-        $ValidacionProductosBeforefacturaSAP = new sincronizacionwebservicesValidacionProductosBeforeFacturaSAPModuleFrontController();
-        return $ValidacionProductosBeforefacturaSAP->validate($order);
-    }*/
-
-
-    protected function getHourStoreCurrent()
-    {
-
-        return  Db::getInstance()->executeS('
-         SELECT sl.`hours`
-         FROM `ps_store_shop` as stsh
-         LEFT JOIN `ps_shop` as sh
-         ON sh.`id_shop` = stsh.`id_shop`
-         LEFT JOIN `ps_store_lang` as sl
-         ON stsh.`id_store` = sl.`id_store`
-         WHERE sh.`active` = 1 AND sh.`deleted` = 0 
-         AND sl.`id_lang` = 1 AND stsh.`id_shop` = 4');
-    }
-
-
 
     function showErrors($order, $message) {
         $this->changeOrderStatus($order, Configuration::get('PS_OS_CANCELED'));

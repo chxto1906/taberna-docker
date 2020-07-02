@@ -1,0 +1,2 @@
+*ERROR* 	v1.7.5.0	2020/04/26 - 19:44:30: La longitud del campo Address->latitude es actualmente de 21 caracteres. Debe tener entre 0 y 20 caracteres. at line 984 in file classes/ObjectModel.php
+*ERROR* 	v1.7.5.0	2020/04/26 - 19:49:31: La longitud del campo Address->latitude es actualmente de 21 caracteres. Debe tener entre 0 y 20 caracteres. at line 984 in file classes/ObjectModel.php

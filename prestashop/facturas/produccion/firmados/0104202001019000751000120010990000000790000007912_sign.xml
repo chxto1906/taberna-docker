@@ -1,46 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>0104202001019000751000120010990000000790000007912</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000079</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>01/04/2020</fechaEmision><dirEstablecimiento>La Taberna Kennedy Norte (Guayaquil) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>06</tipoIdentificacionComprador><razonSocialComprador>remo gambetta podesta</razonSocialComprador><identificacionComprador>116467631</identificacionComprador><direccionComprador>1 Avenida Herradura, Guayaquil, ECU</direccionComprador><totalSinImpuestos>26.73</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>16.96</baseImponible><valor>2.04</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>29.94</importeTotal><pagos><pago><formaPago/><total/><plazo/><unidadTiempo/></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10062160</codigoPrincipal><descripcion>RON FLOR DE CAÑA GRAND RESERVA 7 AÑOS 75</descripcion><cantidad>1.00</cantidad><precioUnitario>16.96</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>16.96</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>16.96</baseImponible><valor>2.04</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature861521">
-<ds:SignedInfo Id="Signature-SignedInfo743206">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Almacenes Juan Eljuri Cia. LTDA.</razonSocial><nombreComercial>Almacenes Juan Eljuri Cia. LTDA.</nombreComercial><ruc>0190007510001</ruc><claveAcceso>0104202001019000751000120010990000000790000007912</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>099</ptoEmi><secuencial>000000079</secuencial><dirMatriz>Av. Gil Ramírez Dávalos y Armenillas</dirMatriz></infoTributaria><infoFactura><fechaEmision>01/04/2020</fechaEmision><dirEstablecimiento>La Taberna Kennedy Norte (Guayaquil) Av. Gil Ramírez Dávalos y Armenillas</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>06</tipoIdentificacionComprador><razonSocialComprador>remo gambetta podesta</razonSocialComprador><identificacionComprador>116467631</identificacionComprador><direccionComprador>1 Avenida Herradura, Guayaquil, ECU</direccionComprador><totalSinImpuestos>26.73</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><descuentoAdicional>0.00</descuentoAdicional><baseImponible>26.73</baseImponible><valor>3.21</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>29.94</importeTotal><pagos><pago><formaPago>20</formaPago><total>29.94</total><plazo>0</plazo><unidadTiempo>DIAS</unidadTiempo></pago></pagos></infoFactura><detalles><detalle><codigoPrincipal>10062160</codigoPrincipal><descripcion>RON FLOR DE CAÑA GRAND RESERVA 7 AÑOS 75</descripcion><cantidad>1.00</cantidad><precioUnitario>16.96</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>16.96</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>16.96</baseImponible><valor>2.04</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>10075867</codigoPrincipal><descripcion>AGUA GINGER ALE SEAGRAM'S 355ML</descripcion><cantidad>2.00</cantidad><precioUnitario>2.01</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>4.02</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>4.02</baseImponible><valor>0.48</valor></impuesto></impuestos></detalle><detalle><codigoPrincipal>20000154</codigoPrincipal><descripcion>TRANSPORTE - SERV VARIOS TABERNAS</descripcion><cantidad>1.00</cantidad><precioUnitario>5.75</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>5.75</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.00</tarifa><baseImponible>5.75</baseImponible><valor>0.69</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature675338">
+<ds:SignedInfo Id="Signature-SignedInfo429907">
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
 <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
-<ds:Reference Id="SignedPropertiesID519655" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature861521-SignedProperties928765">
+<ds:Reference Id="SignedPropertiesID833545" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature675338-SignedProperties821647">
 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-<ds:DigestValue>9dIVq3sKfwoJ75EEsK+NThanqCg=</ds:DigestValue>
+<ds:DigestValue>VXUlyxbOM37kA/ePpELvB8ZNZL8=</ds:DigestValue>
 </ds:Reference>
-<ds:Reference URI="#Certificate1113940">
+<ds:Reference URI="#Certificate1891332">
 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-<ds:DigestValue>SEebK2TOhxpeLqQmTaucdZDlxRY=</ds:DigestValue>
+<ds:DigestValue>TM9G+Ch28BhxYSeJX2L2b51RQ60=</ds:DigestValue>
 </ds:Reference>
-<ds:Reference Id="Reference-ID-537437" URI="#comprobante">
+<ds:Reference Id="Reference-ID-406403" URI="#comprobante">
 <ds:Transforms>
 <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-<ds:DigestValue>bNp/awqTH0tBA5tfKz/HhjJi7xw=</ds:DigestValue>
+<ds:DigestValue>R+Rxhsy0Ct8Z5Vjtbrsj/8Hrgrk=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
-<ds:SignatureValue Id="SignatureValue481315">
-c4ZH+1tC7DtZ/elC1oRxHMccttL7lVWPc/KzIv2Pl/84yaK4shzYLK2bMkq35js95p5NJdnLRi53
-0F5l35SgConhsAAi8+cwz38NHC15Hk+wl9fplpyIDe6iJK6UwFz6L7ApxPVvNdI9Ie0BfOP0bYsq
-hUt863BW9v2xU9Yq61GdsKXsmJz58CRY84fWxns2VaMxfe6RUEH7dUx2hrGfyRZOZVknzKIE73aU
-kDQgF98YnKP+XJGwf7VUc+BOXha1US3xGdt7Nxbjg/L/7lSh84TKrJWR+yBuw9qF5oP0G2L1KZtK
-O7OtCmrakNEOJDD/Lz27ZIJBhuDAl8Vwxw3YFA==
+<ds:SignatureValue Id="SignatureValue926344">
+xgmhu5cpPTA2tZMrmo2+i6szY+k5fIxnnlqY2peoTcehpv2LXnSKWKbX1qTZdJyHi+vrEYhXWSGR
+RRbeTjQle7wfsTAeT5r/4EAbJyHzwGJWkmF5AYYlWNYKMX7oGevCpMEbTbFeXecuL00U4KV7Fahc
+wnXV2dWzZpkgydoiZq6Ecn9zrFlplBqFbOgMNwKiNQjbnAQzEOY0EjXE7PDOh/Mx8FGa8D5UvMoK
+1tdY1Pgb/d72rHpGZ8hWB7GJQI8LbVmpz00MW7kriyo3EgcBB8jZtNrlDAGmek/7UYA8S2iwL0Ab
+XACHX920YGFHXS/R3S1SjmcSv+IypOLMFe4tBQ==
 </ds:SignatureValue>
-<ds:KeyInfo Id="Certificate1113940">
+<ds:KeyInfo Id="Certificate1891332">
 <ds:X509Data>
 <ds:X509Certificate>
-MIIJ8DCCB9igAwIBAgIEWltOwDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+MIIJ8DCCB9igAwIBAgIEW2L5oDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
 BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
 SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
-QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MDMxMjIwNDgxM1oXDTIwMDMxMjIxMTgx
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTIwMDMwOTE0NDc0M1oXDTIyMDMwOTE1MTc0
 M1owgbUxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
 NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
 DAYDVQQHEwVRVUlUTzE5MBEGA1UEBRMKMDAwMDA2ODMxMDAkBgNVBAMTHUNBUkxPUyBKT0FRVUlO
-IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzzMlOstY1fh3
-XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZbnNrBqhgBQFzm
-h2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIHHd6VDy3lAKUm
-VArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQGJv/P2eD2oXE
-gXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKmruxY/HeV/raF
-EJzob4pqWB1r6BoABHCE49gDQQIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
+IEFMVkFSRVogRUxKVVJJMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3JllbXhHYNl0
+5Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z2rQ7e0QCN9Uf
+/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxmwdpTuhN/mm72
+3Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJxRqE+wxRbf/a+
+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbnqHXPbqODd3Nh
+1xcGYlbAehYSbO2OlRMlgkiwuwIDAQABo4IFGDCCBRQwCwYDVR0PBAQDAgeAMGcGA1UdIARgMF4w
 XAYLKwYBBAGCqDsCAgEwTTBLBggrBgEFBQcCARY/aHR0cDovL3d3dy5lY2kuYmNlLmVjL3BvbGl0
 aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtanVyaWRpY2EucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+
 BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
@@ -53,39 +53,39 @@ RTAqBgorBgEEAYKoOwMHBBwTGkFWIEdJTCBSQU1JUkVaIERBVkFMT1MgNTMyMBkGCisGAQQBgqg7
 AwgECxMJMDcyODYyMTExMBYGCisGAQQBgqg7AwkECBMGQ3VlbmNhMBcGCisGAQQBgqg7AwwECRMH
 RUNVQURPUjAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wIAYDVR0RBBkwF4EVamNh
 c3RpbGxvQGVsanVyaWMuY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8v
-YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMNTMzLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
+YmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMOTQxLGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIw
 REVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBE
 RSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1Is
 Yz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5l
 Yy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYD
 VQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJ
 RklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMc
-QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMNTMzMCsGA1UdEAQkMCKA
-DzIwMTgwMzEyMjA0ODEzWoEPMjAyMDAzMTIyMTE4MTNaMB8GA1UdIwQYMBaAFBj58PvmMhyZZjkq
-youyaX1JJ7/OMB0GA1UdDgQWBBSVe328dqEYBcpyfpGssHFYGWPZ7zAJBgNVHRMEAjAAMBkGCSqG
-SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQAFHWul8YLZMvJsCPtDSfZ0
-GQmgTJF9kHFo4skIBSj5CeatAc9RsdAeB61mEIGDe3ecS1v+uEt/PoaCRKcoIJOhcAxNBuFIzUzd
-Ree/B0HIZmV/JIlonhl6bV90sAHgno5+6en2KNUtUYSH6B3nbgEVMamzw8e0+MzNfNE1ucQa16p4
-IBDjG7CpklIeWdYWzAtQx2kf0BOvtL+l1l6h8pKB2AhllGlfh3VPGukZ6USqPsnQO52IBvYJvpJ2
-gU7oZGZC39CWngjy1dDTj6CuCL/CjH207SWZMcoziH62M+eZA9BsEJ4lJ0UyjBj1Q0dBRC+PA8hL
-PrwmsXOjY8GXuVwMt/BoPmrEvzkXFLisNcsv1U1zX7p1QFI+itOJth/HUDKmmGqzglkVGWtRuC6v
-He0rf72d1e1etQcb0/ykOhVFKkbBJIZgtDnBNLxnjvBjK5XFpqMQDPC2a6GqFr5fepSdTZ8WOVEw
-BZW52k8T7Ii7fwiLwrtHpyrPTxLc5zgfJLZRVQPhlKVWhtrUyJ9cZbJZhfEodqvA08C88i2W+Q+M
-9HdZRcz18p7LKZvjliFkMJrPHMKxM7wa5WkOjs6c100fkAhT1CzHdhiOFEsxzwVUmoXgrc7NV2AD
-ToLmFxPk7cDBOO7n/tWASPkpOFI/RUrzCnFCD4g1db2RMa4eBs9X9A==
+QUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMOTQxMCsGA1UdEAQkMCKA
+DzIwMjAwMzA5MTQ0NzQzWoEPMjAyMjAzMDkxNTE3NDNaMB8GA1UdIwQYMBaAFEii3yMfHfgsUXqM
+A81JMqUJwZSrMB0GA1UdDgQWBBRpQsc22bUg9nyrE1t6dJsFq/ZW5TAJBgNVHRMEAjAAMBkGCSqG
+SIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQC55jV2Sp9Pix4xlRiZuVKP
+ACnJ99m7jXUQmY+eii7klsAvd0lCjInTUGZ7lKQk1zagwZa2/8V0y4QCRCBW6FssOgZqXv5P4DVj
+20vVO/dzcc+ZMObaH09WUEDJHkEevo+GlzI98d8eM7MDWq7dVxBsQjGZyxB9zlrCYiehEyWRStc2
+weEY19t2kwMbMJ3YeHUcMnJE/271YaTSAnvWjwTkMAFrCFjOppAiftF463tQV0QsXMgdRztjjPI/
+Ep/0PlV/DwGNtc9Xd5nyEugaBwqbhw8gZMVUDQz/915WpKInukvgmUQcA4KcZ18YdeWfFSfBKAfv
+PYfvTFBp+294dNfbxRuXr9vYGkb0Rbldh7kLluagm4CCe22t9olMyEXoJrg4E2rgYEmSJmk26Q/U
+wvgbNzM2B3xei4tG6LNIpxlI6LMcipATq9THInLQbI72Q1hMbkoRu7r3F+4iVsTEAt0afpMdmlhm
+PtO0vhG/6DxJqMAuKFGIbWysjC/y1lF0IwDKm3J9iZZk2qhTAHWzCgp5/dSe1m+c0FpjsXAS8m9B
+wLnek2Xxi6gPXDnD0VJLLiTqaixaWOnbQEckGPsHfAgy3zNAn7x3jvkA1dnDeK930gsS7JDaVNQw
+WtgJTNrPsC/Vi5heD8nix33uDl0UEYO8OJhj+EoIX433WKClqwxlbw==
 </ds:X509Certificate>
 </ds:X509Data>
 <ds:KeyValue>
 <ds:RSAKeyValue>
 <ds:Modulus>
-zzMlOstY1fh3XKK34lLYZ5Nt0yX915eBzbtwqxKfkaPsuDRFIfyLLLayjHMIcaEUZ9qP3bpPgXZb
-nNrBqhgBQFzmh2MmcTDJr7HklpGdtWLREbDQ76PX8FRITO0JXros9V8phVY7U216G8IA/MzNQLIH
-Hd6VDy3lAKUmVArWduw4kC012elb2dZ94lQg0Xdkt17BmoE0iZtbC2AxcXqvp/DVuD8qpDmC1YTQ
-GJv/P2eD2oXEgXaXJAvUlUu2soN5CdVHvMmuINRNtffbCl9bXM/5y440+xDFhJOe8MYL4hiyUwKm
-ruxY/HeV/raFEJzob4pqWB1r6BoABHCE49gDQQ==
+3JllbXhHYNl05Je4rncP8w4e7r3WPTBpv0XTFcSuYRxgrFQUI2yYa/d6CFI9T/nmDqjXv2rggU4Z
+2rQ7e0QCN9Uf/PmURkjngWhpdyBJ/x87lodF1LpcESbTJwDqtkJlIoGCdCnx3KEswHQOfbdkqRxm
+wdpTuhN/mm723Z0skuvAd2e6Ju0LqYnVgcPMvVYyy+XL93oJft/kMx9/fK8WZmRXQ3o/fDlxmlJx
+RqE+wxRbf/a+Jm8eO9a8HTtL4GYIbnEi5NUI9ZhEgaVsx5WoJ6D9oaCZctPRH7+Gi8jqirDqmQbn
+qHXPbqODd3Nh1xcGYlbAehYSbO2OlRMlgkiwuw==
 </ds:Modulus>
 <ds:Exponent>AQAB</ds:Exponent>
 </ds:RSAKeyValue>
 </ds:KeyValue>
 </ds:KeyInfo>
-<ds:Object Id="Signature861521-Object115596"><etsi:QualifyingProperties Target="#Signature861521"><etsi:SignedProperties Id="Signature861521-SignedProperties928765"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-04-01T19:11:12+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>/SpSIebFwcglxj5xozUbjzjWHuY=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1515933376</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-537437"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>
+<ds:Object Id="Signature675338-Object69563"><etsi:QualifyingProperties Target="#Signature675338"><etsi:SignedProperties Id="Signature675338-SignedProperties821647"><etsi:SignedSignatureProperties><etsi:SigningTime>2020-04-06T01:57:02+00:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>vrP9gKQ3eSMc4sZAfwaydVlUr1g=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1533213088</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-406403"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

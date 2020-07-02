@@ -13,309 +13,806 @@ RewriteRule . - [E=HTTP_AUTHORIZATION:%1]
 
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^manta/?$ /manta/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^manta/(.*) /$1 [L]
 
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/gran-colombia/?$ /cuenca/gran-colombia/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/gran-colombia/(.*) /$1 [L]
 
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^cuenca/remigio-crespo/?$ /cuenca/remigio-crespo/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^cuenca/remigio-crespo$ /cuenca/remigio-crespo/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/remigio-crespo/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^cuenca/estadio/?$ /cuenca/estadio/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^cuenca/estadio$ /cuenca/estadio/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/estadio/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^quito/la-taberna-orellana/?$ /quito/la-taberna-orellana/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/la-taberna-orellana$ /quito/la-taberna-orellana/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^quito/la-taberna-orellana/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^quito/cumbaya/?$ /quito/cumbaya/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/cumbaya$ /quito/cumbaya/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^quito/cumbaya/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^guayaquil/urdesa/?$ /guayaquil/urdesa/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^guayaquil/urdesa$ /guayaquil/urdesa/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^guayaquil/urdesa/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^guayaquil/kennedy-norte/?$ /guayaquil/kennedy-norte/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^guayaquil/kennedy-norte$ /guayaquil/kennedy-norte/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^guayaquil/kennedy-norte/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^guayaquil/samborondon/?$ /guayaquil/samborondon/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^guayaquil/samborondon$ /guayaquil/samborondon/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^guayaquil/samborondon/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^quito/brasil/?$ /quito/brasil/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/brasil$ /quito/brasil/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^quito/brasil/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^loja/?$ /loja/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^loja$ /loja/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^loja/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^machala/?$ /machala/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^machala$ /machala/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^machala/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^ambato/?$ /ambato/index.php [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^ambato$ /ambato/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^ambato/(.*) /$1 [L]
 
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/showroom$ /cuenca/showroom/ [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/showroom/(.*) /$1 [L]
 
 # Images
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 
-#Domain: localhost
-RewriteCond %{HTTP_HOST} ^localhost$
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/winery$ /cuenca/winery/ [L,R]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^cuenca/winery/(.*) /$1 [L]
 
 # Images
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/eloy-alfaro$ /quito/eloy-alfaro/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/eloy-alfaro/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/el-condado$ /quito/el-condado/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/el-condado/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/winery-eloy-alfaro$ /quito/winery-eloy-alfaro/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/winery-eloy-alfaro/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^santo-domingo$ /santo-domingo/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^santo-domingo/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/boliche$ /quito/boliche/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^quito/boliche/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^manta/plazaventura$ /manta/plazaventura/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^manta/plazaventura/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+
+#Domain: lataberna.com.ec
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api$ api/ [L]
+
+RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^playas$ /playas/ [L,R]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^playas/(.*) /$1 [L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{HTTP_HOST} ^lataberna.com.ec$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 </IfModule>
 
