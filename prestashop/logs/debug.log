@@ -1,0 +1,743 @@
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:52:58: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:06: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:09: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:43: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:53:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:24: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:43: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:54:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:55:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:25: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:38: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:49: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:55: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:56:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:46: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:57:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:27: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:27: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:58:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:15: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:36: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:36: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:36: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:36: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:37: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:50: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 00:59:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:04: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:04: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:15: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:17: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:20: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:34: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:37: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:37: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:37: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:37: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:44: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:00:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:06: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:06: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:09: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:12: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:13: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:13: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:13: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:37: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:37: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:01:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:11: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:11: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:25: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:34: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:36: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:36: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:02:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:21: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:21: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:33: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:33: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:59: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:03:59: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:05: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:05: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:10: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:10: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:34: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:34: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:04:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:08: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:08: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:11: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:21: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:38: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:38: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:38: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:38: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:05:54: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:04: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:04: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:04: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:04: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:41: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:06:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:03: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:03: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:03: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:03: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:19: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:07:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:08:38: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:03: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:08: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:08: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:08: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:08: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:09:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:05: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:05: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:05: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:05: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:10:59: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:03: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:05: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:05: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:05: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:05: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:34: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:40: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:41: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:58: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:59: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:11:59: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:11: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:13: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:13: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:27: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:29: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:29: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:41: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:44: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:44: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:12:58: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:34: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:34: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:34: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:59: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:13:59: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:27: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:27: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:38: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:38: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:38: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:14:59: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:03: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:12: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:12: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:27: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:27: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:40: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:41: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:15:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:19: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:43: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:52: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:16:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:03: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:15: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:33: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:33: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:33: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:33: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:17:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:18:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:25: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:27: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:27: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:48: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:54: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:19:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:20:59: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:21:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:05: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:08: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:09: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:09: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:11: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:22:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:28: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:28: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:46: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:23:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:50: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:54: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:24:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:37: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:40: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:40: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:25:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:02: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:05: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:05: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:17: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:18: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:18: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:18: AUTHORIZATION: S0d/OmmdZdfViS16+uMaU0BAQBkOjq5B6j91uhTSx0hmA/kA0BwL9CyguzNPEjmWQjRjkipHvgLosNi5Z87OUA==
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:18: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:24: BODYYY cotizar al API MIpiloto: {"latitud":"-2.15646800","longitud":"-79.89712400","latitudLlegada":"-2.1426541469790856","longitudLlegada":"-79.92344333788125","ciudad":2}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:24: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":202,"kmIni":"4.01","kmFin":"4.50","valor":"4.10","created_at":"2019-11-21 17:15:08","updated_at":"2019-11-25 18:39:30","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":2,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":364,"kmIni":"4.01","kmFin":"4.50","valor":"5.60","created_at":"2020-04-22 20:19:55","updated_at":"2020-04-22 20:19:55","valorNoche1":"4.10","valorNoche2":"5.60","ciudadId":2,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:25: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:25: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:25: BODYYY cotizar al API MIpiloto: {"latitud":"-2.15646800","longitud":"-79.89712400","latitudLlegada":"-2.1426541469790856","longitudLlegada":"-79.92344333788125","ciudad":2}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:25: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":202,"kmIni":"4.01","kmFin":"4.50","valor":"4.10","created_at":"2019-11-21 17:15:08","updated_at":"2019-11-25 18:39:30","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":2,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":364,"kmIni":"4.01","kmFin":"4.50","valor":"5.60","created_at":"2020-04-22 20:19:55","updated_at":"2020-04-22 20:19:55","valorNoche1":"4.10","valorNoche2":"5.60","ciudadId":2,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:26: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:26: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:26: BODYYY cotizar al API MIpiloto: {"latitud":"-2.15646800","longitud":"-79.89712400","latitudLlegada":"-2.1426541469790856","longitudLlegada":"-79.92344333788125","ciudad":2}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:26: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":202,"kmIni":"4.01","kmFin":"4.50","valor":"4.10","created_at":"2019-11-21 17:15:08","updated_at":"2019-11-25 18:39:30","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":2,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":364,"kmIni":"4.01","kmFin":"4.50","valor":"5.60","created_at":"2020-04-22 20:19:55","updated_at":"2020-04-22 20:19:55","valorNoche1":"4.10","valorNoche2":"5.60","ciudadId":2,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: BODYYY cotizar al API MIpiloto: {"latitud":"-2.15646800","longitud":"-79.89712400","latitudLlegada":"-2.1426541469790856","longitudLlegada":"-79.92344333788125","ciudad":2}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: RESPUESTA cotizar mi piloto API: {"tarifa":[{"id":202,"kmIni":"4.01","kmFin":"4.50","valor":"4.10","created_at":"2019-11-21 17:15:08","updated_at":"2019-11-25 18:39:30","valorNoche1":"3.10","valorNoche2":"4.10","ciudadId":2,"tipoVehiculoId":1,"tipo_vehiculo":{"id":1,"tipo":"Moto","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}},{"id":364,"kmIni":"4.01","kmFin":"4.50","valor":"5.60","created_at":"2020-04-22 20:19:55","updated_at":"2020-04-22 20:19:55","valorNoche1":"4.10","valorNoche2":"5.60","ciudadId":2,"tipoVehiculoId":2,"tipo_vehiculo":{"id":2,"tipo":"Carro","habilitado":1,"created_at":"-0001-11-30 00:00:00","updated_at":"-0001-11-30 00:00:00"}}],"tiempo_llegada":60}
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: HTTPCODE return de cotizar mi piloto API: 200
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:27: ¿¿ERROR en cotizar mi piloto API???: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:30: ***Response GET CART***
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:30: $ 148,19, Array, $ 4,59, 2, , Array, 7495
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:30: total_cart_items: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:35: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:39: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:39: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:39: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:39: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:43: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:26:58: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:09: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:38: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:59: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:27:59: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:01: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:01: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:25: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:27: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:27: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:31: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:31: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:59: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:28:59: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:03: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:03: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:03: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:06: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:33: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:33: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:33: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:34: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:29:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:15: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:33: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:30:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:36: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:40: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:31:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:28: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:32:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:02: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:02: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:12: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:24: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:27: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:28: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:28: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:51: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:57: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:33:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:03: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:07: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:07: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:23: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:24: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:29: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:31: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:33: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:43: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:45: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:34:50: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:07: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:11: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:11: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:11: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:11: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:25: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:32: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:36: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:40: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:53: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:35:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:04: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:10: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:10: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:36:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:01: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:27: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:32: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:32: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:34: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:35: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:35: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:56: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:37:56: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:11: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:15: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:20: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:22: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:46: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:56: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:57: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:38:57: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:00: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:00: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:00: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:14: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:26: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:26: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:26: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 11
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:30: AUTHORIZATION: 
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:30: Llegó a CheckPedidosPendientes
+*DEBUG* 	v1.7.5.0	2020/07/02 - 01:39:30: Llegó a CheckPedidosPendientes y tiene ID_SHOP: 6
